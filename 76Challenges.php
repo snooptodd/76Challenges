@@ -42,7 +42,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$LineWrap=false; // if true then wrap line if longer than $PageWidth
 
 	// Discord webhook url created per server. 
-	$WebHookURL = "https://discord.com/api/webhooks/912021809472368660/L2FLZ32BUjPkpDo_lxlSaEN5k4ScHJXdBnLP3prbUdnDMfb2UVM_rc57lbTQ1vGDQH9z";
+	$WebHookURL = "https://discord.com/api/webhooks/SECRET:STUFF";
 
 	$DaysSinceEpoch = intdiv(time(),(24*60*60));
 	if ($DaysSinceEpoch & 1) {
