@@ -12,13 +12,31 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 <body>
 	<form Method ="POST" action="76Challenges.php">
 	<?php
+
+	// format of MinervaLocation.csv: Start,end,location,list
+	// example
+	// 7/12/2021,7/13/2021,Foundation,1
+	// 7/19/2021,7/20/2021,The Crater,2
+	// 7/26/2021,7/27/2021,Fort Atlas,3
+	// 8/5/2021,8/8/2021,Foundation,1|2|3
+
+	// format of times.txt,score.txt and daily.txt is file with one entry per line.
+
+	// format of MinervaEnventory.txt is list|item|cost 
+	// example
+	// 1|Cattle Prod|188
+	// 1|Chemist's Backpack Mod|263
+	// 1|Farmable Dirt Tiles|375
+
+
 	error_reporting(E_ALL|E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 	ini_set('display_errors', 'On');
 
-	$aMLocation = file('/home/todd/public_html/MinervaLocation.csv',FILE_IGNORE_NEW_LINES);
-	$Challenges = file('/home/todd/public_html/daily.txt',FILE_IGNORE_NEW_LINES);
-	$Times= file('/home/todd/public_html/times.txt',FILE_IGNORE_NEW_LINES);
-	$Score= file('/home/todd/public_html/score.txt',FILE_IGNORE_NEW_LINES);
+	$MinervaEnventory = file('/home/todd/src/76Challenges/MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
+	$aMLocation = file('/home/todd/src/76Challenges/MinervaLocation.txt',FILE_IGNORE_NEW_LINES);
+	$Challenges = file('/home/todd/src/76Challenges/daily.txt',FILE_IGNORE_NEW_LINES);
+	$Times= file('/home/todd/src/76Challenges/times.txt',FILE_IGNORE_NEW_LINES);
+	$Score= file('/home/todd/src/76Challenges/score.txt',FILE_IGNORE_NEW_LINES);
 	$DailyChallenge=range('a', 'p');
 	$WeeklyChallenge=range('a', 'n');
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center');
@@ -27,9 +45,11 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$MinervaListPrint = ("\n");
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
 	$EnemyMutations2 = array('', 'Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations');
-	$MinervaEnventory = file('/home/todd/public_html/MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
+
+
 	$MinervaList = 0;
 	$now = time();
+	//$now = strtotime('20220409T12:01:00');
 
 	sort($Challenges);
 	sort($Location);
@@ -42,7 +62,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$LineWrap=false; // if true then wrap line if longer than $PageWidth
 
 	// Discord webhook url created per server. 
-	$WebHookURL = "https://discord.com/api/webhooks/SECRET:STUFF";
+	$WebHookURL = "https://discord.com/api/webhooks/912021809472368660/L2FLZ32BUjPkpDo_lxlSaEN5k4ScHJXdBnLP3prbUdnDMfb2UVM_rc57lbTQ1vGDQH9z";
 
 	$DaysSinceEpoch = intdiv(time(),(24*60*60));
 	if ($DaysSinceEpoch & 1) {
@@ -343,13 +363,13 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			$DailyChallenge[$key] = array($_REQUEST['d'.$value],$_REQUEST['d'.$value.'times'],$_REQUEST['d'.$value.'score']);
 		}
 		if ( $Submit == "Edit Score" ) {
-			$File='/home/todd/public_html/score.txt';
+			$File='/home/todd/src/76Challenges/score.txt';
 			edit_file($File);
 		} elseif ($Submit == 'Edit Times') {
-			$File='/home/todd/public_html/times.txt';
+			$File='/home/todd/src/76Challenges/times.txt';
 			edit_file($File);
 		} elseif ($Submit =='Edit Challenges') {
-			$File='/home/todd/public_html/daily.txt';
+			$File='/home/todd/src/76Challenges/daily.txt';
 			edit_file($File);
 		} elseif ( $Submit == 'Submit') {
 			
@@ -359,50 +379,28 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			$textareaValue .= formatprint($WeeklyChallenge,'w',$PageWidth,$LineWrap,True); 
 			$textareaValue .= formatprint($DailyChallenge,'d',$PageWidth,$LineWrap,False);
 
-			// $now = strtotime('03 January 2022 12:00:00');
-			if ($MinervaLocationResult!=='Away') {
-			 	
-				
-				// time from Minervas first apperance subtracted from now and the result dvided by #sec in 1 week
-				$Mweeks=1+intdiv(($now-strtotime('12 July 2021 12:00:00')),(7*24*60*60));
-				
-				// the list repetes every 20 weeks, this should make that happen. 
-				$MinervaList1=$Mweeks-(20*intdiv($Mweeks,20));
-				// there is a extra week added when menerva shuts donwn the big sale intdiv(,5) will remove that week
-				$MinervaList=$MinervaList1-intdiv($MinervaList1,5);
-			} else {
-				foreach($aMLocation as $MLvalue) {
-					$MLLine = explode(',',$MLvalue);
-					if (strtotime($MLLine[0]) <= $now && $now <= strtotime($MLLine[1]) ) {
-						$MinervaLocationResult = $MLLine[2];
-						$MinervaList = $MLLine[3];
-					}
+			foreach($aMLocation as $MLvalue) {
+				$MLLine = explode(',',$MLvalue);
+				if (strtotime($MLLine[0]) <= $now && $now <= strtotime($MLLine[1]) ) {
+					$MinervaLocationResult = $MLLine[2];
+					$MinervaList = explode('|',$MLLine[3]);
 				}
 			}
-			if ($MinervaList == '4' ) {
-				$MLList = array('1','2','3');
-			} elseif ($MinervaList == '8' ){
-				$MLList = array('5','6','7');
-			}elseif ($MinervaList == '12' ){
-				$MLList = array('9','10','11');
-			}elseif ($MinervaList == '16' ){
-				$MLList = array('13','14','15');
-			} else {
-				$MLList = array($MinervaList);
-			}
-			$MinervaListPrint = array('');
-			foreach ($MinervaEnventory as $MEkey => $MEvalue) {
-				$MEline = explode('|',$MEvalue);
-				if ( in_array($MEline[0], $MLList)) {
-					//$MinervaListPrint[$MEkey] = $MEline[1]." ".$MEline[2]."\n";
-					array_push($MinervaListPrint, $MEline[1]." (".$MEline[2].")" );
-				}
-			}
-			sort($MinervaListPrint);
 			if ($MinervaLocationResult=='Away') {
 				$textareaValue .=  "**Minerva's Location: $MinervaLocationResult**\n\n";
 				//echo "```\n$MinervaLocationResult\n```\n";
 			} else {
+				$MinervaListPrint = array('');
+				foreach ($MinervaEnventory as $MEkey => $MEvalue) {
+					$MEline = explode('|',$MEvalue);
+					//if ( in_array($MEline[0], $MLList)) {
+					if ( in_array($MEline[0], $MinervaList)) {
+						//$MinervaListPrint[$MEkey] = $MEline[1]." ".$MEline[2]."\n";
+						array_push($MinervaListPrint, $MEline[1]." (".$MEline[2].")" );
+					}
+				}
+				sort($MinervaListPrint);
+			
 				$textareaValue .=  "**Minerva's Location: $MinervaLocationResult**\n";
 				$textareaValue .=  "```\nName (Gold Price)";
 				foreach ($MinervaListPrint as $key => $value) {
@@ -428,7 +426,10 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			if (mb_strlen($textareaValue) > 2000 ) {
 				echo "CAUTION:Character count exceeds Discord maximum post length (".mb_strlen($textareaValue).") > 2000 <P>";
 			} else {
-				echo "Character count (".mb_strlen($textareaValue).")<p>";
+				echo "Character count: (".mb_strlen($textareaValue).")<br>";
+				echo "Minerva List: ";
+				print_r($MinervaList);
+				echo "<p>";
 			}
 			echo '<textarea id="content" name="content" cols="120" rows="40" autofocus>';
 			echo $textareaValue;
@@ -444,7 +445,8 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		} elseif ( $Submit == 'Discord' ) {
 			$textareaValue = ($_REQUEST['content']);
 			if (mb_strlen($textareaValue) < 2000 ) {
-				DiscordPost ($WebHookURL,$textareaValue);
+				//DiscordPost ($WebHookURL,$textareaValue);
+				echo "Function Disabled";
 			} else {
 				echo "CAUTION:Character count exceeds Discord maximum post length (".mb_strlen($textareaValue).") > 2000 ";
 			}
