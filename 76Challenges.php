@@ -51,12 +51,35 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	foreach ($WeeklyChallenge as $key => $value) {
 		$WeeklyChallenge[$key][2]='1000';
 	}
-	$DailyChallenge[0][0]='Above Rank 100: Gain XP';
-	$DailyChallenge[0][1]='(x2500)';
-	$WeeklyChallenge[0][0]='♻ Repeatable Under Rank 100: Gain XP';
-	$WeeklyChallenge[0][1]='(x10000)';
-	$WeeklyChallenge[0][2]='100';
-	
+	if ( ! isset( $_POST['Submit'] ) ) {
+		$DailyChallenge[0][0]='Above Rank 100: Gain XP';
+		$DailyChallenge[0][1]='(x2500)';
+		$DailyChallenge[1][0]='Level up!';
+		$DailyChallenge[1][1]='(x1)';
+		$DailyChallenge[1][2]='500';
+		$DailyChallenge[2][0]='Complete a Daily Operation!';
+		$DailyChallenge[2][1]='(x1)';
+		$DailyChallenge[2][2]='250';
+		$DailyChallenge[3][0]='Complete an Event';
+		$DailyChallenge[3][1]='(x1)';
+		$DailyChallenge[3][2]='250';
+		$DailyChallenge[4][0]='Gold Star: Complete a Daily Challenge';
+		$DailyChallenge[4][1]='(x5)';
+		$DailyChallenge[4][2]='250';
+		$WeeklyChallenge[0][0]='Repeatable Under Rank 100: Gain XP';
+		$WeeklyChallenge[0][1]='(x10000)';
+		$WeeklyChallenge[0][2]='100';
+		$WeeklyChallenge[1][0]='Complete a Gold Star Daily Challenge!';
+		$WeeklyChallenge[1][1]='(x1)';
+		$WeeklyChallenge[1][2]='1500';
+		$WeeklyChallenge[2][0]='Complete Daily Operations!';
+		$WeeklyChallenge[2][1]='(x5)';
+		$WeeklyChallenge[2][2]='1000';
+		$WeeklyChallenge[3][0]='Level up!';
+		$WeeklyChallenge[3][1]='(x3)';
+		$WeeklyChallenge[3][2]='1500.';
+	}
+
 	$MinervaList = 0;
 	$now = time();
 	//$now = strtotime('20220409T12:01:00');
@@ -97,6 +120,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			//echo '<option value="'.$value.'">'.$value.'</option>';
 		}
 	}
+
 	// takes as input the name of the select box, its current value and an array for the options
 	function select_box($BoxName, $CurrnetValue, $SelectOptions) {
 		//echo isset($_REQUEST[$BoxName]);
@@ -107,24 +131,24 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		select_option($BoxName, $CurrnetValue, $SelectOptions);
 		echo '</select></td>';
 	}
-
-	// for the script to work this fucntion needs to make the value passed to $aChallenge availble to the script (global?)
-	function read_form($aChallenge,$select_prefix)
-	{
-		foreach ($aChallenge as $key => $value) {
-			// put the results into the *Challenge array
-			$aChallenge[$key] = array($_REQUEST[$select_prefix.$value ],$_REQUEST[$select_prefix.$value.'times'],$_REQUEST[$select_prefix.$value.'score']);
-		}
+	
+	// Comparison function 
+	// This  only sorts the empty values to the bottom
+	function cmp($a, $b) {
+		$ac = utf8_decode($a[0]);
+		$bc = utf8_decode($b[0]);
+		if ($ac and $bc) return 0; // no sort if not empty
+		return ($ac > $bc) ? -1 : 1; // else sort
 	}
 
-	function edit_file($File)
-	{
+	function edit_file($File)	{
 		echo '<p><textarea name="content" id="content" cols="120" rows="40" autofocus>&#10;';
 		include($File);
 		echo '</textarea><br>';
 		echo '<input type="submit" Name="Submit" value="Save"> ';
 		echo '<label hidden="true" for="fname">File name:</label><input type="text" hidden="true" id="fname" name="fname" value='.$File.' ><br>';
 	}
+
 	// takes as input Challenge array DailyChallenge,WeeklyChallenge
 	// takes as input prefix for select boxes d,w
 	// PageWidth is the width of the page
@@ -137,7 +161,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			//$ChallengeLength=strlen( utf8_decode(' '.$aChallenge[$key][0].$aChallenge[$key][1].$aChallenge[$key][2]) );
 		//}
 		$ouput = "";
-		if ( !empty($aChallenge[1][0]) ){
+		if ( !empty($aChallenge[7][0]) ){
 			if ( $Weekly ) {
 				$ouput .= "**Weekly Challenges**\n";
 				$ouput .= "```\n".str_pad('Challenge (Count)',$PageWidth-10)." S.C.O.R.E.\n";
@@ -378,6 +402,10 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			$DailyChallenge[$key][1] = $_REQUEST['d'.$key.'times'];
 			$DailyChallenge[$key][2] = $_REQUEST['d'.$key.'score'];
 		}
+		
+		sort($DailyChallenge);
+		usort($DailyChallenge,'cmp');
+		
 		if ( $Submit == "Edit Score" ) {
 			$File=$rootPath.'score.txt';
 			edit_file($File);
