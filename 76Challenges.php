@@ -35,18 +35,23 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$rootPath='/home/todd/src/76Challenges/';
 	$MinervaEnventory = file($rootPath.'MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
 	$aMLocation = file($rootPath.'MinervaLocation.txt',FILE_IGNORE_NEW_LINES);
-	$Challenges = file($rootPath.'daily.txt',FILE_IGNORE_NEW_LINES);
+	$Challenges = array('');
 	$Times= file($rootPath.'times.txt',FILE_IGNORE_NEW_LINES);
 	$Score= file($rootPath.'score.txt',FILE_IGNORE_NEW_LINES);
-	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 3) ); }, range(1, 19) );
-	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 3) ); }, range(1, 19) );
+	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
+	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center');
 	$MinervaLocation=array('Away','Foundation','The Crater','Fort Atlas' );
 	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners' );
 	$MinervaListPrint = ("\n");
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
 	$EnemyMutations2 = array('', 'Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations');
+	$FO1st = array('','1ˢᵗ ');
 
+	foreach ( file($rootPath.'daily.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
+		$Challenges[$key]=explode("|",$value);
+	}
+	
 	// pre fill the Daily and Weekly arrays with common data
 	foreach ($WeeklyChallenge as $key => $value) {
 		$WeeklyChallenge[$key][2]='1000';
@@ -108,16 +113,22 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 
 	// takes as input an array that is used to fill in the options for a select box
 	function select_option($BoxName,$CurrnetValue, $alist) {
-		foreach ($alist as $value) {
+		foreach ($alist as $key => $value) {
+			if ( is_array($value) ) {
+				if ( isset($CurrnetValue) &&  $CurrnetValue == $value[0] ) {
+					echo '<option selected value="'.htmlentities($value[0]).'">'.htmlentities($value[0]).'</option>';
+				} else {
+					echo '<option value="'.htmlentities($value[0]).'">'.htmlentities($value[0]).'</option>';
+				}
+				//echo '<option value="'.$value.'">'.$value.'</option>';
 			
-			if ( isset($_REQUEST[$BoxName] ) && ( $value == $_REQUEST[$BoxName] ) ) {
-			    echo '<option selected value="'.htmlentities($value).'">'.htmlentities($value).'</option>';
-			} elseif ( isset($CurrnetValue) &&  $CurrnetValue == $value ) {
-				echo '<option selected value="'.htmlentities($value).'">'.htmlentities($value).'</option>';
 			} else {
-			    echo '<option value="'.htmlentities($value).'">'.htmlentities($value).'</option>';
+				if ( isset($CurrnetValue) &&  $CurrnetValue == $value ) {
+					echo '<option selected value="'.htmlentities($value).'">'.htmlentities($value).'</option>';
+				} else {
+					echo '<option value="'.htmlentities($value).'">'.htmlentities($value).'</option>';
+				}
 			}
-			//echo '<option value="'.$value.'">'.$value.'</option>';
 		}
 	}
 
@@ -154,14 +165,14 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	// PageWidth is the width of the page
 	// Weekly is true if its called for Weekly challenge
 	// only prints if first item has a value
-	function formatprint($aChallenge,$select_prefix,$PageWidth,$LineWrap,$Weekly) {
+	function formatprint($Challenges,$aChallenge,$select_prefix,$PageWidth,$LineWrap,$Weekly) {
 		//foreach ($aChallenge as $key => $value) {
 			// put the results into the *Challenge array
 		//	$aChallenge[$key] = array($_REQUEST[$select_prefix.$value ],$_REQUEST[$select_prefix.$value.'times'],$_REQUEST[$select_prefix.$value.'score']);
 			//$ChallengeLength=strlen( utf8_decode(' '.$aChallenge[$key][0].$aChallenge[$key][1].$aChallenge[$key][2]) );
 		//}
 		$ouput = "";
-		if ( !empty($aChallenge[7][0]) ){
+		if ( ($aChallenge[13][0]) !== ' '){
 			if ( $Weekly ) {
 				$ouput .= "**Weekly Challenges**\n";
 				$ouput .= "```\n".str_pad('Challenge (Count)',$PageWidth-10)." S.C.O.R.E.\n";
@@ -184,7 +195,15 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
                	    		$aChallenge[$key][2]=' '.$aChallenge[$key][2];
                		}
                 	// print results
-       	        	$ouput .= $aChallenge[$key][0].' '.$aChallenge[$key][1].' '.$aChallenge[$key][2]."\n";
+					// [TODO] check if $aChallenge[$key][0] in $Challenges is an array if so then add its 2nd element. 
+					// it might be better to make all $Challenges be an array and just add whatever value to the string.
+					// the below will probably work but $Challenges needs passed to the function.
+					foreach( $Challenges as $key2 => $value2) {
+						if ($aChallenge[$key][0] == $value2[0]) {
+							$ouput .=$aChallenge[$key][3].$value2[1].$aChallenge[$key][0].' '.$aChallenge[$key][1].' '.$aChallenge[$key][2]."\n";
+						}
+					}
+       	        	//$ouput .= $aChallenge[$key][3].' '.$aChallenge[$key][0].' '.$aChallenge[$key][1].' '.$aChallenge[$key][2]."\n";
 				}
 			}
 	    	$ouput .= "```\n";
@@ -303,77 +322,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		curl_close( $ch );
 
 	}
-?>
-</center>
-
-	<table  style=" right">
-		<caption><h1>Weekly Challenges</h1></caption>
-		
-		<tr><th>Challenge</th><th>Times</th><th>SCORE</th></tr>	
-			<?php
-			foreach ($WeeklyChallenge as $key => $value) {
-				echo '<tr>';
-				select_box('w'.$key, $value[0], $Challenges);
-				select_box('w'.$key.'times', $value[1], $Times);
-				select_box('w'.$key.'score', $value[2], $Score);
-				echo '</tr>';
-			}
-			?>
-	</table>
-
-
-<table  style=" left;">
-	<caption><h1>Daily Challenges</h1></caption>
-	<tr><th>Challenge</th><th>Times</th><th>SCORE</th></tr>	
-		<?php
-		foreach ($DailyChallenge as $key => $value) {
-			echo '<tr>';
-			select_box('d'.$key, $value[0], $Challenges);
-			select_box('d'.$key.'times', $value[1], $Times);
-			select_box('d'.$key.'score', $value[2], $Score);
-			echo '</tr>';
-		}
-		?>
-	<tr><th><input type="submit" name="Submit" value="Edit Challenges"></th>
-	<th><input type="submit" name="Submit" value="Edit Times"></th>
-	<th><input type="submit" name="Submit" value="Edit Score"></th></tr>
-</table>	    
-<!-- 	<h1>Minerva's Location</h1>
-            <label for="MinervaLocation1"> Minerva's Location. </label>
-            <select name="MinervaLocation1" id="MinervaLocation1">
-                <?php //select_option('MinervaLocation1',$MinervaLocation);?>
-            </select>
- -->
-
-	<h1><img src='bos.png' style='vertical-align:middle'>Daily Operation</h1>
-
-	    <label for="Location">Choose a location. </label>
-	    <select name="Location" id="Location">
-	    	<?php select_option('Location', '', $Location);?>
-	    </select>
-		<br>
-	    <label for="EnemyFaction">Choose a enemy faction. </label>
-	    <select name="EnemyFaction" id="EnemyFaction">
-	    	<?php select_option('EnemyFaction', '', $EnemyFaction);?>
-	    </select>
-		<br>
-		<label for="EnemyMutations1">   Choose a primary enemy mutation. </label>
-	    <select name="EnemyMutations1" id="EnemyMutations1">
-	    	<?php select_option('EnemyMutations1', '', $EnemyMutations1);?>
-	    	</select>
-		<br>
-		<label for="EnemyMutations2">   Choose a sceondary enemy mutation. </label>
-	    <select name="EnemyMutations2" id="EnemyMutations2">
-	    	<?php select_option('EnemyMutations2', '', $EnemyMutations2);?>
-	    </select>
-		
-		 <input type="submit" Name = "Submit" value='Submit'>
-		
-
-<?php
-	error_reporting(E_ALL|E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-	ini_set('display_errors', 'On');
-
+	
 	  // Check if the form is submitted
 	if ( isset( $_POST['Submit'] ) ) {
 
@@ -395,16 +344,100 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			$WeeklyChallenge[$key][0] = $_REQUEST['w'.$key];
 			$WeeklyChallenge[$key][1] = $_REQUEST['w'.$key.'times'];
 			$WeeklyChallenge[$key][2] = $_REQUEST['w'.$key.'score'];
+			$WeeklyChallenge[$key][3] = $_REQUEST['w'.$key.'1st'];
 		}
 		foreach ($DailyChallenge as $key => $value) {
 			// put the results into the *Challenge array
 			$DailyChallenge[$key][0] = $_REQUEST['d'.$key];
 			$DailyChallenge[$key][1] = $_REQUEST['d'.$key.'times'];
 			$DailyChallenge[$key][2] = $_REQUEST['d'.$key.'score'];
+			$DailyChallenge[$key][3] = $_REQUEST['d'.$key.'1st'];
 		}
+		//sort($DailyChallenge);
+		//usort($DailyChallenge,'cmp');
+		// sort($WeeklyChallenge);
+		//usort($WeeklyChallenge,'cmp');
+	}
+	?>
+</center>
+
+	<table  style=" right">
+		<caption><h1>Weekly Challenges</h1></caption>
+		<tr><th>1st</th><th>Challenge</th><th>Times</th><th>SCORE</th></tr>	
+			<?php
+			foreach ($WeeklyChallenge as $key => $value) {
+				echo '<tr>';
+				select_box('w'.$key.'1st', $value[3], $FO1st);
+				select_box('w'.$key, $value[0], $Challenges);
+				select_box('w'.$key.'times', $value[1], $Times);
+				select_box('w'.$key.'score', $value[2], $Score);
+				echo '</tr>';
+			}
+			?>
+	</table>
+
+
+<table  style=" left;">
+	<caption><h1>Daily Challenges</h1></caption>
+	<tr><th>1st</th><th>Challenge</th><th>Times</th><th>SCORE</th></tr>	
+		<?php
+		foreach ($DailyChallenge as $key => $value) {
+			echo '<tr>';
+			select_box('d'.$key.'1st', $value[3], $FO1st);
+			select_box('d'.$key, $value[0], $Challenges);
+			select_box('d'.$key.'times', $value[1], $Times);
+			select_box('d'.$key.'score', $value[2], $Score);
+			echo '</tr>';
+		}
+		?>
+	<tr><th> </th><th><input type="submit" name="Submit" value="Edit Challenges"></th>
+	<th><input type="submit" name="Submit" value="Edit Times"></th>
+	<th><input type="submit" name="Submit" value="Edit Score"></th></tr>
+</table>	    
+<!-- 	<h1>Minerva's Location</h1>
+            <label for="MinervaLocation1"> Minerva's Location. </label>
+            <select name="MinervaLocation1" id="MinervaLocation1">
+                <?php //select_option('MinervaLocation1',$MinervaLocation);?>
+            </select>
+ -->
+
+	<h1><img src='bos.png' style='vertical-align:middle'>Daily Operation</h1>
+
+	    <label for="Location">Choose a location. </label>
+	    <select name="Location" id="Location">
+	    	<?php select_option('Location', $LocationResult, $Location);?>
+	    </select>
+		<br>
+	    <label for="EnemyFaction">Choose a enemy faction. </label>
+	    <select name="EnemyFaction" id="EnemyFaction">
+	    	<?php select_option('EnemyFaction', $EnemyFactionResult, $EnemyFaction);?>
+	    </select>
+		<br>
+		<label for="EnemyMutations1">   Choose a primary enemy mutation. </label>
+	    <select name="EnemyMutations1" id="EnemyMutations1">
+	    	<?php select_option('EnemyMutations1', $EnemyMutations1Result, $EnemyMutations1);?>
+	    	</select>
+		<br>
+		<label for="EnemyMutations2">   Choose a sceondary enemy mutation. </label>
+	    <select name="EnemyMutations2" id="EnemyMutations2">
+	    	<?php select_option('EnemyMutations2', $EnemyMutations2Result, $EnemyMutations2);?>
+	    </select>
+		
+		 <input type="submit" Name = "Submit" value='Submit'><P>
+		
+
+<?php
+	error_reporting(E_ALL|E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+	ini_set('display_errors', 'On');
+
+	  // Check if the form is submitted
+	if ( isset( $_POST['Submit'] ) ) {
 		
 		sort($DailyChallenge);
-		usort($DailyChallenge,'cmp');
+		//$tmpDailyChallenge=array_reverse($DailyChallenge);
+		//$DailyChallenge = $tmpDailyChallenge;
+		sort($WeeklyChallenge);
+		usort($WeeklyChallenge,'cmp');
 		
 		if ( $Submit == "Edit Score" ) {
 			$File=$rootPath.'score.txt';
@@ -420,8 +453,8 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			// display the results
 			//echo " \n";
 			$textareaValue = "Fallout 76 Daily Update\n";
-			$textareaValue .= formatprint($WeeklyChallenge,'w',$PageWidth,$LineWrap,True); 
-			$textareaValue .= formatprint($DailyChallenge,'d',$PageWidth,$LineWrap,False);
+			$textareaValue .= formatprint($Challenges,$WeeklyChallenge,'w',$PageWidth,$LineWrap,True); 
+			$textareaValue .= formatprint($Challenges,$DailyChallenge,'d',$PageWidth,$LineWrap,False);
 
 			foreach($aMLocation as $MLvalue) {
 				$MLLine = explode(',',$MLvalue);
@@ -465,7 +498,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 				$textareaValue .=  "Enemy Mutations: $EnemyMutations1Result, $EnemyMutations2Result \n";
 				$textareaValue .=  "```";
 			}
-			echo '<input type="submit" Name="Submit" value="Discord"><P>';
+			//echo '<input type="submit" Name="Submit" value="Discord"><P>';
 			
 			if (mb_strlen($textareaValue) > 2000 ) {
 				echo "CAUTION:Character count exceeds Discord maximum post length (".mb_strlen($textareaValue).") > 2000 <P>";
