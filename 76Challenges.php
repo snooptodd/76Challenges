@@ -20,7 +20,15 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	// 7/26/2021,7/27/2021,Fort Atlas,3
 	// 8/5/2021,8/8/2021,Foundation,1|2|3
 
-	// format of times.txt,score.txt and daily.txt is file with one entry per line.
+	// format of times.txt,score.txt and is text file with one entry per line.
+
+	// format of challenges.txt is challenge|emogi 
+	// frist line is "|"
+	// example
+	// |
+	// Above Rank 100: Gain XP|
+	// Buy an item from or Sell an item to another Player|
+	// CALL TO AXE-ION: Complete CALL TO AXE-ION Daily Challenges|🪓
 
 	// format of MinervaEnventory.txt is list|item|cost 
 	// example
@@ -48,7 +56,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$EnemyMutations2 = array('', 'Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations');
 	$FO1st = array('','1ˢᵗ ');
 
-	foreach ( file($rootPath.'daily.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
+	foreach ( file($rootPath.'challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
 		$Challenges[$key]=explode("|",$value);
 	}
 	
@@ -58,7 +66,8 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	}
 	if ( ! isset( $_POST['Submit'] ) ) {
 		$DailyChallenge[0][0]='Above Rank 100: Gain XP';
-		$DailyChallenge[0][1]='(x2500)';
+		$DailyChallenge[0][1]='(x1000)';
+		$DailyChallenge[0][2]='50';
 		$DailyChallenge[1][0]='Level up!';
 		$DailyChallenge[1][1]='(x1)';
 		$DailyChallenge[1][2]='500';
@@ -70,14 +79,14 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		$DailyChallenge[3][2]='250';
 		$DailyChallenge[4][0]='Gold Star: Complete a Daily Challenge';
 		$DailyChallenge[4][1]='(x5)';
-		$DailyChallenge[4][2]='250';
+		$DailyChallenge[4][2]='500';
 		$WeeklyChallenge[0][0]='Repeatable Under Rank 100: Gain XP';
 		$WeeklyChallenge[0][1]='(x10000)';
 		$WeeklyChallenge[0][2]='100';
 		$WeeklyChallenge[1][0]='Complete a Gold Star Daily Challenge!';
 		$WeeklyChallenge[1][1]='(x1)';
 		$WeeklyChallenge[1][2]='1500';
-		$WeeklyChallenge[2][0]='Complete Daily Operations!';
+		$WeeklyChallenge[2][0]='Complete Daily Operations Daily Challenges!';
 		$WeeklyChallenge[2][1]='(x5)';
 		$WeeklyChallenge[2][2]='1000';
 		$WeeklyChallenge[3][0]='Level up!';
@@ -100,7 +109,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$LineWrap=false; // if true then wrap line if longer than $PageWidth
 
 	// Discord webhook url created per server. 
-	$WebHookURL = "https://discord.com/api/webhooks/912021809472368660/L2FLZ32BUjPkpDo_lxlSaEN5k4ScHJXdBnLP3prbUdnDMfb2UVM_rc57lbTQ1vGDQH9z";
+	$WebHookURL = "";
 
 	$DaysSinceEpoch = intdiv(time(),(24*60*60));
 	if ($DaysSinceEpoch & 1) {
@@ -172,7 +181,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			//$ChallengeLength=strlen( utf8_decode(' '.$aChallenge[$key][0].$aChallenge[$key][1].$aChallenge[$key][2]) );
 		//}
 		$ouput = "";
-		if ( ($aChallenge[13][0]) !== ' '){
+		if ( ($aChallenge[13][0]) !== ''){
 			if ( $Weekly ) {
 				$ouput .= "**Weekly Challenges**\n";
 				$ouput .= "```\n".str_pad('Challenge (Count)',$PageWidth-10)." S.C.O.R.E.\n";
