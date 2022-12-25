@@ -1,13 +1,29 @@
 |
 Above Rank 100: Gain XP|
+ANNIVERSARY: Claim the mystery item of the day|
+ANNIVERSARY: Complete Mystery Item Daily Challenges|
+ANNIVERSARY: Complete Mystery Item Weekly Challenges|
 Back to the Beginning - Kill Enemies|
-Build Anything in Workshops or C.A.M.P.s|
-Build Anything in a Shelter|
-Build Taxidermy Decor in your C.A.M.P.|
+Build a Container, Display, or Shelf in a Workshop or C.A.M.P. in Free Cam|
 Build a Floor or Wall Decoration in a Shelter|
+Build a Floor or Wall Decoration in a Shelter in Free Cam|
 Build a Floor or Wall Decoration in a Workshop or C.A.M.P.|
+Build a Floor or Wall Decoration in a Workshop or C.A.M.P. in Free Cam|
 Build a Floor or Wall in a Shelter|
-Build a Floor, Wall, or Roof in Workshops or C.A.M.P.s|
+Build a Floor or Wall in a Shelter in Free Cam|
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P.|
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam|
+Build a Generator, Light, or Power Connector in a Workshop or C.A.M.P. in Free Cam|
+Build a Heavy Cryo Turret in a Workshop or C.A.M.P|
+Build Anything in a Shelter|
+Build Anything in a Shelter in Free Cam|
+Build Anything in a Workshop or C.A.M.P.|
+Build Anything in a Workshop or C.A.M.P. in Free Cam|
+Build a Water Source in a Workshop or C.A.M.P. in Free Cam|
+Build Defense, Appliance or Crafting C.A.M.P items|
+Build light sources in your Workshop or C.A.M.P.|
+Build Taxidermy Decor in your C.A.M.P.|
+Build turrets or traps in your Workshop or C.A.M.P.|
 Build up a Workshop or C.A.M.P.|
 Buy an item from or Sell an item to another Player|
 CALL TO AXE-ION: Complete CALL TO AXE-ION Daily Challenges|🪓
@@ -19,28 +35,34 @@ CALL TO AXE-ION: Kill Super Mutants with the Redd-Upper|🪓
 CALL TO AXE-ION: Kill Trogs with the Redd-Upper|🪓
 Chew some Bubblegum|
 Claim a Workshop|
-Collect Caps|
-Collect Gold Bullion|
-Collect Legendary Scrip|
-Collect Purified Water|
-Collect Vertibird Fuel|
-Collect Wood|
+Collect 15 Ash Roses in the Rose Suit|❤️
+Collect 15 Fever Blossoms in the Rose Suit|❤️
 Collect a Bobblehead|
 Collect a Magazine|
 Collect an audio Holotape|
-Complete Daily Operations Daily Challenges!|
-Complete Daily Operations on a Public Team!|
-Complete Daily Operations!|
-Complete Expeditions Daily Challenges|🗺️
-Complete Shelters Daily Challenges!|
-Complete a "Grahm's Meat-Cook" Daily Challenge|
-Complete a "Photograph Creature" Daily Challenge|
-Complete a "While Intoxicated" Daily Challenge|
-Complete a Daily Operation on a Public Team!|
+Collect any flavor of Nuka-Cola|
+Collect Caps|
+Collect Deathclaw eggs|
+Collect Gold Bullion|
+Collect Legendary Modules|
+Collect Legendary Scrip|
+Collect Mirelurk eggs|
+Collect Mothman eggs|
+Collect or Scrap Coal|
+Collect Pre-war Food|
+Collect Purified Water|
+Collect Stimpaks or Chems|
+Collect Vertibird Fuel|
+Collect Wood|
+Complete 5 Daily Free Cam Challenges|
+Complete 5 of the 7 Spread the Love Daily Challenges|❤️
 Complete a Daily Operation!|
+Complete a Daily Operation on a Public Team!|
 Complete a Daily Quest|
 Complete a Gold Star Daily Challenge!|
-Complete a Quest|
+Complete a "Grahm's Meat-Cook" Daily Challenge|
+Complete an encounter at the Whitespring Refuge|
+Complete an Event|
 Complete an "Event in Region" Daily Challenge|
 Complete an Event in the Ash Heap Region|
 Complete an Event in the Cranberry Bog Region|
@@ -48,129 +70,188 @@ Complete an Event in the Forest Region|
 Complete an Event in the Mire Region|
 Complete an Event in the Savage Divide Region|
 Complete an Event in the Toxic Valley Region|
+Complete an Event while in a Group|
 Complete an Event while Wearing a Costume|
 Complete an Event while Well Fed|
-Complete an Event while in a Group|
-Complete an Event|
-Complete an encounter at the Whitespring Refuge|
+Complete a "Photograph Creature" Daily Challenge|
+Complete a Quest|
+Complete a "While Intoxicated" Daily Challenge|
+Complete Daily Operations!|
+Complete Daily Operations Daily Challenges!|
+Complete Daily Operations on a Public Team!|
+Complete Daily or Weekly Challenges while wearing Bunny Ears|
+Complete Events at Nuka-World On Tour|
+Complete Expeditions Daily Challenges|🗺️
+Complete Shelters Daily Challenges!|
+Complete the Event: "A Colossal Problem"|
+Complete the Event: "Encryptid"|
+Complete the Event: "Eviction Notice"|
+Complete the Event: "Fasnacht Day"|
+Complete the Event: "Fasnacht Day" while wearing a Fasnacht Mask|
+Complete the Event: "Grahm's Meat-Cook"|
+Complete the Event: "Invaders From Beyond"|
+Complete the Event: "Moonshine Jamboree"|
+Complete the Event: "Most Wanted"|
+Complete the Event: "Primal Cuts"|
+Complete the Event: "Project Paradise"|
+Complete the Event: "Radiation Rumble"|
+Complete the Event: "Riding Shotgun"|
+Complete the Event: "Scorched Earth"|
+Complete the Event: "Seismic Activity"|
+Complete the Event: "Spin The Wheel"|
+Complete the Event: "Test Your Metal"|
+Complete the Event: "The Mothman Equinox"|
+Complete the Event: "Tunnel Of Love"|
 Complete the "Eviction Notice" Daily Challenge|
 Complete the "Fasnacht" Daily Challenge|
 Complete the "Invaders From Beyond" Daily Challenge|
 Complete the "Moonshine Jamboree" Daily Challenge|
 Complete the "Test Your Metal" Daily Challenge|
 Complete the "The Mothman Equinox" Daily Challenge|
-Complete the Event: "A Colossal Problem"|
-Complete the Event: "Encryptid"|
-Complete the Event: "Eviction Notice"|
-Complete the Event: "Fasnacht Day"|
-Complete the Event: "Grahm's Meat-Cook"|
-Complete the Event: "Invaders From Beyond"|
-Complete the Event: "Moonshine Jamboree"|
-Complete the Event: "Primal Cuts"|
-Complete the Event: "Project Paradise"|
-Complete the Event: "Radiation Rumble"|
-Complete the Event: "Riding Shotgun"|
-Complete the Event: "Scorched Earth"|
-Complete the Event: "Test Your Metal"|
-Complete the Event: "The Mothman Equinox"|
-Consume a "Vintage" Alcoholic Beverage|
 Consume an Alcoholic Beverage|
+Consume an Alcoholic Beverage while on a Team|
+Consume an Alcoholic Beverage while on a Team and Wearing a Costume|
+Consume a Nukashine in a Teammate's C.A.M.P.|
+Consume a "Vintage" Alcoholic Beverage|
 Cook a Meal with Plants or Fungi|
 Cook a Meat-Based Meal|
-Craft Ammo at a Workbench|
+Craft 10 Fermentable Wine in the Rose Suit|❤️
 Craft a Grenade, Mine, or Thrown Weapon|
+Craft Ammo at a Workbench|
 Craft an Alcoholic Beverage|
+Craft or Scrap a Melee Weapon|
+Craft or Scrap a piece of Power Armor|
+Craft or Scrap a Ranged Weapon|
 Craft or Scrap Armor|
 Craft or Scrap Clothing, Armor or a Weapon|
-Craft or Scrap a Melee Weapon|
-Craft or Scrap a Ranged Weapon|
-Craft or Scrap a piece of Power Armor|
+Cripple Ghoul Legs|
+Cripple Human Heads|
+Cripple Protectron or Robobrain Arms|
+Cripple Spooky Scorched Legs|
+Cripple the head of a Deathclaw|
 Deal a Critical Hit to an Enemy|
+Deal a Critical Hit to an Enemy using Automatic Weapons|
+Deal Cryo Damage to enemies|
+Deal Fire Damage to enemies|
+Destroy a Fanatic Protectron|
+Destroy an Assaultron|
+Destroy a Protectron while intoxicated by Hard Lemonade|
+Destroy a Robot|
+Destroy a Robot with an Auto Axe|
 Destroy Assorted Robots|
 Destroy Robots with a Rifle|
-Destroy a Fanatic Protectron|
-Destroy a Protectron while intoxicated by Hard Lemonade|
-Destroy a Robot with an Auto Axe|
-Destroy a Robot|
-Destroy an Assaultron|
+Drink Nuka-Cherry|
 Drink Nuka-Cola|
-Eat Dog Food|
-Eat Pre-war Food|
+Drink Nuka-Cola Cranberry|
+Drink Nuka-Cola Dark|
+Drink Nuka-Cola Orange|
+Drink Nuka-Cola Quantum|
+Drink Nuka-Cola Wild|
+Drink Nuka-Grape|
+Drink Nuka-Twist|
 Eat a Cake, Pie, or Candy|
+Eat a Cobbler, which is not a Pie.|
 Eat a Cooked Meal|
+Eat a Cooked Meal in a Teammate's C.A.M.P.|
 Eat a Meat-based Meal|
 Eat a Plant-based Meal|
-Expeditions - From Ashes to Fire: Collect Fallen Prisoners' Collars|🗺️
-Expeditions - Union Dues: Collect Steel Ingots from The Pitt!|🗺️
+Eat Dog Food|
+Eat Mystery Candy|
+Eat Pre-war Food|
+Epic - Build a Floor or Wall Decoration in a Shelter|
+Epic - Build a Heavy machinegun turret in a Workshop or C.A.M.P.|
+Epic - Build Turrets or Traps in your Workshop or C.A.M.P. in Free Cam|
+Epic - Catch Diseases|
+Epic - Claim a Workshop|
+Epic - Collect a Bobblehead|
+Epic - Collect a Magazine|
+Epic - Collect Caps|
+Epic - Consume Radscorpion Meat|
+Epic - Craft a Grenade, Mine, or Thrown Weapon|
+Epic - Cripple arms of a Sentry Bot using an energy weapon|
+Epic - Destroy Robots with a Blunt Weapon|
+Epic - Drink Nuka-Cola|
+Epic - Hack Terminals|
+Epic - Kill a Mole Miner with Automatic Weapons|
+Epic - Kill Glowing Trogs|
+Epic - Kill Super Mutants with a Shotgun|
+Epic - Mod a Weapon|
+Epic - Pick Locks|
+Epic - Plant a Crop in a Workshop or C.A.M.P.|
+Epic - Rank up a Perk Card|
+Epic - Read Magazines|
+Epic - Scrap a Board Game|
+Epic - Scrap junk to produce Ballistic Fiber|
+Epic - Scrap Pre-War Money|
+Epic - Take a Camera Picture of a Mirelurk King while Well Rested|
+Epic - Take a Camera Picture of a Power Armored Blood Eagle|
+Epic - Take a Camera Picture of a Super Mutant Behemoth|
+Epic - Take a Picture of a Honey beast while intoxicated on Nuka-Shine|
+Epic - Take Camera Picture of a Hermit crab while affected by Calmex|
 Expeditions: Collect Stamps|🗺️
+Expeditions: Complete a mission in The Pitt|🗺️
+Expeditions: Complete any Mission!|🗺️
+Expeditions: Complete any mission in The Pitt!|🗺️
+Expeditions: Complete any mission in The Pitt while in a Group|🗺️
+Expeditions: Complete any mission while wearing a Responders outfit|🗺️
+Expeditions: Complete any mission while wearing Union Power Armor|🗺️
+Expeditions: Complete a Refuge Daily!|🗺️
 Expeditions: Complete A Refugee's Guide|🗺️
 Expeditions: Complete Code Blue|🗺️
 Expeditions: Complete From Ashes to Fire in The Pitt!|🗺️
 Expeditions: Complete Mutual Aid|🗺️
 Expeditions: Complete Recipe for Success|🗺️
 Expeditions: Complete Union Dues in The Pitt!|🗺️
-Expeditions: Complete a Refuge Daily!|🗺️
-Expeditions: Complete a Refuge Daily|🗺️
-Expeditions: Complete a mission in The Pitt|🗺️
-Expeditions: Complete any Mission!|🗺️
-Expeditions: Complete any mission in The Pitt while in a Group|🗺️
-Expeditions: Complete any mission in The Pitt!|🗺️
-Expeditions: Complete any mission while wearing Union Power Armor|🗺️
-Expeditions: Complete any mission while wearing a Responders outfit|🗺️
+Expeditions - From Ashes to Fire: Collect Fallen Prisoners' Collars|🗺️
+Expeditions - Union Dues: Collect Steel Ingots from The Pitt!|🗺️
 Ferment an Alcoholic Beverage|
 Gain XP|
 Gather Building Supplies|
 Gold Star: Complete a Daily Challenge|⭐
-HALLOWEEN: Build Spooky Candy Bowl and give out candy from your C.A.M.P.|🎃
-HALLOWEEN: Complete Give out Candy Daily Challenges|🎃
-HALLOWEEN: Complete Give out Candy Daily Challenge|🎃
-HALLOWEEN: Complete Give out Candy Weekly Challenge|🎃
-HALLOWEEN: Complete Trick or Treat Daily Challenges|🎃
-HALLOWEEN: Complete Trick or Treat Weekly Challenge|🎃
-HALLOWEEN: Kill Spooky Scorched (Repeatable)|🎃
-HALLOWEEN: Kill Spooky Scorched|🎃
-HALLOWEEN: Trick or Treat from other players' candy bowls|🎃
 Hack a Terminal|
-Harvest Corn, Razorgrain, or a Tato Plant|
+HALLOWEEN: Build Spooky Candy Bowl and give out candy from your C.A.M.P.|🎃
+HALLOWEEN: Complete Give out Candy Daily Challenge|🎃
+HALLOWEEN: Complete Give out Candy Daily Challenges|🎃
+HALLOWEEN: Complete Give out Candy Weekly Challenge|🎃
+HALLOWEEN: Complete Give Out Candy Weekly Challenges|🎃
+HALLOWEEN: Complete Trick or Treat Daily Challenges|🎃
+HALLOWEEN: Complete Trick or Treat Weekly Challenges|🎃
+HALLOWEEN: Kill Spooky Scorched|🎃
+HALLOWEEN: Kill Spooky Scorched (Repeatable)|🎃
+HALLOWEEN: Trick or Treat from other players' candy bowls|🎃
 Harvest a Wild Plant or Fungi|
+Harvest Corn, Razorgrain, or a Tato Plant|
+Hunt Rabbits|🐰
 Join a Group with another Player|
-Kill Animals with a Pipe Weapon|
-Kill Brahmin while wielding an Alien Blaster|
-Kill Cultists with a Bladed Weapon|
-Kill Enemies while using Boxing Gloves or Gauntlets|
-Kill Enemies while wielding a Sword|
-Kill Enemies with a Sword or Black Powder Weapon|
-Kill Feral Ghouls with a Shotgun|
-Kill Insects with an Energy Weapon|
-Kill Insects|
-Kill Legendary Enemies with Laser Weapons|
-Kill Legendary Enemies with Two-Handed Melee Weapons|
-Kill Liberators with the Commie Whacker|
-Kill Robots while wielding Laser, Plasma, or Energy Guns|
-Kill Super Mutants while wielding Two-Handed Melee Weapons|
-Kill Super Mutants with a Heavy Gun|
-Kill a Blood Eagle with a Blunt Weapon|
 Kill a Blood Eagle|
-Kill a Creature while Wearing a Costume|
-Kill a Creature while Well Fed|
+Kill a Blood Eagle with a Blunt Weapon|
+Kill a Creature|
 Kill a Creature while in a Group|
 Kill a Creature while intoxicated by Hard Lemonade|
 Kill a Creature while intoxicated by Lead Champagne|
 Kill a Creature while intoxicated by Mire Magic Moonshine|
-Kill a Creature|
+Kill a Creature while Wearing a Costume|
+Kill a Creature while Well Fed|
+Kill a Creature with an unarmed weapon while intoxicated on Nuka-Cola Dark|
 Kill a Cryptid|
+Kill a Cryptid with a Bow or Crossbow|
+Kill a Cryptid with a melee weapon|
+Kill a Cryptid with a Railway Rifle or Missile launcher|
+Kill a Cryptid with the Cold Shoulder|
 Kill a Cultist|
 Kill a Deathclaw|
+Kill a Fanatic|
 Kill a Fanatic Conqueror|
 Kill a Fanatic with an Auto Axe|
-Kill a Fanatic|
 Kill a Feral Ghoul|
 Kill a Festive Scorched|
+Kill a Festive Scorched while on a Team|
+Kill a Festive Scorched while on a Team and Wearing a Costume|
 Kill a Floater|
 Kill a Glowing Creature|
 Kill a Glowing Trog|
-Kill a Gulper while intoxicated by Mire Magic Moonshine|
 Kill a Gulper|
+Kill a Gulper while intoxicated by Mire Magic Moonshine|
 Kill a Honey Beast|
 Kill a Huge Creature|
 Kill a Legendary 3-Star Creature|
@@ -178,44 +259,60 @@ Kill a Legendary Creature|
 Kill a Legendary Enemy|
 Kill a Mirelurk|
 Kill a Mole Miner|
+Kill an enemy with an Auto Axe|
+Kill Animals with a Pipe Weapon|
+Kill a Radstag|
 Kill a Scorched|
 Kill a Sheepsquatch|
 Kill a Snallygaster|
 Kill a Spooky Scorched|
-Kill a Super Mutant while intoxicated by Lead Champagne|
 Kill a Super Mutant|
+Kill a Super Mutant while intoxicated by Lead Champagne|
 Kill a Treasure Hunter|
+Kill a Trog|
 Kill a Trog Fledgling|
 Kill a Trog Superior or Trog Devourer|
 Kill a Trog with an Auto Axe|
-Kill a Trog|
 Kill a Wendigo|
-Kill an enemy with an Auto Axe|
+Kill Brahmin while wielding an Alien Blaster|
+Kill Creatures with the Cold Shoulder|
+Kill Cryptids with the Cold Shoulder|
+Kill Cultists during The Mothman Equinox event|
+Kill Cultists during The Mothman Equinox event with the Cold Shoulder|
+Kill Cultists with a Bladed Weapon|
+Kill Cultists with a Shotgun|
+Kill Enemies while using Boxing Gloves or Gauntlets|
+Kill Enemies while wielding a Sword|
+Kill Enemies with a Sword or Black Powder Weapon|
+Kill Enemies with unarmed weapons while intoxicated on Nuka-Cola Dark|
+Kill Feral Ghouls with a Shotgun|
+Kill Insects|
+Kill Insects with an Energy Weapon|
+Kill Legendary Enemies with Laser Weapons|
+Kill Legendary Enemies with Two-Handed Melee Weapons|
+Kill Liberators with the Commie Whacker|
+Kill Radstags during The Mothman Equinox event|
+Kill Robots while wielding Laser, Plasma, or Energy Guns|
+Kill Robots with an Energy Weapon|
+Kill Super Mutants while wielding Two-Handed Melee Weapons|
+Kill Super Mutants with a Heavy Gun|
 Kill the Mothman|
 Level up!|
-Mod a Weapon|
-Mod a piece of Armor|
 Mod an Auto Axe|
+Mod a piece of Armor|
+Mod a Weapon|
+Nuka-Connoisseur - Drink Nuka-Cola Types|
 Pick a Lock|
-Plant a Crop in Workshops or C.A.M.P.s|
+Plant a Crop in a Workshop or C.A.M.P.|
+Plant a Crop in a Workshop or C.A.M.P. in Free Cam|
 Rank up a Perk Card|
-Repair Armor, Weapons, or Power Armor|
 Repair an Auto Axe|
+Repair Armor, Weapons, or Power Armor|
 Repeatable Under Rank 100: Complete a Public Event|🔁
 Repeatable Under Rank 100: Gain XP|🔁
-SPREAD THE LOVE: Kill Enemies with the Heart Wrencher|❤️
-SPREAD THE LOVE: Kill Mirelurks with the Heart Wrencher|❤️
-SPREAD THE LOVE: Kill Robots with the Heart Wrencher|❤️
-SPREAD THE LOVE: Kill Super Mutants with the Heart Wrencher|❤️
-STORM: Complete Daily Challenges|⛈️
-STORM: Complete an Event with the BoS Backpack in the Ash Heap|⛈️
-STORM: Complete an Event with the BoS Backpack in the Forest|⛈️
-STORM: Complete an Event with the BoS Backpack in the Savage Divide|⛈️
-STORM: Complete an Event with the BoS Backpack in the Toxic Valley|⛈️
-STORM: Take over a Workshop with the BoS Backpack|⛈️
-Scrap Headwear|
-Scrap Pre-War Money|
 Scrap a Board Game|
+Scrap Headwear|
+Scrap junk to produce 25 Ceramic in the Rose Suit|❤️
 Scrap junk to produce Acid|
 Scrap junk to produce Adhesive|
 Scrap junk to produce Aluminum|
@@ -232,8 +329,8 @@ Scrap junk to produce Copper|
 Scrap junk to produce Cork|
 Scrap junk to produce Crystal|
 Scrap junk to produce Fertilizer|
-Scrap junk to produce Fiber Optics|
 Scrap junk to produce Fiberglass|
+Scrap junk to produce Fiber Optics|
 Scrap junk to produce Gears|
 Scrap junk to produce Glass|
 Scrap junk to produce Gold|
@@ -247,30 +344,65 @@ Scrap junk to produce Silver|
 Scrap junk to produce Springs|
 Scrap junk to produce Steel|
 Scrap junk to produce Wood|
-TEST Repeatable Above 100: Gain XP|🔁
+Scrap Pre-War Money|
+Sell Glowing Fungus Soup|
+Sell Mirelurk Queen Steak|
+Sell Missile Launcher|
+Sell Mothman Egg Omelette|
+Sell Mutant Hound Chops|
+Sell Pumpkin Pie|
+Sell Ribeye Steak|
+Sell Scorchbeast Steak|
+Sell Wolf Ribs|
+Sell Yao Guai Ribs|
+SPREAD THE LOVE: Kill Enemies with the Heart Wrencher|❤️
+SPREAD THE LOVE: Kill Mirelurks with the Heart Wrencher|❤️
+SPREAD THE LOVE: Kill Robots with the Heart Wrencher|❤️
+SPREAD THE LOVE: Kill Super Mutants with the Heart Wrencher|❤️
+STORM: Complete an Event with the BoS Backpack in the Ash Heap|⛈️
+STORM: Complete an Event with the BoS Backpack in the Forest|⛈️
+STORM: Complete an Event with the BoS Backpack in the Savage Divide|⛈️
+STORM: Complete an Event with the BoS Backpack in the Toxic Valley|⛈️
+STORM: Complete Daily Challenges|⛈️
+STORM: Take over a Workshop with the BoS Backpack|⛈️
+St Patrick's Day: Kill Enemies with Green Weapons|
+St Patrick's Day: Take Photos of Green Creatures|
+Take a Camera Picture at Nuka-World On Tour|
+Take a Camera Picture in Camden Park|
+Take a Camera Picture of a Fanatic Conqueror|
+Take a Camera Picture of a Gulper|
+Take a Camera Picture of a Gulper while intoxicated by Mire Magic Moonshine|
+Take a Camera Picture of an Alien Drone|
+Take a Camera Picture of an Alien Enemy|
+Take a Camera Picture of an Alien Invader|
+Take a Camera Picture of a Radscorpion|
+Take a Camera Picture of a Snallygaster|
+Take a Camera Picture of a Super Mutant|
+Take a Camera Picture of a Super Mutant while intoxicated by Lead Champagne|
+Take a Camera Picture of a Trog Superior or Trog Devourer in The Pitt!|
 Take a Camera Picture of Captain Alpha|
 Take a Camera Picture of Captain Omega|
 Take a Camera Picture of General Zeta|
 Take a Camera Picture of Lieutenant Kappa|
 Take a Camera Picture of Mr. Prizebot|
-Take a Camera Picture of a Fanatic Conqueror|
-Take a Camera Picture of a Gulper while intoxicated by Mire Magic Moonshine|
-Take a Camera Picture of a Gulper|
-Take a Camera Picture of a Super Mutant while intoxicated by Lead Champagne|
-Take a Camera Picture of a Super Mutant|
-Take a Camera Picture of a Trog Superior or Trog Devourer in The Pitt!|
-Take a Camera Picture of an Alien Drone|
-Take a Camera Picture of an Alien Enemy|
-Take a Camera Picture of an Alien Invader|
+Take a Camera Picture of the Ultracite Abomination|
+Take a Picture of a Grafton Monster|
+Take a Picture of a Sheepsquatch|
+Take a Picture of a Wendigo|
 Take a Picture of Harvestable Plants|
 Take a Picture of Scorched Statues|
+TEST Repeatable Above 100: Gain XP|🔁
 Under Rank 25: Gain XP|
 Under Rank 50: Gain XP|
 Under Rank 75: Gain XP|
 Use Photomode in a Teammate's C.A.M.P.|
 Use Photomode in your own C.A.M.P.|
-Use Photomode to Take a Photo in The Pitt!|
 Use Photomode to Take a Photo|
+Use Photomode to Take a Photo at Nuka-World On Tour|
+Use Photomode to Take a Photo in Camden Park|
+Use Photomode to Take a Photo in The Pitt!|
 Use Photomode while in a Group|
 Visit another Player's Shelter|
+Visit another Player's Shelter and Drink an Alcoholic Beverage|❤️
+Visit Tunnel of Love while on a Team in the Rose Suit|❤️
 Visit your Shelter|

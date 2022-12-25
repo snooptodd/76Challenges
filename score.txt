@@ -6,13 +6,12 @@
 3000
 100
 200
+Legendary Module (X)
 Lunchbox (x)
 Repair Kit (x)
 Perk Card Pack (x)
-Brotherhood of Steel Pipboy Skin
 Stimpack (x)
 Perfect Bubblegum (x)
-Brotherhood of Steel Icon
-Brotherhood of Steel Flag Set
 Carry Weight Booster (x)
-50 
+Treasury Note (x)
+50

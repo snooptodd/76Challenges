@@ -48,12 +48,12 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$Score= file($rootPath.'score.txt',FILE_IGNORE_NEW_LINES);
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
-	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center');
+	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Capitol Building','Garrahan Mining Headquarters','Morgantown High School');
 	$MinervaLocation=array('Away','Foundation','The Crater','Fort Atlas' );
-	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners' );
+	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens');
 	$MinervaListPrint = ("\n");
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
-	$EnemyMutations2 = array('', 'Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations');
+	$EnemyMutations2 = array('', 'Reflective Skin','Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations');
 	$FO1st = array('','1ˢᵗ ');
 
 	foreach ( file($rootPath.'challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
@@ -66,7 +66,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	}
 	if ( ! isset( $_POST['Submit'] ) ) {
 		$DailyChallenge[0][0]='Above Rank 100: Gain XP';
-		$DailyChallenge[0][1]='(x1000)';
+		$DailyChallenge[0][1]='(x2500)';
 		$DailyChallenge[0][2]='50';
 		$DailyChallenge[1][0]='Level up!';
 		$DailyChallenge[1][1]='(x1)';
@@ -87,23 +87,26 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		$WeeklyChallenge[1][1]='(x1)';
 		$WeeklyChallenge[1][2]='1500';
 		$WeeklyChallenge[2][0]='Complete Daily Operations Daily Challenges!';
-		$WeeklyChallenge[2][1]='(x5)';
+		$WeeklyChallenge[2][1]='(x3)';
 		$WeeklyChallenge[2][2]='1000';
 		$WeeklyChallenge[3][0]='Level up!';
 		$WeeklyChallenge[3][1]='(x3)';
 		$WeeklyChallenge[3][2]='1500.';
+		$WeeklyChallenge[4][0]='Complete an Event';
+		$WeeklyChallenge[4][1]='(x10)';
+		$WeeklyChallenge[4][2]='1000.';
 	}
 
 	$MinervaList = 0;
 	$now = time();
-	//$now = strtotime('20220409T12:01:00');
+	//$now = strtotime('20221105T12:01:00');
 
 	sort($Challenges);
 	sort($Location);
 	sort($EnemyFaction);
 	sort($EnemyMutations1);
 	sort($EnemyMutations2);
-	sort($MinervaEnventory);
+	//sort($MinervaEnventory);
 
 	$PageWidth = 0; 
 	$LineWrap=false; // if true then wrap line if longer than $PageWidth
@@ -143,8 +146,6 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 
 	// takes as input the name of the select box, its current value and an array for the options
 	function select_box($BoxName, $CurrnetValue, $SelectOptions) {
-		//echo isset($_REQUEST[$BoxName]);
-		//echo $_REQUEST[$BoxName];
 		echo '<td>';
 		//echo '<td><label for="'.$BoxName.'">'.$BoxName.'. </label>';
 		echo '<select name="'.$BoxName.'" id="'.$BoxName.'">';
@@ -446,7 +447,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		//$tmpDailyChallenge=array_reverse($DailyChallenge);
 		//$DailyChallenge = $tmpDailyChallenge;
 		sort($WeeklyChallenge);
-		usort($WeeklyChallenge,'cmp');
+		//usort($WeeklyChallenge,'cmp');
 		
 		if ( $Submit == "Edit Score" ) {
 			$File=$rootPath.'score.txt';
@@ -485,7 +486,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 						array_push($MinervaListPrint, $MEline[1]." (".$MEline[2].")" );
 					}
 				}
-				sort($MinervaListPrint);
+				//sort($MinervaListPrint);
 			
 				$textareaValue .=  "**Minerva's Location: $MinervaLocationResult**\n";
 				$textareaValue .=  "```\nName (Gold Price)";
@@ -514,7 +515,10 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			} else {
 				echo "Character count: (".mb_strlen($textareaValue).")<br>";
 				echo "Minerva List: ";
-				print_r($MinervaList);
+				if (!empty($MinervaList)) {
+					//print_r($MinervaList);
+					echo $MinervaList[0].", ".$MinervaList[1].", ".$MinervaList[2];
+				}
 				echo "<p>";
 			}
 			echo '<textarea id="content" name="content" cols="120" rows="40" autofocus>';
