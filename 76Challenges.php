@@ -156,10 +156,17 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	// Comparison function 
 	// This  only sorts the empty values to the bottom
 	function cmp($a, $b) {
-		$ac = utf8_decode($a[0]);
-		$bc = utf8_decode($b[0]);
-		if ($ac and $bc) return 0; // no sort if not empty
-		return ($ac > $bc) ? -1 : 1; // else sort
+		$ac = ($a[0]);
+		$bc = ($b[0]);
+		//if ($ac and $bc) return 0; // no sort if not empty
+		//return ($ac > $bc) ? -1 : 1; // else sort
+		if ($a[3] == "1ˢᵗ ") {
+			return -1;
+		}
+		if ($b[3] == "1ˢᵗ ") {
+			return 1;
+		}
+		return strcmp($ac,$bc);
 	}
 
 	function edit_file($File)	{
@@ -400,9 +407,9 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			echo '</tr>';
 		}
 		?>
-	<tr><th> </th><th><input type="submit" name="Submit" value="Edit Challenges"></th>
+	<!-- <tr><th> </th><th><input type="submit" name="Submit" value="Edit Challenges"></th>
 	<th><input type="submit" name="Submit" value="Edit Times"></th>
-	<th><input type="submit" name="Submit" value="Edit Score"></th></tr>
+	<th><input type="submit" name="Submit" value="Edit Score"></th></tr> -->
 </table>	    
 <!-- 	<h1>Minerva's Location</h1>
             <label for="MinervaLocation1"> Minerva's Location. </label>
@@ -443,10 +450,11 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	  // Check if the form is submitted
 	if ( isset( $_POST['Submit'] ) ) {
 		
-		sort($DailyChallenge);
+		//sort($DailyChallenge);
+		usort($DailyChallenge,'cmp');
 		//$tmpDailyChallenge=array_reverse($DailyChallenge);
 		//$DailyChallenge = $tmpDailyChallenge;
-		sort($WeeklyChallenge);
+		usort($WeeklyChallenge,'cmp');
 		//usort($WeeklyChallenge,'cmp');
 		
 		if ( $Submit == "Edit Score" ) {
@@ -517,7 +525,10 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 				echo "Minerva List: ";
 				if (!empty($MinervaList)) {
 					//print_r($MinervaList);
-					echo $MinervaList[0].", ".$MinervaList[1].", ".$MinervaList[2];
+					//echo $MinervaList[0].", ".$MinervaList[1].", ".$MinervaList[2];
+					foreach($MinervaList as $key => $value) {
+						echo $value." " ;
+					}
 				}
 				echo "<p>";
 			}
