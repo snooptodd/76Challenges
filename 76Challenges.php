@@ -65,21 +65,22 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		$WeeklyChallenge[$key][2]='1000';
 	}
 	if ( ! isset( $_POST['Submit'] ) ) {
-		$DailyChallenge[0][0]='Above Rank 100: Gain XP';
-		$DailyChallenge[0][1]='(x2500)';
-		$DailyChallenge[0][2]='50';
-		$DailyChallenge[1][0]='Level up!';
-		$DailyChallenge[1][1]='(x1)';
-		$DailyChallenge[1][2]='500';
-		$DailyChallenge[2][0]='Complete a Daily Operation!';
+		$DailyChallenge[0][3]='1ˢᵗ ';
+		$DailyChallenge[1][0]='Above Rank 100: Gain XP';
+		$DailyChallenge[1][1]='(x2500)';
+		$DailyChallenge[1][2]='50';
+		$DailyChallenge[2][0]='Level up!';
 		$DailyChallenge[2][1]='(x1)';
-		$DailyChallenge[2][2]='250';
-		$DailyChallenge[3][0]='Complete an Event';
+		$DailyChallenge[2][2]='500';
+		$DailyChallenge[3][0]='Complete a Daily Operation!';
 		$DailyChallenge[3][1]='(x1)';
 		$DailyChallenge[3][2]='250';
-		$DailyChallenge[4][0]='Gold Star: Complete a Daily Challenge';
-		$DailyChallenge[4][1]='(x5)';
-		$DailyChallenge[4][2]='500';
+		$DailyChallenge[4][0]='Complete an Event';
+		$DailyChallenge[4][1]='(x1)';
+		$DailyChallenge[4][2]='250';
+		$DailyChallenge[5][0]='Gold Star: Complete a Daily Challenge';
+		$DailyChallenge[5][1]='(x5)';
+		$DailyChallenge[5][2]='500';
 		$WeeklyChallenge[0][0]='Repeatable Under Rank 100: Gain XP';
 		$WeeklyChallenge[0][1]='(x10000)';
 		$WeeklyChallenge[0][2]='100';
@@ -154,18 +155,15 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	}
 	
 	// Comparison function 
-	// This  only sorts the empty values to the bottom
+	// sorts FO1st to top , "" to bottom and rest by alpha
 	function cmp($a, $b) {
 		$ac = ($a[0]);
 		$bc = ($b[0]);
-		//if ($ac and $bc) return 0; // no sort if not empty
-		//return ($ac > $bc) ? -1 : 1; // else sort
-		if ($a[3] == "1ˢᵗ ") {
-			return -1;
-		}
-		if ($b[3] == "1ˢᵗ ") {
-			return 1;
-		}
+		if ($a[3] == "1ˢᵗ ") {return -1;}
+		if ($b[3] == "1ˢᵗ ") {return 1;}
+		//sort empty to bottom
+		if ($ac  == "") {return 1;}
+		if ($bc  == "") {return -1;}
 		return strcmp($ac,$bc);
 	}
 
@@ -189,7 +187,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			//$ChallengeLength=strlen( utf8_decode(' '.$aChallenge[$key][0].$aChallenge[$key][1].$aChallenge[$key][2]) );
 		//}
 		$ouput = "";
-		if ( ($aChallenge[13][0]) !== ''){
+		if ( ($aChallenge[6][0]) !== ''){
 			if ( $Weekly ) {
 				$ouput .= "**Weekly Challenges**\n";
 				$ouput .= "```\n".str_pad('Challenge (Count)',$PageWidth-10)." S.C.O.R.E.\n";
