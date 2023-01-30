@@ -37,6 +37,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	// 1|Farmable Dirt Tiles|375
 
 
+	require_once '/home/todd/src/76Challenges/vendor/autoload.php';
 	error_reporting(E_ALL|E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 	ini_set('display_errors', 'On');
 
@@ -56,6 +57,28 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$EnemyMutations2 = array('', 'Reflective Skin','Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations');
 	$FO1st = array('','1ˢᵗ ');
 
+	
+// read fallout76 calendar for current events
+use ICal\ICal;
+
+try {
+    $ical = new ICal( array(
+        'defaultSpan'                 => 2,     // Default value
+        'defaultTimeZone'             => 'UTC',
+        'defaultWeekStart'            => 'MO',  // Default value
+        'disableCharacterReplacement' => false, // Default value
+        'filterDaysAfter'             => null,  // Default value
+        'filterDaysBefore'            => null,  // Default value
+        'httpUserAgent'               => null,  // Default value
+        'skipRecurrence'              => false, // Default value
+    ));
+	// this is ran after the form is submitted so we dont load the calendar for each page load
+    //$ical->initFile($rootPath.'ZPAxXoBAnacByPGk-2023-01-29.ics');
+    // $ical->initUrl('https://nextcloud.ktntg.com/remote.php/dav/calendars/todd/minerva/?export', $username = 'todd', $password = 'N@bozqT6HVC6', $userAgent = null);
+} catch (\Exception $e) {
+    die($e);
+}	
+	
 	foreach ( file($rootPath.'challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
 		$Challenges[$key]=explode("|",$value);
 	}
@@ -337,6 +360,24 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		curl_close( $ch );
 
 	}
+
+	function CurrentEvents($ical) {
+		// gets events for for current day
+		$output = "**Current Events**\n```\n";
+		$events = $ical->eventsFromInterval('1 day');
+		foreach ($events as $event) {
+			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
+			$output .= $event->summary . ', Ends on (' . $dtend->format('d-M-Y') . ')'."\n";
+			// $now = ceil((($ical->iCalDateToUnixTimestamp($event->dtend))-time())/60/60/24);
+			// if ($now>1) {
+			// 	$output .= $event->summary . ', Ends in ' . $now . ' days.'."\n";
+			// } elseif ($now=1) {
+			// 	$output .= $event->summary . ', Ends in ' . $now . ' day.'."\n";
+			// }
+		}
+		$output .="```\n";
+		return $output;
+	}
 	
 	  // Check if the form is submitted
 	if ( isset( $_POST['Submit'] ) ) {
@@ -468,7 +509,10 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			
 			// display the results
 			//echo " \n";
+			//$ical->initFile($rootPath.'ZPAxXoBAnacByPGk-2023-01-29.ics');
+			$ical->initUrl('https://nextcloud.ktntg.com/remote.php/dav/calendars/todd/minerva/?export', $username = 'todd', $password = 'N@bozqT6HVC6', $userAgent = null);
 			$textareaValue = "Fallout 76 Daily Update\n";
+			$textareaValue .= CurrentEvents($ical);
 			$textareaValue .= formatprint($Challenges,$WeeklyChallenge,'w',$PageWidth,$LineWrap,True); 
 			$textareaValue .= formatprint($Challenges,$DailyChallenge,'d',$PageWidth,$LineWrap,False);
 
