@@ -90,26 +90,26 @@ try {
 	}
 	if ( ! isset( $_POST['Submit'] ) ) {
 		$DailyChallenge[0][3]='1ˢᵗ ';
-		$DailyChallenge[1][0]='Above Rank 100: Gain XP';
-		$DailyChallenge[1][1]='(x2500)';
-		$DailyChallenge[1][2]='50';
-		$DailyChallenge[2][0]='Level up!';
+		//$DailyChallenge[1][0]='Above Rank 100: Gain XP';
+		//$DailyChallenge[1][1]='(x2500)';
+		//$DailyChallenge[1][2]='50';
+		//$DailyChallenge[2][0]='Level up!';
+		//$DailyChallenge[2][1]='(x1)';
+		//$DailyChallenge[2][2]='500';
+		$DailyChallenge[2][0]='Complete a Daily Operation!';
 		$DailyChallenge[2][1]='(x1)';
-		$DailyChallenge[2][2]='500';
-		$DailyChallenge[3][0]='Complete a Daily Operation!';
+		$DailyChallenge[2][2]='250';
+		$DailyChallenge[3][0]='Complete an Event';
 		$DailyChallenge[3][1]='(x1)';
 		$DailyChallenge[3][2]='250';
-		$DailyChallenge[4][0]='Complete an Event';
-		$DailyChallenge[4][1]='(x1)';
-		$DailyChallenge[4][2]='250';
-		$DailyChallenge[5][0]='Gold Star: Complete a Daily Challenge';
-		$DailyChallenge[5][1]='(x5)';
-		$DailyChallenge[5][2]='500';
+		$DailyChallenge[1][0]='Gold Star: Complete a Daily Challenge';
+		$DailyChallenge[1][1]='(x6)';
+		$DailyChallenge[1][2]='1000';
 		$WeeklyChallenge[0][0]='Repeatable Under Rank 100: Gain XP';
 		$WeeklyChallenge[0][1]='(x10000)';
 		$WeeklyChallenge[0][2]='100';
 		$WeeklyChallenge[1][0]='Complete a Gold Star Daily Challenge!';
-		$WeeklyChallenge[1][1]='(x1)';
+		$WeeklyChallenge[1][1]='(x3)';
 		$WeeklyChallenge[1][2]='1500';
 		$WeeklyChallenge[2][0]='Complete Daily Operations Daily Challenges!';
 		$WeeklyChallenge[2][1]='(x3)';
@@ -185,6 +185,8 @@ try {
 		$bc = ($b[0]);
 		if ($a[3] == "1ˢᵗ ") {return -1;}
 		if ($b[3] == "1ˢᵗ ") {return 1;}
+		if ($a[3] == "⭐ ") {return -1;}
+        if ($b[3] == "⭐ ") {return 1;}
 		//sort empty to bottom
 		if ($ac  == "") {return 1;}
 		if ($bc  == "") {return -1;}
@@ -368,11 +370,16 @@ try {
 		$events = $ical->eventsFromInterval('1 day');
 		foreach ($events as $event) {
 			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
+			$dtstart = $ical->iCalDateToDateTime($event->dtstart_array[3]);
 			$now = date('d-M-Y');
-			$check = $dtend->format('d-M-Y');
-			if ( strcmp($now,$check)!=0 ) {
-				$output .= $event->summary . ', Ends on (' . $check . ')'."\n";
+			$checkend = $dtend->format('d-M-Y');
+			$checkstart = $dtstart->format('d-M-Y');
+			if ( strcmp($now,$checkend)!=0 ) {
+				$output .= $event->summary . ', Ends on ' . $checkend . ''."\n";
 			}
+			if ( strcmp($checkstart,$checkend)==0 ) {
+                                $output .= $event->summary . ''."\n";
+                        }
 			// $now = ceil((($ical->iCalDateToUnixTimestamp($event->dtend))-time())/60/60/24);
 			// if ($now>1) {
 			// 	$output .= $event->summary . ', Ends in ' . $now . ' days.'."\n";
