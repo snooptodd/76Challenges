@@ -90,26 +90,26 @@ try {
 	}
 	if ( ! isset( $_POST['Submit'] ) ) {
 		$DailyChallenge[0][3]='1ˢᵗ ';
-		//$DailyChallenge[1][0]='Above Rank 100: Gain XP';
-		//$DailyChallenge[1][1]='(x2500)';
-		//$DailyChallenge[1][2]='50';
-		//$DailyChallenge[2][0]='Level up!';
-		//$DailyChallenge[2][1]='(x1)';
-		//$DailyChallenge[2][2]='500';
-		$DailyChallenge[2][0]='Complete a Daily Operation!';
-		$DailyChallenge[2][1]='(x1)';
-		$DailyChallenge[2][2]='250';
-		$DailyChallenge[3][0]='Complete an Event';
-		$DailyChallenge[3][1]='(x1)';
-		$DailyChallenge[3][2]='250';
 		$DailyChallenge[1][0]='Gold Star: Complete a Daily Challenge';
 		$DailyChallenge[1][1]='(x6)';
 		$DailyChallenge[1][2]='1000';
+		// $DailyChallenge[2][0]='Level up!';
+		// $DailyChallenge[2][1]='(x1)';
+		// $DailyChallenge[2][2]='500';
+		// $DailyChallenge[3][0]='Complete a Daily Operation!';
+		// $DailyChallenge[3][1]='(x1)';
+		// $DailyChallenge[3][2]='250';
+		// $DailyChallenge[4][0]='Complete an Event';
+		// $DailyChallenge[4][1]='(x1)';
+		// $DailyChallenge[4][2]='250';
+		// $DailyChallenge[5][0]='Gold Star: Complete a Daily Challenge';
+		// $DailyChallenge[5][1]='(x5)';
+		// $DailyChallenge[5][2]='500';
 		$WeeklyChallenge[0][0]='Repeatable Under Rank 100: Gain XP';
 		$WeeklyChallenge[0][1]='(x10000)';
 		$WeeklyChallenge[0][2]='100';
 		$WeeklyChallenge[1][0]='Complete a Gold Star Daily Challenge!';
-		$WeeklyChallenge[1][1]='(x3)';
+		$WeeklyChallenge[1][1]='(x1)';
 		$WeeklyChallenge[1][2]='1500';
 		$WeeklyChallenge[2][0]='Complete Daily Operations Daily Challenges!';
 		$WeeklyChallenge[2][1]='(x3)';
@@ -138,14 +138,14 @@ try {
 
 	// Discord webhook url created per server. 
 	$WebHookURL = "";
-
+	//  patch 42 had the same mutation1 as the previous day. so this needed changed.
 	$DaysSinceEpoch = intdiv(time(),(24*60*60));
 	if ($DaysSinceEpoch & 1) {
 		// ODD Day 
-		$EnemyMutations1 = array('Piercing Gaze','Savage Strike');
+		$EnemyMutations1 = array('Savage Strike','Piercing Gaze');
 	} else {
 		// Even Day
-		$EnemyMutations1 = array('Savage Strike','Piercing Gaze');
+		$EnemyMutations1 = array('Piercing Gaze','Savage Strike');
 	}
 
 	// takes as input an array that is used to fill in the options for a select box
@@ -186,7 +186,7 @@ try {
 		if ($a[3] == "1ˢᵗ ") {return -1;}
 		if ($b[3] == "1ˢᵗ ") {return 1;}
 		if ($a[3] == "⭐ ") {return -1;}
-        if ($b[3] == "⭐ ") {return 1;}
+		if ($b[3] == "⭐ ") {return 1;}
 		//sort empty to bottom
 		if ($ac  == "") {return 1;}
 		if ($bc  == "") {return -1;}
@@ -239,11 +239,11 @@ try {
 					// [TODO] check if $aChallenge[$key][0] in $Challenges is an array if so then add its 2nd element. 
 					// it might be better to make all $Challenges be an array and just add whatever value to the string.
 					// the below will probably work but $Challenges needs passed to the function.
-					foreach( $Challenges as $key2 => $value2) {
-						if ($aChallenge[$key][0] == $value2[0]) {
-							$ouput .=$aChallenge[$key][3].$value2[1].$aChallenge[$key][0].' '.$aChallenge[$key][1].' '.$aChallenge[$key][2]."\n";
-						}
-					}
+					// foreach( $Challenges as $key2 => $value2) {
+					// 	if ($aChallenge[$key][0] == $value2[0]) {
+					 		$ouput .=$aChallenge[$key][3].$aChallenge[$key][0].' '.$aChallenge[$key][1].' '.$aChallenge[$key][2]."\n";
+					// 	}
+					// }
        	        	//$ouput .= $aChallenge[$key][3].' '.$aChallenge[$key][0].' '.$aChallenge[$key][1].' '.$aChallenge[$key][2]."\n";
 				}
 			}
@@ -370,16 +370,11 @@ try {
 		$events = $ical->eventsFromInterval('1 day');
 		foreach ($events as $event) {
 			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
-			$dtstart = $ical->iCalDateToDateTime($event->dtstart_array[3]);
 			$now = date('d-M-Y');
-			$checkend = $dtend->format('d-M-Y');
-			$checkstart = $dtstart->format('d-M-Y');
-			if ( strcmp($now,$checkend)!=0 ) {
-				$output .= $event->summary . ', Ends on ' . $checkend . ''."\n";
+			$check = $dtend->format('d-M-Y');
+			if ( strcmp($now,$check)!=0 ) {
+				$output .= $event->summary . ', Ends on (' . $check . ')'."\n";
 			}
-			if ( strcmp($checkstart,$checkend)==0 ) {
-                                $output .= $event->summary . ''."\n";
-                        }
 			// $now = ceil((($ical->iCalDateToUnixTimestamp($event->dtend))-time())/60/60/24);
 			// if ($now>1) {
 			// 	$output .= $event->summary . ', Ends in ' . $now . ' days.'."\n";
@@ -391,6 +386,27 @@ try {
 		return $output;
 	}
 	
+	// read form submission and return array to feed formatprint function
+	function ReadForm($Challenges,$aChallenge,$prefix){
+		foreach ($aChallenge as $key => $value) {
+			// put the results into the *Challenge array
+			$tmp=$prefix.$key;
+			$aChallenge[$key][0] = $_REQUEST[$tmp];
+			$aChallenge[$key][1] = $_REQUEST[$tmp.'times'];
+			$aChallenge[$key][2] = $_REQUEST[$tmp.'score'];
+			if ($_REQUEST[$tmp.'1st'] == '1ˢᵗ ') {
+				$aChallenge[$key][3] = $_REQUEST[$tmp.'1st'];
+			} else {
+				foreach( $Challenges as $key2 => $value2) {
+					if ($aChallenge[$key][0] == $value2[0]) {
+						$aChallenge[$key][3] = $value2[1];
+					}
+				}
+			}
+		}
+		return $aChallenge;
+	}
+
 	  // Check if the form is submitted
 	if ( isset( $_POST['Submit'] ) ) {
 
@@ -405,22 +421,30 @@ try {
 		$EnemyMutations2Result = $_REQUEST['EnemyMutations2'];
 		//$MinervaLocationResult = $_REQUEST['MinervaLocation1'];
 		$MinervaLocationResult = "Away";
-		//read_form($WeeklyChallenge,'w');
-		//read_form($DailyChallenge,'d');
-		foreach ($WeeklyChallenge as $key => $value) {
-			// put the results into the *Challenge array
-			$WeeklyChallenge[$key][0] = $_REQUEST['w'.$key];
-			$WeeklyChallenge[$key][1] = $_REQUEST['w'.$key.'times'];
-			$WeeklyChallenge[$key][2] = $_REQUEST['w'.$key.'score'];
-			$WeeklyChallenge[$key][3] = $_REQUEST['w'.$key.'1st'];
-		}
-		foreach ($DailyChallenge as $key => $value) {
-			// put the results into the *Challenge array
-			$DailyChallenge[$key][0] = $_REQUEST['d'.$key];
-			$DailyChallenge[$key][1] = $_REQUEST['d'.$key.'times'];
-			$DailyChallenge[$key][2] = $_REQUEST['d'.$key.'score'];
-			$DailyChallenge[$key][3] = $_REQUEST['d'.$key.'1st'];
-		}
+		$WeeklyChallenge=ReadForm($Challenges,$WeeklyChallenge,'w');
+		$DailyChallenge=ReadForm($Challenges,$DailyChallenge,'d');
+		// foreach ($WeeklyChallenge as $key => $value) {
+		// 	// put the results into the *Challenge array
+		// 	$WeeklyChallenge[$key][0] = $_REQUEST['w'.$key];
+		// 	$WeeklyChallenge[$key][1] = $_REQUEST['w'.$key.'times'];
+		// 	$WeeklyChallenge[$key][2] = $_REQUEST['w'.$key.'score'];
+		// 	if ($_REQUEST['w'.$key.'1st'] == '1ˢᵗ ') {
+		// 		$WeeklyChallenge[$key][3] = $_REQUEST[$prefix.$key.'1st'];
+		// 	} else {
+		// 		foreach( $Challenges as $key2 => $value2) {
+		// 			if ($WeeklyChallenge[$key][0] == $value2[0]) {
+		// 				$WeeklyChallenge[$key][3] = $value2[1];
+		// 			}
+		// 		}
+		// 	}
+		// }
+		// foreach ($DailyChallenge as $key => $value) {
+		// 	// put the results into the *Challenge array
+		// 	$DailyChallenge[$key][0] = $_REQUEST['d'.$key];
+		// 	$DailyChallenge[$key][1] = $_REQUEST['d'.$key.'times'];
+		// 	$DailyChallenge[$key][2] = $_REQUEST['d'.$key.'score'];
+		// 	$DailyChallenge[$key][3] = $_REQUEST['d'.$key.'1st'];
+		// }
 		//sort($DailyChallenge);
 		//usort($DailyChallenge,'cmp');
 		// sort($WeeklyChallenge);
