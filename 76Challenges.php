@@ -39,7 +39,7 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 
 	require_once '/home/todd/src/76Challenges/vendor/autoload.php';
 	error_reporting(E_ALL|E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-	ini_set('display_errors', 'On');
+//	ini_set('display_errors', 'On');
 	date_default_timezone_set("America/New_York");
 
 	$rootPath='/home/todd/src/76Challenges/';
@@ -50,13 +50,15 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$Score= file($rootPath.'score.txt',FILE_IGNORE_NEW_LINES);
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
-	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Capitol Building','Garrahan Mining Headquarters','Morgantown High School');
+	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School');
 	$MinervaLocation=array('Away','Foundation','The Crater','Fort Atlas' );
 	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens');
 	$MinervaListPrint = ("\n");
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
-	$EnemyMutations2 = array('', 'Reflective Skin','Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations');
+	$EnemyMutations2 = array('', 'Reflective Skin','Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger cloud');
 	$FO1st = array('','1ˢᵗ ');
+	$icalURL="https://calendar.google.com/calendar/ical/677a43e0ffb5d922130f03876fe8c0bea6cb2fa558a7f50574cbbaa75564c74e%40group.calendar.google.com/public/basic.ics";
+	#$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
 
 	
 // read fallout76 calendar for current events
@@ -75,7 +77,7 @@ try {
     ));
 	// this is ran after the form is submitted so we dont load the calendar for each page load
     //$ical->initFile($rootPath.'ZPAxXoBAnacByPGk-2023-01-29.ics');
-    // $ical->initUrl('https://nextcloud.ktntg.com/remote.php/dav/calendars/todd/minerva/?export', $username = '', $password = '', $userAgent = null);
+
 } catch (\Exception $e) {
     die($e);
 }	
@@ -105,21 +107,21 @@ try {
 		// $DailyChallenge[5][0]='Gold Star: Complete a Daily Challenge';
 		// $DailyChallenge[5][1]='(x5)';
 		// $DailyChallenge[5][2]='500';
-		$WeeklyChallenge[0][0]='Repeatable Under Rank 100: Gain XP';
-		$WeeklyChallenge[0][1]='(x10000)';
-		$WeeklyChallenge[0][2]='100';
-		$WeeklyChallenge[1][0]='Complete a Gold Star Daily Challenge!';
-		$WeeklyChallenge[1][1]='(x1)';
-		$WeeklyChallenge[1][2]='1500';
-		$WeeklyChallenge[2][0]='Complete Daily Operations Daily Challenges!';
-		$WeeklyChallenge[2][1]='(x3)';
-		$WeeklyChallenge[2][2]='1000';
-		$WeeklyChallenge[3][0]='Level up!';
-		$WeeklyChallenge[3][1]='(x3)';
-		$WeeklyChallenge[3][2]='1500.';
-		$WeeklyChallenge[4][0]='Complete an Event';
-		$WeeklyChallenge[4][1]='(x10)';
-		$WeeklyChallenge[4][2]='1000.';
+		//$WeeklyChallenge[0][0]='Repeatable Under Rank 100: Gain XP';
+		//$WeeklyChallenge[0][1]='(x10000)';
+		//$WeeklyChallenge[0][2]='100';
+		$WeeklyChallenge[0][0]='Complete a Gold Star Daily Challenge!';
+		$WeeklyChallenge[0][1]='(x3)';
+		$WeeklyChallenge[0][2]='1500';
+		//$WeeklyChallenge[2][0]='Complete Daily Operations Daily Challenges!';
+		//$WeeklyChallenge[2][1]='(x3)';
+		//$WeeklyChallenge[2][2]='1000';
+		//$WeeklyChallenge[3][0]='Level up!';
+		//$WeeklyChallenge[3][1]='(x3)';
+		//$WeeklyChallenge[3][2]='1500.';
+		//$WeeklyChallenge[4][0]='Complete an Event';
+		//$WeeklyChallenge[4][1]='(x10)';
+		//$WeeklyChallenge[4][2]='1000.';
 	}
 
 	$MinervaList = 0;
@@ -185,8 +187,8 @@ try {
 		$bc = ($b[0]);
 		if ($a[3] == "1ˢᵗ ") {return -1;}
 		if ($b[3] == "1ˢᵗ ") {return 1;}
-		if ($a[3] == "⭐ ") {return -1;}
-		if ($b[3] == "⭐ ") {return 1;}
+		if ($a[3] == "⭐") {return -1;}
+		if ($b[3] == "⭐") {return 1;}
 		//sort empty to bottom
 		if ($ac  == "") {return 1;}
 		if ($bc  == "") {return -1;}
@@ -546,7 +548,7 @@ try {
 			// display the results
 			//echo " \n";
 			//$ical->initFile($rootPath.'ZPAxXoBAnacByPGk-2023-01-29.ics');
-			$ical->initUrl('https://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export', $username = '', $password = '', $userAgent = null);
+			$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
 			$textareaValue = "Fallout 76 Daily Update\n";
 			$textareaValue .= CurrentEvents($ical);
 			$textareaValue .= formatprint($Challenges,$WeeklyChallenge,'w',$PageWidth,$LineWrap,True); 
