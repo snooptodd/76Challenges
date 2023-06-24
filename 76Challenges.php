@@ -42,7 +42,8 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 //	ini_set('display_errors', 'On');
 	date_default_timezone_set("America/New_York");
 
-	$rootPath='/home/todd/src/76Challenges/';
+	$rootPath='/home/todd/public_html/76Challenges/';
+	include '/home/todd/src/DevVariables.php';
 	$MinervaEnventory = file($rootPath.'MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
 	$aMLocation = file($rootPath.'MinervaLocation.txt',FILE_IGNORE_NEW_LINES);
 	$Challenges = array('');
@@ -107,9 +108,9 @@ try {
 		// $DailyChallenge[5][0]='Gold Star: Complete a Daily Challenge';
 		// $DailyChallenge[5][1]='(x5)';
 		// $DailyChallenge[5][2]='500';
-		//$WeeklyChallenge[0][0]='Repeatable Under Rank 100: Gain XP';
-		//$WeeklyChallenge[0][1]='(x10000)';
-		//$WeeklyChallenge[0][2]='100';
+		$WeeklyChallenge[1][0]='Repeatable Under Rank 100: Gain XP';
+		$WeeklyChallenge[1][1]='(x10000)';
+		$WeeklyChallenge[1][2]='100';
 		$WeeklyChallenge[0][0]='Complete a Gold Star Daily Challenge!';
 		$WeeklyChallenge[0][1]='(x3)';
 		$WeeklyChallenge[0][2]='1500';
@@ -128,7 +129,7 @@ try {
 	$now = time();
 	//$now = strtotime('20221105T12:01:00');
 
-	sort($Challenges);
+	//sort($Challenges);
 	sort($Location);
 	sort($EnemyFaction);
 	sort($EnemyMutations1);
