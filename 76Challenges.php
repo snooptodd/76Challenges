@@ -240,10 +240,10 @@ try {
 		if ( ($aChallenge[3][0]) !== ''){
 			if ( $select_prefix == 'w' ) {
 				$ouput .= "**Weekly Challenges**\n";
-				$ouput .= "```\n".str_pad('Challenge (Count)',$PageWidth-10)." S.C.O.R.E.\n";
+				$ouput .= "```\nChallenge (Count) S.C.O.R.E.\n";
 			} else {
 				$ouput .= "**Daily Challenges**\n";
-				$ouput .= "```\n".str_pad('Challenge (Count)',$PageWidth-10)." S.C.O.R.E.\n";
+				$ouput .= "```\nChallenge (Count) S.C.O.R.E.\n";
 			}
 			foreach ($aChallenge as $key => $value) {
 
