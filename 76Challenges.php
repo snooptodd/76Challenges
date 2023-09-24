@@ -300,6 +300,50 @@ try {
 		return $aChallenge;
 	}
 
+	// minervas fucntion
+	function Minerva(){
+
+		$MinervaEnventory = file('MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
+		$aMLocation = file('MinervaLocation.txt',FILE_IGNORE_NEW_LINES);
+		$MinervaLocationResult='Away';
+		$MinervaNextLocation='';
+		$now = time();
+		$output = '';
+
+		//$now = strtotime('20230925T12:10:00');
+
+		foreach($aMLocation as $MLvalue) {
+			$MLLine = explode(',',$MLvalue);
+			if (strtotime($MLLine[0]) <= $now && $now <= strtotime($MLLine[1]) ) {
+				$MinervaLocationResult = $MLLine[2];
+				$MinervaList = explode('|',$MLLine[3]);
+			}
+			if ($MinervaNextLocation == '') {
+				if (strtotime($MLLine[0]) >= $now  ) {
+					$MinervaNextLocation = 'She will next be at '. $MLLine[2] .' on '. date("l jS \of F Y",strtotime($MLLine[0])) ;
+				}
+			}
+		}
+		if ($MinervaLocationResult=='Away') {
+			$output =  "**Minerva's Location: $MinervaLocationResult**\n$MinervaNextLocation\n";
+			//echo "```\n$MinervaLocationResult\n```\n";
+		} else {
+			$output =  "**Minerva's Location: $MinervaLocationResult**\n";
+			$output .=  "```\nName (Gold Price)\n";
+			$MinervaListPrint = array('');
+			foreach ($MinervaEnventory as $MEkey => $MEvalue) {
+				$MEline = explode('|',$MEvalue);
+				//if ( in_array($MEline[0], $MLList)) {
+				if ( in_array($MEline[0], $MinervaList)) {
+					$output .= $MEline[1]." (".$MEline[2].")\n";
+					//array_push($MinervaListPrint, $MEline[1]." (".$MEline[2].")" );
+				}
+			}
+			$output .=  "```\n";
+		}
+		return $output;
+	}
+
 	  // Check if the form is submitted
 	if ( isset( $_POST['Submit'] ) ) {
 
@@ -395,36 +439,7 @@ try {
 		$textareaValue .= CurrentEvents($ical);
 		$textareaValue .= formatprint($WeeklyChallenges,$WeeklyChallenge,'w'); 
 		$textareaValue .= formatprint($DailyChallenges,$DailyChallenge,'d');
-
-		foreach($aMLocation as $MLvalue) {
-			$MLLine = explode(',',$MLvalue);
-			if (strtotime($MLLine[0]) <= $now && $now <= strtotime($MLLine[1]) ) {
-				$MinervaLocationResult = $MLLine[2];
-				$MinervaList = explode('|',$MLLine[3]);
-			}
-		}
-		if ($MinervaLocationResult=='Away') {
-			$textareaValue .=  "**Minerva's Location: $MinervaLocationResult**\n\n";
-			//echo "```\n$MinervaLocationResult\n```\n";
-		} else {
-			$MinervaListPrint = array('');
-			foreach ($MinervaEnventory as $MEkey => $MEvalue) {
-				$MEline = explode('|',$MEvalue);
-				//if ( in_array($MEline[0], $MLList)) {
-				if ( in_array($MEline[0], $MinervaList)) {
-					//$MinervaListPrint[$MEkey] = $MEline[1]." ".$MEline[2]."\n";
-					array_push($MinervaListPrint, $MEline[1]." (".$MEline[2].")" );
-				}
-			}
-			//sort($MinervaListPrint);
-		
-			$textareaValue .=  "**Minerva's Location: $MinervaLocationResult**\n";
-			$textareaValue .=  "```\nName (Gold Price)";
-			foreach ($MinervaListPrint as $key => $value) {
-				$textareaValue .=  "$value\n";
-			}
-			$textareaValue .=  "```\n";
-		}
+		$textareaValue .= Minerva();
 
 		if (!empty($LocationResult)) {
 			$DOPSMode="Uplink";
@@ -444,14 +459,14 @@ try {
 			echo "CAUTION:Character count exceeds Discord maximum post length (".mb_strlen($textareaValue).") > 2000 <P>";
 		} else {
 			echo "Character count: (".mb_strlen($textareaValue).")<br>";
-			echo "Minerva List: ";
-			if (!empty($MinervaList)) {
-				//print_r($MinervaList);
-				//echo $MinervaList[0].", ".$MinervaList[1].", ".$MinervaList[2];
-				foreach($MinervaList as $key => $value) {
-					echo $value." " ;
-				}
-			}
+			// echo "Minerva List: ";
+			// if (!empty($MinervaList)) {
+			// 	//print_r($MinervaList);
+			// 	//echo $MinervaList[0].", ".$MinervaList[1].", ".$MinervaList[2];
+			// 	foreach($MinervaList as $key => $value) {
+			// 		echo $value." " ;
+			// 	}
+			// }
 			echo "<p>";
 		}
 		echo '<textarea id="content" name="content" cols="120" rows="40" autofocus>';
