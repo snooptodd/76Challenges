@@ -325,7 +325,7 @@ try {
 			}
 		}
 		if ($MinervaLocationResult=='Away') {
-			$output =  "**Minerva's Location: $MinervaLocationResult**\n$MinervaNextLocation\n";
+			$output =  "**Minerva's Location: $MinervaLocationResult**\n```\n$MinervaNextLocation\n```\n";
 			//echo "```\n$MinervaLocationResult\n```\n";
 		} else {
 			$output =  "**Minerva's Location: $MinervaLocationResult**\n";
