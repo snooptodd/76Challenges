@@ -30,31 +30,24 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 //	ini_set('display_errors', 'On');
 	date_default_timezone_set("America/New_York");
 
-	//$MinervaEnventory = file('MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
-	//$aMLocation = file('MinervaLocation.txt',FILE_IGNORE_NEW_LINES);
 	$DailyChallenges = array('');
 	$WeeklyChallenges = array('');
-	$Times= file('times.txt',FILE_IGNORE_NEW_LINES);
+	//$Times= file('times.txt',FILE_IGNORE_NEW_LINES);
 	$Score= file('score.txt',FILE_IGNORE_NEW_LINES);
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School');
-	//$MinervaLocation=array('Away','Foundation','The Crater','Fort Atlas' );
 	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens');
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
 	$EnemyMutations2 = array('', 'Reflective Skin','Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud');
 	$FO1st = array('','1ˢᵗ ');
 
-
-	
 	use ICal\ICal;
 
-
-	
-	foreach ( file('daily_challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
+	foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
 		$DailyChallenges[$key]=explode("|",$value);
 	}
-	foreach ( file('weekly_challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
+	foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
 		$WeeklyChallenges[$key]=explode("|",$value);
 	}
 	

@@ -1,0 +1,7 @@
+/.vscode/*
+/vendor/*
+dmp*
+*challenges*.txt
+!challenges.txt
+publish.sh
+*.ics
