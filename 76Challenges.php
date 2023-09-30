@@ -13,13 +13,6 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	<form Method ="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	<?php
 
-	// format of MinervaLocation.csv: Start,end,location,list
-	// example
-	// 7/12/2021,7/13/2021,Foundation,1
-	// 7/19/2021,7/20/2021,The Crater,2
-	// 7/26/2021,7/27/2021,Fort Atlas,3
-	// 8/5/2021,8/8/2021,Foundation,1|2|3
-
 	// format of times.txt,score.txt and is text file with one entry per line.
 
 	// format of challenges.txt is: challenge (count)|emogi
@@ -30,11 +23,6 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	// Buy an item from or Sell an item to another Player (x3)|
 	// CALL TO AXE-ION: Complete CALL TO AXE-ION Daily Challenges (x1)|🪓
 
-	// format of MinervaEnventory.txt is list|item|cost 
-	// example
-	// 1|Cattle Prod|188
-	// 1|Chemist's Backpack Mod|263
-	// 1|Farmable Dirt Tiles|375
 
 
 	require_once '/home/todd/src/76Challenges/vendor/autoload.php';
@@ -42,8 +30,8 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 //	ini_set('display_errors', 'On');
 	date_default_timezone_set("America/New_York");
 
-	$MinervaEnventory = file('MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
-	$aMLocation = file('MinervaLocation.txt',FILE_IGNORE_NEW_LINES);
+	//$MinervaEnventory = file('MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
+	//$aMLocation = file('MinervaLocation.txt',FILE_IGNORE_NEW_LINES);
 	$DailyChallenges = array('');
 	$WeeklyChallenges = array('');
 	$Times= file('times.txt',FILE_IGNORE_NEW_LINES);
@@ -51,36 +39,17 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School');
-	$MinervaLocation=array('Away','Foundation','The Crater','Fort Atlas' );
+	//$MinervaLocation=array('Away','Foundation','The Crater','Fort Atlas' );
 	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens');
-	$MinervaListPrint = ("\n");
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
 	$EnemyMutations2 = array('', 'Reflective Skin','Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud');
 	$FO1st = array('','1ˢᵗ ');
-	$icalURL="https://calendar.google.com/calendar/ical/677a43e0ffb5d922130f03876fe8c0bea6cb2fa558a7f50574cbbaa75564c74e%40group.calendar.google.com/public/basic.ics";
-	#$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
+
 
 	
-// read fallout76 calendar for current events
-use ICal\ICal;
+	use ICal\ICal;
 
-try {
-    $ical = new ICal( array(
-        'defaultSpan'                 => 2,     // Default value
-        'defaultTimeZone'             => 'UTC',
-        'defaultWeekStart'            => 'MO',  // Default value
-        'disableCharacterReplacement' => false, // Default value
-        'filterDaysAfter'             => null,  // Default value
-        'filterDaysBefore'            => null,  // Default value
-        'httpUserAgent'               => null,  // Default value
-        'skipRecurrence'              => false, // Default value
-    ));
-	// this is ran after the form is submitted so we dont load the calendar for each page load
-    //$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
 
-} catch (\Exception $e) {
-    die($e);
-}	
 	
 	foreach ( file('daily_challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
 		$DailyChallenges[$key]=explode("|",$value);
@@ -130,7 +99,6 @@ try {
 		//$WeeklyChallenge[4][2]='1000.';
 	}
 
-	$MinervaList = 0;
 	$now = time();
 	//$now = strtotime('20221105T12:01:00');
 
@@ -231,11 +199,12 @@ try {
 		return strcmp($ac,$bc);
 	}
 
+
+	function formatprint($ScoreMult,$aChallenge,$select_prefix) {
 	// takes as input Challenge array DailyChallenge,WeeklyChallenge
 	// takes as input prefix for select boxes d,w
 	// only prints if first item has a value
-	function formatprint($Challenges,$aChallenge,$select_prefix) {
-
+		//$ScoreMult = 1;
 		$ouput = "";
 		if ( ($aChallenge[3][0]) !== ''){
 			if ( $select_prefix == 'w' ) {
@@ -246,9 +215,14 @@ try {
 				$ouput .= "```\nChallenge (Count) S.C.O.R.E.\n";
 			}
 			foreach ($aChallenge as $key => $value) {
-
 				if ( $aChallenge[$key][0] ) {
-					$ouput .=$aChallenge[$key][3].$aChallenge[$key][0].' '.$aChallenge[$key][2]."\n";
+					if (is_numeric($aChallenge[$key][2]) ) {
+						$ouput .=$aChallenge[$key][3].$aChallenge[$key][0].' '.$ScoreMult * $aChallenge[$key][2]."\n";
+					} else {
+						$ouput .=$aChallenge[$key][3].$aChallenge[$key][0].' '.$aChallenge[$key][2]."\n";
+					}
+					
+					
 				}
 			}
 	    	$ouput .= "```\n";
@@ -256,8 +230,29 @@ try {
 		return $ouput;
 	}
 
-	function CurrentEvents($ical) {
+	function CurrentEvents() {
+		// read fallout76 calendar for current events
+
 		// gets events for for current day
+		try {
+			$ical = new ICal( array(
+				'defaultSpan'                 => 2,     // Default value
+				'defaultTimeZone'             => 'UTC',
+				'defaultWeekStart'            => 'MO',  // Default value
+				'disableCharacterReplacement' => false, // Default value
+				'filterDaysAfter'             => null,  // Default value
+				'filterDaysBefore'            => null,  // Default value
+				'httpUserAgent'               => null,  // Default value
+				'skipRecurrence'              => false, // Default value
+			));
+		} catch (\Exception $e) {
+			die($e);
+		}
+		
+		//$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
+		$icalURL="https://calendar.google.com/calendar/ical/677a43e0ffb5d922130f03876fe8c0bea6cb2fa558a7f50574cbbaa75564c74e%40group.calendar.google.com/public/basic.ics";
+		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
+		$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
 		$output = "**Current Events**\n```\n";
 		$events = $ical->eventsFromInterval('1 day');
 		foreach ($events as $event) {
@@ -300,8 +295,23 @@ try {
 		return $aChallenge;
 	}
 
-	// minervas fucntion
+
+
 	function Minerva(){
+		// minervas fucntion
+
+		// format of MinervaLocation.txt: Start,end,location,list
+		// example
+		// 7/12/2021,7/13/2021,Foundation,1
+		// 7/19/2021,7/20/2021,The Crater,2
+		// 7/26/2021,7/27/2021,Fort Atlas,3
+		// 8/5/2021,8/8/2021,Foundation,1|2|3
+		
+		// format of MinervaEnventory.txt is list|item|cost 
+		// example
+		// 1|Cattle Prod|188
+		// 1|Chemist's Backpack Mod|263
+		// 1|Farmable Dirt Tiles|375
 
 		$MinervaEnventory = file('MinervaEnventory.txt',FILE_IGNORE_NEW_LINES);
 		$aMLocation = file('MinervaLocation.txt',FILE_IGNORE_NEW_LINES);
@@ -326,17 +336,13 @@ try {
 		}
 		if ($MinervaLocationResult=='Away') {
 			$output =  "**Minerva's Location: $MinervaLocationResult**\n```\n$MinervaNextLocation\n```\n";
-			//echo "```\n$MinervaLocationResult\n```\n";
 		} else {
 			$output =  "**Minerva's Location: $MinervaLocationResult**\n";
 			$output .=  "```\nName (Gold Price)\n";
-			$MinervaListPrint = array('');
 			foreach ($MinervaEnventory as $MEkey => $MEvalue) {
 				$MEline = explode('|',$MEvalue);
-				//if ( in_array($MEline[0], $MLList)) {
 				if ( in_array($MEline[0], $MinervaList)) {
 					$output .= $MEline[1]." (".$MEline[2].")\n";
-					//array_push($MinervaListPrint, $MEline[1]." (".$MEline[2].")" );
 				}
 			}
 			$output .=  "```\n";
@@ -354,7 +360,7 @@ try {
 		$EnemyMutations1Result =  htmlspecialchars($_REQUEST['EnemyMutations1']);
 		$EnemyMutations2Result =  htmlspecialchars($_REQUEST['EnemyMutations2']);
 		//$MinervaLocationResult = $_REQUEST['MinervaLocation1'];
-		$MinervaLocationResult = "Away";
+		//$MinervaLocationResult = "Away";
 		$WeeklyChallenge=ReadForm($WeeklyChallenges,$WeeklyChallenge,'w');
 		$DailyChallenge=ReadForm($DailyChallenges,$DailyChallenge,'d');
 	}
@@ -424,21 +430,18 @@ try {
 	  // Check if the form is submitted
 	if ( isset( $_POST['Submit'] ) ) {
 		
-		//sort($DailyChallenge);
 		usort($DailyChallenge,'cmp');
-		//$tmpDailyChallenge=array_reverse($DailyChallenge);
-		//$DailyChallenge = $tmpDailyChallenge;
 		usort($WeeklyChallenge,'cmp');
-		//usort($WeeklyChallenge,'cmp');
 
-		// display the results
-		//echo " \n";
-		//$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
-		$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
+		
 		$textareaValue = "Fallout 76 Daily Update\n";
-		$textareaValue .= CurrentEvents($ical);
-		$textareaValue .= formatprint($WeeklyChallenges,$WeeklyChallenge,'w'); 
-		$textareaValue .= formatprint($DailyChallenges,$DailyChallenge,'d');
+		$textareaValue .= CurrentEvents();
+		$ScoreMult=1;
+		if (str_contains($textareaValue,'Double Score')) {
+			$ScoreMult = 2;
+		}
+		$textareaValue .= formatprint(1,$WeeklyChallenge,'w'); 
+		$textareaValue .= formatprint($ScoreMult,$DailyChallenge,'d');
 		$textareaValue .= Minerva();
 
 		if (!empty($LocationResult)) {
@@ -459,14 +462,6 @@ try {
 			echo "CAUTION:Character count exceeds Discord maximum post length (".mb_strlen($textareaValue).") > 2000 <P>";
 		} else {
 			echo "Character count: (".mb_strlen($textareaValue).")<br>";
-			// echo "Minerva List: ";
-			// if (!empty($MinervaList)) {
-			// 	//print_r($MinervaList);
-			// 	//echo $MinervaList[0].", ".$MinervaList[1].", ".$MinervaList[2];
-			// 	foreach($MinervaList as $key => $value) {
-			// 		echo $value." " ;
-			// 	}
-			// }
 			echo "<p>";
 		}
 		echo '<textarea id="content" name="content" cols="120" rows="40" autofocus>';
