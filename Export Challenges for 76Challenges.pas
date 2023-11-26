@@ -35,40 +35,43 @@ begin
     Exit;
   
   if Pos('_Halloween_', EditorID(e)) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🎃' )
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🎃|' + GetElementEditValues(e, 'MNAM') )
 
   else if Pos('CALL TO AXE-ION:', GetElementEditValues(e,'FULL')) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🪓' )
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🪓|' + GetElementEditValues(e, 'MNAM') )
 
   else if Pos('_Love_', EditorID(e)) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '❤️' )
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '❤️|' + GetElementEditValues(e, 'MNAM') )
   
   else if Pos('_Valentines_', EditorID(e)) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '❤️' )
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '❤️|' + GetElementEditValues(e, 'MNAM') )
 
-else if Pos('_ST_Patrick_', EditorID(e)) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '☘️' )
+  else if Pos('_ST_Patrick_', EditorID(e)) <> 0 then
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '☘️|' + GetElementEditValues(e, 'MNAM') )
 
-else if Pos('_Easter', EditorID(e)) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🐰' )
+  else if Pos('_Easter', EditorID(e)) <> 0 then
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🐰|' + GetElementEditValues(e, 'MNAM') )
 
   else if Pos('STORM:', GetElementEditValues(e, 'FULL')) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '⛈️' )
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '⛈️|' + GetElementEditValues(e, 'MNAM') )
 
   else if Pos('_RECURRING_', EditorID(e)) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🔁' )
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🔁|' + GetElementEditValues(e, 'MNAM') )
 
   else if Pos('Expeditions', GetElementEditValues(e,'FULL')) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🗺️' )
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' + '🗺️|' + GetElementEditValues(e, 'MNAM') )
 
   else if Pos('Gold Star:', GetElementEditValues(e,'FULL')) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|'  + '⭐' )
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|'  + '⭐|' + GetElementEditValues(e, 'MNAM') )
 
   else if Pos('Summer Camp:', GetElementEditValues(e,'FULL')) <> 0 then
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|'  + '🏕️' )
-
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|'  + '🏕️|' + GetElementEditValues(e, 'MNAM') )
+  
+  else if Pos('Birthday:', GetElementEditValues(e,'FULL')) <> 0 then
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|'  + '🎂|'  + GetElementEditValues(e, 'MNAM'))
+  
   else
-    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')|' );
+    slExport.Add(GetElementEditValues(e, 'FULL') + ' (x' + GetElementEditValues(e, 'TNAM') + ')||' + GetElementEditValues(e, 'MNAM'));
 
 end;
 

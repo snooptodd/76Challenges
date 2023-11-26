@@ -4,35 +4,72 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>76 Challenges</title>
-
+	<style>
+	.warning {
+	background-color: yellow;
+	text-align: center;
+	}
+	table, th, td {
+		border: 1px solid black;
+		border-radius: 4px;
+		border-collapse: collapse;
+	}
+	textarea {
+		width: 50%;
+		height: 50rem;
+		/* padding: 12px 20px; */
+		box-sizing: border-box;
+		border: 1px solid black;
+		border-radius: 4px;
+		/* background-color: #f8f8f8; */
+		/*resize: none;*/
+	}
+	select {
+		width: fit-content;
+		/*padding: 16px 20px;*/
+		border: 1px solid black;
+		border-radius: 4px;
+		/* background-color: #f1f1f1; */
+	}
+	input {
+		width: fit-content;
+		padding: 0px;
+		border: none;
+		/* border-radius: 4px; */
+		/* background-color: #f1f1f1; */
+	}
+	div {
+		max-height: 40000px
+		max-width: 100%
+	}
+</style>
 </head>
-<!-- <style>
-table, th, td {border:1px solid black;border-collapse: collapse;}
-</style> -->
+
 <body>
 	<form Method ="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	<?php
 
 	// format of times.txt,score.txt and is text file with one entry per line.
 
-	// format of challenges.txt is: challenge (count)|emogi
+	// format of challenges.txt is: challenge (count)|emogi|reward
 	// 
 	// example
 	// 
-	// Above Rank 100: Gain XP (x10000)|
-	// Buy an item from or Sell an item to another Player (x3)|
-	// CALL TO AXE-ION: Complete CALL TO AXE-ION Daily Challenges (x1)|🪓
+	// Above Rank 100: Gain XP (x10000)||
+	// Buy an item from or Sell an item to another Player (x3)||
+	// CALL TO AXE-ION: Complete CALL TO AXE-ION Daily Challenges (x1)|🪓|Lunchbox
 
 
 
 	require_once '/home/todd/src/76Challenges/vendor/autoload.php';
 	error_reporting(E_ALL|E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-//	ini_set('display_errors', 'On');
+	//ini_set('display_errors', 'On');
 	date_default_timezone_set("America/New_York");
 
-	$DailyChallenges = array('');
-	$WeeklyChallenges = array('');
+	// $DailyChallenges = array('');
+	// $WeeklyChallenges = array('');
 	//$Times= file('times.txt',FILE_IGNORE_NEW_LINES);
+	$Challenges = array('');
 	$Score= file('score.txt',FILE_IGNORE_NEW_LINES);
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
@@ -44,11 +81,14 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 
 	use ICal\ICal;
 
+	// foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
+	// 	$DailyChallenges[$key]=explode("|",$value);
+	// }
+	// foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
+	// 	$WeeklyChallenges[$key]=explode("|",$value);
+	// }
 	foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
-		$DailyChallenges[$key]=explode("|",$value);
-	}
-	foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
-		$WeeklyChallenges[$key]=explode("|",$value);
+		$Challenges[$key]=explode("|",$value);
 	}
 	
 	if ( ! isset( $_POST['Submit'] ) ) {
@@ -95,16 +135,18 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 	$now = time();
 	//$now = strtotime('20221105T12:01:00');
 
-	sort($DailyChallenges);
-	sort($WeeklyChallenges);
+	// sort($DailyChallenges);
+	// sort($WeeklyChallenges);
+	sort($Challenges);
 	sort($Location);
 	sort($EnemyFaction);
 	sort($EnemyMutations1);
 	sort($EnemyMutations2);
 	//sort($MinervaEnventory);
 
-	datalist("DailyChallenges",$DailyChallenges);
-	datalist("WeeklyChallenges",$WeeklyChallenges);
+	// datalist("DailyChallenges",$DailyChallenges);
+	// datalist("WeeklyChallenges",$WeeklyChallenges);
+	datalist("Challenges",$Challenges);
 	datalist("1st",$FO1st);
 	//datalist("times",$Times);
 	datalist("score",$Score);
@@ -254,6 +296,9 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			$check = $dtend->format('d-M-Y');
 			if ( strcmp($now,$check)!=0 ) {
 				$output .= $event->summary . ', Ends on (' . $check . ')'."\n";
+				if (is_string($event->description)) {
+					$output .= strip_tags($event->description) . "\n";
+				}
 			}
 			// $now = ceil((($ical->iCalDateToUnixTimestamp($event->dtend))-time())/60/60/24);
 			// if ($now>1) {
@@ -280,7 +325,9 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 				foreach( $Challenges as $key2 => $value2) {
 					if ($aChallenge[$key][0] == $value2[0]) {
 						$aChallenge[$key][3] = $value2[1];
-						//$aChallenge[$key][1] = $value2[2];
+						if (strlen($value2[2]>1)) {
+							$aChallenge[$key][2] = $value2[2];
+						}
 					}
 				}
 			}
@@ -358,16 +405,15 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		$DailyChallenge=ReadForm($DailyChallenges,$DailyChallenge,'d');
 	}
 	?>
-</center>
 
-	<table  style=" right">
+	<table>
 		<caption><h1>Weekly Challenges</h1></caption>
 		<tr><th>1st</th><th>Challenge</th><th>SCORE</th></tr>	
 			<?php
 			foreach ($WeeklyChallenge as $key => $value) {
 				echo '<tr>';
 				text_input('1st','w'.$key.'1st', $value[3],'5');
-				text_input('WeeklyChallenges','w'.$key, $value[0],'70');
+				text_input('Challenges','w'.$key, $value[0],'80');
 				//text_input('times','w'.$key.'times', $value[1],'10');
 				text_input('score','w'.$key.'score', $value[2],'10');
 				echo '</tr>';
@@ -375,23 +421,22 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 			?>
 	</table>
 
+	<table>
+		<caption><h1>Daily Challenges</h1></caption>
+		<tr><th>1st</th><th>Challenge</th><th>SCORE</th></tr>	
+			<?php
+			foreach ($DailyChallenge as $key => $value) {
+				echo '<tr>';
+				text_input('1st','d'.$key.'1st', $value[3],5);
+				text_input('Challenges','d'.$key, $value[0],80);
+				//text_input('times','d'.$key.'times', $value[1],10);
+				text_input('score','d'.$key.'score', $value[2],10);
+				echo '</tr>';
+			}
+			?>
+	</table>
 
-<table  style=" left;">
-	<caption><h1>Daily Challenges</h1></caption>
-	<tr><th>1st</th><th>Challenge</th><th>SCORE</th></tr>	
-		<?php
-		foreach ($DailyChallenge as $key => $value) {
-			echo '<tr>';
-			text_input('1st','d'.$key.'1st', $value[3],5);
-			text_input('DailyChallenges','d'.$key, $value[0],70);
-			//text_input('times','d'.$key.'times', $value[1],10);
-			text_input('score','d'.$key.'score', $value[2],10);
-			echo '</tr>';
-		}
-		?>
-</table>	    
-
-	<h1><img src='bos.png' style='vertical-align:middle'>Daily Operation</h1>
+	<h1><img src='bos.png'> Daily Operation</h1>
 
 	    <label for="Location">Choose a location. </label>
 	    <select name="Location" id="Location">
@@ -417,8 +462,6 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		
 
 <?php
-	error_reporting(E_ALL|E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
-	ini_set('display_errors', 'On');
 
 	  // Check if the form is submitted
 	if ( isset( $_POST['Submit'] ) ) {
@@ -452,14 +495,14 @@ table, th, td {border:1px solid black;border-collapse: collapse;}
 		
 		
 		if (mb_strlen($textareaValue) > 2000 ) {
-			echo "CAUTION:Character count exceeds Discord maximum post length (".mb_strlen($textareaValue).") > 2000 <P>";
+			echo '<p> <span class="warning">CAUTION:Character count exceeds Discord maximum post length (' .mb_strlen($textareaValue).") > 2000.</span></p>";
 		} else {
-			echo "Character count: (".mb_strlen($textareaValue).")<br>";
-			echo "<p>";
+			echo "<p>Character count: (".mb_strlen($textareaValue).")</p>";
+			//echo "<p>";
 		}
-		echo '<textarea id="content" name="content" cols="120" rows="40" autofocus>';
+		echo '<div><textarea id="content" name="content" autofocus>';
 		echo $textareaValue;
-		echo '</textarea>';	
+		echo '</textarea></div>';	
 		
 	} 
 ?>
