@@ -9,10 +9,15 @@
 	background-color: yellow;
 	text-align: center;
 	}
-	table, th, td {
-		border: 1px solid black;
-		border-radius: 4px;
+	table {
 		border-collapse: collapse;
+	}
+	th {
+		border: none;
+		/* background_color: lightgrey; */
+	}
+	td {
+		border: 1px solid black;
 	}
 	textarea {
 		width: 50rem;
@@ -39,8 +44,8 @@
 		/* background-color: #f1f1f1; */
 	}
 	div {
-		max-height: 40000px
-		max-width: 100%
+		max-height: 40000px;
+		max-width: 100%;
 	}
 </style>
 </head>
