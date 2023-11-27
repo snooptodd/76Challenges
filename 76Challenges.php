@@ -15,7 +15,7 @@
 		border-collapse: collapse;
 	}
 	textarea {
-		width: 50%;
+		width: 50rem;
 		height: 50rem;
 		/* padding: 12px 20px; */
 		box-sizing: border-box;
@@ -31,7 +31,7 @@
 		border-radius: 4px;
 		/* background-color: #f1f1f1; */
 	}
-	input {
+	input.text {
 		width: fit-content;
 		padding: 0px;
 		border: none;
@@ -66,11 +66,7 @@
 	//ini_set('display_errors', 'On');
 	date_default_timezone_set("America/New_York");
 
-	// $DailyChallenges = array('');
-	// $WeeklyChallenges = array('');
-	//$Times= file('times.txt',FILE_IGNORE_NEW_LINES);
 	$Challenges = array('');
-	$Score= file('score.txt',FILE_IGNORE_NEW_LINES);
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School');
@@ -81,81 +77,31 @@
 
 	use ICal\ICal;
 
-	// foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
-	// 	$DailyChallenges[$key]=explode("|",$value);
-	// }
-	// foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
-	// 	$WeeklyChallenges[$key]=explode("|",$value);
-	// }
 	foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
-		$Challenges[$key]=explode("|",$value);
+		$tmpChallenges[$key]=$value;
 	}
-	
+	$Challenges = array_unique($tmpChallenges,SORT_STRING);
+
 	if ( ! isset( $_POST['Submit'] ) ) {
-		// pre fill the Daily and Weekly arrays with common data
-		foreach ($WeeklyChallenge as $key => $value) {
-			$WeeklyChallenge[$key][2]='1000';
-		}
-		foreach ($DailyChallenge as $key => $value) {
-			$DailyChallenge[$key][2]='250';
-		}
+		
 		$DailyChallenge[0][3]='1ˢᵗ ';
-		$DailyChallenge[1][0]='Gold Star: Complete a Daily Challenge (x6)';
-		$DailyChallenge[1][1]='(x6)';
-		$DailyChallenge[1][2]='1000';
-		// $DailyChallenge[2][0]='Level up!';
-		// $DailyChallenge[2][1]='(x1)';
-		// $DailyChallenge[2][2]='500';
-		// $DailyChallenge[3][0]='Complete a Daily Operation!';
-		// $DailyChallenge[3][1]='(x1)';
-		// $DailyChallenge[3][2]='250';
-		// $DailyChallenge[4][0]='Complete an Event';
-		// $DailyChallenge[4][1]='(x1)';
-		// $DailyChallenge[4][2]='250';
-		// $DailyChallenge[5][0]='Gold Star: Complete a Daily Challenge';
-		// $DailyChallenge[5][1]='(x5)';
-		// $DailyChallenge[5][2]='500';
-		$WeeklyChallenge[1][0]='Repeatable Under Rank 100: Gain XP (x10000)';
-		$WeeklyChallenge[1][1]='(x10000)';
-		$WeeklyChallenge[1][2]='100';
-		$WeeklyChallenge[0][0]='Complete a Gold Star Daily Challenge! (x3)';
-		$WeeklyChallenge[0][1]='(x3)';
-		$WeeklyChallenge[0][2]='1500';
-		//$WeeklyChallenge[2][0]='Complete Daily Operations Daily Challenges!';
-		//$WeeklyChallenge[2][1]='(x3)';
-		//$WeeklyChallenge[2][2]='1000';
-		//$WeeklyChallenge[3][0]='Level up!';
-		//$WeeklyChallenge[3][1]='(x3)';
-		//$WeeklyChallenge[3][2]='1500.';
-		//$WeeklyChallenge[4][0]='Complete an Event';
-		//$WeeklyChallenge[4][1]='(x10)';
-		//$WeeklyChallenge[4][2]='1000.';
+		$DailyChallenge[1][0]='Gold Star: Complete a Daily Challenge (x6)|⭐ |1000';
+		$WeeklyChallenge[1][0]='Repeatable Under Rank 100: Gain XP (x10000)|🔁 |100';
+		$WeeklyChallenge[0][0]='Complete a Gold Star Daily Challenge! (x3)|⭐ |1500';
 	}
 
 	$now = time();
 	//$now = strtotime('20221105T12:01:00');
 
-	// sort($DailyChallenges);
-	// sort($WeeklyChallenges);
 	sort($Challenges);
 	sort($Location);
 	sort($EnemyFaction);
 	sort($EnemyMutations1);
 	sort($EnemyMutations2);
-	//sort($MinervaEnventory);
 
-	// datalist("DailyChallenges",$DailyChallenges);
-	// datalist("WeeklyChallenges",$WeeklyChallenges);
 	datalist("Challenges",$Challenges);
 	datalist("1st",$FO1st);
-	//datalist("times",$Times);
-	datalist("score",$Score);
 
-	$PageWidth = 0; 
-	$LineWrap=false; // if true then wrap line if longer than $PageWidth
-
-	// Discord webhook url created per server. 
-	$WebHookURL = "";
 	//  patch 42 had the same mutation1 as the previous day. so this needed changed.
 	$DaysSinceEpoch = intdiv(time(),(24*60*60));
 	if ($DaysSinceEpoch & 1) {
@@ -176,7 +122,6 @@
 					echo '<option value="'.htmlentities($value[0]).'">'.htmlentities($value[0]).'</option>';
 				}
 				//echo '<option value="'.$value.'">'.$value.'</option>';
-			
 			} else {
 				if ( isset($CurrnetValue) &&  $CurrnetValue == $value ) {
 					echo '<option selected value="'.htmlentities($value).'">'.htmlentities($value).'</option>';
@@ -193,18 +138,20 @@
 		echo '<td><label for="'.$BoxName.'">'.$BoxName.'. </label>';
 		select_option($BoxName, $CurrnetValue, $SelectOptions);
 	}
-
+	
+	// text input box 
+	//used for challenges
 	function text_input($ID,$BoxName, $CurrentValue, $Size) {
 		echo '<td>';
 		if ( (strcmp($ID,"times")==0) ) {
-			echo '<input list="'.$ID.'" name="'.$BoxName.'" id="'.$BoxName.'" value="'.$CurrentValue.'" size="'.$Size.'" type="number" pattern=[\d+]>';
+			echo '<input class="text" list="'.$ID.'" name="'.$BoxName.'" id="'.$BoxName.'" value="'.$CurrentValue.'" size="'.$Size.'" type="number" pattern=[\d+]>';
 		} else {
-			echo '<input list="'.$ID.'" name="'.$BoxName.'" id="'.$BoxName.'" value="'.$CurrentValue.'" size="'.$Size.'" type="text">';
+			echo '<input class="text" list="'.$ID.'" name="'.$BoxName.'" id="'.$BoxName.'" value="'.$CurrentValue.'" size="'.$Size.'" type="text">';
 		}
 		echo '</input></td>';
 	}
 
-	//create data list
+	//create data list for html input tag 
 	function datalist($ID,$alist){
 		echo '<datalist id='.$ID.'>';
 		foreach ($alist as $key => $value) {
@@ -213,8 +160,6 @@
 			} else {
 				echo "<option>".$value."</option>";
 			}
-			
-			
 		}
 		echo "</datalist>";
 	}
@@ -226,8 +171,8 @@
 		$bc = ($b[0]);
 		if ($a[3] == "1ˢᵗ ") {return -1;}
 		if ($b[3] == "1ˢᵗ ") {return 1;}
-		if ($a[3] == "⭐") {return -1;}
-		if ($b[3] == "⭐") {return 1;}
+		if (str_contains($ac,"⭐")) {return -1;}
+		if (str_contains($bc,"⭐")) {return 1;}
 		//sort empty to bottom
 		if ($ac  == "") {return 1;}
 		if ($bc  == "") {return -1;}
@@ -236,33 +181,42 @@
 
 
 	function formatprint($ScoreMult,$aChallenge,$select_prefix) {
-	// takes as input Challenge array DailyChallenge,WeeklyChallenge
-	// takes as input prefix for select boxes d,w
-	// only prints if first item has a value
+	// takes as input Challenge array (DailyChallenge,WeeklyChallenge)
+	// takes as input prefix for select boxes (d,w)
+	// only prints if there are more than 3 entries and item[*][0] has a value
 		//$ScoreMult = 1;
-		$ouput = "";
+		$output = "";
 		if ( ($aChallenge[3][0]) !== ''){
 			if ( $select_prefix == 'w' ) {
-				$ouput .= "**Weekly Challenges**\n";
-				$ouput .= "```\nChallenge (Count) S.C.O.R.E.\n";
+				$output .= "**Weekly Challenges**\n";
+				$output .= "```\nChallenge (Count) S.C.O.R.E.\n";
 			} else {
-				$ouput .= "**Daily Challenges**\n";
-				$ouput .= "```\nChallenge (Count) S.C.O.R.E.\n";
+				$output .= "**Daily Challenges**\n";
+				$output .= "```\nChallenge (Count) S.C.O.R.E.\n";
 			}
 			foreach ($aChallenge as $key => $value) {
-				if ( $aChallenge[$key][0] ) {
-					if (is_numeric($aChallenge[$key][2]) ) {
-						$ouput .=$aChallenge[$key][3].$aChallenge[$key][0].' '.$ScoreMult * $aChallenge[$key][2]."\n";
+				if ( $value[0] ) {
+					$tmp=explode("|",$value[0]);
+					$value[0] = $tmp[0];
+					$value[1] = $tmp[1];
+					if ( strlen($tmp[2])==0 && $select_prefix == 'w' ) {
+						$value[2] = '1000';
+					} elseif ( strlen($tmp[2])==0 && $select_prefix == 'd') {
+						$value[2] = '250';
 					} else {
-						$ouput .=$aChallenge[$key][3].$aChallenge[$key][0].' '.$aChallenge[$key][2]."\n";
+						$value[2] = $tmp[2];
 					}
 					
-					
+					if (is_numeric($value[2]) ) {
+						$output .=$value[3].$value[1].$value[0].' '.$ScoreMult * $value[2]."\n";
+					} else {
+						$output .=$value[3].$value[1].$value[0].' '.$value[2]."\n";
+					}
 				}
 			}
-	    	$ouput .= "```\n";
+	    	$output .= "```\n";
 		}
-		return $ouput;
+		return $output;
 	}
 
 	function CurrentEvents() {
@@ -311,26 +265,18 @@
 		return $output;
 	}
 	
-	// read form submission and return array to feed formatprint function
-	function ReadForm($Challenges,$aChallenge,$prefix){
+	function ReadForm($aChallenge,$prefix){
+	// read form submission and return array to feed formatprint and text_input function
+	// we have to allow editing of the input fields
+	// 
+	// $aChallenge is the list of challenges from the last time the form was submitted
+	// $prefix is weekly or daily (w,d) challenges and used to read correct item from $S_REQUEST
+	
 		foreach ($aChallenge as $key => $value) {
 			// put the results into the *Challenge array
 			$tmp=$prefix.$key;
 			$aChallenge[$key][0] =  htmlspecialchars($_REQUEST[$tmp]);
-			//$aChallenge[$key][1] =  htmlspecialchars($_REQUEST[$tmp.'times']);
-			$aChallenge[$key][2] =  htmlspecialchars($_REQUEST[$tmp.'score']);
-			if ($_REQUEST[$tmp.'1st'] == '1ˢᵗ ') {
-				$aChallenge[$key][3] =  htmlspecialchars($_REQUEST[$tmp.'1st']);
-			} else {
-				foreach( $Challenges as $key2 => $value2) {
-					if ($aChallenge[$key][0] == $value2[0]) {
-						$aChallenge[$key][3] = $value2[1];
-						if (strlen($value2[2]>1)) {
-							$aChallenge[$key][2] = $value2[2];
-						}
-					}
-				}
-			}
+			$aChallenge[$key][3] =  htmlspecialchars($_REQUEST[$tmp.'1st']);
 		}
 		return $aChallenge;
 	}
@@ -399,23 +345,19 @@
 		$EnemyFactionResult =  htmlspecialchars($_REQUEST['EnemyFaction']);
 		$EnemyMutations1Result =  htmlspecialchars($_REQUEST['EnemyMutations1']);
 		$EnemyMutations2Result =  htmlspecialchars($_REQUEST['EnemyMutations2']);
-		//$MinervaLocationResult = $_REQUEST['MinervaLocation1'];
-		//$MinervaLocationResult = "Away";
-		$WeeklyChallenge=ReadForm($WeeklyChallenges,$WeeklyChallenge,'w');
-		$DailyChallenge=ReadForm($DailyChallenges,$DailyChallenge,'d');
+		$WeeklyChallenge=ReadForm($WeeklyChallenge,'w');
+		$DailyChallenge=ReadForm($DailyChallenge,'d');
 	}
 	?>
 
 	<table>
 		<caption><h1>Weekly Challenges</h1></caption>
-		<tr><th>1st</th><th>Challenge</th><th>SCORE</th></tr>	
+		<tr><th>1st</th><th>Challenge</th></tr>	
 			<?php
 			foreach ($WeeklyChallenge as $key => $value) {
 				echo '<tr>';
 				text_input('1st','w'.$key.'1st', $value[3],'5');
 				text_input('Challenges','w'.$key, $value[0],'80');
-				//text_input('times','w'.$key.'times', $value[1],'10');
-				text_input('score','w'.$key.'score', $value[2],'10');
 				echo '</tr>';
 			}
 			?>
@@ -423,14 +365,12 @@
 
 	<table>
 		<caption><h1>Daily Challenges</h1></caption>
-		<tr><th>1st</th><th>Challenge</th><th>SCORE</th></tr>	
+		<tr><th>1st</th><th>Challenge</th></tr>	
 			<?php
 			foreach ($DailyChallenge as $key => $value) {
 				echo '<tr>';
 				text_input('1st','d'.$key.'1st', $value[3],5);
 				text_input('Challenges','d'.$key, $value[0],80);
-				//text_input('times','d'.$key.'times', $value[1],10);
-				text_input('score','d'.$key.'score', $value[2],10);
 				echo '</tr>';
 			}
 			?>
@@ -460,7 +400,6 @@
 		
 		 <input type="submit" Name = "Submit" value='Submit'><P>
 		
-
 <?php
 
 	  // Check if the form is submitted
@@ -468,7 +407,6 @@
 		
 		usort($DailyChallenge,'cmp');
 		usort($WeeklyChallenge,'cmp');
-
 		
 		$textareaValue = "Fallout 76 Daily Update\n";
 		$textareaValue .= CurrentEvents();
@@ -493,12 +431,10 @@
 			$textareaValue .=  "```";
 		}
 		
-		
 		if (mb_strlen($textareaValue) > 2000 ) {
 			echo '<p> <span class="warning">CAUTION:Character count exceeds Discord maximum post length (' .mb_strlen($textareaValue).") > 2000.</span></p>";
 		} else {
 			echo "<p>Character count: (".mb_strlen($textareaValue).")</p>";
-			//echo "<p>";
 		}
 		echo '<div><textarea id="content" name="content" autofocus>';
 		echo $textareaValue;
