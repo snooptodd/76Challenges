@@ -5,3 +5,4 @@ dmp*
 !challenges.txt
 publish.sh
 *.ics
+*.phar

@@ -65,8 +65,8 @@
 	// CALL TO AXE-ION: Complete CALL TO AXE-ION Daily Challenges (x1)|🪓|Lunchbox
 
 
-
-	require_once '/home/todd/src/76Challenges/vendor/autoload.php';
+	//require_once 'phar:///home/todd/src/76Challenges/76Challenges.phar/vendor/autoload.php';
+	require 'libraies.phar';
 	error_reporting(E_ALL|E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 	//ini_set('display_errors', 'On');
 	date_default_timezone_set("America/New_York");
@@ -416,7 +416,7 @@
 		$textareaValue = "Fallout 76 Daily Update\n";
 		$textareaValue .= CurrentEvents();
 		$ScoreMult=1;
-		if (str_contains($textareaValue,'Double Score')) {
+		if (str_contains($textareaValue,'Double SCORE') || str_contains($textareaValue,'Double Score')) {
 			$ScoreMult = 2;
 		}
 		$textareaValue .= formatprint(1,$WeeklyChallenge,'w'); 
