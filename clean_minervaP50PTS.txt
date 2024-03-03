@@ -1,0 +1,261 @@
+[LVLI:005FFDEB] | 01
+[LVLI:005FFDEB] | 02
+[LVLI:005FFDEB] | 03
+[LVLI:005FFDEB] | 04_M
+[LVLI:005FFDEB] | 05
+[LVLI:005FFDEB] | 06
+[LVLI:005FFDEB] | 07
+[LVLI:005FFDEB] | 08_M
+[LVLI:005FFDEB] | 09
+[LVLI:005FFDEB] | 10
+[LVLI:005FFDEB] | 11
+[LVLI:005FFDEB] | 12_M
+[LVLI:005FFDEB] | 13
+[LVLI:005FFDEB] | 14
+[LVLI:005FFDEB] | 15
+[LVLI:005FFDEB] | 16_M
+[LVLI:005FFDEB] | 17
+[LVLI:005FFDEB] | 18
+[LVLI:005FFDEB] | 19
+[LVLI:005FFDEB] | 20_M
+[LVLI:005FFDEB] | 21
+[LVLI:005FFDEB] | 22
+[LVLI:005FFDEB] | 23
+[LVLI:005FFDEB] | 24_M
+01|Secret Service Left Arm|
+01|Secret Service Right Arm|
+01|Secret Service Helmet|
+01|Secret Service Left Leg|
+01|Secret Service Right Leg|
+01|Secret Service Chest Piece|
+01|Farmable Dirt Tiles|
+01|Sympto-Matic|
+01|Super Reactor|
+01|War Glaive|
+01|Gauss Minigun Gunner Sights|
+01|Gauss Minigun Tesla Capacitor|
+01|Gauss Minigun Tesla Dynamo|
+01|Chemist's Backpack Mod|
+01|Cattle Prod|
+16_M| 13
+16_M| 14
+16_M| 15
+02|Grocer's Backpack Mod|
+02|Scavenged Solar Panel|
+02|Strangler Heart Left Arm|
+02|Strangler Heart Right Arm|
+02|Strangler Heart Helmet|
+02|Strangler Heart Left Leg|
+02|Strangler Heart Right Leg|
+02|Strangler Heart Chest Piece|
+02|Dynamite|
+02|Gauss Pistol|
+02|Treated Lining Secret Service Underarmor|
+02|Resistant Lining Secret Service Underarmor|
+02|Floater Gnasher Grenade|
+03|Chinese Stealth Armor|
+03|Chinese Stealth Helmet|
+03|Gauntlet|
+03|War Glaive Cryo Blade|
+03|War Glaive Plasma Blade|
+03|Secret Service Jet Pack Armor|
+03|Secret Service Pocketed Armor Limb|
+03|Secret Service Pocketed Armor Torso|
+03|T-65 Overdrive Servos|
+03|T-65 Medic Pump|
+03|T-65 Stealth Boy|
+03|Chicken Coop|
+04_M| 01
+04_M| 02
+04_M| 03
+05|Gauss Pistol Aligned Short Barrel|
+05|Gauss Pistol Drum Magazine|
+05|Gauss Pistol Refined Receiver|
+05|Gauss Minigun|
+05|Thorn Armor Left Arm|
+05|Thorn Armor Right Arm|
+05|Thorn Armor Left Leg|
+05|Thorn Armor Right Leg|
+05|Thorn Armor Chest Piece|
+05|Protective Lining Secret Service Underarmor|
+05|Shielded Lining Secret Service Underarmor|
+06|War Glaive Flaming Blade|
+06|War Glaive Shock Blade|
+06|Whistle in the Dark|
+06|Water Well|
+06|Ultra-Light Build Secret Service Armor Limbs|
+06|Lighter Build Secret Service Armor Limbs|
+06|Plasma Caster|
+06|T-65 Calibrated Shocks|
+06|T-65 Rusty Knuckles|
+06|T-65 Jet Pack|
+06|Secret Service Underarmor|
+06|The Gutter|
+07|Gauss Shotgun|
+07|Floater Flamer Grenade|
+07|Gauss Shotgun Extended Barrel|
+07|Gauss Shotgun Extended Magazine|
+07|Gauss Shotgun Hardened Receiver|
+07|Brotherhood Recon Left Arm|
+07|Brotherhood Recon Right Arm|
+07|Brotherhood Recon Helmet|
+07|Brotherhood Recon Left Leg|
+07|Brotherhood Recon Right Leg|
+07|Brotherhood Recon Chest Piece|
+07|Ammo Converter|
+08_M| 05
+08_M| 06
+08_M| 07
+09|T-65 Left Arm|
+09|T-65 Right Arm|
+09|T-65 Helm|
+09|T-65 Left Leg|
+09|T-65 Right Leg|
+09|T-65 Torso|
+09|Plasma Caster Aligned Sniper Barrel|
+09|Plasma Caster Calibrated Capacitor|
+09|Plasma Caster Pulse Capacitor|
+09|Dynamite Bundle|
+09|Crusader Pistol|
+09|Asylum Light|
+09|Meat Bag Stash Box|
+10|Gauss Shotgun Precise Stock|
+10|Gauss Shotgun Vicious Receiver|
+10|Gauss Shotgun Refined Receiver|
+10|Gauntlet|
+10|Gauss Minigun Triple Barrel|
+10|Flare|
+10|Brotherhood Recon Pocketed Armor Limb|
+10|Brotherhood Recon Pocketed Armor Torso|
+10|Turbo-Fert Fertilizer|
+10|Hellstorm Missile Launcher|
+10|Unstoppable Monster|
+11|Solar Armor Left Arm|
+11|Solar Armor Right Arm|
+11|Solar Armor Left Leg|
+11|Solar Armor Right Leg|
+11|Solar Armor Chest Piece|
+11|Plasma Caster True Long Barrel|
+11|Plasma Caster True Capacitor|
+11|Floater Freezer Grenade|
+11|Super Mutant Tube|
+11|Science Chalkboards|
+11|Plasma Cutter Cryo Blade|
+11|Plasma Cutter Flaming Blade|
+11|Plasma Cutter Shock Blade|
+12_M| 09
+12_M| 10
+12_M| 11
+13|Gauss Pistol Suppressed Barrel|
+13|Gauss Pistol Vicious Receiver|
+13|Gauss Pistol Hardened Receiver|
+13|Plasma Cutter|
+13|Emmett Mountain Disposal Signs|
+13|Hello Neon Sign|
+13|BoS Medallion|
+13|Brotherhood Recon Jet Pack|
+13|Gauss Minigun|
+14|Hellstorm Missile Launcher Cryo Payload|
+14|Hellstorm Missile Launcher Napalm Payload|
+14|Hellstorm Missile Launcher Plasma Payload|
+14|Wendigo Tube|
+14|Medical Malpractice|
+14|Enclave Medallion|
+14|War Glaive|
+14|Water Well|
+14|Floater Flamer Grenade|
+15|Crusader Pistol Cryo Receiver|
+15|Crusader Pistol Fusion Receiver|
+15|Crusader Pistol Pyro Receiver|
+15|Open Neon Sign|
+15|Covert Scout Armor Left Arm|
+15|Covert Scout Armor Right Arm|
+15|Covert Scout Armor Left Leg|
+15|Covert Scout Armor Right Leg|
+15|Covert Scout Armor Chest Piece|
+15|Covert Scout Armor Mask|
+24_M| 21
+24_M| 22
+24_M| 23
+23|Arctic Marine Left Arm|
+23|Arctic Marine Right Arm|
+23|Arctic Marine Left Leg|
+23|Arctic Marine Right Leg|
+23|Arctic Marine Torso|
+23|Arctic Marine Armor Helmet|
+23|Brotherhood of Steel Minigun Paint|
+23|Slocum Joe's Power Armor Paint|
+23|Crusader Pistol|
+23|Gauss Minigun|
+23|Meat Bag Stash Box|
+23|Wendigo Tube|
+22|War Glaive Flaming Blade|
+22|War Glaive Shock Blade|
+22|Whistle in the Dark|
+22|Water Well|
+22|Ultra-Light Build Secret Service Armor Limbs|
+22|Lighter Build Secret Service Armor Limbs|
+22|Plasma Caster|
+22|T-65 Calibrated Shocks|
+22|T-65 Rusty Knuckles|
+22|T-65 Jet Pack|
+22|Secret Service Underarmor|
+22|The Gutter|
+21|Gauss Pistol Aligned Short Barrel|
+21|Gauss Pistol Drum Magazine|
+21|Gauss Pistol Refined Receiver|
+21|Gauss Minigun|
+21|Thorn Armor Left Arm|
+21|Thorn Armor Right Arm|
+21|Thorn Armor Left Leg|
+21|Thorn Armor Right Leg|
+21|Thorn Armor Chest Piece|
+21|Protective Lining Secret Service Underarmor|
+21|Shielded Lining Secret Service Underarmor|
+21|Mechanic's Best Friend|
+21|Medium Supply Crate|
+19|Chinese Stealth Armor|
+19|Chinese Stealth Helmet|
+19|Gauntlet|
+19|War Glaive Cryo Blade|
+19|War Glaive Plasma Blade|
+19|Secret Service Jet Pack Armor|
+19|Secret Service Pocketed Armor Limb|
+19|Secret Service Pocketed Armor Torso|
+19|T-65 Overdrive Servos|
+19|T-65 Medic Pump|
+19|T-65 Stealth Boy|
+19|Mirelurk King Tube|
+19|Hellfire Prototype Power Armor Paint|
+20_M| 17
+20_M| 18
+20_M| 19
+18|Grocer's Backpack Mod|
+18|Scavenged Solar Panel|
+18|Strangler Heart Left Arm|
+18|Strangler Heart Right Arm|
+18|Strangler Heart Helmet|
+18|Strangler Heart Left Leg|
+18|Strangler Heart Right Leg|
+18|Strangler Heart Chest Piece|
+18|Dynamite|
+18|Gauss Pistol|
+18|Treated Lining Secret Service Underarmor|
+18|Resistant Lining Secret Service Underarmor|
+18|Floater Gnasher Grenade|
+18|Sole Survivor|
+17|Secret Service Left Arm|
+17|Secret Service Right Arm|
+17|Secret Service Helmet|
+17|Secret Service Left Leg|
+17|Secret Service Right Leg|
+17|Secret Service Chest Piece|
+17|Farmable Dirt Tiles|
+17|Sympto-Matic|
+17|Super Reactor|
+17|War Glaive|
+17|Gauss Minigun Gunner Sights|
+17|Gauss Minigun Tesla Capacitor|
+17|Gauss Minigun Tesla Dynamo|
+17|Chemist's Backpack Mod|
+17|Cattle Prod|
