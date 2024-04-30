@@ -72,6 +72,7 @@
 	date_default_timezone_set("America/New_York");
 
 	$Challenges = array('');
+	$EventChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 10) );
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School');
@@ -79,6 +80,7 @@
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
 	$EnemyMutations2 = array('', 'Reflective Skin','Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud');
 	$FO1st = array('','1ˢᵗ ');
+	//$ChallengeType = $arrayName = array('Event','Weekly','Daily');
 
 	use ICal\ICal;
 
@@ -90,9 +92,9 @@
 	if ( ! isset( $_POST['Submit'] ) ) {
 		
 		$DailyChallenge[0][3]='1ˢᵗ ';
-		$DailyChallenge[1][0]='Gold Star: Complete a Daily Challenge (x6)|⭐ |1000';
-		$WeeklyChallenge[1][0]='Repeatable Under Rank 100: Gain XP (x10000)|🔁 |100';
-		$WeeklyChallenge[0][0]='Complete a Gold Star Daily Challenge! (x3)|⭐ |1500';
+		$DailyChallenge[1][0]='Gold Star: Complete a Daily Challenge (x6)|Daily|⭐|1000';
+		$WeeklyChallenge[1][0]='Repeatable Under Rank 100: Gain XP (x10000)|Weekly|🔁 |100';
+		$WeeklyChallenge[0][0]='Complete a Gold Star Daily Challenge! (x3)|Weekly|⭐|1500';
 	}
 
 	$now = time();
@@ -104,9 +106,10 @@
 	sort($EnemyMutations1);
 	sort($EnemyMutations2);
 
-	datalist("Challenges",$Challenges);
-	datalist("1st",$FO1st);
-
+	datalist($Challenges);
+			
+	echo '<datalist id=1st><option>1ˢᵗ</option></datalist>';
+	
 	//  patch 42 had the same mutation1 as the previous day. so this needed changed.
 	$DaysSinceEpoch = intdiv(time(),(24*60*60));
 	if ($DaysSinceEpoch & 1) {
@@ -151,22 +154,35 @@
 		if ( (strcmp($ID,"times")==0) ) {
 			echo '<input class="text" list="'.$ID.'" name="'.$BoxName.'" id="'.$BoxName.'" value="'.$CurrentValue.'" size="'.$Size.'" type="number" pattern=[\d+]>';
 		} else {
-			echo '<input class="text" list="'.$ID.'" name="'.$BoxName.'" id="'.$BoxName.'" value="'.$CurrentValue.'" size="'.$Size.'" type="text">';
+			echo '<input class="text" list="'.$ID.'" name="'.$BoxName.'" id="'.$BoxName.'" value="'.$CurrentValue.'" size="'.$Size.'"autocomplete="off" type="text">';
 		}
 		echo '</input></td>';
 	}
 
 	//create data list for html input tag 
-	function datalist($ID,$alist){
-		echo '<datalist id='.$ID.'>';
+	// if event and $value[1] is event then echo
+	// if Weekly and $value[1] is Weekly then echo
+	// if daily and $value[1] is Daily then echom
+	function datalist($alist){
+		$tmpevent = '<datalist id=EventChallenges>';
+		$tmpweekly = '<datalist id=WeeklyChallenges>';
+		$tmpdaily = '<datalist id=DailyChallenges>';
 		foreach ($alist as $key => $value) {
-			if ( is_array($value) ) {
-				echo "<option>".$value[0]."</option>";
-			} else {
-				echo "<option>".$value."</option>";
-			}
+			$tmpvalue = explode('|',$value)[1];
+			if ( $tmpvalue=='Event' ) {
+				$tmpevent .="<option>".$value."</option>";
+			} elseif ( $tmpvalue=='Weekly' ) {
+				$tmpweekly .= "<option>".$value."</option>";
+			} elseif ($tmpvalue=='Daily' ) {
+				$tmpdaily .= "<option>".$value."</option>";
+			} 
 		}
-		echo "</datalist>";
+		$tmpevent .= "</datalist>";
+		$tmpweekly .= "</datalist>";
+		$tmpdaily .= "</datalist>";
+		echo $tmpevent;
+		echo $tmpweekly;
+		echo $tmpdaily;
 	}
 	
 	// Comparison function 
@@ -193,33 +209,37 @@
 		$output = "";
 		if ( ($aChallenge[3][0]) !== ''){
 			if ( $select_prefix == 'w' ) {
-				$output .= "**Weekly Challenges**\n";
-				$output .= "```\nChallenge (Count) S.C.O.R.E.\n";
-			} else {
-				$output .= "**Daily Challenges**\n";
-				$output .= "```\nChallenge (Count) S.C.O.R.E.\n";
+				$output .= "**Weekly Challenges**\n\n";
+				$output .= "Challenge (Count) S.C.O.R.E.\n";
+			} elseif ( $select_prefix == 'd' ) {
+				$output .= "**Daily Challenges**\n\n";
+				$output .= "Challenge (Count) S.C.O.R.E.\n";
+			} elseif ($select_prefix == 'e') {
+				$output .= "**Event Challenges**\n\nChallenge (Count) Reward\n";
 			}
 			foreach ($aChallenge as $key => $value) {
 				if ( $value[0] ) {
 					$tmp=explode("|",$value[0]);
-					$value[0] = $tmp[0];
-					$value[1] = $tmp[1];
-					if ( strlen($tmp[2])==0 && $select_prefix == 'w' ) {
+					$value[0] = $tmp[0]; // full name and required count
+					$value[1] = $tmp[2]; // flair
+					// $value[2] is reward
+					// $value[3] is "1st"
+					if ( strlen($tmp[3])==0 && $tmp[1]=='Weekly' ) {
 						$value[2] = '1000';
-					} elseif ( strlen($tmp[2])==0 && $select_prefix == 'd') {
+					} elseif ( strlen($tmp[3])==0 && $tmp[1]=='Daily') {
 						$value[2] = '250';
 					} else {
-						$value[2] = $tmp[2];
+						$value[2] = $tmp[3];
 					}
 					
 					if (is_numeric($value[2]) ) {
-						$output .=$value[3].$value[1].$value[0].' '.$ScoreMult * $value[2]."\n";
+						$output .="* ".$value[3].$value[1].$value[0].' '.$ScoreMult * $value[2]."\n";
 					} else {
-						$output .=$value[3].$value[1].$value[0].' '.$value[2]."\n";
+						$output .="* ".$value[3].$value[1].$value[0].' '.$value[2]."\n";
 					}
 				}
 			}
-	    	$output .= "```\n";
+	    	$output .= "\n";
 		}
 		return $output;
 	}
@@ -247,16 +267,16 @@
 		$icalURL="https://calendar.google.com/calendar/ical/677a43e0ffb5d922130f03876fe8c0bea6cb2fa558a7f50574cbbaa75564c74e%40group.calendar.google.com/public/basic.ics";
 		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
 		$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
-		$output = "**Current Events**\n```\n";
+		$output = "**Current Events**\n";
 		$events = $ical->eventsFromInterval('1 day');
 		foreach ($events as $event) {
 			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
 			$now = date('d-M-Y');
 			$check = $dtend->format('d-M-Y');
 			if ( strcmp($now,$check)!=0 ) {
-				$output .= $event->summary . ', Ends on (' . $check . ')'."\n";
+				$output .= "* ".$event->summary . ', Ends on (' . $check . ')'."\n";
 				if (is_string($event->description)) {
-					$output .= strip_tags($event->description) . "\n";
+					$output .= "* ".strip_tags($event->description) . "\n";
 				}
 			}
 			// $now = ceil((($ical->iCalDateToUnixTimestamp($event->dtend))-time())/60/60/24);
@@ -266,7 +286,7 @@
 			// 	$output .= $event->summary . ', Ends in ' . $now . ' day.'."\n";
 			// }
 		}
-		$output .="```\n";
+		$output .="\n";
 		return $output;
 	}
 	
@@ -311,7 +331,7 @@
 		$now = time();
 		$output = '';
 
-		$now = strtotime('20230925T12:10:00');
+		//$now = strtotime('20230925T12:10:00');
 
 		foreach($aMLocation as $MLvalue) {
 			$MLLine = explode(',',$MLvalue);
@@ -326,19 +346,20 @@
 			}
 		}
 		if ($MinervaLocationResult=='Away') {
-			$output =  "**Minerva's Location: $MinervaLocationResult**\n```\n$MinervaNextLocation\n```\n";
+			$output =  "**Minerva's Location: $MinervaLocationResult**\n\n$MinervaNextLocation\n";
 		} else {
-			$output =  "**Minerva's Location: $MinervaLocationResult**\n";
-			$output .=  "```\nName (Gold Price)\n";
+			$output =  "**Minerva's Location: $MinervaLocationResult**\n\n";
+			$output .=  "Name (Gold Price)\n";
 			foreach ($MinervaEnventory as $MEkey => $MEvalue) {
 				$MEline = explode('|',$MEvalue);
 				if ( in_array($MEline[0], $MinervaList)) {
 					$gold = round($MEline[2]*0.75);
-					$output .= $MEline[1]." (".$gold.")\n";
+					$output .= "* ".$MEline[1]." (".$gold.")\n";
 				}
 			}
-			$output .=  "```\n";
+			
 		}
+		$output .=  "\n";
 		return $output;
 	}
 
@@ -353,6 +374,7 @@
 		$EnemyMutations2Result =  htmlspecialchars($_REQUEST['EnemyMutations2']);
 		$WeeklyChallenge=ReadForm($WeeklyChallenge,'w');
 		$DailyChallenge=ReadForm($DailyChallenge,'d');
+		$EventChallenge=ReadForm($EventChallenge,'e');
 	}
 	?>
 
@@ -363,7 +385,7 @@
 			foreach ($WeeklyChallenge as $key => $value) {
 				echo '<tr>';
 				text_input('1st','w'.$key.'1st', $value[3],'5');
-				text_input('Challenges','w'.$key, $value[0],'80');
+				text_input('WeeklyChallenges','w'.$key, $value[0],'106');
 				echo '</tr>';
 			}
 			?>
@@ -376,7 +398,19 @@
 			foreach ($DailyChallenge as $key => $value) {
 				echo '<tr>';
 				text_input('1st','d'.$key.'1st', $value[3],5);
-				text_input('Challenges','d'.$key, $value[0],80);
+				text_input('DailyChallenges','d'.$key, $value[0],106);
+				echo '</tr>';
+			}
+			?>
+	</table>
+
+	<table>
+		<caption><h1>Event Challenges</h1></caption>
+		<tr><th>Challenge</th></tr>	
+			<?php
+			foreach ($EventChallenge as $key => $value) {
+				echo '<tr>';
+				text_input('EventChallenges','e'.$key, $value[0],'113');
 				echo '</tr>';
 			}
 			?>
@@ -420,6 +454,7 @@
 		if (str_contains($textareaValue,'Double SCORE') || str_contains($textareaValue,'Double Score')) {
 			$ScoreMult = 2;
 		}
+		$textareaValue .= formatprint(1,$EventChallenge,'e'); 
 		$textareaValue .= formatprint(1,$WeeklyChallenge,'w'); 
 		$textareaValue .= formatprint($ScoreMult,$DailyChallenge,'d');
 		$textareaValue .= Minerva();
@@ -430,11 +465,11 @@
 				$DOPSMode="Decryption";
 			}				
 			$textareaValue .=  "**Daily OPS: $DOPSMode**\n";
-			$textareaValue .=  "```\n";
-			$textareaValue .=  "Location: $LocationResult\n";
-			$textareaValue .=  "Enemy Faction: $EnemyFactionResult\n";
-			$textareaValue .=  "Enemy Mutations: $EnemyMutations1Result, $EnemyMutations2Result \n";
-			$textareaValue .=  "```";
+			//$textareaValue .=  "\n";
+			$textareaValue .=  "* Location: $LocationResult\n";
+			$textareaValue .=  "* Enemy Faction: $EnemyFactionResult\n";
+			$textareaValue .=  "* Enemy Mutations: $EnemyMutations1Result, $EnemyMutations2Result \n";
+			//$textareaValue .=  "";
 		}
 		
 		if (mb_strlen($textareaValue) > 2000 ) {
