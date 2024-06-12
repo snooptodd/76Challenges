@@ -54,15 +54,13 @@
 	<form Method ="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 	<?php
 
-	// format of times.txt,score.txt and is text file with one entry per line.
-
-	// format of challenges.txt is: challenge (count)|emogi|reward
-	// 
+	// format of challenges.txt is: challenge (count)|event type|emogi|reward
+	// event_type is one of Daily,Weekly,Event
 	// example
 	// 
-	// Above Rank 100: Gain XP (x10000)||
-	// Buy an item from or Sell an item to another Player (x3)||
-	// CALL TO AXE-ION: Complete CALL TO AXE-ION Daily Challenges (x1)|🪓|Lunchbox
+	// Above Rank 100: Gain XP (x10000)|Weekly||
+	// Buy an item from or Sell an item to another Player (x3)|Daily||
+	// CALL TO AXE-ION: Complete CALL TO AXE-ION Daily Challenges (x1)|Event|🪓|Lunchbox
 
 
 	//require_once '/home/todd/src/76Challenges/vendor/autoload.php';
@@ -75,13 +73,12 @@
 	$EventChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 10) );
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
-	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School');
-	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens');
+	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic');
+	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown');
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
 	$EnemyMutations2 = array('', 'Reflective Skin','Piercing Gaze', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud');
 	$FO1st = array('','1ˢᵗ ');
-	//$ChallengeType = $arrayName = array('Event','Weekly','Daily');
-
+	
 	use ICal\ICal;
 
 	foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {

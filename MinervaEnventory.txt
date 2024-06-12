@@ -13,6 +13,7 @@
 01|Gauss Minigun Tesla Dynamo|100
 01|Chemist's Backpack Mod|350
 01|Cattle Prod|250
+01|Face Breaker|1000
 02|Grocer's Backpack Mod|350
 02|Scavenged Solar Panel|2000
 02|Strangler Heart Left Arm|1000
@@ -26,6 +27,7 @@
 02|Treated Lining Secret Service Underarmor|50
 02|Resistant Lining Secret Service Underarmor|100
 02|Floater Gnasher Grenade|150
+02|Auto Grenade Launcher Blood Eagle Paint|350
 03|Chinese Stealth Armor|4000
 03|Chinese Stealth Helmet|1650
 03|Gauntlet|250
@@ -73,6 +75,8 @@
 07|Brotherhood Recon Right Leg|1333
 07|Brotherhood Recon Chest Piece|2000
 07|Ammo Converter|1250
+07|Kids Truck Bed|500
+07|Umbrella Hat|100
 09|T-65 Left Arm|1000
 09|T-65 Right Arm|1000
 09|T-65 Helm|1650
@@ -86,6 +90,8 @@
 09|Crusader Pistol|2667
 09|Asylum Light|1000
 09|Meat Bag Stash Box|1000
+09|Ghoul Chair|500
+09|Gorilla Chair|500
 10|Gauss Shotgun Precise Stock|100
 10|Gauss Shotgun Vicious Receiver|200
 10|Gauss Shotgun Refined Receiver|200
@@ -97,6 +103,9 @@
 10|Turbo-Fert Fertilizer|750
 10|Hellstorm Missile Launcher|2667
 10|Unstoppable Monster|1333
+10|Cowboy Chaps|150
+10|Cowboy Duster|150
+10|Cowboy Hat|100
 11|Solar Armor Left Arm|750
 11|Solar Armor Right Arm|750
 11|Solar Armor Left Leg|750
@@ -110,6 +119,7 @@
 11|Plasma Cutter Cryo Blade|200
 11|Plasma Cutter Flaming Blade|200
 11|Plasma Cutter Shock Blade|200
+11|Floater Tubes|2000
 13|Gauss Pistol Suppressed Barrel|150
 13|Gauss Pistol Vicious Receiver|200
 13|Gauss Pistol Hardened Receiver|200
@@ -119,6 +129,11 @@
 13|BoS Medallion|1000
 13|Brotherhood Recon Jet Pack|2000
 13|Gauss Minigun|750
+13|Caged Bulb Lights|200
+13|Burrows Signs|200
+13|Valley Galleria Signs|200
+13|Steel Bust|500
+13|Foundry Smelter|1000
 14|Hellstorm Missile Launcher Cryo Payload|200
 14|Hellstorm Missile Launcher Napalm Payload|200
 14|Hellstorm Missile Launcher Plasma Payload|200
@@ -128,6 +143,7 @@
 14|War Glaive|2667
 14|Water Well|750
 14|Floater Flamer Grenade|150
+14|Flatwoods Monster Tube|2000
 15|Crusader Pistol Cryo Receiver|200
 15|Crusader Pistol Fusion Receiver|200
 15|Crusader Pistol Pyro Receiver|200
@@ -150,6 +166,7 @@
 23|Gauss Minigun|750
 23|Meat Bag Stash Box|1000
 23|Wendigo Tube|2000
+23|Alien Backpack|500
 22|War Glaive Flaming Blade|200
 22|War Glaive Shock Blade|200
 22|Whistle in the Dark|1333
@@ -162,6 +179,7 @@
 22|T-65 Jet Pack|2000
 22|Secret Service Underarmor|250
 22|The Gutter|1333
+22|Hot Rod Flames Handmade Skin|350
 21|Gauss Pistol Aligned Short Barrel|150
 21|Gauss Pistol Drum Magazine|100
 21|Gauss Pistol Refined Receiver|200
@@ -175,6 +193,7 @@
 21|Shielded Lining Secret Service Underarmor|200
 21|Mechanic's Best Friend|1333
 21|Medium Supply Crate|1000
+21|Intergalactic Handmade Skin|250
 19|Chinese Stealth Armor|4000
 19|Chinese Stealth Helmet|1650
 19|Gauntlet|250
@@ -188,6 +207,9 @@
 19|T-65 Stealth Boy|750
 19|Mirelurk King Tube|2000
 19|Hellfire Prototype Power Armor Paint|2000
+19|Long Aquarium Signs|350
+19|Atlantic Emblem|500
+19|Aquarium Signs|250
 18|Grocer's Backpack Mod|350
 18|Scavenged Solar Panel|2000
 18|Strangler Heart Left Arm|1000
@@ -202,6 +224,7 @@
 18|Resistant Lining Secret Service Underarmor|100
 18|Floater Gnasher Grenade|150
 18|Sole Survivor|1333
+18|X-01 Scorched Paint|500
 17|Secret Service Left Arm|750
 17|Secret Service Right Arm|750
 17|Secret Service Helmet|1650
