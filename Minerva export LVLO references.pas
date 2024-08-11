@@ -3,7 +3,7 @@
 	//idealy this will loop through the first leveled list and get elements from the sub leveled lists its not there yet in fact it is barely usable
 	//Version: 0.1
 	//run the folloing to clean up the output. ya this could be done in the script. I barely understand what the script is doing and dont want to break it.
-	//sed dmp_minerva.txt -e 's/BS02_SpecialVendor_Minerva_LL._GoldVendor.//g' -e 's/.\[\w*:\w*\].//g' -e 's/ .*Plan: //' -e 's/"/|/' |sort
+	//sed dmp_minerva.txt -e 's/BS02_SpecialVendor_Minerva_LL._GoldVendor.//g' -e 's/.\[\w*:\w*\].//g' -e 's/ .*Plan: //' -e 's/"/|/' |sort //"
 	// Version 0.1.1
 	// the output has been cleaned up and gold values added. 
 	// NOTE: Gold value does not have Minerva's discount applied
@@ -96,8 +96,8 @@ function Process(e: IInterface): integer;
 							if GoldBullionValueGLOB = '' then 
 								s := MinervaInventoryListID + '|' + FULLname + '|' + GoldBullionValue
 							else 
-								s := MinervaInventoryListID + '|' + FULLname + '|' +copy(GoldBullionValueGLOB,1,pos('.',GoldBullionValueGLOB)-1);
-							AddMessage(s);
+								s := MinervaInventoryListID + '|' + FULLname + '|' + StringReplace(GoldBullionValueGLOB,'.000000','',[rfReplaceAll, rfIgnoreCase]);
+							//AddMessage(s);
 							slExport.Add(s);
 						//end; // end if
 					end; // end if

@@ -70,9 +70,9 @@
 	date_default_timezone_set("America/New_York");
 
 	$Challenges = array('');
-	$EventChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 10) );
-	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
-	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 19) );
+	//$EventChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 10) );
+	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 12) );
+	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 12) );
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic');
 	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown');
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
@@ -82,9 +82,9 @@
 	use ICal\ICal;
 
 	foreach ( file('challenges.txt',FILE_IGNORE_NEW_LINES) as $key => $value) {
-		$tmpChallenges[$key]=$value;
+		$Challenges[$key]=$value;
 	}
-	$Challenges = array_unique($tmpChallenges,SORT_STRING);
+	//$Challenges = array_unique($tmpChallenges,SORT_STRING);
 
 	if ( ! isset( $_POST['Submit'] ) ) {
 		
@@ -97,7 +97,7 @@
 	$now = time();
 	//$now = strtotime('20221105T12:01:00');
 
-	sort($Challenges);
+	//sort($Challenges);
 	sort($Location);
 	sort($EnemyFaction);
 	sort($EnemyMutations1);
@@ -241,7 +241,7 @@
 		return $output;
 	}
 
-	function CurrentEvents() {
+	function CurrentEvents($Challenges) {
 		// read fallout76 calendar for current events
 
 		// gets events for for current day
@@ -269,12 +269,14 @@
 		foreach ($events as $event) {
 			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
 			$now = date('d-M-Y');
-			$check = $dtend->format('d-M-Y');
+			$check = $dtend->format('l, jMy');
 			if ( strcmp($now,$check)!=0 ) {
+				// call EventChallengs and put return value in something and append that to the output before return.
+				$chalEvent .= EventChallenges($event->summary,$Challenges);
 				$output .= "* ".$event->summary . ', Ends on (' . $check . ')'."\n";
-				if (is_string($event->description)) {
-					$output .= "* ".strip_tags($event->description) . "\n";
-				}
+				if (is_string($event->description) && strlen($chalEvent) == 0) {
+					$output .= strip_tags($event->description) . "\n";
+				}				
 			}
 			// $now = ceil((($ical->iCalDateToUnixTimestamp($event->dtend))-time())/60/60/24);
 			// if ($now>1) {
@@ -284,6 +286,7 @@
 			// }
 		}
 		$output .="\n";
+		$output .= $chalEvent;
 		return $output;
 	}
 	
@@ -360,6 +363,45 @@
 		return $output;
 	}
 
+	function EventChallenges($CurrentEvent,$ChallengeArray){
+		// check to see if an event is going on
+		// check to see if there are any matching challenges
+		// print them all purdy
+		$output ="";
+		// look for "Challenge Week" in the event
+		if ( str_contains($CurrentEvent,'Challenge Week') ) {			
+			if (strlen($output)==0) {
+				$output .="**$CurrentEvent**\n\nChallenge (Count) Reward\n";
+			}
+			$cWeek = 'week1';
+			if ( str_contains($CurrentEvent,'Week 2')) {
+				$cWeek = 'week2';
+			}
+			//foreach line of challenges check if its an event and check if it matches the current event and the week
+			// get event into seperate words so we can search the challenge array for 
+			foreach (explode(' ',$CurrentEvent) as $ekey => $evalue) {
+				foreach ($ChallengeArray as $ckey => $cvalue) { 
+					$expcvalue = explode('|',$cvalue); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
+					if ( strcmp($expcvalue[1],'Event') == 0 ) { // we only care about event challenges
+						$dtemp = strpos($expcvalue[0],$evalue);
+						if (strpos($expcvalue[0],$evalue) === 0 ) { // look for current word of the event at the begining of the challenge
+							if ( strcmp($expcvalue[2],$cWeek) == 0 || strcmp($expcvalue[2],"") == 0 ) {
+								$colonpositon = strpos($expcvalue[0],':');
+								$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
+								//$output .= '* ' . $expcvalue[0] . ' ' . $expcvalue[3] . "\n";
+								$output .= '* ' . $cleanChallenge . ' ' . $expcvalue[3] . "\n";
+							}
+							
+						}
+					}
+				}
+			}
+			$output .= "\n";
+		}
+
+		return $output;
+	}
+
 	  // Check if the form is submitted
 	if ( isset( $_POST['Submit'] ) ) {
 
@@ -371,7 +413,7 @@
 		$EnemyMutations2Result =  htmlspecialchars($_REQUEST['EnemyMutations2']);
 		$WeeklyChallenge=ReadForm($WeeklyChallenge,'w');
 		$DailyChallenge=ReadForm($DailyChallenge,'d');
-		$EventChallenge=ReadForm($EventChallenge,'e');
+		//$EventChallenge=ReadForm($EventChallenge,'e');
 	}
 	?>
 
@@ -401,7 +443,7 @@
 			?>
 	</table>
 
-	<table>
+	<!-- <table>
 		<caption><h1>Event Challenges</h1></caption>
 		<tr><th>Challenge</th></tr>	
 			<?php
@@ -411,7 +453,7 @@
 				echo '</tr>';
 			}
 			?>
-	</table>
+	</table> -->
 
 	<h1><img src='bos.png'> Daily Operation</h1>
 
@@ -446,12 +488,12 @@
 		usort($WeeklyChallenge,'cmp');
 		
 		$textareaValue = "Fallout 76 Daily Update\n";
-		$textareaValue .= CurrentEvents();
+		$textareaValue .= CurrentEvents($Challenges);
 		$ScoreMult=1;
 		if (str_contains($textareaValue,'Double SCORE') || str_contains($textareaValue,'Double Score')) {
 			$ScoreMult = 2;
 		}
-		$textareaValue .= formatprint(1,$EventChallenge,'e'); 
+		//$textareaValue .= formatprint(1,$EventChallenge,'e'); 
 		$textareaValue .= formatprint(1,$WeeklyChallenge,'w'); 
 		$textareaValue .= formatprint($ScoreMult,$DailyChallenge,'d');
 		$textareaValue .= Minerva();

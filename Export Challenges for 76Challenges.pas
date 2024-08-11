@@ -10,8 +10,9 @@ const
   sRecordsToSkip = 'REFR,PGRD,PHZD,ACHR,NAVM,NAVI,LAND';
 
 var
-  slExport, slTemp, elementFullName, elementChallengeFrequency, elementRequiredCount, elementFlair, elementReward: TStringList;
+  slExport, slTemp, elementFullName,FullName, elementChallengeFrequency, elementRequiredCount, elementFlair, elementReward, elementReward2: TStringList;
   sScore : integer;
+  L0, L1, L2, L3, L4, L5, L6, L7: IInterface;
 
 function Initialize: integer;
 begin
@@ -46,9 +47,31 @@ begin
   //  Exit;
   
   elementFullName := GetElementEditValues(e, 'FULL');
+  // if (Pos(': ',elementFullName)) > 0 then
+  //   FullName := RightStr(elementFullName,StrLen(elementFullName)-Pos(': ',elementFullName)-1)
+  // else
+    FullName := elementFullName;
+  
   elementRequiredCount := GetElementEditValues(e, 'TNAM');
   elementChallengeFrequency := GetElementEditValues(e, 'CNAM');
   elementReward := GetElementEditValues(e, 'MNAM');
+
+  // get 'rewards' element ElementByName(e,'Rewards')
+  // get 'reward' child element ElementByName(rewards, 'reward') 
+  // get 'DNAM' child element ElementBySignature(reward, 'DNAM')
+  // open reward element (GMRW) LinksTo(DNAM)
+  // do it all over again for QRCX to get GLOB
+  // get FLTV from GLOB GetElementeditValues(GLOB,'FLTV')
+  // we should have our scrip value for this challenge
+  L0 := ElementByName(e,'Rewards');
+  L1 := ElementByName(L0,'reward');
+  L2 := LinksTo(ElementBySignature(L1, 'DNAM'));
+  L3 := ElementByName(L2,'Rewards List');
+  L4 := ElementByName(L3,'reward');
+  L5 := LinksTo(ElementBySignature(L4, 'QRCX'));
+  L6 := GetElementeditValues(L5,'FLTV');
+
+  elementReward2 := StringReplace(L6,'.000000','',[rfReplaceAll, rfIgnoreCase]);
 
   if Pos('_Halloween_', EditorID(e)) <> 0 then
     elementFlair := '🎃' 
@@ -86,13 +109,19 @@ begin
   else if Pos('_Birthday_', EditorID(e)) <> 0 then
     elementFlair := '🎂' 
   
+  else if Pos('_Week1_', EditorID(e)) <> 0 then
+    elementFlair := 'week1' 
+  
+  else if Pos('_Week2_', EditorID(e)) <> 0 then
+    elementFlair := 'week2' 
+  
   else
     elementFlair := '';
 
-slTemp := elementFullName + ' (x' + elementRequiredCount + ')|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward;
+slTemp := FullName + ' (x' + elementRequiredCount + ')|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward + elementReward2;
 
-slExport.add(slTemp);
-//AddMessage(slTemp);
+//slExport.add(slTemp);
+AddMessage(slTemp);
 
 end;
 
