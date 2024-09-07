@@ -95,7 +95,6 @@
 	}
 
 	$now = time();
-	//$now = strtotime('20221105T12:01:00');
 
 	//sort($Challenges);
 	sort($Location);
@@ -269,7 +268,7 @@
 		foreach ($events as $event) {
 			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
 			$now = date('d-M-Y');
-			$check = $dtend->format('l, jMy');
+			$check = $dtend->format('d-M-Y');
 			if ( strcmp($now,$check)!=0 ) {
 				// call EventChallengs and put return value in something and append that to the output before return.
 				$chalEvent .= EventChallenges($event->summary,$Challenges);
