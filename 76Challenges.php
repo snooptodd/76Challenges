@@ -370,8 +370,8 @@
 		// check to see if there are any matching challenges
 		// print them all purdy
 		$output ="";
-		// look for "Challenge Week" in the event
-		if ( str_contains($CurrentEvent,'Challenge Week') ) {			
+		// look for "Challenge" in the event
+		if ( str_contains($CurrentEvent,'Challenge') ) {			
 			if (strlen($output)==0) {
 				$output .="**$CurrentEvent**\n\nChallenge (Count) Reward\n";
 			}
@@ -385,7 +385,7 @@
 				foreach ($ChallengeArray as $ckey => $cvalue) { 
 					$expcvalue = explode('|',$cvalue); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
 					if ( strcmp($expcvalue[1],'Event') == 0 ) { // we only care about event challenges
-						$dtemp = strpos($expcvalue[0],$evalue);
+						//$dtemp = strpos($expcvalue[0],$evalue); // is this used?
 						if (strpos($expcvalue[0],$evalue) === 0 ) { // look for current word of the event at the begining of the challenge
 							if ( strcmp($expcvalue[2],$cWeek) == 0 || strcmp($expcvalue[2],"") == 0 ) {
 								$colonpositon = strpos($expcvalue[0],':');
