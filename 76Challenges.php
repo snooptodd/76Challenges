@@ -72,7 +72,7 @@
 	$Challenges = array('');
 	//$EventChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 10) );
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 12) );
-	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 12) );
+	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 15) );
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic','Glassed Caverns','Atlantic City Community Center');
 	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown');
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
@@ -90,7 +90,8 @@
 		
 		$DailyChallenge[0][3]='1ˢᵗ ';
 		$DailyChallenge[1][0]='Gold Star: Complete a Daily Challenge (x6)|Daily|⭐|1000';
-		$WeeklyChallenge[1][0]='Repeatable Under Rank 100: Gain XP (x10000)|Weekly|🔁 |100';
+		$WeeklyChallenge[1][0]='Repeatable Under Rank 100: Gain XP (x10000)|Weekly|🔁|100';
+		$WeeklyChallenge[2][0]='Repeatable at Rank 100 and above: Complete a Public Event (x3)|Weekly|🔁|300';
 		$WeeklyChallenge[0][0]='Complete a Gold Star Daily Challenge! (x3)|Weekly|⭐|1500';
 	}
 
@@ -190,6 +191,8 @@
 		if ($b[3] == "1ˢᵗ ") {return 1;}
 		if (str_contains($ac,"⭐")) {return -1;}
 		if (str_contains($bc,"⭐")) {return 1;}
+		if (str_contains($ac,"🔁")) {return -1;}
+		if (str_contains($bc,"🔁")) {return 1;}
 		//sort empty to bottom
 		if ($ac  == "") {return 1;}
 		if ($bc  == "") {return -1;}
@@ -217,7 +220,7 @@
 				if ( $value[0] ) {
 					$tmp=explode("|",$value[0]);
 					$value[0] = $tmp[0]; // full name and required count
-					$value[1] = $tmp[2]; // flair
+					$value[1] = $tmp[2].' '; // flair
 					// $value[2] is reward
 					// $value[3] is "1st"
 					if ( strlen($tmp[3])==0 && $tmp[1]=='Weekly' ) {

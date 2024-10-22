@@ -24,8 +24,10 @@ begin
   if Pos(Signature(e), sRecordsToSkip) <> 0 then
     Exit;
   
-  if (Pos('ATX_DE2024_', EditorID(e)) + Pos('SCORE_', EditorID(e))) <> 1 then
-    Exit;
+  // This was soo simple. Why did they have to break you?
+  // if (Pos('ATX_DE2023_', EditorID(e)) + Pos('SCORE_', EditorID(e))) <> 1 then
+  //   Exit;
+
   //if Pos('Epic - ',GetElementEditValues(e, 'FULL')) = 1 then
   //begin
   //  if pos('Weekly',GetElementEditValues(e, 'CNAM') = 1 then
@@ -33,18 +35,35 @@ begin
   //  else
   //    sScore := 400;
   //end; 
+
   if Pos('_META', EditorID(e)) <> 0 then
     Exit;
   if Pos('_SUB_', EditorID(e)) <> 0 then
     Exit;
-  //if Pos('Sub_', EditorID(e)) <> 0 then
-  //  Exit;
-  //if Pos('zzz', EditorID(e)) <> 0 then
-  //  Exit;
-  //if Pos('_Epic', EditorID(e)) <> 0 then
-  //  Exit;
-  //if Pos('POST_', EditorID(e)) <> 0 then
-  //  Exit;
+  if Pos('Sub_', EditorID(e)) <> 0 then
+   Exit;
+  if Pos('zzz', EditorID(e)) = 1 then
+   Exit;
+  if Pos('_Epic', EditorID(e)) <> 0 then
+   Exit;
+  if Pos('POST', EditorID(e)) = 1 then
+   Exit;
+  if Pos('CUT', EditorID(e)) = 1 then
+   Exit;
+  if Pos('Challenge_', EditorID(e)) = 1 then
+   Exit;
+  if Pos('ATX_DE2021_', EditorID(e)) = 1 then
+   Exit;
+  if Pos('ATX_DE2022_', EditorID(e)) = 1 then
+   Exit;
+  if Pos('ATX_DE2023_', EditorID(e)) = 1 then
+   Exit;
+  if Pos('TEST', EditorID(e)) = 1 then
+   Exit;
+  if Pos('ZZZ', EditorID(e)) = 1 then
+   Exit;
+  if Pos('ATOMS_', EditorID(e)) = 1 then
+   Exit;
   
   elementFullName := GetElementEditValues(e, 'FULL');
   // if (Pos(': ',elementFullName)) > 0 then
@@ -109,10 +128,10 @@ begin
   else if Pos('_Birthday_', EditorID(e)) <> 0 then
     elementFlair := '🎂' 
   
-  else if Pos('_Week1_', EditorID(e)) <> 0 then
+  else if Pos('_Week1', EditorID(e)) <> 0 then
     elementFlair := 'week1' 
   
-  else if Pos('_Week2_', EditorID(e)) <> 0 then
+  else if Pos('_Week2', EditorID(e)) <> 0 then
     elementFlair := 'week2' 
   
   else
@@ -120,8 +139,9 @@ begin
 
 slTemp := FullName + ' (x' + elementRequiredCount + ')|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward + elementReward2;
 
-//slExport.add(slTemp);
-AddMessage(slTemp);
+slExport.add(slTemp);
+//AddMessage(slTemp);
+AddMessage(EditorID(e));
 
 end;
 
