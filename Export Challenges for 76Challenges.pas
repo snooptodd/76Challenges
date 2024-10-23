@@ -130,9 +130,12 @@ begin
   
   else if Pos('_Week1', EditorID(e)) <> 0 then
     elementFlair := 'week1' 
-  
+    
   else if Pos('_Week2', EditorID(e)) <> 0 then
-    elementFlair := 'week2' 
+    elementFlair := 'week1' 
+  
+  else if Pos('event', elementChallengeFrequency) <> 0 then
+    elementFlair := '' 
   
   else
     elementFlair := '';

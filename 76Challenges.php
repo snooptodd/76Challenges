@@ -371,7 +371,7 @@
 		// print them all purdy
 		$output ="";
 		// look for "Challenge" in the event
-		if ( str_contains($CurrentEvent,'Challenge') ) {			
+		if ( str_contains($CurrentEvent,'Event') ) {			
 			if (strlen($output)==0) {
 				$output .="**$CurrentEvent**\n\nChallenge (Count) Reward\n";
 			}
@@ -385,8 +385,8 @@
 				foreach ($ChallengeArray as $ckey => $cvalue) { 
 					$expcvalue = explode('|',$cvalue); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
 					if ( strcmp($expcvalue[1],'Event') == 0 ) { // we only care about event challenges
-						//$dtemp = strpos($expcvalue[0],$evalue); // is this used?
-						if (strpos($expcvalue[0],$evalue) === 0 ) { // look for current word of the event at the begining of the challenge
+						//$dtemp = strpos(strtolower($expcvalue[0]),strtolower($evalue)); // debug 
+						if ( strpos(strtolower($expcvalue[0]),strtolower($evalue)) === 0 ) { // look for current word of the event at the begining of the challenge
 							if ( strcmp($expcvalue[2],$cWeek) == 0 || strcmp($expcvalue[2],"") == 0 ) {
 								$colonpositon = strpos($expcvalue[0],':');
 								$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
@@ -492,8 +492,10 @@
 		$textareaValue = "Fallout 76 Daily Update\n";
 		$textareaValue .= CurrentEvents($Challenges);
 		$ScoreMult=1;
-		if (str_contains($textareaValue,'Double SCORE') || str_contains($textareaValue,'Double Score')) {
+		if (str_contains(strtolower($textareaValue),'double score')) {
 			$ScoreMult = 2;
+		} elseif (str_contains(strtolower($textareaValue),'triple score')) {
+			$ScoreMult = 3;
 		}
 		//$textareaValue .= formatprint(1,$EventChallenge,'e'); 
 		$textareaValue .= formatprint(1,$WeeklyChallenge,'w'); 

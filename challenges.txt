@@ -625,7 +625,7 @@ Use Photomode to take a Photo at a Best Build C.A.M.P. (x1)|Daily||250
 Visit a Best Build C.A.M.P. (x1)|Daily||250
 Like a Best Build C.A.M.P. (x1)|Daily||250
 Take a Camera picture at a Best Build C.A.M.P. (x1)|Daily||250
-HALLOWEEN: Complete Trick or Treat Weekly Challenges (x2)|Event|🎃|Blood Punch Bowl
+HALLOWEEN: Complete Trick or Treat Weekly Challenges (x2)|Event||Blood Punch Bowl
 HALLOWEEN: Build a Candy Bowl and give out candy from your C.A.M.P. (x1)|Daily|🎃|250
 HALLOWEEN: Kill a Spooky Scorched (x5)|Daily|🎃|Repair Kit
 HALLOWEEN: Complete Give out Candy Daily Challenges (x3)|Weekly|🎃|1000
@@ -634,8 +634,8 @@ HALLOWEEN: Kill a Spooky Scorched (x5)|Daily|🎃|Perfect Bubblegum (3)
 HALLOWEEN: Complete Trick or Treat Daily Challenges (x3)|Weekly|🎃|1000
 HALLOWEEN: Trick or Treat from other players' candy bowls (x5)|Daily|🎃|250
 HALLOWEEN: Kill Spooky Scorched (Repeatable) (x50)|Weekly|🎃|Carry Weight Booster (3)
-HALLOWEEN: Complete Give Out Candy Weekly Challenges (x2)|Event|🎃|Jack O'Lantern Dress
-HALLOWEEN: Complete Trick or Treat and Give Out Candy Weekly Challenges (x2)|Event|🎃|Mothman Eyes Wall Light
+HALLOWEEN: Complete Give Out Candy Weekly Challenges (x2)|Event||Jack O'Lantern Dress
+HALLOWEEN: Complete Trick or Treat and Give Out Candy Weekly Challenges (x2)|Event||Mothman Eyes Wall Light
 HALLOWEEN: Complete Trick or Treat Daily Challenges (x3)|Weekly|🎃|1000
 HALLOWEEN: Complete Give out Candy Daily Challenges (x3)|Weekly|🎃|1000
 Repeatable at Rank 100 or above: Complete a Public Event (x3)|Weekly|🔁|300
