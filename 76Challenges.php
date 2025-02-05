@@ -117,6 +117,13 @@
 		$EnemyMutations1 = array('Piercing Gaze','Savage Strike');
 	}
 
+	function atomicShop() {
+		// return formated list of daily atomic shop items
+		// maybe for the rest of the 76 week.
+		$output="";
+		return $output;
+	}
+
 	// takes as input an array that is used to fill in the options for a select box
 	function select_option($BoxName,$CurrnetValue, $alist) {
 		foreach ($alist as $key => $value) {
@@ -274,11 +281,16 @@
 			$check = $dtend->format('d-M-Y');
 			if ( strcmp($now,$check)!=0 ) {
 				// call EventChallengs and put return value in something and append that to the output before return.
-				$chalEvent .= EventChallenges($event->summary,$Challenges);
-				$output .= "* ".$event->summary . ', Ends on (' . $check . ')'."\n";
-				if (is_string($event->description) && strlen($chalEvent) == 0) {
-					$output .= strip_tags($event->description) . "\n";
-				}				
+				$chalEvent .= EventChallenges($event->summary,$event->description);
+				if ( $event->description == "Estimated" ) {
+					$output .= "* ".$event->summary . ', Estimated end date (' . $check . ')'."\n";
+				} else {
+					$output .= "* ".$event->summary . ', Ends on (' . $check . ')'."\n";
+				}
+				
+				// if (is_string($event->description) && strlen($chalEvent) == 0) {
+				// 	$output .= strip_tags($event->description) . "\n";
+				// }				
 			}
 			// $now = ceil((($ical->iCalDateToUnixTimestamp($event->dtend))-time())/60/60/24);
 			// if ($now>1) {
@@ -347,9 +359,9 @@
 				}
 			}
 		}
-		if ($MinervaLocationResult=='Away') {
+		if (($MinervaLocationResult=='Away') & !($MinervaNextLocation=='') ) {
 			$output =  "**Minerva's Location: $MinervaLocationResult**\n\n$MinervaNextLocation\n";
-		} else {
+		} elseif ( !($MinervaLocationResult=='Away') & !($MinervaNextLocation=='') ) {
 			$output =  "**Minerva's Location: $MinervaLocationResult**\n\n";
 			$output .=  "Name (Gold Price)\n";
 			foreach ($MinervaEnventory as $MEkey => $MEvalue) {
@@ -358,46 +370,60 @@
 					$gold = round($MEline[2]*0.75);
 					$output .= "* ".$MEline[1]." (".$gold.")\n";
 				}
-			}
-			
+			}			
+		} else {
+			$output .= '**Minerva is broken.**';
 		}
 		$output .=  "\n";
 		return $output;
 	}
 
-	function EventChallenges($CurrentEvent,$ChallengeArray){
+	function EventChallenges($CurrentEvent,$CurrentDiscription){
 		// check to see if an event is going on
 		// check to see if there are any matching challenges
 		// print them all purdy
 		$output ="";
 		// look for "Challenge" in the event
-		if ( str_contains($CurrentEvent,'Event') ) {			
+		if ( str_contains(strtolower($CurrentEvent),'challenge') ) {			
 			if (strlen($output)==0) {
 				$output .="**$CurrentEvent**\n\nChallenge (Count) Reward\n";
-			}
-			$cWeek = 'week1';
-			if ( str_contains($CurrentEvent,'Week 2')) {
-				$cWeek = 'week2';
+			// }
+			// $cWeek = 'week1';
+			// if ( str_contains($CurrentEvent,'Week 2')) {
+			// 	$cWeek = 'week2';
+			// }
+				$aCurrentDiscription=preg_split("/\r\n|\n|\r/", $CurrentDiscription);
+				foreach ($aCurrentDiscription as $key => $value) {
+					$expcvalue = explode('|',$value); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
+					$colonpositon = strpos($expcvalue[0],':');
+					if (! $colonpositon) {
+						$cleanChallenge = trim($expcvalue[0]);
+					} else {
+						$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
+					}
+					$output .= '* ' . $cleanChallenge . ' ' . $expcvalue[3] . "\n";
+				}
 			}
 			//foreach line of challenges check if its an event and check if it matches the current event and the week
 			// get event into seperate words so we can search the challenge array for 
-			foreach (explode(' ',$CurrentEvent) as $ekey => $evalue) {
-				foreach ($ChallengeArray as $ckey => $cvalue) { 
-					$expcvalue = explode('|',$cvalue); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
-					if ( strcmp($expcvalue[1],'Event') == 0 ) { // we only care about event challenges
-						//$dtemp = strpos(strtolower($expcvalue[0]),strtolower($evalue)); // debug 
-						if ( strpos(strtolower($expcvalue[0]),strtolower($evalue)) === 0 ) { // look for current word of the event at the begining of the challenge
-							if ( strcmp($expcvalue[2],$cWeek) == 0 || strcmp($expcvalue[2],"") == 0 ) {
-								$colonpositon = strpos($expcvalue[0],':');
-								$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
-								//$output .= '* ' . $expcvalue[0] . ' ' . $expcvalue[3] . "\n";
-								$output .= '* ' . $cleanChallenge . ' ' . $expcvalue[3] . "\n";
-							}
-							
-						}
-					}
-				}
-			}
+			// foreach (explode(' ',$CurrentEvent) as $ekey => $evalue) {
+			// 	foreach ($ChallengeArray as $ckey => $cvalue) { 
+			// 		$expcvalue = explode('|',$cvalue); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
+			// 		if ( strcmp(strtolower($expcvalue[1]),'event') == 0 ) { // we only care about event challenges
+			// 			//$dtemp = strpos(strtolower($expcvalue[0]),strtolower($evalue)); // debug 
+			// 			if ( strpos(strtolower($expcvalue[0]),strtolower($evalue)) === 0 ) { // look for current word of the event at the begining of the challenge
+			// 				if ( strcmp($expcvalue[2],$cWeek) == 0 || strcmp($expcvalue[2],"") == 0 ) {
+			// 					$colonpositon = strpos($expcvalue[0],':');
+			// 					$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
+			// 					//$output .= '* ' . $expcvalue[0] . ' ' . $expcvalue[3] . "\n";
+			// 					$output .= '* ' . $cleanChallenge . ' ' . $expcvalue[3] . "\n";
+			// 				}
+			// 			}
+			// 		}
+			// 	}
+			// }
+			// KISS
+			
 			$output .= "\n";
 		}
 
