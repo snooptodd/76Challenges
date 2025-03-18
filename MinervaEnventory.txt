@@ -154,46 +154,36 @@
 15|Covert Scout Armor Right Leg|1333
 15|Covert Scout Armor Chest Piece|2000
 15|Covert Scout Armor Mask|2667
-23|Arctic Marine Left Arm|1333
-23|Arctic Marine Right Arm|1333
-23|Arctic Marine Left Leg|1333
-23|Arctic Marine Right Leg|1333
-23|Arctic Marine Torso|2000
-23|Arctic Marine Armor Helmet|2667
-23|Brotherhood of Steel Minigun Paint|1333
-23|Slocum Joe's Power Armor Paint|2000
-23|Crusader Pistol|2667
-23|Gauss Minigun|750
-23|Meat Bag Stash Box|1000
-23|Wendigo Tube|2000
-23|Alien Backpack|500
-22|War Glaive Flaming Blade|200
-22|War Glaive Shock Blade|200
-22|Whistle in the Dark|1333
-22|Water Well|750
-22|Ultra-Light Build Secret Service Armor Limbs|500
-22|Lighter Build Secret Service Armor Limbs|250
-22|Plasma Caster|750
-22|T-65 Calibrated Shocks|750
-22|T-65 Rusty Knuckles|250
-22|T-65 Jet Pack|2000
-22|Secret Service Underarmor|250
-22|The Gutter|1333
-22|Hot Rod Flames Handmade Skin|350
-21|Gauss Pistol Aligned Short Barrel|150
-21|Gauss Pistol Drum Magazine|100
-21|Gauss Pistol Refined Receiver|200
-21|Gauss Minigun|750
-21|Thorn Armor Left Arm|750
-21|Thorn Armor Right Arm|750
-21|Thorn Armor Left Leg|750
-21|Thorn Armor Right Leg|750
-21|Thorn Armor Chest Piece|1000
-21|Protective Lining Secret Service Underarmor|150
-21|Shielded Lining Secret Service Underarmor|200
-21|Mechanic's Best Friend|1333
-21|Medium Supply Crate|1000
-21|Intergalactic Handmade Skin|250
+17|Secret Service Left Arm|750
+17|Secret Service Right Arm|750
+17|Secret Service Helmet|1650
+17|Secret Service Left Leg|750
+17|Secret Service Right Leg|750
+17|Secret Service Chest Piece|1250
+17|Farmable Dirt Tiles|500
+17|Sympto-Matic|2000
+17|Super Reactor|2000
+17|War Glaive|2667
+17|Gauss Minigun Gunner Sights|50
+17|Gauss Minigun Tesla Capacitor|100
+17|Gauss Minigun Tesla Dynamo|100
+17|Chemist's Backpack Mod|350
+17|Cattle Prod|250
+18|Grocer's Backpack Mod|350
+18|Scavenged Solar Panel|2000
+18|Strangler Heart Left Arm|1000
+18|Strangler Heart Right Arm|1000
+18|Strangler Heart Helmet|1650
+18|Strangler Heart Left Leg|1000
+18|Strangler Heart Right Leg|1000
+18|Strangler Heart Chest Piece|1250
+18|Dynamite|100
+18|Gauss Pistol|250
+18|Treated Lining Secret Service Underarmor|50
+18|Resistant Lining Secret Service Underarmor|100
+18|Floater Gnasher Grenade|150
+18|Sole Survivor|1333
+18|X-01 Scorched Paint|500
 19|Chinese Stealth Armor|4000
 19|Chinese Stealth Helmet|1650
 19|Gauntlet|250
@@ -210,33 +200,43 @@
 19|Long Aquarium Signs|350
 19|Atlantic Emblem|500
 19|Aquarium Signs|250
-18|Grocer's Backpack Mod|350
-18|Scavenged Solar Panel|2000
-18|Strangler Heart Left Arm|1000
-18|Strangler Heart Right Arm|1000
-18|Strangler Heart Helmet|1650
-18|Strangler Heart Left Leg|1000
-18|Strangler Heart Right Leg|1000
-18|Strangler Heart Chest Piece|1250
-18|Dynamite|100
-18|Gauss Pistol|250
-18|Treated Lining Secret Service Underarmor|50
-18|Resistant Lining Secret Service Underarmor|100
-18|Floater Gnasher Grenade|150
-18|Sole Survivor|1333
-18|X-01 Scorched Paint|500
-17|Secret Service Left Arm|750
-17|Secret Service Right Arm|750
-17|Secret Service Helmet|1650
-17|Secret Service Left Leg|750
-17|Secret Service Right Leg|750
-17|Secret Service Chest Piece|1250
-17|Farmable Dirt Tiles|500
-17|Sympto-Matic|2000
-17|Super Reactor|2000
-17|War Glaive|2667
-17|Gauss Minigun Gunner Sights|50
-17|Gauss Minigun Tesla Capacitor|100
-17|Gauss Minigun Tesla Dynamo|100
-17|Chemist's Backpack Mod|350
-17|Cattle Prod|250
+21|Gauss Pistol Aligned Short Barrel|150
+21|Gauss Pistol Drum Magazine|100
+21|Gauss Pistol Refined Receiver|200
+21|Gauss Minigun|750
+21|Thorn Armor Left Arm|750
+21|Thorn Armor Right Arm|750
+21|Thorn Armor Left Leg|750
+21|Thorn Armor Right Leg|750
+21|Thorn Armor Chest Piece|1000
+21|Protective Lining Secret Service Underarmor|150
+21|Shielded Lining Secret Service Underarmor|200
+21|Mechanic's Best Friend|1333
+21|Medium Supply Crate|1000
+21|Intergalactic Handmade Skin|250
+22|War Glaive Flaming Blade|200
+22|War Glaive Shock Blade|200
+22|Whistle in the Dark|1333
+22|Water Well|750
+22|Ultra-Light Build Secret Service Armor Limbs|500
+22|Lighter Build Secret Service Armor Limbs|250
+22|Plasma Caster|750
+22|T-65 Calibrated Shocks|750
+22|T-65 Rusty Knuckles|250
+22|T-65 Jet Pack|2000
+22|Secret Service Underarmor|250
+22|The Gutter|1333
+22|Hot Rod Flames Handmade Skin|350
+23|Arctic Marine Left Arm|1333
+23|Arctic Marine Right Arm|1333
+23|Arctic Marine Left Leg|1333
+23|Arctic Marine Right Leg|1333
+23|Arctic Marine Torso|2000
+23|Arctic Marine Armor Helmet|2667
+23|Brotherhood of Steel Minigun Paint|1333
+23|Slocum Joe's Power Armor Paint|2000
+23|Crusader Pistol|2667
+23|Gauss Minigun|750
+23|Meat Bag Stash Box|1000
+23|Wendigo Tube|2000
+23|Alien Backpack|500

@@ -63,24 +63,16 @@ begin
       FULLname := delete(GetElementEditValues(Minerva_Inventory_currentLeveledListRecord , 'FULL'),1,6);
       GoldBullionValue :=  GetElementEditValues(ElementBySignature(Minerva_Inventory_currentLeveledListRecord, 'DATA'), 'Value');
       GoldBullionValueGLOB := GetElementEditValues(LinksTo(ElementBySignature(Minerva_Inventory_currentLeveledListRecord, 'BVGO')), 'FLTV');
-      if pos('M',Minerva_Inventory_ListID) = 0 then begin
+      s := '';
+      if pos('M',Minerva_Inventory_ListID) = 0 then begin // if this is not a 'big' sale add to slExport
         // if GoldBullionValueGLOB has a value then that is used for the gold value of the item
         if GoldBullionValueGLOB = '' then 
           s := Minerva_Inventory_ListID + '|' + FULLname + '|' + GoldBullionValue
         else 
           s := Minerva_Inventory_ListID + '|' + FULLname + '|' + StringReplace(GoldBullionValueGLOB,'.000000','',[rfReplaceAll, rfIgnoreCase]);
+        AddMessage(s);
+        slExport.add(s);
       end;
-      // AddMessage(// Add line of text to the export
-      // IntToHex(FormID(Minerva_Inventory_currentLeveledListRecord) and $FFFFFF, 8) + ',' + // Add FormID
-      // Minerva_Inventory_ListID + ',' + // Add EDID
-      // // name(Minerva_Inventory_currentLVLO) + ',' + // Add EDID
-      // Name(Minerva_CurrentLeveledListRecord) + ',' + // Add FULL)
-      // Name(Minerva_Inventory_currentLeveledListRecord) // Add FULL)
-      // );
-      AddMessage(s);
-      s := '';
-      // slExport.add(s);
-
     end;
   end;
 end;
