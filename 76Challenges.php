@@ -120,7 +120,45 @@
 	function atomicShop() {
 		// return formated list of daily atomic shop items
 		// maybe for the rest of the 76 week.
-		$output="";
+		// read fallout76 atocmic shop calendar for events
+
+		// gets events for for current day
+		try {
+			$ical = new ICal( array(
+				'defaultSpan'                 => 2,     // Default value
+				'defaultTimeZone'             => 'UTC',
+				'defaultWeekStart'            => 'MO',  // Default value
+				'disableCharacterReplacement' => false, // Default value
+				'filterDaysAfter'             => null,  // Default value
+				'filterDaysBefore'            => null,  // Default value
+				'httpUserAgent'               => null,  // Default value
+				'skipRecurrence'              => false, // Default value
+			));
+		} catch (\Exception $e) {
+			die($e);
+		}
+		
+		$chalEvent="";
+		//$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
+		$icalURL="https://calendar.google.com/calendar/ical/3d1861cb59dd5cc76b85ba542950afde0459701cad509e64b5d734ea5df33a83%40group.calendar.google.com/public/basic.ics";
+		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
+		$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
+		$output = "\n**Atomic Shop**\n";
+		$events = $ical->eventsFromInterval('1 day');
+		foreach ($events as $event) {
+			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
+			$now = date('d-M-Y');
+			$check = $dtend->format('d-M-Y');
+			if ( strcmp($now,$check)!=0 ) {
+				// call EventChallengs and put return value in something and append that to the output before return.
+				$chalEvent .= EventChallenges($event->summary,$event->description);
+				if ( $event->summary == "Free & Daily Offers" ) {
+					$output .= "* ".$event->summary . "\n  " . $event->description . ')'."\n";
+				}
+			}
+		}
+		$output .="\n";
+		$output .= $chalEvent;
 		return $output;
 	}
 
@@ -516,6 +554,7 @@
 		usort($WeeklyChallenge,'cmp');
 		
 		$textareaValue = "Fallout 76 Daily Update\n";
+		$textareaValue .= strip_tags(atomicShop());
 		$textareaValue .= CurrentEvents($Challenges);
 		$ScoreMult=1;
 		if (str_contains(strtolower($textareaValue),'double score')) {
