@@ -220,8 +220,8 @@ Take a Camera Picture of a Stingwing (x1)|Daily||250
 Take a Camera Picture of a Fog Crawler (x1)|Daily||250
 Cripple a Mole Miner's Head (x2)|Daily||250
 Cripple a Super Mutant's Head (x2)|Daily||250
-Epic - Sell a Speed Demon Serum to an NPC vendor (x1)|Weekly||1500
-Epic - Sell an Electrically Charged Serum to an NPC vendor (x1)|Weekly||1500
+Epic - Sell a Speed Demon Serum to an NPC vendor (x1)|Monthly||1500
+Epic - Sell an Electrically Charged Serum to an NPC vendor (x1)|Monthly||1500
 Collect Brain Fungus (x5)|Daily||250
 Buiild Musical Instruments in a Workshop or C.A.M.P. (x15)|Weekly||1000
 Build a Generator in a C.A.M.P. or Workshop (x5)|Weekly||1000
@@ -635,9 +635,9 @@ Kill a Creature (x15)|Daily||250
 Kill a Creature while in a Team (x10)|Daily||250
 Kill a Mole Miner (x10)|Daily||250
 Kill a Feral Ghoul (x10)|Daily||250
-Kill a Legendary Creature (x5)|Weekly||1000
-Complete an Event while in a Team (x10)|Weekly||1000
-Harvest a Wild Plant or Fungi (x30)|Weekly||1000
+Kill a Legendary Creature (x5)|Monthly||1000
+Complete an Event while in a Team (x10)|Monthly||1000
+Harvest a Wild Plant or Fungi (x30)|Monthly||1000
 Craft or Scrap Clothing, Armor or a Weapon (x25)|Weekly||1000
 Deal a Critical Hit to an Enemy in VATS (x25)|Weekly||1000
 Complete an Event (x1)|Daily||250
@@ -669,7 +669,7 @@ Eat Pre-war Food (x5)|Daily||250
 Hack a Terminal (x1)|Daily||250
 Eat a Plant-based Meal (x10)|Daily||250
 Ferment an Alcoholic Beverage (x3)|Daily||250
-Epic - Kill a Sheepsquatch (x1)|Daily||400
+Epic - Kill a Sheepsquatch (x1)|Monthly||400
 Kill a Wendigo (x1)|Daily||250
 Complete the Event: "Encryptid" (x1)|Daily||250
 Consume a "Vintage" Alcoholic Beverage (x1)|Daily||250
@@ -678,7 +678,7 @@ Consume an Alcoholic Beverage (x10)|Daily||250
 Scrap junk to produce Aluminum (x5)|Daily||250
 Use Photomode to Take a Photo (x3)|Daily||250
 Level up! (x1)|Daily||250
-Epic - Kill the Mothman (x1)|Daily||400
+Epic - Kill the Mothman (x1)|Monthly||400
 Kill a Deathclaw (x1)|Daily||250
 Kill a Cryptid (x1)|Daily||250
 Craft or Scrap a piece of Power Armor (x1)|Daily||250

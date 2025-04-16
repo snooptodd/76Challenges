@@ -73,6 +73,7 @@
 	//$EventChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 10) );
 	$DailyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 12) );
 	$WeeklyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 15) );
+	$MonthlyChallenge=array_map(function($n) { return array_map(function($n) { return null; }, range(1, 4) ); }, range(1, 5) );
 	$Location=array('', 'Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic','Glassed Caverns','Atlantic City Community Center');
 	$EnemyFaction = array('', 'Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown');
 	$EnemyMutations1 = array('Piercing Gaze', 'Savage Strike');
@@ -203,16 +204,20 @@
 
 	//create data list for html input tag 
 	// if event and $value[1] is event then echo
+	// if Monthly and $value[1] is Monthly then echo
 	// if Weekly and $value[1] is Weekly then echo
 	// if daily and $value[1] is Daily then echom
 	function datalist($alist){
 		$tmpevent = '<datalist id=EventChallenges>';
+		$tmpmonthly = '<datalist id=MonthlyChallenges>';
 		$tmpweekly = '<datalist id=WeeklyChallenges>';
 		$tmpdaily = '<datalist id=DailyChallenges>';
 		foreach ($alist as $key => $value) {
 			$tmpvalue = explode('|',$value)[1];
 			if ( $tmpvalue=='Event' ) {
 				$tmpevent .="<option>".$value."</option>";
+			} elseif ( $tmpvalue=='Monthly' ) {
+				$tmpmonthly .= "<option>".$value."</option>";
 			} elseif ( $tmpvalue=='Weekly' ) {
 				$tmpweekly .= "<option>".$value."</option>";
 			} elseif ($tmpvalue=='Daily' ) {
@@ -220,9 +225,11 @@
 			} 
 		}
 		$tmpevent .= "</datalist>";
+		$tmpmonthly .= "</datalist>";
 		$tmpweekly .= "</datalist>";
 		$tmpdaily .= "</datalist>";
 		echo $tmpevent;
+		echo $tmpmonthly;
 		echo $tmpweekly;
 		echo $tmpdaily;
 	}
@@ -255,6 +262,9 @@
 			if ( $select_prefix == 'w' ) {
 				$output .= "**Weekly Challenges**\n\n";
 				$output .= "Challenge (Count) S.C.O.R.E.\n";
+			} elseif ( $select_prefix == 'm' ) {
+				$output .= "**Monthly  Challenges**\n\n";
+				$output .= "Challenge (Count) S.C.O.R.E.\n";
 			} elseif ( $select_prefix == 'd' ) {
 				$output .= "**Daily Challenges**\n\n";
 				$output .= "Challenge (Count) S.C.O.R.E.\n";
@@ -264,22 +274,23 @@
 			foreach ($aChallenge as $key => $value) {
 				if ( $value[0] ) {
 					$tmp=explode("|",$value[0]);
-					$value[0] = $tmp[0]; // full name and required count
-					$value[1] = $tmp[2].' '; // flair
-					// $value[2] is reward
-					// $value[3] is "1st"
-					if ( strlen($tmp[3])==0 && $tmp[1]=='Weekly' ) {
-						$value[2] = '1000';
-					} elseif ( strlen($tmp[3])==0 && $tmp[1]=='Daily') {
-						$value[2] = '250';
-					} else {
-						$value[2] = $tmp[3];
-					}
+					$name_count = $tmp[0]; // full name and required count
+					$frequency = $tmp[1]; // event, monthoy, weekly , Daily
+					$flair = $tmp[2]; // 
+					$reward = $tmp[3]; // reward
+					$FO1st = $value[3];
+					if ( strlen($reward)==0 && $frequency=='Weekly' ) {
+						$reward = '1000';
+					} elseif ( strlen($reward)==0 && $frequency=='Monthly') {
+						$reward = '2000';
+					} elseif ( strlen($reward)==0 && $frequency=='Daily') {
+						$reward = '250';
+					} 
 					
-					if (is_numeric($value[2]) ) {
-						$output .="* ".$value[3].$value[1].$value[0].' '.$ScoreMult * $value[2]."\n";
+					if (is_numeric($reward) ) { // reward
+						$output .="* ".$FO1st.$flair.$name_count.' '.$ScoreMult * $reward."\n";
 					} else {
-						$output .="* ".$value[3].$value[1].$value[0].' '.$value[2]."\n";
+						$output .="* ".$FO1st.$flair.$name_count.' '.$reward."\n";
 					}
 				}
 			}
@@ -306,7 +317,7 @@
 		} catch (\Exception $e) {
 			die($e);
 		}
-		
+		$chalEvent="";
 		//$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
 		$icalURL="https://calendar.google.com/calendar/ical/677a43e0ffb5d922130f03876fe8c0bea6cb2fa558a7f50574cbbaa75564c74e%40group.calendar.google.com/public/basic.ics";
 		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
@@ -479,9 +490,22 @@
 		$EnemyMutations2Result =  htmlspecialchars($_REQUEST['EnemyMutations2']);
 		$WeeklyChallenge=ReadForm($WeeklyChallenge,'w');
 		$DailyChallenge=ReadForm($DailyChallenge,'d');
-		//$EventChallenge=ReadForm($EventChallenge,'e');
+		$MonthlyChallenge=ReadForm($MonthlyChallenge,'m');
 	}
 	?>
+
+	<table>
+		<caption><h1>Monthly Challenges</h1></caption>
+		<tr><th>1st</th><th>Challenge</th></tr>	
+			<?php
+			foreach ($MonthlyChallenge as $key => $value) {
+				echo '<tr>';
+				text_input('1st','m'.$key.'1st', $value[3],'5');
+				text_input('MonthlyChallenges','m'.$key, $value[0],'106');
+				echo '</tr>';
+			}
+			?>
+	</table>
 
 	<table>
 		<caption><h1>Weekly Challenges</h1></caption>
@@ -552,6 +576,7 @@
 		
 		usort($DailyChallenge,'cmp');
 		usort($WeeklyChallenge,'cmp');
+		usort($MonthlyChallenge,'cmp');
 		
 		$textareaValue = "Fallout 76 Daily Update\n";
 		$textareaValue .= strip_tags(atomicShop());
@@ -562,7 +587,7 @@
 		} elseif (str_contains(strtolower($textareaValue),'triple score')) {
 			$ScoreMult = 3;
 		}
-		//$textareaValue .= formatprint(1,$EventChallenge,'e'); 
+		$textareaValue .= formatprint(1,$MonthlyChallenge,'m'); 
 		$textareaValue .= formatprint(1,$WeeklyChallenge,'w'); 
 		$textareaValue .= formatprint($ScoreMult,$DailyChallenge,'d');
 		$textareaValue .= Minerva();
