@@ -533,17 +533,6 @@
 			?>
 	</table>
 
-	<!-- <table>
-		<caption><h1>Event Challenges</h1></caption>
-		<tr><th>Challenge</th></tr>	
-			<?php
-			foreach ($EventChallenge as $key => $value) {
-				echo '<tr>';
-				text_input('EventChallenges','e'.$key, $value[0],'113');
-				echo '</tr>';
-			}
-			?>
-	</table> -->
 
 	<h1><img src='bos.png'> Daily Operation</h1>
 
