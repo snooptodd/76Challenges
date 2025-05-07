@@ -444,13 +444,15 @@
 				$aCurrentDiscription=preg_split("/\r\n|\n|\r/", $CurrentDiscription);
 				foreach ($aCurrentDiscription as $key => $value) {
 					$expcvalue = explode('|',$value); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
-					$colonpositon = strpos($expcvalue[0],':');
-					if (! $colonpositon) {
-						$cleanChallenge = trim($expcvalue[0]);
-					} else {
-						$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
-					}
-					$output .= '* ' . $cleanChallenge . ' ' . $expcvalue[3] . "\n";
+					// I think it is probably better to have the discription of the calander enty be used as is and not modified as musch
+				// 	$colonpositon = strpos($expcvalue[0],':');
+				// 	if (! $colonpositon) {
+				// 		$cleanChallenge = trim($expcvalue[0]);
+				// 	} else {
+				// 		$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
+				// 	}
+				// 	$output .= '* ' . $cleanChallenge . ' ' . $expcvalue[3] . "\n";
+					$output .= $expcvalue[0].' '. $expcvalue[3]."\n";
 				}
 			}
 			//foreach line of challenges check if its an event and check if it matches the current event and the week
@@ -494,7 +496,7 @@
 	}
 	?>
 
-	<table>
+	<!-- <table>
 		<caption><h1>Monthly Challenges</h1></caption>
 		<tr><th>1st</th><th>Challenge</th></tr>	
 			<?php
@@ -505,7 +507,7 @@
 				echo '</tr>';
 			}
 			?>
-	</table>
+	</table> -->
 
 	<table>
 		<caption><h1>Weekly Challenges</h1></caption>
