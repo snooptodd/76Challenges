@@ -118,6 +118,43 @@
 		$EnemyMutations1 = array('Piercing Gaze','Savage Strike');
 	}
 
+	function axolotl() {
+		// monthly axolot and location
+		// changes on the first monday of the month.
+		$output='**Monthly Axolotl**';
+		$currentMonth=strtotime('first tuesday of this month');
+		$nextMonth=strtotime('first tuesday of next month');
+		$jan=strtotime('first tuesday of jan');
+		$feb=strtotime('first tuesday of feb');
+		$mar=strtotime('first tuesday of march');
+		$apr=strtotime('first tuesday of april');
+		$may=strtotime('first tuesday of may');
+		$june=strtotime('first tuesday of june');
+		$july=strtotime('first tuesday of july');
+		$aug=strtotime('first tuesday of august');
+		$sep=strtotime('first tuesday of september');
+		$oct=strtotime('first tuesday of october');
+		$nov=strtotime('first tuesday of november');
+		$dec=strtotime('first tuesday of december');
+		$output.="\n\n";
+		$output .= match (true) {
+			$currentMonth <= $jan => "Charcoal Axolotl, \nRegions: Skyline Valley & Savage Divide",
+			$currentMonth <= $feb => "Pink Axolotl, \nRegions: Cranberry Bog & Forest",
+			$currentMonth <= $mar => "Clay Axolotl, \nRegions: Skyline Valley & Toxic Valley",
+			$currentMonth <= $apr => "Dotted Axolotl, \nRegions:  Mire & Ash Heap",
+			$currentMonth <= $may => "Purple Axolotl, \nRegions: Skyline Valley & Cranberry Bog",
+			$currentMonth <= $june => "Banded Axolotl, \nRegions: Toxic Valley & Mire",
+			$currentMonth <= $july => "Scaled Axolotl, \nRegions: Forest & Ash Heap",
+			$currentMonth <= $aug => "Striped Axolotl, \nRegions: Skyline Valley & Mire",
+			$currentMonth <= $sep => "Shadow Axolotl, \nRegions: Toxic Valley & Ash Heap",
+			$currentMonth <= $oct => "Spotted Axolotl, \nRegions: Savage Divide & Toxic Valley",
+			$currentMonth <= $nov => "Speckled Axolotl, \nRegions: Cranberry Bog & Forest",
+			$currentMonth <= $dec => "Stone Axolotl, \nRegions: Toxic Valley & Ash Heap"
+		};
+		$output .="\n\n";
+		return $output;
+	}
+
 	function atomicShop() {
 		// return formated list of daily atomic shop items
 		// maybe for the rest of the 76 week.
@@ -572,6 +609,7 @@
 		$textareaValue = "Fallout 76 Daily Update\n";
 		$textareaValue .= strip_tags(atomicShop());
 		$textareaValue .= CurrentEvents($Challenges);
+		$textareaValue .= axolotl();
 		$ScoreMult=1;
 		if (str_contains(strtolower($textareaValue),'double score')) {
 			$ScoreMult = 2;
