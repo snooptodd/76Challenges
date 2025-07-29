@@ -607,7 +607,7 @@
 		usort($MonthlyChallenge,'cmp');
 		
 		$textareaValue = "Fallout 76 Daily Update\n";
-		$textareaValue .= strip_tags(atomicShop());
+		//$textareaValue .= strip_tags(atomicShop());
 		$textareaValue .= CurrentEvents($Challenges);
 		$textareaValue .= axolotl();
 		$ScoreMult=1;
