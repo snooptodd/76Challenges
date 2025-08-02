@@ -122,8 +122,10 @@
 		// monthly axolot and location
 		// changes on the first monday of the month.
 		$output='**Monthly Axolotl**';
-		$currentMonth=strtotime('first tuesday of this month');
-		$nextMonth=strtotime('first tuesday of next month');
+		$now = time();	
+		// $now = strtotime('05aug2025');
+		// $currentMonth=strtotime('first tuesday of this month');
+		// $nextMonth=strtotime('first tuesday of next month');
 		$jan=strtotime('first tuesday of jan');
 		$feb=strtotime('first tuesday of feb');
 		$mar=strtotime('first tuesday of march');
@@ -138,18 +140,18 @@
 		$dec=strtotime('first tuesday of december');
 		$output.="\n\n";
 		$output .= match (true) {
-			$currentMonth <= $jan => "Charcoal Axolotl, \nRegions: Skyline Valley & Savage Divide",
-			$currentMonth <= $feb => "Pink Axolotl, \nRegions: Cranberry Bog & Forest",
-			$currentMonth <= $mar => "Clay Axolotl, \nRegions: Skyline Valley & Toxic Valley",
-			$currentMonth <= $apr => "Dotted Axolotl, \nRegions:  Mire & Ash Heap",
-			$currentMonth <= $may => "Purple Axolotl, \nRegions: Skyline Valley & Cranberry Bog",
-			$currentMonth <= $june => "Banded Axolotl, \nRegions: Toxic Valley & Mire",
-			$currentMonth <= $july => "Scaled Axolotl, \nRegions: Forest & Ash Heap",
-			$currentMonth <= $aug => "Striped Axolotl, \nRegions: Skyline Valley & Mire",
-			$currentMonth <= $sep => "Shadow Axolotl, \nRegions: Toxic Valley & Ash Heap",
-			$currentMonth <= $oct => "Spotted Axolotl, \nRegions: Savage Divide & Toxic Valley",
-			$currentMonth <= $nov => "Speckled Axolotl, \nRegions: Cranberry Bog & Forest",
-			$currentMonth <= $dec => "Stone Axolotl, \nRegions: Toxic Valley & Ash Heap"
+			$now >= $dec => "Stone Axolotl, \nRegions: Toxic Valley & Ash Heap",
+			$now >= $nov => "Speckled Axolotl, \nRegions: Cranberry Bog & Forest",
+			$now >= $oct => "Spotted Axolotl, \nRegions: Savage Divide & Toxic Valley",
+			$now >= $sep => "Shadow Axolotl, \nRegions: Toxic Valley & Ash Heap",
+			$now >= $aug => "Striped Axolotl, \nRegions: Skyline Valley & Mire",
+			$now >= $july => "Scaled Axolotl, \nRegions: Forest & Ash Heap",
+			$now >= $june => "Banded Axolotl, \nRegions: Toxic Valley & Mire",
+			$now >= $may => "Purple Axolotl, \nRegions: Skyline Valley & Cranberry Bog",
+			$now >= $apr => "Dotted Axolotl, \nRegions:  Mire & Ash Heap",
+			$now >= $mar => "Clay Axolotl, \nRegions: Skyline Valley & Toxic Valley",
+			$now >= $feb => "Pink Axolotl, \nRegions: Cranberry Bog & Forest",
+			$now >= $jan => "Charcoal Axolotl, \nRegions: Skyline Valley & Savage Divide"
 		};
 		$output .="\n\n";
 		return $output;

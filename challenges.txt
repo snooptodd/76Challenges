@@ -1,730 +1,747 @@
-Cook Grilled Fish while Intoxicated (x1)|Daily||250
-Eat a Fish (x5)|Daily||250
-Catch a Fish while it is Raining (x2)|Weekly||1000
-Eat a Fish Bit (x6)|Daily||250
-Destroy a Protectron with the Money Bag Backpack equipped (x50)|Event|week2|
-Craft Ballistic Ammo with the Money Bag Backpack equipped (x760)|Event|week2|
-Collect Stimpaks or Chems with the Money Bag Backpack equipped (x76)|Event|week2|
-Craft a Molotov with the Money Bag Backpack equipped (x15)|Event|week1|
-Craft Fish Bits (x35)|Weekly||1000
-Cook Brain Fungus Soup (x1)|Daily||250
-Catch a Fish in the Cranberry Bog Region (x2)|Daily||250
-Catch a Fish in the Toxic Valley Region (x2)|Daily||250
-Cook Yao Guai Ribs (x1)|Daily||250
-Catch a Fish in the Forest Region (x2)|Daily||250
-Cook Grilled Fish (x3)|Daily||250
-Catch a Fish (x3)|Daily||250
-Craft Fish Bits (x5)|Daily||250
-Cook Mole Rat Chunks (x3)|Daily||250
-Catch a Fish in the Ash Heap Region (x2)|Daily||250
-Cook Roasted Mirelurk Meat (x3)|Daily||250
-Catch a Fish while Intoxciated (x3)|Daily||250
-Catch a Fish in the Mire Region (x2)|Daily||250
-Catch a Fish in the Savage Divide Region (x2)|Daily||250
-Catch a Fish in the Skyline Valley Region (x2)|Daily||250
-Sell Grilled Fish to an NPC vendor (x1)|Daily||250
-Catch a Fish (x21)|Weekly||1000
-Appalachian Outlaws: Complete Week 1 and 2 Challenges (x2)|Event||
-Appalachian Outlaws: Complete Week 2 Challenges (x7)|Event||
-Appalachian Outlaws: Complete Week 1 Challenges (x7)|Event||
-Consume an Alcoholic Beverage with the Money Bag Backpack equipped (x20)|Event|week2|
-Hack a Terminal with the Money Bag Backpack equipped (x3)|Event|week2|
-Scrap Junk to Collect Gold with the Money Bag Backpack equipped (x5)|Event|week2|
-Collect a Cigar Box with the Money Bag Backpack equipped (x3)|Event|week2|
-Kill an Enemy with the Money Bag Backpack equipped (x500)|Event|week1|
-Pick a Lock with the Money Bag Backpack equipped (x1)|Event|week1|
-Collect a Pack or Carton of Cigarettes with the Money Bag Backpack equipped (x5)|Event|week1|
-Kill a Human with the Money Bag Backpack equipped (x76)|Event|week1|
-Scrap Junk to Collect Silver with the Money Bag Backpack equipped (x5)|Event|week1|
-Collect Pre-War Money with the Money Bag Backpack equipped (x76)|Event|week1|
-Collect Soap (x500)|Monthly||1000
-Destroy a Robot while wearing the Doctor Head Mirror (x15)|Event|week2|Scouts Banner 
-Collect an "Autopsy" board game while wearing the Doctor Head Mirror (x1)|Event|week1|250
-Kill an Enemy in the Skyline Valley Region (x5)|Daily||250
-Kill an Enemy in the Toxic Valley Region (x5)|Daily||250
-Kill an Enemy in the Savage Divide Region (x5)|Daily||250
-Kill an Enemy in the Mire Region (x5)|Daily||250
-Kill an Enemy in the Cranberry Bog Region (x5)|Daily||250
-Kill an Enemy in the Ash Heap Region (x5)|Daily||250
-Kill an Enemy in the Forest Region (x5)|Daily||250
-Kill an Overgrown during The Big Bloom Event (x3)|Daily||250
-Kill an Overgrown during The Big Bloom Event while wearing a Flower Crown (x3)|Daily||250
-Complete the Event: "The Big Bloom" (x5)|Weekly||1000
-Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x10)|Weekly||1000
-Kill an Insect during The Big Bloom Event (x30)|Weekly||1000
-Kill an Insect during The Big Bloom Event (x5)|Daily||250
-Craft a Flower Crown (x1)|Daily||250
-Complete the Event: "The Big Bloom" (x1)|Daily||250
-Kill an Insect during The Big Bloom Event while wearing a Flower Crown (x5)|Daily||250
- Complete a "The Big Bloom"  Weekly Challenge (x2)|Event||2500
-Kill an Overgrown during The Big Bloom Event (x3)|Event||1000
-Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x10)|Event||1000
-Complete the Event: "The Big Bloom" (x5)|Event||1000
-Harvest a Crystalcup, Radlily or Carnal Weeper during the Big Bloom Event (x5)|Event||250
-Complete the Event: "The Big Bloom" (x1)|Event||250
-Kill an Insect during The Big Bloom Event (x30)|Event||1000
-Deal a Critical Hit to an Enemy during The Big Bloom Event (x3)|Event||250
-Deal a Critical Hit to a Beezlebaby or Beezlebub  during The Big Bloom Event (x1)|Event||250
-Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x1)|Event||250
-Kill an Overgrown during The Big Bloom Event (x3)|Event||250
-Kill an Insect during The Big Bloom Event (x5)|Event||250
-Science of Love: Complete Week 1 and 2 Challenges (x2)|Event||Pink Heart Gobo Light
-Science of Love: Complete Week 2 Challenges (x5)|Event|week2|Study of love Chalkboard
-Science of Love: Complete Week 1 Challenges (x5)|Event|week1|Dopamine Wallpaper
-Kill a Mutant Hound while wearing the Doctor Head Mirror (x5)|Event|week2|Perk Card Pack (x3)
-Collect a Beaker while wearing the Doctor Head Mirror (x3)|Event|week2|250
-Kill an Insect while wearing the Doctor Head Mirror (x10)|Event|week2|Basic Repair Kit (x3)
-Deal Energy Damage to Enemies while wearing the Doctor Head Mirror (x500)|Event|week2|250
-Collect Energy Ammo while wearing the Doctor Head Mirror (x500)|Event|week2|Nuka-Cola Mix Pack
-Scrap junk to produce Glass while wearing the Doctor Head Mirror (x5)|Event|week2|Lunchbox (x3)
-Scrap junk to produce Fiber Optics while wearing the Doctor Head Mirror (x5)|Event|week1|Perk Card Pack (x3)
-Kill a Feral Ghoul while wearing the Doctor Head Mirror (x10)|Event|week1|Basic Repair Kit (x3)
-Collect a Human Skull or Skull part while wearing the Doctor Head Mirror (x5)|Event|week1|250
-Kill a Super Mutant while wearing the Doctor Head Mirror (x10)|Event|week1|Nuka-Cola Mix Pack x1
-Collect Nuclear Waste while wearing the Doctor Head Mirror (x10)|Event|week1|Scouts Banner
-Collect a Microscope while wearing the Doctor Head Mirror (x10)|Event|week1|Lunchbox (x3)
-Complete a Caravan Quest (x1)|Daily||250
-Complete the Event: "Mischief Night" (x5)|Weekly||1000
-Complete the "Mischief Night" Daily Challenge (x3)|Weekly||1000
-Complete the Event: "Mischief Night" (x1)|Daily||250
-Repeatable at Rank 100 or above: Complete a Public Event (x3)|Weekly|🔁|300
-HALLOWEEN: Complete Give out Candy Daily Challenges (x3)|Weekly|🎃|1000
-HALLOWEEN: Complete Trick or Treat Daily Challenges (x3)|Weekly|🎃|1000
-HALLOWEEN: Complete Trick or Treat and Give Out Candy Weekly Challenges (x2)|Event|🎃|Mothman Eyes Wall Light
-HALLOWEEN: Complete Give Out Candy Weekly Challenges (x2)|Event|🎃|Jack O'Lantern Dress
-HALLOWEEN: Kill Spooky Scorched (Repeatable) (x50)|Weekly|🎃|Carry Weight Booster (3)
-HALLOWEEN: Trick or Treat from other players' candy bowls (x5)|Daily|🎃|250
-HALLOWEEN: Complete Trick or Treat Daily Challenges (x3)|Weekly|🎃|1000
-HALLOWEEN: Kill a Spooky Scorched (x5)|Daily|🎃|Perfect Bubblegum (3)
-HALLOWEEN: Kill a Spooky Scorched (x5)|Daily|🎃|Lunchbox
-HALLOWEEN: Complete Give out Candy Daily Challenges (x3)|Weekly|🎃|1000
-HALLOWEEN: Kill a Spooky Scorched (x5)|Daily|🎃|Repair Kit
-HALLOWEEN: Build a Candy Bowl and give out candy from your C.A.M.P. (x1)|Daily|🎃|250
-HALLOWEEN: Complete Trick or Treat Weekly Challenges (x2)|Event|🎃|Blood Punch Bowl
-Take a Camera picture at a Best Build C.A.M.P. (x1)|Daily||250
-Like a Best Build C.A.M.P. (x1)|Daily||250
-Visit a Best Build C.A.M.P. (x1)|Daily||250
-Use Photomode to take a Photo at a Best Build C.A.M.P. (x1)|Daily||250
-Visit a Best Build C.A.M.P. (x4)|Weekly||1000
-Like a Best Build C.A.M.P. (x4)|Weekly||1000
-Uncharted Scouts: Collect a RadAway while wearing the Marshal Mallow T-Shirt & Shorts (x2)|Event|week2|Nuka-Cola Mix Pack
-Cripple a Super Mutant's Limb (x30)|Weekly||1000
-Cripple a Super Mutant's Leg (x18)|Weekly||1000
-Cripple a Super Mutant's Head (x10)|Weekly||1000
-Cripple a Super Mutant's Leg (x2)|Daily||250
-Kill a Lost (x15)|Weekly||1000
-Collect a Board Game (x4)|Weekly||1000
-Kill a Lost (x5)|Daily||250
-Collect a Board Game (x1)|Daily||250
-Collect Soap (x14)|Weekly||1000
-Collect Soap (x2)|Daily||250
-Drink Purified Water (x15)|Weekly||1000
-Collect Toilet Paper (x2)|Daily||250
-Drink Purified Water (x2)|Daily||250
-Collect a box of Sugar Bombs (x1)|Daily||250
-Uncharted Scouts: Complete Week 1 and 2 Challenges (x2)|Event||Marshal Mallow Roasting Stick
-Uncharted Scouts: Complete Week 2 Challenges (x5)|Event|week2|Marshal Mallow Figure
-Uncharted Scouts: Complete Week 1 Challenges (x5)|Event|week1|"I'd Rather Be Camping" Poster
-Uncharted Scouts: Take a Camera Picture at "Johnson's Acre" while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week2|Lunchbox (3)
-Uncharted Scouts: Eat a Cooked Meal while wearing the Marshal Mallow T-Shirt & Shorts (x5)|Event|week2|Legendary Module (3)
-Uncharted Scouts: Kill a Thrasher while wearing the Marshal Mallow T-Shirt & Shorts (x2)|Event|week2|Basic Repair Kit (3)
-Uncharted Scouts: Take a Camera Picture of an Ant while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week2|Scout's Banner
-Uncharted Scouts: Cook a Meal in your C.A.M.P. while wearing the Marshal Mallow T-Shirt & Shorts (x5)|Event|week1|Perk Card Pack (3)
-Uncharted Scouts: Take a Camera Picture at the Slumber Mill Motel while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week1|Lunchbox (3)
-Uncharted Scouts: Deploy a C.A.M.P. within the Skyline Valley Region while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week1|Legendary Module (3)
-Uncharted Scouts: Take a Camera Picture of a "Lost" while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week1|Scout's Banner
-Uncharted Scouts: Collect Purified Water while wearing the Marshal Mallow T-Shirt & Shorts (x5)|Event|week1|Nuka-Cola Mix Pack
-Spring Cleaning:  Scrap junk to create Acid with the Abraxo Pip-Boy Skin equipped (x20)|Event|week1|Basic Repair Kit (3)
-Spring Cleaning:  Scrap junk to create Fertilizer with the Abraxo Pip-Boy Skin equipped (x20)|Event|week1|Perk Card Pack (3)
-Spring Cleaning: Kill a Lesser Devil with the Cremator (x1)|Event|week1|Nuka-Cola Mix Pack
-Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
-Spring Cleaning: Complete Week 1 and 2 Challenges (x2)|Event||Abraxo Washer and Dryer Set
-Spring Cleaning: Complete Week 2 Challenges (x6)|Event|week2|R.I.P. Daring Bin
-Spring Cleaning: Complete Week 1 Challenges (x6)|Event|week1|Mobile Sanitation Backpack
-Spring Cleaning: Kill an Overgrown with the Cremator (x10)|Event|week2|250
-Spring Cleaning: Kill a Snallygaster with the Cremator (x1)|Event|week2|Nuka-Cola Mix Pack
-Spring Cleaning: Scrap junk to create Ceramic with the Abraxo Pip-Boy Skin equipped (x20)|Event|week2|Basic Repair Kit (3)
-Spring Cleaning: Scrap a "Catch the Commie" board game with the Abraxo Pip-Boy Skin equipped (x1)|Event|week2|Scout's Banner
-Spring Cleaning: Collect a Plunger with the Abraxo Pip-Boy Skin equipped (x3)|Event|week2|Basic Repair Kit (3)
-Spring Cleaning: Scrap junk to create Plastic with the Abraxo Pip-Boy Skin equipped (x20)|Event|week2|Legendary Module (3)
-Spring Cleaning: Collect Toilet Paper with the Abraxo Pip-Boy Skin equipped (x5)|Event|week2|Perk Card Pack (3)
-Spring Cleaning: Collect Soap with the Abraxo Pip-Boy Skin equipped (x5)|Event|week1|Legendary Module (3)
-Spring Cleaning: Collect a Broom with the Abraxo Pip-Boy Skin equipped (x3)|Event|week1|Lunchbox (3)
-Spring Cleaning: Collect Abraxo Cleaner with the Abraxo Pip-Boy Skin equipped (x5)|Event|week1|Scout's Banner
-Burning Love: Kill a Trog while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|Perk Card Pack (3)
-Burning Love: Kill a Scorched while on a Team using the Hot Rod Pink Flamer (x30)|Event|❤️|Legendary Module (3)
-Burning Love: Kill a Lesser Devil while on a Team using the Hot Rod Pink Flamer (x1)|Event|❤️|Repair Kit (3)
-Burning Love: Kill a Glowing Enemy while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|250
-Burning Love: Kill a Human while on a Team using the Hot Rod Pink Flamer (x30)|Event|❤️|Lunchbox (3)
-Burning Love: Kill a Fanatic while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|Perk Card Pack (3)
-Burning Love: Kill an Overgrown while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|Lunchbox (3)
-Burning Love: Kill a Feral Ghoul while on a Team using the Hot Rod Pink Flamer (x30)|Event|❤️|Repair Kit (3)
-Burning Love: Kill a Mirelurk while on a Team using the Hot Rod Pink Flamer (x15)|Event|❤️|Legendary Module (3)
-Burning Love: Kill a Gulper while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|250
-Burning Love: Complete Week 1 Challenges (x4)|Event|❤️|Reinhart's Jumpsuit
-Burning Love: Complete Week 1 Challenges and Week 2 Challenges (x2)|Event|❤️|Pink Vault Fireplace
-Burning Love: Complete Week 2 Challenges (x4)|Event|❤️|Ruby's Heart Glasses
-Expeditions: Complete any mission in Atlantic City! (x2)|Weekly|🗺️|1000
-Expeditions: Complete The Most Sensational Game (x1)|Daily|🗺️|250
-Expeditions: Complete Tax Evasion (x1)|Daily|🗺️|250
-Kill an Overgrown (x30)|Weekly||1000
-Kill a Lesser Devil (x30)|Weekly||1000
-Kill a Lesser Devil (x5)|Daily||250
-Kill an Overgrown (x5)|Daily||250
-Cripple enemy limbs (x30)|Weekly||1000
-Cripple enemy limbs (x6)|Daily||250
-Collect a Fuel Tank or Gas Canister (x2)|Daily||250
-Drink Tea (x5)|Weekly||1000
-Collect a Fuel Tank or Gas Canister (x5)|Weekly||1000
-Collect a Garden Gnome (x5)|Weekly||1000
-Build a Floor or Wall Decoration in a Shelter (x25)|Weekly||1000
-Craft any Plushie at a Tinkerer's Bench (x3)|Weekly||1000
-Sell a Weapon to an NPC vendor (x15)|Weekly||1000
-Kill a Brahmin (x6)|Weekly||1000
-Collect a Microscope or Biometric Scanner (x2)|Daily||250
-Build a Generator in a Shelter (x3)|Weekly||1000
-Build a Generator in a Shelter (x1)|Daily||250
-Drink Tea (x1)|Daily||250
-Sell a Weapon to an NPC vendor (x5)|Daily||250
-Craft any Plushie at a Tinkerer's Bench (x1)|Daily||250
-Craft any Flair at a Tinkerer's Bench (x1)|Daily||250
-Mod an Ballistic Weapon (x1)|Daily||250
-Kill a Brahmin (x2)|Daily||250
-Craft any Flair at a Tinkerer's Bench (x3)|Weekly||1000
-Kill a Scorched (x30)|Weekly||1000
-Kill a Mirelurk (x30)|Weekly||1000
-Kill a Feral Ghoul (x30)|Weekly||1000
-Kill a Super Mutant (x30)|Weekly||1000
-Craft Ballistic Ammo (x65)|Weekly||1000
-Craft Energy Ammo (x45)|Weekly||1000
-Craft any Chems (x6)|Weekly||1000
-Craft Bulk Wood (x3)|Weekly||1000
-Craft Bulk Aluminum (x3)|Weekly||1000
-Craft Bulk Steel (x3)|Weekly||1000
-Eat a Pumpkin (x15)|Weekly||1000
-Collect Energy Ammo (x40)|Weekly||1000
-Collect Ballistic Ammo (x60)|Weekly||1000
-Eat a Vegetable (x25)|Weekly||1000
-Consume any Chems (x9)|Weekly||1000
-Collect a Lighter, Cigarette or Cigar (x15)|Weekly||1000
-Collect a Burnt Book (x25)|Weekly||1000
-Collect RadAway or Rad-X (x15)|Weekly||1000
-Deal a Critical Hit to an Enemy in VATS (x25)|Weekly||1000
-Cripple a Blood Eagle's Leg (x18)|Weekly||1000
-Cripple a Blood Eagle's Arm (x18)|Weekly||1000
-Cripple a Scorched's Arm (x18)|Weekly||1000
-Cripple a Scorched's Leg (x18)|Weekly||1000
-Kill a Mutant Hound (x9)|Weekly||1000
-Kill a Human Enemy (x30)|Weekly||1000
-Kill a Yao Guai (x3)|Weekly||1000
-Kill an Angler (x9)|Weekly||1000
-Kill a Mole Rat (x15)|Weekly||1000
-Craft Energy Ammo (x15)|Daily||250
-Craft Ballistic Ammo (x25)|Daily||250
-Craft any Chems (x2)|Daily||250
-Craft Bulk Wood (x1)|Daily||250
-Craft Bulk Aluminum (x1)|Daily||250
-Craft Bulk Steel (x1)|Daily||250
-Eat a Pumpkin (x5)|Daily||250
-Collect Energy Ammo (x20)|Daily||250
-Collect Ballistic Ammo (x20)|Daily||250
-Eat a Vegetable (x10)|Daily||250
-Collect a Lighter, Cigarette or Cigar (x5)|Daily||250
-Consume any Chems (x3)|Daily||250
-Collect a Burnt Book (x5)|Daily||250
-Collect RadAway or Rad-X (x5)|Daily||250
-Kill an Angler (x5)|Daily||250
-Kill a Yao Guai (x1)|Daily||250
-Kill a Human Enemy (x10)|Daily||250
-Kill a Mutant Hound (x3)|Daily||250
-Cripple a Blood Eagle's Leg (x2)|Daily||250
-Cripple a Scorched's Leg (x2)|Daily||250
-Cripple a Scorched's Arm (x2)|Daily||250
-Cripple a Blood Eagle's Arm (x2)|Daily||250
-Deal a Critical Hit to an Enemy in VATS (x10)|Daily||250
-Kill a Mole Rat (x5)|Daily||250
-Complete the Event: "Safe & Sound" (x3)|Weekly||1000
-Complete the Event: "Safe & Sound" (x1)|Daily||250
-Complete the Event: "Beasts of Burden" (x3)|Weekly||1000
-Complete the Event: "Beasts of Burden" (x1)|Daily||250
-Take a Camera Picture of a Mega Sloth (x1)|Weekly||1000
-Take a Camera Picture of a Cat (x1)|Daily||250
-Loot Chests (x10)|Daily||250
-Mod an Energy Weapon (x1)|Daily||250
-Collect a Teapot (x2)|Daily||250
-Build a Bed, Table, or Stairs in a Workshop or C.A.M.P. (x3)|Daily||250
-Build a Generator in a C.A.M.P. or Workshop (x1)|Daily||250
-Take a Camera Picture of a Mirelurk Hunter (x1)|Daily||250
-Take a Camera Picture of an Eyebot (x1)|Daily||250
-Take a Camera Picture of a Stingwing (x1)|Daily||250
-Take a Camera Picture of a Fog Crawler (x1)|Daily||250
-Cripple a Mole Miner's Head (x2)|Daily||250
-Cripple a Super Mutant's Head (x2)|Daily||250
-Epic - Sell a Speed Demon Serum to an NPC vendor (x1)|Weekly||1500
-Epic - Sell an Electrically Charged Serum to an NPC vendor (x1)|Weekly||1500
-Collect Brain Fungus (x5)|Daily||250
-Buiild Musical Instruments in a Workshop or C.A.M.P. (x15)|Weekly||1000
-Build a Generator in a C.A.M.P. or Workshop (x5)|Weekly||1000
-Mod an Energy Weapon (x5)|Weekly||1000
-Craft a Throwable Weapon (x30)|Weekly||1000
-Scrap a Pipe Gun (x20)|Weekly||1000
-Scrap Syringers (x8)|Weekly||1000
-Collect Brain Fungus (x25)|Weekly||1000
-Collect a Teddy Bear (x9)|Weekly||1000
-Collect a Teapot (x9)|Weekly||1000
-Collect a Guitar or Toaster (x9)|Weekly||1000
-Cripple a Mirelurk's Limb (x30)|Weekly||1000
-Cripple a Super Mutant's Arm (x16)|Weekly||1000
-Deal a Critical Hit to a Sentry Bot (x15)|Weekly||1000
-Deal a Critical Hit to a Radtoad (x15)|Weekly||1000
-Kill an Enemy with a Thrown Weapon (x30)|Weekly||1000
-Kill an Enemy with a Tesla Rifle or Cryolator (x30)|Weekly||1000
-Kill a Canine (x30)|Weekly||1000
-Craft a Throwable Weapon (x2)|Daily||250
-Scrap a Pipe Gun (x3)|Daily||250
-Scrap a Syringer (x1)|Daily||250
-Sell a Shotgun to an NPC vendor (x1)|Daily||250
-Sell a Ski Sword to an NPC vendor (x1)|Daily||250
-Sell a Tesla Rifle to an NPC vendor (x1)|Daily||250
-Sell a Black Powder Pistol to an NPC vendor (x1)|Daily||250
-Sell Swamp Tofu to an NPC vendor (x1)|Daily||250
-Sell Bloatfly Meat to an NPC vendor (x1)|Daily||250
-Sell a Sweet Roll to an NPC vendor (x1)|Daily||250
-Collect a Teddy Bear (x3)|Daily||250
-Collect Guitars or Toasters (x2)|Daily||250
-Kill an Enemy with a Tesla Rifle or Cryolator (x10)|Daily||250
-Kill an Enemy with a Thrown Weapon (x10)|Daily||250
-Kill a Canine (x5)|Daily||250
-Deal a Critical Hit to a Radtoad (x8)|Daily||250
-Deal a Critical Hit to a Sentry Bot (x8)|Daily||250
-Cripple a Super Mutant's Arm (x2)|Daily||250
-Cripple a Mirelurk's Limb (x2)|Daily||250
-Craft Infusions (x4)|Weekly||1000
-Complete a Mutated Public Event (x3)|Weekly||1000
-Kill a Mutated Enemy (x30)|Weekly||1000
-Craft an Infusion (x1)|Daily||250
-Kill a Mutated Enemy (x10)|Daily||250
-Complete a Mutated Public Event (x1)|Daily||250
-Build a Heavy Cryo Turret in a Workshop or C.A.M.P. (x9)|Weekly||1000
-Build a Heavy Cryo Turret in a Workshop or C.A.M.P. (x1)|Daily||250
-Kill Creatures with the Cold Shoulder (x30)|Weekly||1000
-Kill Radstags during The Mothman Equinox event (x5)|Daily||250
-Kill Creatures with the Cold Shoulder (x10)|Daily||250
-Sell Missile Launcher to an NPC vendor (x1)|Weekly||1000
-Sell Pumpkin Pie to an NPC vendor (x1)|Weekly||1000
-Sell Mirelurk Queen Steak to an NPC vendor (x1)|Weekly||1000
-Sell Scorchbeast Steak to an NPC vendor (x1)|Weekly||1000
-Sell Yao Guai Ribs to an NPC vendor (x1)|Weekly||1000
-Sell Mothman Egg Omelette to an NPC vendor (x1)|Daily||250
-Sell Ribeye Steak to an NPC vendor (x1)|Daily||250
-Sell Mutant Hound Chops to an NPC vendor (x1)|Daily||250
-Sell Wolf Ribs to an NPC vendor (x1)|Daily||250
-Sell Glowing Fungus Soup to an NPC vendor (x1)|Daily||250
-Complete Daily or Weekly Challenges while wearing Bunny Ears (x5)|Event||1000
-Eat Mystery Candy (x3)|Daily||250
-Cripple a Protectron or a Robobrain's Arm (x16)|Weekly||1000
-Collect Mothman Eggs (x5)|Daily||250
-Kill Cultists during The Mothman Equinox event with the Cold Shoulder (x30)|Weekly||1000
-Cripple a Protectron or a Robobrain's Arm (x2)|Daily||250
-Hunt Rabbits (x2)|Daily|🐰|250
-Kill Cryptids with the Cold Shoulder (x3)|Weekly||1000
-Collect Mirelurk Eggs (x5)|Daily||250
-Cripple a Spooky Scorched's Leg (x10)|Daily||250
-Cripple a Deathclaw's Head (x3)|Weekly||1000
-Collect Deathclaw eggs (x1)|Daily||250
-Cripple a Ghoul's Leg (x15)|Weekly||1000
-Kill a Cryptid with the Cold Shoulder (x1)|Daily||250
-Cripple a Human's Head (x15)|Weekly||1000
-Cripple a Spooky Scorched's Leg (x10)|Weekly||1000
-Cripple a Human's Head (x2)|Daily||250
-Kill Cultists during The Mothman Equinox event with the Cold Shoulder (x10)|Daily||250
-Cripple a Ghoul's Leg (x2)|Daily||250
-Eat a Cobbler, which is not a Pie. (x1)|Daily||250
-Deal Cryo Damage to enemies (x300)|Weekly||1000
-Deal Cryo Damage to enemies (x300)|Daily||250
-Deal Fire Damage to Enemies (x500)|Weekly||1000
-Deal Fire Damage to Enemies (x100)|Daily||250
-Deal a Critical Hit to an Enemy using Automatic Weapons (x10)|Weekly||1000
-Deal a Critical Hit to an Enemy using Automatic Weapons (x5)|Daily||250
-Kill Cultists during The Mothman Equinox event (x30)|Weekly||1000
-Kill Cultists during The Mothman Equinox event (x10)|Daily||250
-Build Defense, Appliance or Crafting items in a Workshop or C.A.M.P. (x10)|Weekly||1000
-Build Defense, Appliance, or Crafting items in a Workshop or C.A.M.P. (x3)|Daily||250
-Kill a Cryptid with a Railway Rifle or Missile launcher (x3)|Weekly||1000
-Kill a Cryptid with a Bow or Crossbow (x3)|Weekly||1000
-Build turrets or traps in a Workshop or C.A.M.P. (x10)|Weekly||1000
-Kill Enemies with Unarmed Weapons while intoxicated on Nuka-Cola Dark (x3)|Weekly||1000
-Consume a Nukashine in a Teammate's C.A.M.P. (x1)|Weekly||1000
-Build light sources in a Workshop or C.A.M.P. (x10)|Weekly||1000
-Collect Legendary Modules (x10)|Weekly||1000
-Collect Stimpaks or Chems (x20)|Weekly||1000
-Collect Pre-war Food (x20)|Weekly||1000
-Take a Picture of a Sheepsquatch (x1)|Weekly||1000
-Take a Picture of a Wendigo (x1)|Weekly||1000
-Take a Picture of a Grafton Monster (x1)|Weekly||1000
-Build turrets or traps in a Workshop or C.A.M.P. (x3)|Daily||250
-Build light sources in a Workshop or C.A.M.P. (x3)|Daily||250
-Kill Cultists with a Shotgun (x5)|Daily||250
-Kill a Cryptid with a Railway Rifle or Missile launcher (x1)|Daily||250
-Kill a Cryptid with a Bow or Crossbow (x1)|Daily||250
-Collect Stimpaks or Chems (x5)|Daily||250
-Collect Pre-war Food (x5)|Daily||250
-Take a Camera Picture of a Radscorpion (x1)|Daily||250
-Take a Camera Picture of a Snallygaster (x1)|Daily||250
-Build Anything in a Shelter in Free Cam (x10)|Daily||250
-Drink Nuka-Twist (x5)|Weekly||1000
-Drink Nuka-Twist (x2)|Daily||250
-Build a Floor or Wall in a Shelter in Free Cam (x10)|Daily||250
-Build a Floor or Wall Decoration in a Shelter in Free Cam (x5)|Daily||250
-Kill a Festive Scorched while on a Team and Wearing a Costume (x10)|Daily||250
-Kill a Festive Scorched while on a Team (x10)|Daily||250
-Consume an Alcoholic Beverage while on a Team and Wearing a Costume (x10)|Daily||250
-Consume an Alcoholic Beverage while on a Team (x5)|Daily||250
-Kill a Radstag (x5)|Daily||250
-Collect or Scrap Coal (x5)|Daily||250
-Eat a Cooked Meal in a Teammate's C.A.M.P. (x5)|Daily||250
-Complete the Event: "Fasnacht Day" while wearing a Fasnacht Mask (x1)|Daily||250
-Build a Floor or Wall Decoration in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
-Build Anything in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
-Plant a Crop in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
-Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
-Plant a Crop in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
-Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
-Build Anything in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
-Build a Floor or Wall Decoration in a Workshop or C.A.M.P. in Free Cam (x5)|Daily||250
-Complete Events at Nuka-World On Tour (x2)|Weekly||1000
-Take a Camera Picture at Nuka-World On Tour (x1)|Daily||250
-Use Photomode to Take a Photo at Nuka-World On Tour (x1)|Daily||250
-Complete the Event: "Seismic Activity" (x1)|Weekly||1000
-Take a Camera Picture of the Ultracite Abomination (x1)|Weekly||1000
-Use Photomode to Take a Photo in Camden Park (x1)|Daily||250
-Drink Nuka-Cola Wild (x5)|Weekly||1000
-Drink Nuka-Cola Quantum (x5)|Weekly||1000
-Drink Nuka-Orange (x5)|Weekly||1000
-Drink Nuka-Grape (x5)|Weekly||1000
-Drink Nuka-Cola Dark (x5)|Weekly||1000
-Drink Nuka-Cola Cranberry (x5)|Weekly||1000
-Drink Nuka-Cherry (x5)|Weekly||1000
-Collect any flavor of Nuka-Cola (x20)|Weekly||1000
-Complete the Event: "Tunnel Of Love" (x1)|Daily||250
-Complete the Event: "Spin The Wheel" (x1)|Daily||250
-Complete the Event: "Most Wanted" (x1)|Daily||250
-Take a Camera Picture in Camden Park (x1)|Daily||250
-Drink Nuka-Cola Wild (x2)|Daily||250
-Drink Nuka-Cola Quantum (x2)|Daily||250
-Drink Nuka-Orange (x2)|Daily||250
-Drink Nuka-Grape (x2)|Daily||250
-Drink Nuka-Cola Dark (x2)|Daily||250
-Drink Nuka-Cola Cranberry (x2)|Daily||250
-Drink Nuka-Cherry (x2)|Daily||250
-Collect any flavor of Nuka-Cola (x5)|Daily||250
-Scrap Headwear (x10)|Weekly||1000
-Kill a Snallygaster (x10)|Weekly||1000
-Destroy Robots with a Rifle (x25)|Weekly||1000
-Destroy a Robot (x30)|Weekly||1000
-Kill a Mole Miner (x30)|Weekly||1000
-Kill Insects (x30)|Weekly||1000
-Kill a Honey Beast (x5)|Weekly||1000
-Kill a Gulper (x10)|Weekly||1000
-Kill a Floater (x10)|Weekly||1000
-Destroy an Assaultron (x5)|Weekly||1000
-Kill Animals with a Pipe Gun (x25)|Weekly||1000
-Scrap junk to produce Wood (x30)|Weekly||1000
-Scrap junk to produce Steel (x30)|Weekly||1000
-Scrap junk to produce Springs (x15)|Weekly||1000
-Scrap junk to produce Silver (x10)|Weekly||1000
-Scrap junk to produce Screws (x15)|Weekly||1000
-Scrap junk to produce Rubber (x30)|Weekly||1000
-Scrap junk to produce Plastic (x30)|Weekly||1000
-Scrap junk to produce Oil (x15)|Weekly||1000
-Scrap junk to produce Leather (x30)|Weekly||1000
-Scrap junk to produce Lead (x30)|Weekly||1000
-Scrap junk to produce Gold (x10)|Weekly||1000
-Scrap junk to produce Glass (x30)|Weekly||1000
-Scrap junk to produce Gears (x15)|Weekly||1000
-Scrap junk to produce Fiber Optics (x10)|Weekly||1000
-Scrap junk to produce Fiberglass (x15)|Weekly||1000
-Scrap junk to produce Fertilizer (x15)|Weekly||1000
-Scrap junk to produce Crystal (x15)|Weekly||1000
-Scrap junk to produce Cork (x15)|Weekly||1000
-Scrap junk to produce Copper (x15)|Weekly||1000
-Scrap junk to produce Concrete (x30)|Weekly||1000
-Scrap junk to produce Cloth (x30)|Weekly||1000
-Scrap junk to produce Circuitry (x15)|Weekly||1000
-Scrap junk to produce Ceramic (x15)|Weekly||1000
-Scrap junk to produce Bone (x15)|Weekly||1000
-Scrap junk to produce Black Titanium (x10)|Weekly||1000
-Scrap junk to produce Ballistic Fiber (x10)|Weekly||1000
-Scrap junk to produce Asbestos (x15)|Weekly||1000
-Scrap junk to produce Antiseptic (x15)|Weekly||1000
-Scrap junk to produce Aluminum (x15)|Weekly||1000
-Scrap junk to produce Adhesive (x15)|Weekly||1000
-Scrap junk to produce Acid (x15)|Weekly||1000
-Scrap Headwear (x1)|Daily||250
-Kill a Snallygaster (x3)|Daily||250
-Kill Insects (x5)|Daily||250
-Kill a Honey Beast (x1)|Daily||250
-Kill a Gulper (x3)|Daily||250
-Kill a Floater (x3)|Daily||250
-Destroy an Assaultron (x1)|Daily||250
-Kill Animals with a Pipe Gun (x3)|Daily||250
-Scrap junk to produce Wood (x10)|Daily||250
-Scrap junk to produce Steel (x10)|Daily||250
-Scrap junk to produce Silver (x3)|Daily||250
-Scrap junk to produce Oil (x5)|Daily||250
-Scrap junk to produce Leather (x10)|Daily||250
-Scrap junk to produce Lead (x10)|Daily||250
-Scrap junk to produce Gold (x3)|Daily||250
-Scrap junk to produce Glass (x10)|Daily||250
-Scrap junk to produce Gears (x5)|Daily||250
-Scrap junk to produce Fiber Optics (x3)|Daily||250
-Scrap junk to produce Fiberglass (x5)|Daily||250
-Scrap junk to produce Fertilizer (x5)|Daily||250
-Scrap junk to produce Crystal (x5)|Daily||250
-Scrap junk to produce Cork (x5)|Daily||250
-Scrap junk to produce Copper (x5)|Daily||250
-Scrap junk to produce Concrete (x10)|Daily||250
-Scrap junk to produce Cloth (x10)|Daily||250
-Scrap junk to produce Circuitry (x5)|Daily||250
-Scrap junk to produce Ceramic (x5)|Daily||250
-Scrap junk to produce Bone (x5)|Daily||250
-Scrap junk to produce Black Titanium (x3)|Daily||250
-Scrap junk to produce Ballistic Fiber (x3)|Daily||250
-Scrap junk to produce Asbestos (x5)|Daily||250
-Scrap junk to produce Antiseptic (x5)|Daily||250
-Scrap junk to produce Adhesive (x5)|Daily||250
-Scrap junk to produce Acid (x5)|Daily||250
-Expeditions: Collect Stamps (x5)|Weekly|🗺️|1000
-Collect Vertibird Fuel (x300)|Weekly|🗺️|1000
-Collect Vertibird Fuel (x100)|Daily|🗺️|250
-Expeditions: Complete Mutual Aid (x1)|Daily|🗺️|250
-Repair an Auto Axe (x1)|Daily||250
-Kill a Trog with an Auto Axe (x30)|Weekly||1000
-Kill a Trog Superior or Trog Devourer (x1)|Daily||250
-Kill a Trog Fledgling (x10)|Daily||250
-Kill a Trog (x10)|Daily||250
-Expeditions - From Ashes to Fire: Collect Fallen Prisoners' Collars (x5)|Weekly|🗺️|1000
-Kill a Fanatic Conqueror (x1)|Daily||250
-Kill a Fanatic (x10)|Daily||250
-Use Photomode to Take a Photo in The Pitt! (x1)|Weekly|🗺️|1000
-Expeditions: Complete any mission in the Pitt while wearing Union Power Armor (x1)|Weekly|🗺️|1000
-Complete an encounter at the Whitespring Refuge (x1)|Daily||250
-Expeditions: Complete any mission in The Pitt while in a Team (x1)|Weekly|🗺️|1000
-Kill an enemy with an Auto Axe (x20)|Daily||250
-Take a Camera Picture of a Fanatic Conqueror (x1)|Weekly||1000
-Expeditions: Complete any mission in the Pitt while wearing a Responders outfit (x1)|Weekly|🗺️|1000
-Take a Camera Picture of a Trog Superior or Trog Devourer in The Pitt! (x1)|Weekly||1000
-Mod an Auto Axe (x1)|Daily||250
-Kill a Trog (x50)|Weekly||1000
-Kill a Fanatic (x50)|Weekly||1000
-Kill a Glowing Trog (x1)|Daily||250
-Kill a Trog with an Auto Axe (x5)|Daily||250
-Expeditions - Union Dues: Collect Steel Ingots from The Pitt! (x5)|Weekly|🗺️|1000
-Destroy a Robot with an Auto Axe (x10)|Daily||250
-Complete an encounter at the Whitespring Refuge (x5)|Weekly||1000
-Kill a Fanatic with an Auto Axe (x30)|Weekly||1000
-Destroy a Fanatic Protectron (x5)|Daily||250
-Kill a Fanatic with an Auto Axe (x5)|Daily||250
-Destroy a Protectron while intoxicated by Hard Lemonade (x1)|Daily||250
-Kill a Creature while intoxicated by Hard Lemonade (x5)|Daily||250
-Complete a "Photograph Creature" Daily Challenge (x5)|Weekly||1000
-Complete a "While Intoxicated" Daily Challenge (x5)|Weekly||1000
-Kill a Creature while intoxicated by Lead Champagne (x5)|Daily||250
-Take a Camera Picture of a Super Mutant (x1)|Daily||250
-Take a Camera Picture of a Super Mutant while intoxicated by Lead Champagne (x1)|Daily||250
-Kill a Super Mutant while intoxicated by Lead Champagne (x1)|Daily||250
-Kill a Creature while intoxicated by Mire Magic Moonshine (x5)|Daily||250
-Take a Camera Picture of a Gulper while intoxicated by Mire Magic Moonshine (x1)|Daily||250
-Take a Camera Picture of a Gulper (x1)|Daily||250
-Kill a Gulper while intoxicated by Mire Magic Moonshine (x1)|Daily||250
-Complete an "Event in Region" Daily Challenge (x5)|Weekly||1000
-Complete the Event: "Test Your Metal" (x5)|Weekly||1000
-Complete the Event: "Moonshine Jamboree" (x5)|Weekly||1000
-Complete the Event: "Eviction Notice" (x5)|Weekly||1000
-Complete the "Test Your Metal" Daily Challenge (x5)|Weekly||1000
-Complete the "Moonshine Jamboree" Daily Challenge (x5)|Weekly||1000
-Complete the "Eviction Notice" Daily Challenge (x5)|Weekly||1000
-Complete the Event: "Test Your Metal" (x1)|Daily||250
-Complete the Event: "Eviction Notice" (x1)|Daily||250
-Complete the Event: "Moonshine Jamboree" (x1)|Daily||250
-Expeditions: Complete a Refuge Daily! (x1)|Weekly|🗺️|1000
-Expeditions: Complete Recipe for Success (x1)|Daily|🗺️|250
-Expeditions: Complete Code Blue (x1)|Daily|🗺️|250
-Expeditions: Complete A Refugee's Guide (x1)|Daily|🗺️|250
-Expeditions: Complete a Refuge Daily (x1)|Daily|🗺️|250
-Expeditions: Complete any Mission! (x1)|Weekly|🗺️|1000
-Expeditions: Complete any mission in The Pitt! (x1)|Weekly|🗺️|1000
-Expeditions: Complete From Ashes to Fire in The Pitt! (x1)|Weekly|🗺️|1000
-Expeditions: Complete Union Dues in The Pitt! (x1)|Weekly|🗺️|1000
-Complete Expeditions Daily Challenges (x3)|Weekly|🗺️|1000
-Expeditions: Complete a mission in The Pitt (x1)|Daily|🗺️|250
-Kill a Creature while Well Fed (x10)|Daily||250
-Kill a Creature while Well Fed (x20)|Weekly||1000
-Complete an Event while Well Fed (x1)|Daily||250
-Take a Camera Picture of an Alien Enemy (x1)|Daily||250
-Take a Camera Picture of Captain Alpha (x1)|Weekly||1000
-Take a Camera Picture of Lieutenant Kappa (x1)|Weekly||1000
-Complete an Event while Well Fed (x10)|Weekly||1000
-Take a Camera Picture of Captain Omega (x1)|Weekly||1000
-Take a Camera Picture of an Alien Invader (x1)|Daily||250
-Take a Camera Picture of an Alien Drone (x1)|Daily||250
-Complete the Event: "Invaders From Beyond" (x5)|Weekly||1000
-Kill a Spooky Scorched (x10)|Weekly||1000
-Kill a Spooky Scorched (x10)|Daily||250
-Complete the "Invaders From Beyond" Daily Challenge (x5)|Weekly||1000
-Complete the Event: "Invaders From Beyond" (x1)|Daily||250
-Take a Camera Picture of General Zeta (x1)|Weekly||1000
-Complete a "Grahm's Meat-Cook" Daily Challenge (x5)|Weekly||1000
-Complete the "Fasnacht" Daily Challenge (x5)|Weekly||1000
-Kill a Festive Scorched (x10)|Weekly||1000
-Kill a Festive Scorched (x10)|Daily||250
-Complete the "The Mothman Equinox" Daily Challenge (x5)|Weekly||1000
-Complete the Event: "The Mothman Equinox" (x5)|Weekly||1000
-Complete the Event: "The Mothman Equinox" (x1)|Daily||250
-Collect Legendary Scrip (x500)|Weekly||1000
-Collect Gold Bullion (x150)|Weekly||1000
-Collect Gold Bullion (x20)|Daily||250
-Collect Legendary Scrip (x50)|Daily||250
-Complete an Event while Wearing a Costume (x2)|Weekly||1000
-Complete an Event while Wearing a Costume (x1)|Daily||250
-Kill a Creature while Wearing a Costume (x20)|Weekly||1000
-Kill a Creature while Wearing a Costume (x10)|Daily||250
-Kill a Treasure Hunter (x1)|Daily||250
-Complete the Event: "Fasnacht Day" (x1)|Daily||250
-Under Rank 75: Gain XP (x1000)|Daily||50
-Under Rank 50: Gain XP (x1000)|Daily||50
-Under Rank 25: Gain XP (x1000)|Daily||50
-Above Rank 100: Gain XP (x1000)|Daily||50
-Above Rank 100: Gain XP (x1000)|Weekly||100
-Complete the Event: "Primal Cuts" (x1)|Daily||250
-Complete the Event: "Grahm's Meat-Cook" (x1)|Daily||250
-Complete the Event: "Riding Shotgun" (x1)|Weekly||1000
-Complete the Event: "Radiation Rumble" (x1)|Weekly||1000
-Complete the Event: "Project Paradise" (x1)|Weekly||1000
-Complete the Event: "Grahm's Meat-Cook" (x5)|Weekly||1000
-Under Rank 75: Gain XP (x1000)|Weekly||100
-Under Rank 50: Gain XP (x1000)|Weekly||100
-Under Rank 25: Gain XP (x1000)|Weekly||100
-Complete the Event: "Fasnacht Day" (x5)|Weekly||1000
-Complete the Event: "Scorched Earth" (x1)|Weekly||1000
-Visit your Shelter (x5)|Weekly||1000
-Visit another Player's Shelter (x3)|Weekly||1000
-Complete Shelters Daily Challenges! (x3)|Weekly||1000
-Visit your Shelter (x1)|Daily||250
-Visit another Player's Shelter (x1)|Daily||250
-Build a Floor or Wall in a Shelter (x10)|Daily||250
-Build Anything in a Shelter (x10)|Daily||250
-Build a Floor or Wall Decoration in a Shelter (x5)|Daily||250
-Buy an item from or Sell an item to another Player (x15)|Weekly||1000
-Scrap Pre-War Money (x50)|Weekly||1000
-Repair Armor, Weapons, or Power Armor (x10)|Weekly||1000
-Complete the Event: "Encryptid" (x1)|Weekly||1000
-Kill a Glowing Creature (x10)|Weekly||1000
-Kill a Cultist (x30)|Weekly||1000
-Kill a Blood Eagle (x30)|Weekly||1000
-Craft Ammo at a Workbench (x250)|Weekly||1000
-Drink Nuka-Cola (x25)|Weekly||1000
-Eat Pre-war Food (x25)|Weekly||1000
-Eat a Meat-based Meal (x10)|Weekly||1000
-Eat a Cooked Meal (x30)|Weekly||1000
-Consume an Alcoholic Beverage (x15)|Weekly||1000
-Collect Purified Water (x25)|Weekly||1000
-Collect Caps (x2500)|Weekly||1000
-Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. (x25)|Weekly||1000
-Plant a Crop in a Workshop or C.A.M.P. (x25)|Weekly||1000
-Build Anything in a Workshop or C.A.M.P. (x25)|Weekly||1000
-Build a Floor or Wall Decoration in a Workshop or C.A.M.P. (x25)|Weekly||1000
-Gain XP (x2500)|Daily||250
-Complete the Event: "A Colossal Problem" (x1)|Weekly||1000
-Complete Daily Operations Daily Challenges! (x5)|Weekly||1000
-Complete Daily Operations on a Public Team! (x5)|Weekly||1000
-Complete Daily Operations! (x7)|Weekly||1000
-Complete a Daily Operation on a Public Team! (x1)|Daily||250
-Complete a Daily Operation! (x1)|Daily||250
-Kill a Blood Eagle (x10)|Daily||250
-Kill a Cultist (x10)|Daily||250
-Repeatable Under Rank 100: Complete a Public Event (x1)|Weekly|🔁|100
-Claim a Workshop (x3)|Weekly||1000
-Kill a Legendary Enemy (x5)|Weekly||1000
-Complete an Event while in a Team (x1)|Daily||250
-Kill a Creature (x20)|Weekly||1000
-Repeatable Under Rank 100: Gain XP (x10000)|Weekly|🔁|100
-Gold Star: Complete a Daily Challenge (x6)|Daily|⭐|1000
-Complete a Gold Star Daily Challenge! (x3)|Weekly|⭐|1500
-Level up! (x3)|Weekly||1000
-Use Photomode in your own C.A.M.P. (x1)|Daily||250
-Use Photomode in a Teammate's C.A.M.P. (x1)|Daily||250
-Mod a piece of Armor (x5)|Daily||250
-Join a Team with another Player (x1)|Daily||250
-Scrap Pre-War Money (x5)|Daily||250
-Scrap junk to produce Rubber (x5)|Daily||250
-Collect Purified Water (x5)|Daily||250
-Buy an item from or Sell an item to another Player (x1)|Daily||250
-Scrap junk to produce Springs (x5)|Daily||250
-Scrap junk to produce Screws (x5)|Daily||250
-Scrap junk to produce Plastic (x10)|Daily||250
+Collect Caps (x100)|Daily||250
+Epic - Kill the Mothman (x1)|Daily||400
+Kill a Cryptid (x1)|Daily||250
+Craft a Grenade, Mine, or Thrown Weapon (x5)|Daily||250
+Cook a Meat-Based Meal (x5)|Daily||250
+Cook a Meal with Plants or Fungi (x5)|Daily||250
+Kill a Deathclaw (x1)|Daily||250
+Craft Ammo at a Workbench (x50)|Daily||250
+Craft or Scrap Armor (x5)|Daily||250
+Craft or Scrap a piece of Power Armor (x1)|Daily||250
+Level up! (x1)|Daily||250
+Scrap junk to produce Aluminum (x5)|Daily||250
+Use Photomode to Take a Photo (x3)|Daily||250
+Kill a Mole Miner (x10)|Daily||250
+Build Anything in a Workshop or C.A.M.P. (x10)|Daily||250
+Collect an audio Holotape (x1)|Daily||250
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. (x10)|Daily||250
+Collect Wood (x5)|Daily||250
 Kill a Super Mutant (x5)|Daily||250
 Kill a Scorched (x10)|Daily||250
 Build a Floor or Wall Decoration in a Workshop or C.A.M.P. (x5)|Daily||250
-Build Anything in a Workshop or C.A.M.P. (x10)|Daily||250
-Collect an audio Holotape (x1)|Daily||250
-Kill a Mirelurk (x5)|Daily||250
-Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. (x10)|Daily||250
-Collect Wood (x5)|Daily||250
-Kill a Creature (x12)|Daily||250
 Kill a Creature while in a Team (x10)|Daily||250
-Kill a Mole Miner (x10)|Daily||250
 Kill a Feral Ghoul (x10)|Daily||250
-Kill a Legendary Creature (x5)|Weekly||1000
-Complete an Event while in a Team (x10)|Weekly||1000
-Harvest a Wild Plant or Fungi (x30)|Weekly||1000
-Craft or Scrap Clothing, Armor or a Weapon (x25)|Weekly||1000
-Deal a Critical Hit to an Enemy in VATS (x25)|Weekly||1000
-Complete an Event (x1)|Daily||250
-Eat a Meat-based Meal (x10)|Daily||250
-Eat Dog Food (x5)|Daily||250
-Mod a Weapon (x3)|Daily||250
-Craft or Scrap a Melee Weapon (x5)|Daily||250
-Craft or Scrap a Ranged Weapon (x5)|Daily||250
+Kill a Creature (x12)|Daily||250
+Kill a Mirelurk (x5)|Daily||250
+Scrap Pre-War Money (x5)|Daily||250
+Scrap junk to produce Screws (x5)|Daily||250
+Collect Purified Water (x5)|Daily||250
+Buy an item from or Sell an item to another Player (x1)|Daily||250
+Scrap junk to produce Plastic (x10)|Daily||250
+Scrap junk to produce Rubber (x5)|Daily||250
+Scrap junk to produce Springs (x5)|Daily||250
+Join a Team with another Player (x1)|Daily||250
+Mod a piece of Armor (x5)|Daily||250
+Eat a Plant-based Meal (x10)|Daily||250
+Hack a Terminal (x1)|Daily||250
+Eat Pre-war Food (x5)|Daily||250
+Complete an Event (x3)|Weekly||1000
+Claim a Workshop (x1)|Daily||250
+Eat a Cooked Meal (x10)|Daily||250
+Plant a Crop in a Workshop or C.A.M.P. (x5)|Daily||250
+Use Photomode while in a Team (x1)|Daily||250
+Kill a Legendary Enemy (x1)|Daily||250
+Pick a Lock (x1)|Daily||250
+Complete a Daily Quest (x1)|Daily||250
 Eat a Cake, Pie, or Candy (x5)|Daily||250
-Chew some Bubblegum (x1)|Daily||250
-Drink Nuka-Cola (x3)|Daily||250
-Scrap a Board Game (x1)|Daily||250
+Rank up a Perk Card (x1)|Daily||250
 Harvest a Wild Plant or Fungi (x12)|Daily||250
+Scrap a Board Game (x1)|Daily||250
+Complete a Quest (x1)|Daily||250
+Harvest Corn, Razorgrain, or a Tato Plant (x12)|Daily||250
+Drink Nuka-Cola (x3)|Daily||250
+Chew some Bubblegum (x1)|Daily||250
 Repair Armor, Weapons, or Power Armor (x5)|Daily||250
 Kill a Glowing Creature (x1)|Daily||250
 Destroy a Robot (x10)|Daily||250
-Rank up a Perk Card (x1)|Daily||250
-Harvest Corn, Razorgrain, or a Tato Plant (x12)|Daily||250
-Complete a Quest (x1)|Daily||250
-Complete an Event (x3)|Weekly||1000
-Claim a Workshop (x1)|Daily||250
-Complete a Daily Quest (x1)|Daily||250
-Eat a Cooked Meal (x10)|Daily||250
-Kill a Legendary Enemy (x1)|Daily||250
-Plant a Crop in a Workshop or C.A.M.P. (x5)|Daily||250
-Pick a Lock (x1)|Daily||250
-Use Photomode while in a Team (x1)|Daily||250
-Eat Pre-war Food (x5)|Daily||250
-Hack a Terminal (x1)|Daily||250
-Eat a Plant-based Meal (x10)|Daily||250
-Ferment an Alcoholic Beverage (x3)|Daily||250
-Epic - Kill a Sheepsquatch (x1)|Daily||400
-Kill a Wendigo (x1)|Daily||250
-Complete the Event: "Encryptid" (x1)|Daily||250
-Consume a "Vintage" Alcoholic Beverage (x1)|Daily||250
-Craft an Alcoholic Beverage (x1)|Daily||250
+Mod a Weapon (x3)|Daily||250
+Craft or Scrap a Melee Weapon (x5)|Daily||250
+Craft or Scrap a Ranged Weapon (x5)|Daily||250
+Eat Dog Food (x5)|Daily||250
+Eat a Meat-based Meal (x10)|Daily||250
+Complete an Event (x1)|Daily||250
+Craft or Scrap Clothing, Armor or a Weapon (x25)|Weekly||1000
+Harvest a Wild Plant or Fungi (x30)|Weekly||1000
+Complete an Event while in a Team (x10)|Weekly||1000
+Deal a Critical Hit to an Enemy in VATS (x25)|Weekly||1000
+Kill a Legendary Creature (x5)|Weekly||1000
 Consume an Alcoholic Beverage (x10)|Daily||250
-Scrap junk to produce Aluminum (x5)|Daily||250
-Use Photomode to Take a Photo (x3)|Daily||250
-Level up! (x1)|Daily||250
-Epic - Kill the Mothman (x1)|Daily||400
-Kill a Deathclaw (x1)|Daily||250
-Kill a Cryptid (x1)|Daily||250
-Craft or Scrap a piece of Power Armor (x1)|Daily||250
-Craft or Scrap Armor (x5)|Daily||250
-Collect Caps (x100)|Daily||250
-Cook a Meat-Based Meal (x5)|Daily||250
-Cook a Meal with Plants or Fungi (x5)|Daily||250
-Craft Ammo at a Workbench (x50)|Daily||250
-Craft a Grenade, Mine, or Thrown Weapon (x5)|Daily||250
+Craft an Alcoholic Beverage (x1)|Daily||250
+Consume a "Vintage" Alcoholic Beverage (x1)|Daily||250
+Complete the Event: "Encryptid" (x1)|Daily||250
+Kill a Wendigo (x1)|Daily||250
+Epic - Kill a Sheepsquatch (x1)|Daily||400
+Ferment an Alcoholic Beverage (x3)|Daily||250
+Use Photomode in your own C.A.M.P. (x1)|Daily||250
+Use Photomode in a Teammate's C.A.M.P. (x1)|Daily||250
+Level up! (x3)|Weekly||1000
+Complete a Gold Star Daily Challenge! (x3)|Weekly|⭐|1500
+Repeatable Under Rank 100: Gain XP (x10000)|Weekly|🔁|100
+Gold Star: Complete a Daily Challenge (x6)|Daily|⭐|1000
+Kill a Legendary Enemy (x5)|Weekly||1000
+Kill a Creature (x20)|Weekly||1000
+Claim a Workshop (x3)|Weekly||1000
+Complete an Event while in a Team (x1)|Daily||250
+Repeatable Under Rank 100: Complete a Public Event (x1)|Weekly|🔁|100
+Kill a Blood Eagle (x10)|Daily||250
+Kill a Cultist (x10)|Daily||250
+Complete Daily Operations! (x7)|Weekly||1000
+Complete a Daily Operation on a Public Team! (x1)|Daily||250
+Complete Daily Operations on a Public Team! (x5)|Weekly||1000
+Complete a Daily Operation! (x1)|Daily||250
+Complete Daily Operations Daily Challenges! (x5)|Weekly||1000
+Complete the Event: "A Colossal Problem" (x1)|Weekly||1000
+Kill a Glowing Creature (x10)|Weekly||1000
+Consume an Alcoholic Beverage (x15)|Weekly||1000
+Plant a Crop in a Workshop or C.A.M.P. (x25)|Weekly||1000
+Build a Floor or Wall Decoration in a Workshop or C.A.M.P. (x25)|Weekly||1000
+Gain XP (x2500)|Daily||250
+Complete the Event: "Encryptid" (x1)|Weekly||1000
+Repair Armor, Weapons, or Power Armor (x10)|Weekly||1000
+Eat a Cooked Meal (x30)|Weekly||1000
+Scrap Pre-War Money (x50)|Weekly||1000
+Buy an item from or Sell an item to another Player (x15)|Weekly||1000
+Eat a Meat-based Meal (x10)|Weekly||1000
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. (x25)|Weekly||1000
+Eat Pre-war Food (x25)|Weekly||1000
+Drink Nuka-Cola (x25)|Weekly||1000
+Collect Caps (x2500)|Weekly||1000
+Build Anything in a Workshop or C.A.M.P. (x25)|Weekly||1000
+Craft Ammo at a Workbench (x250)|Weekly||1000
+Kill a Cultist (x30)|Weekly||1000
+Collect Purified Water (x25)|Weekly||1000
+Kill a Blood Eagle (x30)|Weekly||1000
+Visit your Shelter (x5)|Weekly||1000
+Build a Floor or Wall Decoration in a Shelter (x5)|Daily||250
+Visit another Player's Shelter (x3)|Weekly||1000
+Visit your Shelter (x1)|Daily||250
+Build Anything in a Shelter (x10)|Daily||250
+Visit another Player's Shelter (x1)|Daily||250
+Build a Floor or Wall in a Shelter (x10)|Daily||250
+Complete Shelters Daily Challenges! (x3)|Weekly||1000
+Under Rank 25: Gain XP (x1000)|Daily||50
+Under Rank 25: Gain XP (x1000)|Weekly||100
+Complete the Event: "Scorched Earth" (x1)|Weekly||1000
+Under Rank 50: Gain XP (x1000)|Daily||50
+Under Rank 75: Gain XP (x1000)|Daily||50
+Under Rank 75: Gain XP (x1000)|Weekly||100
+Complete the Event: "Primal Cuts" (x1)|Daily||250
+Complete the Event: "Grahm's Meat-Cook" (x5)|Weekly||1000
+Complete the Event: "Radiation Rumble" (x1)|Weekly||1000
+Complete the Event: "Project Paradise" (x1)|Weekly||1000
+Complete the Event: "Riding Shotgun" (x1)|Weekly||1000
+Above Rank 100: Gain XP (x1000)|Daily||50
+Complete the Event: "Grahm's Meat-Cook" (x1)|Daily||250
+Complete the Event: "Fasnacht Day" (x5)|Weekly||1000
+Under Rank 50: Gain XP (x1000)|Weekly||100
+Above Rank 100: Gain XP (x1000)|Weekly||100
+Complete the Event: "Fasnacht Day" (x1)|Daily||250
+Kill a Treasure Hunter (x1)|Daily||250
+Complete an Event while Wearing a Costume (x1)|Daily||250
+Kill a Creature while Wearing a Costume (x20)|Weekly||1000
+Kill a Creature while Wearing a Costume (x10)|Daily||250
+Complete an Event while Wearing a Costume (x2)|Weekly||1000
+Complete the Event: "The Mothman Equinox" (x1)|Daily||250
+Collect Legendary Scrip (x50)|Daily||250
+Collect Legendary Scrip (x500)|Weekly||1000
+Kill a Festive Scorched (x10)|Daily||250
+Collect Gold Bullion (x20)|Daily||250
+Complete the "The Mothman Equinox" Daily Challenge (x5)|Weekly||1000
+Complete the Event: "The Mothman Equinox" (x5)|Weekly||1000
+Kill a Festive Scorched (x10)|Weekly||1000
+Collect Gold Bullion (x150)|Weekly||1000
+Complete the "Fasnacht" Daily Challenge (x5)|Weekly||1000
+Complete a "Grahm's Meat-Cook" Daily Challenge (x5)|Weekly||1000
+Complete the Event: "Invaders From Beyond" (x1)|Daily||250
+Complete the "Invaders From Beyond" Daily Challenge (x5)|Weekly||1000
+Take a Camera Picture of General Zeta (x1)|Weekly||1000
+Kill a Spooky Scorched (x10)|Daily||250
+Kill a Spooky Scorched (x10)|Weekly||1000
+Complete the Event: "Invaders From Beyond" (x5)|Weekly||1000
+Complete an Event while Well Fed (x1)|Daily||250
+Complete an Event while Well Fed (x10)|Weekly||1000
+Take a Camera Picture of an Alien Invader (x1)|Daily||250
+Take a Camera Picture of an Alien Drone (x1)|Daily||250
+Take a Camera Picture of Lieutenant Kappa (x1)|Weekly||1000
+Kill a Creature while Well Fed (x20)|Weekly||1000
+Take a Camera Picture of an Alien Enemy (x1)|Daily||250
+Take a Camera Picture of Captain Omega (x1)|Weekly||1000
+Kill a Creature while Well Fed (x10)|Daily||250
+Take a Camera Picture of Captain Alpha (x1)|Weekly||1000
+Expeditions: Complete a mission in The Pitt (x1)|Daily|🗺️|250
+Complete Expeditions Daily Challenges (x3)|Weekly|🗺️|1000
+Expeditions: Complete any mission in The Pitt! (x1)|Weekly|🗺️|1000
+Expeditions: Complete any Mission! (x1)|Weekly|🗺️|1000
+Expeditions: Complete Union Dues in The Pitt! (x1)|Weekly|🗺️|1000
+Expeditions: Complete A Refugee's Guide (x1)|Daily|🗺️|250
+Expeditions: Complete a Refuge Daily (x1)|Daily|🗺️|250
+Expeditions: Complete Code Blue (x1)|Daily|🗺️|250
+Expeditions: Complete Recipe for Success (x1)|Daily|🗺️|250
+Expeditions: Complete From Ashes to Fire in The Pitt! (x1)|Weekly|🗺️|1000
+Expeditions: Complete a Refuge Daily! (x1)|Weekly|🗺️|1000
+Complete the "Moonshine Jamboree" Daily Challenge (x5)|Weekly||1000
+Complete the Event: "Eviction Notice" (x1)|Daily||250
+Complete the "Eviction Notice" Daily Challenge (x5)|Weekly||1000
+Complete the Event: "Eviction Notice" (x5)|Weekly||1000
+Complete the Event: "Test Your Metal" (x1)|Daily||250
+Complete the Event: "Test Your Metal" (x5)|Weekly||1000
+Complete the Event: "Moonshine Jamboree" (x1)|Daily||250
+Complete the "Test Your Metal" Daily Challenge (x5)|Weekly||1000
+Complete the Event: "Moonshine Jamboree" (x5)|Weekly||1000
+Complete an "Event in Region" Daily Challenge (x5)|Weekly||1000
+Kill a Creature while intoxicated by Lead Champagne (x5)|Daily||250
+Kill a Creature while intoxicated by Mire Magic Moonshine (x5)|Daily||250
+Kill a Gulper while intoxicated by Mire Magic Moonshine (x1)|Daily||250
+Take a Camera Picture of a Gulper (x1)|Daily||250
+Take a Camera Picture of a Gulper while intoxicated by Mire Magic Moonshine (x1)|Daily||250
+Complete a "While Intoxicated" Daily Challenge (x5)|Weekly||1000
+Kill a Super Mutant while intoxicated by Lead Champagne (x1)|Daily||250
+Destroy a Protectron while intoxicated by Hard Lemonade (x1)|Daily||250
+Kill a Creature while intoxicated by Hard Lemonade (x5)|Daily||250
+Take a Camera Picture of a Super Mutant (x1)|Daily||250
+Complete a "Photograph Creature" Daily Challenge (x5)|Weekly||1000
+Take a Camera Picture of a Super Mutant while intoxicated by Lead Champagne (x1)|Daily||250
+Complete an encounter at the Whitespring Refuge (x1)|Daily||250
+Destroy a Robot with an Auto Axe (x10)|Daily||250
+Expeditions: Complete any mission in the Pitt while wearing Union Power Armor (x1)|Weekly|🗺️|1000
+Use Photomode to Take a Photo in The Pitt! (x1)|Weekly|🗺️|1000
+Expeditions - Union Dues: Collect Steel Ingots from The Pitt! (x5)|Weekly|🗺️|1000
+Repair an Auto Axe (x1)|Daily||250
+Kill a Trog Superior or Trog Devourer (x1)|Daily||250
+Kill a Fanatic (x10)|Daily||250
+Kill a Trog (x10)|Daily||250
+Destroy a Fanatic Protectron (x5)|Daily||250
+Kill a Fanatic Conqueror (x1)|Daily||250
+Kill a Trog with an Auto Axe (x5)|Daily||250
+Expeditions - From Ashes to Fire: Collect Fallen Prisoners' Collars (x5)|Weekly|🗺️|1000
+Expeditions: Complete any mission in The Pitt while in a Team (x1)|Weekly|🗺️|1000
+Complete an encounter at the Whitespring Refuge (x5)|Weekly||1000
+Take a Camera Picture of a Fanatic Conqueror (x1)|Weekly||1000
+Kill a Fanatic with an Auto Axe (x5)|Daily||250
+Take a Camera Picture of a Trog Superior or Trog Devourer in The Pitt! (x1)|Weekly||1000
+Kill a Trog (x50)|Weekly||1000
+Kill a Fanatic with an Auto Axe (x30)|Weekly||1000
+Kill a Trog with an Auto Axe (x30)|Weekly||1000
+Kill a Trog Fledgling (x10)|Daily||250
+Kill a Glowing Trog (x1)|Daily||250
+Kill a Fanatic (x50)|Weekly||1000
+Kill an enemy with an Auto Axe (x20)|Daily||250
+Mod an Auto Axe (x1)|Daily||250
+Expeditions: Complete any mission in the Pitt while wearing a Responders outfit (x1)|Weekly|🗺️|1000
+Expeditions: Complete Mutual Aid (x1)|Daily|🗺️|250
+Expeditions: Collect Stamps (x5)|Weekly|🗺️|1000
+Collect Vertibird Fuel (x100)|Daily|🗺️|250
+Collect Vertibird Fuel (x300)|Weekly|🗺️|1000
+Scrap junk to produce Ceramic (x5)|Daily||250
+Scrap junk to produce Cork (x5)|Daily||250
+Scrap junk to produce Steel (x10)|Daily||250
+Scrap junk to produce Adhesive (x5)|Daily||250
+Scrap junk to produce Cloth (x10)|Daily||250
+Scrap junk to produce Lead (x10)|Daily||250
+Scrap junk to produce Gold (x3)|Daily||250
+Scrap junk to produce Fertilizer (x5)|Daily||250
+Scrap junk to produce Concrete (x10)|Daily||250
+Scrap junk to produce Gears (x5)|Daily||250
+Scrap junk to produce Fiberglass (x5)|Daily||250
+Scrap junk to produce Copper (x5)|Daily||250
+Scrap junk to produce Silver (x3)|Daily||250
+Scrap junk to produce Glass (x10)|Daily||250
+Kill Insects (x5)|Daily||250
+Kill a Gulper (x3)|Daily||250
+Kill a Snallygaster (x3)|Daily||250
+Kill a Honey Beast (x1)|Daily||250
+Scrap junk to produce Acid (x5)|Daily||250
+Scrap junk to produce Asbestos (x5)|Daily||250
+Scrap junk to produce Oil (x5)|Daily||250
+Scrap junk to produce Fiber Optics (x3)|Daily||250
+Scrap junk to produce Wood (x10)|Daily||250
+Scrap junk to produce Ballistic Fiber (x3)|Daily||250
+Scrap junk to produce Crystal (x5)|Daily||250
+Scrap Headwear (x1)|Daily||250
+Kill Animals with a Pipe Gun (x3)|Daily||250
+Scrap junk to produce Black Titanium (x3)|Daily||250
+Scrap junk to produce Bone (x5)|Daily||250
+Scrap junk to produce Leather (x10)|Daily||250
+Destroy an Assaultron (x1)|Daily||250
+Kill a Floater (x3)|Daily||250
+Scrap junk to produce Circuitry (x5)|Daily||250
+Scrap junk to produce Antiseptic (x5)|Daily||250
+Scrap junk to produce Plastic (x30)|Weekly||1000
+Scrap junk to produce Cloth (x30)|Weekly||1000
+Scrap junk to produce Concrete (x30)|Weekly||1000
+Scrap junk to produce Gold (x10)|Weekly||1000
+Scrap junk to produce Glass (x30)|Weekly||1000
+Kill a Mole Miner (x30)|Weekly||1000
+Scrap junk to produce Acid (x15)|Weekly||1000
+Scrap junk to produce Adhesive (x15)|Weekly||1000
+Destroy Robots with a Rifle (x25)|Weekly||1000
+Scrap junk to produce Bone (x15)|Weekly||1000
+Scrap junk to produce Springs (x15)|Weekly||1000
+Kill a Honey Beast (x5)|Weekly||1000
+Scrap junk to produce Gears (x15)|Weekly||1000
+Kill a Floater (x10)|Weekly||1000
+Scrap junk to produce Fiber Optics (x10)|Weekly||1000
+Scrap junk to produce Leather (x30)|Weekly||1000
+Destroy an Assaultron (x5)|Weekly||1000
+Scrap junk to produce Lead (x30)|Weekly||1000
+Scrap junk to produce Oil (x15)|Weekly||1000
+Scrap junk to produce Circuitry (x15)|Weekly||1000
+Scrap junk to produce Silver (x10)|Weekly||1000
+Scrap junk to produce Ballistic Fiber (x10)|Weekly||1000
+Scrap junk to produce Aluminum (x15)|Weekly||1000
+Scrap junk to produce Copper (x15)|Weekly||1000
+Scrap junk to produce Cork (x15)|Weekly||1000
+Scrap junk to produce Rubber (x30)|Weekly||1000
+Kill a Snallygaster (x10)|Weekly||1000
+Scrap junk to produce Wood (x30)|Weekly||1000
+Kill Insects (x30)|Weekly||1000
+Scrap junk to produce Asbestos (x15)|Weekly||1000
+Scrap junk to produce Ceramic (x15)|Weekly||1000
+Kill Animals with a Pipe Gun (x25)|Weekly||1000
+Scrap junk to produce Screws (x15)|Weekly||1000
+Scrap junk to produce Steel (x30)|Weekly||1000
+Scrap junk to produce Black Titanium (x10)|Weekly||1000
+Scrap junk to produce Crystal (x15)|Weekly||1000
+Destroy a Robot (x30)|Weekly||1000
+Scrap junk to produce Fiberglass (x15)|Weekly||1000
+Scrap junk to produce Fertilizer (x15)|Weekly||1000
+Scrap junk to produce Antiseptic (x15)|Weekly||1000
+Kill a Gulper (x10)|Weekly||1000
+Scrap Headwear (x10)|Weekly||1000
+Drink Nuka-Cola Dark (x2)|Daily||250
+Drink Nuka-Orange (x5)|Weekly||1000
+Drink Nuka-Orange (x2)|Daily||250
+Take a Camera Picture of the Ultracite Abomination (x1)|Weekly||1000
+Collect any flavor of Nuka-Cola (x20)|Weekly||1000
+Take a Camera Picture in Camden Park (x1)|Daily||250
+Complete the Event: "Seismic Activity" (x1)|Weekly||1000
+Complete the Event: "Most Wanted" (x1)|Daily||250
+Use Photomode to Take a Photo in Camden Park (x1)|Daily||250
+Drink Nuka-Cola Cranberry (x2)|Daily||250
+Drink Nuka-Cherry (x5)|Weekly||1000
+Drink Nuka-Cola Quantum (x5)|Weekly||1000
+Complete the Event: "Tunnel Of Love" (x1)|Daily||250
+Drink Nuka-Grape (x2)|Daily||250
+Drink Nuka-Grape (x5)|Weekly||1000
+Drink Nuka-Cola Dark (x5)|Weekly||1000
+Drink Nuka-Cola Quantum (x2)|Daily||250
+Drink Nuka-Cola Wild (x2)|Daily||250
+Drink Nuka-Cola Wild (x5)|Weekly||1000
+Drink Nuka-Cherry (x2)|Daily||250
+Collect any flavor of Nuka-Cola (x5)|Daily||250
+Drink Nuka-Cola Cranberry (x5)|Weekly||1000
+Complete the Event: "Spin The Wheel" (x1)|Daily||250
+Complete Events at Nuka-World On Tour (x2)|Weekly||1000
+Use Photomode to Take a Photo at Nuka-World On Tour (x1)|Daily||250
+Take a Camera Picture at Nuka-World On Tour (x1)|Daily||250
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
+Plant a Crop in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
+Build a Floor or Wall Decoration in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
+Plant a Crop in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
+Build Anything in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
+Build Anything in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
+Build a Floor or Wall Decoration in a Workshop or C.A.M.P. in Free Cam (x5)|Daily||250
+Collect or Scrap Coal (x5)|Daily||250
+Kill a Radstag (x5)|Daily||250
+Consume an Alcoholic Beverage while on a Team (x5)|Daily||250
+Kill a Festive Scorched while on a Team and Wearing a Costume (x10)|Daily||250
+Consume an Alcoholic Beverage while on a Team and Wearing a Costume (x10)|Daily||250
+Kill a Festive Scorched while on a Team (x10)|Daily||250
+Complete the Event: "Fasnacht Day" while wearing a Fasnacht Mask (x1)|Daily||250
+Eat a Cooked Meal in a Teammate's C.A.M.P. (x5)|Daily||250
+Build a Floor or Wall in a Shelter in Free Cam (x10)|Daily||250
+Drink Nuka-Twist (x5)|Weekly||1000
+Drink Nuka-Twist (x2)|Daily||250
+Build a Floor or Wall Decoration in a Shelter in Free Cam (x5)|Daily||250
+Build Anything in a Shelter in Free Cam (x10)|Daily||250
+Eat a Cobbler, which is not a Pie. (x1)|Daily||250
+Deal a Critical Hit to an Enemy using Automatic Weapons (x5)|Daily||250
+Collect Pre-war Food (x20)|Weekly||1000
+Kill Cultists with a Shotgun (x5)|Daily||250
+Collect Stimpaks or Chems (x5)|Daily||250
+Take a Camera Picture of a Radscorpion (x1)|Daily||250
+Take a Camera Picture of a Snallygaster (x1)|Daily||250
+Deal Cryo Damage to enemies (x300)|Weekly||1000
+Deal Fire Damage to Enemies (x500)|Weekly||1000
+Collect Stimpaks or Chems (x20)|Weekly||1000
+Deal a Critical Hit to an Enemy using Automatic Weapons (x10)|Weekly||1000
+Kill Cultists during The Mothman Equinox event (x30)|Weekly||1000
+Take a Picture of a Sheepsquatch (x1)|Weekly||1000
+Build Defense, Appliance or Crafting items in a Workshop or C.A.M.P. (x10)|Weekly||1000
+Kill a Cryptid with a Railway Rifle or Missile launcher (x1)|Daily||250
+Kill a Cryptid with a Railway Rifle or Missile launcher (x3)|Weekly||1000
+Take a Picture of a Grafton Monster (x1)|Weekly||1000
+Kill a Cryptid with a Bow or Crossbow (x3)|Weekly||1000
+Collect Pre-war Food (x5)|Daily||250
+Kill Enemies with Unarmed Weapons while intoxicated on Nuka-Cola Dark (x3)|Weekly||1000
+Build light sources in a Workshop or C.A.M.P. (x3)|Daily||250
+Kill a Cryptid with a Bow or Crossbow (x1)|Daily||250
+Build light sources in a Workshop or C.A.M.P. (x10)|Weekly||1000
+Collect Legendary Modules (x10)|Weekly||1000
+Deal Fire Damage to Enemies (x100)|Daily||250
+Kill Cultists during The Mothman Equinox event (x10)|Daily||250
+Take a Picture of a Wendigo (x1)|Weekly||1000
+Deal Cryo Damage to enemies (x300)|Daily||250
+Build Defense, Appliance, or Crafting items in a Workshop or C.A.M.P. (x3)|Daily||250
+Build turrets or traps in a Workshop or C.A.M.P. (x3)|Daily||250
+Consume a Nukashine in a Teammate's C.A.M.P. (x1)|Weekly||1000
+Build turrets or traps in a Workshop or C.A.M.P. (x10)|Weekly||1000
+Cripple a Human's Head (x15)|Weekly||1000
+Cripple a Ghoul's Leg (x2)|Daily||250
+Hunt Rabbits (x2)|Daily|🐰|250
+Collect Deathclaw eggs (x1)|Daily||250
+Cripple a Protectron or a Robobrain's Arm (x16)|Weekly||1000
+Kill Cultists during The Mothman Equinox event with the Cold Shoulder (x10)|Daily||250
+Kill Cultists during The Mothman Equinox event with the Cold Shoulder (x30)|Weekly||1000
+Kill a Cryptid with the Cold Shoulder (x1)|Daily||250
+Cripple a Protectron or a Robobrain's Arm (x2)|Daily||250
+Kill Cryptids with the Cold Shoulder (x3)|Weekly||1000
+Cripple a Spooky Scorched's Leg (x10)|Weekly||1000
+Cripple a Spooky Scorched's Leg (x10)|Daily||250
+Collect Mothman Eggs (x5)|Daily||250
+Cripple a Ghoul's Leg (x15)|Weekly||1000
+Eat Mystery Candy (x3)|Daily||250
+Cripple a Deathclaw's Head (x3)|Weekly||1000
+Cripple a Human's Head (x2)|Daily||250
+Collect Mirelurk Eggs (x5)|Daily||250
+Complete Daily or Weekly Challenges while wearing Bunny Ears (x5)|Event||1000
+Kill Radstags during The Mothman Equinox event (x5)|Daily||250
+Sell Mirelurk Queen Steak to an NPC vendor (x1)|Weekly||1000
+Sell Ribeye Steak to an NPC vendor (x1)|Daily||250
+Sell Wolf Ribs to an NPC vendor (x1)|Daily||250
+Sell Glowing Fungus Soup to an NPC vendor (x1)|Daily||250
+Kill Creatures with the Cold Shoulder (x10)|Daily||250
+Sell Mothman Egg Omelette to an NPC vendor (x1)|Daily||250
+Kill Creatures with the Cold Shoulder (x30)|Weekly||1000
+Sell Pumpkin Pie to an NPC vendor (x1)|Weekly||1000
+Sell Scorchbeast Steak to an NPC vendor (x1)|Weekly||1000
+Sell Mutant Hound Chops to an NPC vendor (x1)|Daily||250
+Build a Heavy Cryo Turret in a Workshop or C.A.M.P. (x9)|Weekly||1000
+Sell Missile Launcher to an NPC vendor (x1)|Weekly||1000
+Build a Heavy Cryo Turret in a Workshop or C.A.M.P. (x1)|Daily||250
+Sell Yao Guai Ribs to an NPC vendor (x1)|Weekly||1000
+Complete a Mutated Public Event (x1)|Daily||250
+Kill a Mutated Enemy (x10)|Daily||250
+Craft an Infusion (x1)|Daily||250
+Kill a Mutated Enemy (x30)|Weekly||1000
+Complete a Mutated Public Event (x3)|Weekly||1000
+Craft Infusions (x4)|Weekly||1000
+Collect Guitars or Toasters (x2)|Daily||250
+Deal a Critical Hit to a Radtoad (x8)|Daily||250
+Cripple a Super Mutant's Arm (x2)|Daily||250
+Cripple a Mirelurk's Limb (x2)|Daily||250
+Kill a Canine (x5)|Daily||250
+Collect a Teddy Bear (x3)|Daily||250
+Kill an Enemy with a Tesla Rifle or Cryolator (x10)|Daily||250
+Deal a Critical Hit to a Sentry Bot (x8)|Daily||250
+Kill an Enemy with a Thrown Weapon (x10)|Daily||250
+Sell a Shotgun to an NPC vendor (x1)|Daily||250
+Sell Swamp Tofu to an NPC vendor (x1)|Daily||250
+Sell a Sweet Roll to an NPC vendor (x1)|Daily||250
+Scrap a Syringer (x1)|Daily||250
+Craft a Throwable Weapon (x2)|Daily||250
+Sell a Black Powder Pistol to an NPC vendor (x1)|Daily||250
+Scrap a Pipe Gun (x3)|Daily||250
+Sell a Ski Sword to an NPC vendor (x1)|Daily||250
+Sell Bloatfly Meat to an NPC vendor (x1)|Daily||250
+Sell a Tesla Rifle to an NPC vendor (x1)|Daily||250
+Collect Brain Fungus (x25)|Weekly||1000
+Kill an Enemy with a Thrown Weapon (x30)|Weekly||1000
+Scrap Syringers (x8)|Weekly||1000
+Scrap a Pipe Gun (x20)|Weekly||1000
+Deal a Critical Hit to a Radtoad (x15)|Weekly||1000
+Cripple a Super Mutant's Arm (x16)|Weekly||1000
+Build a Generator in a C.A.M.P. or Workshop (x5)|Weekly||1000
+Craft a Throwable Weapon (x30)|Weekly||1000
+Mod an Energy Weapon (x5)|Weekly||1000
+Deal a Critical Hit to a Sentry Bot (x15)|Weekly||1000
+Collect a Teddy Bear (x9)|Weekly||1000
+Kill an Enemy with a Tesla Rifle or Cryolator (x30)|Weekly||1000
+Collect a Guitar or Toaster (x9)|Weekly||1000
+Cripple a Mirelurk's Limb (x30)|Weekly||1000
+Kill a Canine (x30)|Weekly||1000
+Collect a Teapot (x9)|Weekly||1000
+Buiild Musical Instruments in a Workshop or C.A.M.P. (x15)|Weekly||1000
+Epic - Sell an Electrically Charged Serum to an NPC vendor (x1)|Weekly||1500
+Build a Bed, Table, or Stairs in a Workshop or C.A.M.P. (x3)|Daily||250
+Take a Camera Picture of a Mirelurk Hunter (x1)|Daily||250
+Take a Camera Picture of a Stingwing (x1)|Daily||250
+Cripple a Mole Miner's Head (x2)|Daily||250
+Epic - Sell a Speed Demon Serum to an NPC vendor (x1)|Weekly||1500
+Collect Brain Fungus (x5)|Daily||250
+Take a Camera Picture of an Eyebot (x1)|Daily||250
+Cripple a Super Mutant's Head (x2)|Daily||250
+Build a Generator in a C.A.M.P. or Workshop (x1)|Daily||250
+Take a Camera Picture of a Fog Crawler (x1)|Daily||250
+Collect a Teapot (x2)|Daily||250
+Mod an Energy Weapon (x1)|Daily||250
+Loot Chests (x10)|Daily||250
+Take a Camera Picture of a Cat (x1)|Daily||250
+Take a Camera Picture of a Mega Sloth (x1)|Weekly||1000
+Complete the Event: "Safe & Sound" (x1)|Daily||250
+Complete the Event: "Safe & Sound" (x3)|Weekly||1000
+Complete the Event: "Beasts of Burden" (x1)|Daily||250
+Complete the Event: "Beasts of Burden" (x3)|Weekly||1000
+Cripple a Blood Eagle's Arm (x2)|Daily||250
+Cripple a Scorched's Arm (x2)|Daily||250
+Cripple a Scorched's Leg (x2)|Daily||250
+Cripple a Blood Eagle's Leg (x2)|Daily||250
+Deal a Critical Hit to an Enemy in VATS (x10)|Daily||250
+Kill a Mutant Hound (x3)|Daily||250
+Kill a Human Enemy (x10)|Daily||250
+Kill a Yao Guai (x1)|Daily||250
+Kill an Angler (x5)|Daily||250
+Kill a Mole Rat (x5)|Daily||250
+Collect RadAway or Rad-X (x5)|Daily||250
+Collect a Burnt Book (x5)|Daily||250
+Consume any Chems (x3)|Daily||250
+Collect a Lighter, Cigarette or Cigar (x5)|Daily||250
+Eat a Vegetable (x10)|Daily||250
+Collect Ballistic Ammo (x20)|Daily||250
+Collect Energy Ammo (x20)|Daily||250
+Craft Bulk Wood (x1)|Daily||250
+Eat a Pumpkin (x5)|Daily||250
+Craft Bulk Steel (x1)|Daily||250
+Craft Bulk Aluminum (x1)|Daily||250
+Craft any Chems (x2)|Daily||250
+Craft Ballistic Ammo (x25)|Daily||250
+Craft Energy Ammo (x15)|Daily||250
+Craft Bulk Aluminum (x3)|Weekly||1000
+Kill a Human Enemy (x30)|Weekly||1000
+Craft Bulk Wood (x3)|Weekly||1000
+Craft any Chems (x6)|Weekly||1000
+Kill a Mutant Hound (x9)|Weekly||1000
+Craft Energy Ammo (x45)|Weekly||1000
+Craft Ballistic Ammo (x65)|Weekly||1000
+Cripple a Scorched's Leg (x18)|Weekly||1000
+Cripple a Scorched's Arm (x18)|Weekly||1000
+Craft Bulk Steel (x3)|Weekly||1000
+Kill a Yao Guai (x3)|Weekly||1000
+Collect Energy Ammo (x40)|Weekly||1000
+Eat a Vegetable (x25)|Weekly||1000
+Kill a Mole Rat (x15)|Weekly||1000
+Cripple a Blood Eagle's Arm (x18)|Weekly||1000
+Cripple a Blood Eagle's Leg (x18)|Weekly||1000
+Deal a Critical Hit to an Enemy in VATS (x25)|Weekly||1000
+Collect RadAway or Rad-X (x15)|Weekly||1000
+Collect a Burnt Book (x25)|Weekly||1000
+Collect a Lighter, Cigarette or Cigar (x15)|Weekly||1000
+Consume any Chems (x9)|Weekly||1000
+Collect Ballistic Ammo (x60)|Weekly||1000
+Kill an Angler (x9)|Weekly||1000
+Eat a Pumpkin (x15)|Weekly||1000
+Kill a Super Mutant (x30)|Weekly||1000
+Kill a Scorched (x30)|Weekly||1000
+Kill a Feral Ghoul (x30)|Weekly||1000
+Kill a Mirelurk (x30)|Weekly||1000
+Craft any Flair at a Tinkerer's Bench (x1)|Daily||250
+Craft any Plushie at a Tinkerer's Bench (x1)|Daily||250
+Drink Tea (x1)|Daily||250
+Sell a Weapon to an NPC vendor (x5)|Daily||250
+Mod an Ballistic Weapon (x1)|Daily||250
+Drink Tea (x5)|Weekly||1000
+Build a Generator in a Shelter (x1)|Daily||250
+Build a Generator in a Shelter (x3)|Weekly||1000
+Collect a Garden Gnome (x5)|Weekly||1000
+Craft any Flair at a Tinkerer's Bench (x3)|Weekly||1000
+Collect a Microscope or Biometric Scanner (x2)|Daily||250
+Kill a Brahmin (x6)|Weekly||1000
+Sell a Weapon to an NPC vendor (x15)|Weekly||1000
+Craft any Plushie at a Tinkerer's Bench (x3)|Weekly||1000
+Build a Floor or Wall Decoration in a Shelter (x25)|Weekly||1000
+Collect a Fuel Tank or Gas Canister (x5)|Weekly||1000
+Kill a Brahmin (x2)|Daily||250
+Collect a Fuel Tank or Gas Canister (x2)|Daily||250
+Cripple enemy limbs (x6)|Daily||250
+Cripple enemy limbs (x30)|Weekly||1000
+Expeditions: Complete any mission in Atlantic City! (x2)|Weekly|🗺️|1000
+Kill a Lesser Devil (x30)|Weekly||1000
+Kill an Overgrown (x5)|Daily||250
+Kill an Overgrown (x30)|Weekly||1000
+Expeditions: Complete The Most Sensational Game (x1)|Daily|🗺️|250
+Kill a Lesser Devil (x5)|Daily||250
+Expeditions: Complete Tax Evasion (x1)|Daily|🗺️|250
+Burning Love: Kill a Human while on a Team using the Hot Rod Pink Flamer (x30)|Event|❤️|Lunchbox (3)
+Burning Love: Complete Week 1 Challenges (x4)|Event|❤️|Reinhart's Jumpsuit
+Burning Love: Complete Week 2 Challenges (x4)|Event|❤️|Ruby's Heart Glasses
+Burning Love: Kill a Lesser Devil while on a Team using the Hot Rod Pink Flamer (x1)|Event|❤️|Repair Kit (3)
+Burning Love: Kill a Fanatic while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|Perk Card Pack (3)
+Burning Love: Kill a Gulper while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|250
+Burning Love: Kill an Overgrown while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|Lunchbox (3)
+Burning Love: Kill a Glowing Enemy while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|250
+Burning Love: Kill a Mirelurk while on a Team using the Hot Rod Pink Flamer (x15)|Event|❤️|Legendary Module (3)
+Burning Love: Kill a Trog while on a Team using the Hot Rod Pink Flamer (x10)|Event|❤️|Perk Card Pack (3)
+Burning Love: Kill a Scorched while on a Team using the Hot Rod Pink Flamer (x30)|Event|❤️|Legendary Module (3)
+Burning Love: Complete Week 1 Challenges and Week 2 Challenges (x2)|Event|❤️|Pink Vault Fireplace
+Burning Love: Kill a Feral Ghoul while on a Team using the Hot Rod Pink Flamer (x30)|Event|❤️|Repair Kit (3)
+Spring Cleaning: Scrap junk to create Ceramic with the Abraxo Pip-Boy Skin equipped (x20)|Event|week2|Basic Repair Kit (3)
+Spring Cleaning: Kill a Snallygaster with the Cremator (x1)|Event|week2|Nuka-Cola Mix Pack
+Spring Cleaning: Kill an Overgrown with the Cremator (x10)|Event|week2|250
+Spring Cleaning: Complete Week 1 Challenges (x6)|Event|week1|Mobile Sanitation Backpack
+Spring Cleaning: Complete Week 2 Challenges (x6)|Event|week2|R.I.P. Daring Bin
+Spring Cleaning: Complete Week 1 and 2 Challenges (x2)|Event||Abraxo Washer and Dryer Set
+Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
+Spring Cleaning: Kill a Lesser Devil with the Cremator (x1)|Event|week1|Nuka-Cola Mix Pack
+Spring Cleaning:  Scrap junk to create Fertilizer with the Abraxo Pip-Boy Skin equipped (x20)|Event|week1|Perk Card Pack (3)
+Spring Cleaning:  Scrap junk to create Acid with the Abraxo Pip-Boy Skin equipped (x20)|Event|week1|Basic Repair Kit (3)
+Spring Cleaning: Collect Abraxo Cleaner with the Abraxo Pip-Boy Skin equipped (x5)|Event|week1|Scout's Banner
+Spring Cleaning: Collect a Broom with the Abraxo Pip-Boy Skin equipped (x3)|Event|week1|Lunchbox (3)
+Spring Cleaning: Collect Soap with the Abraxo Pip-Boy Skin equipped (x5)|Event|week1|Legendary Module (3)
+Spring Cleaning: Scrap a "Catch the Commie" board game with the Abraxo Pip-Boy Skin equipped (x1)|Event|week2|Scout's Banner
+Spring Cleaning: Collect Toilet Paper with the Abraxo Pip-Boy Skin equipped (x5)|Event|week2|Perk Card Pack (3)
+Spring Cleaning: Scrap junk to create Plastic with the Abraxo Pip-Boy Skin equipped (x20)|Event|week2|Legendary Module (3)
+Spring Cleaning: Collect a Plunger with the Abraxo Pip-Boy Skin equipped (x3)|Event|week2|Basic Repair Kit (3)
+Uncharted Scouts: Cook a Meal in your C.A.M.P. while wearing the Marshal Mallow T-Shirt & Shorts (x5)|Event|week1|Perk Card Pack (3)
+Uncharted Scouts: Collect Purified Water while wearing the Marshal Mallow T-Shirt & Shorts (x5)|Event|week1|Nuka-Cola Mix Pack
+Uncharted Scouts: Take a Camera Picture at "Johnson's Acre" while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week2|Lunchbox (3)
+Uncharted Scouts: Take a Camera Picture of an Ant while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week2|Scout's Banner
+Uncharted Scouts: Complete Week 1 Challenges (x5)|Event|week1|"I'd Rather Be Camping" Poster
+Uncharted Scouts: Complete Week 1 and 2 Challenges (x2)|Event||Marshal Mallow Roasting Stick
+Uncharted Scouts: Take a Camera Picture of a "Lost" while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week1|Scout's Banner
+Uncharted Scouts: Complete Week 2 Challenges (x5)|Event|week2|Marshal Mallow Figure
+Uncharted Scouts: Kill a Thrasher while wearing the Marshal Mallow T-Shirt & Shorts (x2)|Event|week2|Basic Repair Kit (3)
+Uncharted Scouts: Eat a Cooked Meal while wearing the Marshal Mallow T-Shirt & Shorts (x5)|Event|week2|Legendary Module (3)
+Uncharted Scouts: Deploy a C.A.M.P. within the Skyline Valley Region while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week1|Legendary Module (3)
+Uncharted Scouts: Take a Camera Picture at the Slumber Mill Motel while wearing the Marshal Mallow T-Shirt & Shorts (x1)|Event|week1|Lunchbox (3)
+Drink Purified Water (x15)|Weekly||1000
+Drink Purified Water (x2)|Daily||250
+Collect a box of Sugar Bombs (x1)|Daily||250
+Collect Toilet Paper (x2)|Daily||250
+Collect Soap (x2)|Daily||250
+Collect Soap (x14)|Weekly||1000
+Kill a Lost (x15)|Weekly||1000
+Collect a Board Game (x4)|Weekly||1000
+Collect a Board Game (x1)|Daily||250
+Kill a Lost (x5)|Daily||250
+Cripple a Super Mutant's Head (x10)|Weekly||1000
+Cripple a Super Mutant's Leg (x18)|Weekly||1000
+Cripple a Super Mutant's Leg (x2)|Daily||250
+Cripple a Super Mutant's Limb (x30)|Weekly||1000
+Uncharted Scouts: Collect a RadAway while wearing the Marshal Mallow T-Shirt & Shorts (x2)|Event|week2|Nuka-Cola Mix Pack
+Visit a Best Build C.A.M.P. (x1)|Daily||250
+Visit a Best Build C.A.M.P. (x4)|Weekly||1000
+Like a Best Build C.A.M.P. (x4)|Weekly||1000
+Use Photomode to take a Photo at a Best Build C.A.M.P. (x1)|Daily||250
+Like a Best Build C.A.M.P. (x1)|Daily||250
+Take a Camera picture at a Best Build C.A.M.P. (x1)|Daily||250
+HALLOWEEN: Complete Trick or Treat and Give Out Candy Weekly Challenges (x2)|Event|🎃|Mothman Eyes Wall Light
+HALLOWEEN: Kill a Spooky Scorched (x5)|Daily|🎃|Repair Kit
+HALLOWEEN: Complete Trick or Treat Daily Challenges (x3)|Weekly|🎃|1000
+HALLOWEEN: Complete Give out Candy Daily Challenges (x3)|Weekly|🎃|1000
+HALLOWEEN: Complete Give out Candy Daily Challenges (x3)|Weekly|🎃|1000
+HALLOWEEN: Kill a Spooky Scorched (x5)|Daily|🎃|Lunchbox
+HALLOWEEN: Complete Trick or Treat Weekly Challenges (x2)|Event|🎃|Blood Punch Bowl
+HALLOWEEN: Complete Give Out Candy Weekly Challenges (x2)|Event|🎃|Jack O'Lantern Dress
+HALLOWEEN: Build a Candy Bowl and give out candy from your C.A.M.P. (x1)|Daily|🎃|250
+HALLOWEEN: Kill a Spooky Scorched (x5)|Daily|🎃|Perfect Bubblegum (3)
+HALLOWEEN: Complete Trick or Treat Daily Challenges (x3)|Weekly|🎃|1000
+HALLOWEEN: Trick or Treat from other players' candy bowls (x5)|Daily|🎃|250
+HALLOWEEN: Kill Spooky Scorched (Repeatable) (x50)|Weekly|🎃|Carry Weight Booster (3)
+Repeatable at Rank 100 or above: Complete a Public Event (x3)|Weekly|🔁|300
+Complete the Event: "Mischief Night" (x1)|Daily||250
+Complete the "Mischief Night" Daily Challenge (x3)|Weekly||1000
+Complete the Event: "Mischief Night" (x5)|Weekly||1000
+Complete a Caravan Quest (x1)|Daily||250
+Kill a Mutant Hound while wearing the Doctor Head Mirror (x5)|Event|week2|Perk Card Pack (x3)
+Scrap junk to produce Fiber Optics while wearing the Doctor Head Mirror (x5)|Event|week1|Perk Card Pack (x3)
+Collect Nuclear Waste while wearing the Doctor Head Mirror (x10)|Event|week1|Scouts Banner
+Science of Love: Complete Week 1 Challenges (x5)|Event|week1|Dopamine Wallpaper
+Science of Love: Complete Week 2 Challenges (x5)|Event|week2|Study of love Chalkboard
+Science of Love: Complete Week 1 and 2 Challenges (x2)|Event||Pink Heart Gobo Light
+Scrap junk to produce Glass while wearing the Doctor Head Mirror (x5)|Event|week2|Lunchbox (x3)
+Kill a Super Mutant while wearing the Doctor Head Mirror (x10)|Event|week1|Nuka-Cola Mix Pack x1
+Collect a Beaker while wearing the Doctor Head Mirror (x3)|Event|week2|250
+Kill a Feral Ghoul while wearing the Doctor Head Mirror (x10)|Event|week1|Basic Repair Kit (x3)
+Deal Energy Damage to Enemies while wearing the Doctor Head Mirror (x500)|Event|week2|250
+Collect a Microscope while wearing the Doctor Head Mirror (x10)|Event|week1|Lunchbox (x3)
+Collect Energy Ammo while wearing the Doctor Head Mirror (x500)|Event|week2|Nuka-Cola Mix Pack
+Collect a Human Skull or Skull part while wearing the Doctor Head Mirror (x5)|Event|week1|250
+Kill an Insect while wearing the Doctor Head Mirror (x10)|Event|week2|Basic Repair Kit (x3)
+Deal a Critical Hit to a Beezlebaby or Beezlebub  during The Big Bloom Event (x1)|Event||250
+Deal a Critical Hit to an Enemy during The Big Bloom Event (x3)|Event||250
+Kill an Insect during The Big Bloom Event (x5)|Event||250
+Kill an Overgrown during The Big Bloom Event (x3)|Event||250
+Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x1)|Event||250
+Kill an Insect during The Big Bloom Event (x30)|Event||1000
+Complete the Event: "The Big Bloom" (x1)|Event||250
+Harvest a Crystalcup, Radlily or Carnal Weeper during the Big Bloom Event (x5)|Event||250
+Kill an Overgrown during The Big Bloom Event (x3)|Event||1000
+ Complete a "The Big Bloom"  Weekly Challenge (x2)|Event||2500
+Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x10)|Event||1000
+Complete the Event: "The Big Bloom" (x5)|Event||1000
+Kill an Insect during The Big Bloom Event while wearing a Flower Crown (x5)|Daily||250
+Kill an Insect during The Big Bloom Event (x30)|Weekly||1000
+Complete the Event: "The Big Bloom" (x5)|Weekly||1000
+Kill an Insect during The Big Bloom Event (x5)|Daily||250
+Complete the Event: "The Big Bloom" (x1)|Daily||250
+Craft a Flower Crown (x1)|Daily||250
+Kill an Overgrown during The Big Bloom Event while wearing a Flower Crown (x3)|Daily||250
+Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x10)|Weekly||1000
+Kill an Overgrown during The Big Bloom Event (x3)|Daily||250
+Kill an Enemy in the Mire Region (x5)|Daily||250
+Kill an Enemy in the Ash Heap Region (x5)|Daily||250
+Kill an Enemy in the Forest Region (x5)|Daily||250
+Kill an Enemy in the Skyline Valley Region (x5)|Daily||250
+Kill an Enemy in the Cranberry Bog Region (x5)|Daily||250
+Kill an Enemy in the Savage Divide Region (x5)|Daily||250
+Kill an Enemy in the Toxic Valley Region (x5)|Daily||250
+Collect an "Autopsy" board game while wearing the Doctor Head Mirror (x1)|Event|week1|250
+Destroy a Robot while wearing the Doctor Head Mirror (x15)|Event|week2|Scouts Banner 
+Collect Pre-War Money with the Money Bag Backpack equipped (x76)|Event|week1|
+Scrap Junk to Collect Silver with the Money Bag Backpack equipped (x5)|Event|week1|
+Kill a Human with the Money Bag Backpack equipped (x76)|Event|week1|
+Collect a Cigar Box with the Money Bag Backpack equipped (x3)|Event|week2|
+Pick a Lock with the Money Bag Backpack equipped (x1)|Event|week1|
+Scrap Junk to Collect Gold with the Money Bag Backpack equipped (x5)|Event|week2|
+Collect a Pack or Carton of Cigarettes with the Money Bag Backpack equipped (x5)|Event|week1|
+Hack a Terminal with the Money Bag Backpack equipped (x3)|Event|week2|
+Kill an Enemy with the Money Bag Backpack equipped (x500)|Event|week1|
+Consume an Alcoholic Beverage with the Money Bag Backpack equipped (x20)|Event|week2|
+Catch a Fish in the Cranberry Bog Region (x2)|Daily||250
+Sell Grilled Fish to an NPC vendor (x1)|Daily||250
+Cook Brain Fungus Soup (x1)|Daily||250
+Catch a Fish in the Skyline Valley Region (x2)|Daily||250
+Craft Fish Bits (x35)|Weekly||1000
+Catch a Fish in the Savage Divide Region (x2)|Daily||250
+Catch a Fish in the Mire Region (x2)|Daily||250
+Cook Yao Guai Ribs (x1)|Daily||250
+Catch a Fish while Intoxciated (x3)|Daily||250
+Cook Roasted Mirelurk Meat (x3)|Daily||250
+Catch a Fish in the Ash Heap Region (x2)|Daily||250
+Cook Mole Rat Chunks (x3)|Daily||250
+Craft Fish Bits (x5)|Daily||250
+Catch a Fish (x3)|Daily||250
+Cook Grilled Fish (x3)|Daily||250
+Catch a Fish in the Forest Region (x2)|Daily||250
+Catch a Fish (x21)|Weekly||1000
+Catch a Fish in the Toxic Valley Region (x2)|Daily||250
+Collect Soap (x500)|Monthly||1000
+Appalachian Outlaws: Complete Week 1 Challenges (x7)|Event||
+Appalachian Outlaws: Complete Week 2 Challenges (x7)|Event||
+Appalachian Outlaws: Complete Week 1 and 2 Challenges (x2)|Event||
+Craft a Molotov with the Money Bag Backpack equipped (x15)|Event|week1|
+Craft Ballistic Ammo with the Money Bag Backpack equipped (x760)|Event|week2|
+Collect Stimpaks or Chems with the Money Bag Backpack equipped (x76)|Event|week2|
+Destroy a Protectron with the Money Bag Backpack equipped (x50)|Event|week2|
+Cook Grilled Fish while Intoxicated (x1)|Daily||250
+Catch a Fish while it is Raining (x2)|Weekly||1000
+Eat a Fish Bit (x6)|Daily||250
+Eat a Fish (x5)|Daily||250
+Kill a Gulper with the Marshal Mallow Fishing Hat equipped (x20)|Event|week2|
+Catch a Fish in the Toxic Valley with the Marshal Mallow Fishing Hat equiped (x10)|Event|week2|
+Catch a Fish with the Marshal Mallow Fishing Hat equipped (x76)|Event||
+Collect Bait with the Marshal Mallow Fishing Hat equipped (x10)|Event|week1|
+Craft a Replica Fishing Rod at the Tinker's Workbench with the Marshal Mallow Fishing Hat equipped (x2)|Event|week1|
+Catch a Fish in the Cranberry Bog with the Marshal Mallow Fishing Hat equipped (x10)|Event|week1|
+Catch a Fish in the Savage Divide with the Marshal Mallow Fishing Hat equipped (x10)|Event|week2|
+Catch a Fish in the Forest with the Marshal Mallow Fishing Hat equipped (x10)|Event|week1|
+Catch a Fish in the Mire with the Marshal Mallow Fishing Hat equipped (x10)|Event|week1|
+Complete All Regional Fishing Challenges (x3)|Event||
+Kill a Mirelurk Queen with the Marshal Mallow Fishing Hat equipped (x3)|Event|week2|
+Catch a Fish while intoxicated with the Marshal Mallow Fishing Hat equipped (x10)|Event|week2|
+Catch a Fish while intoxicated with the Marshal Mallow Fishing Hat equipped (x10)|Event|week1|
+Catch a Fish in the Ash Heap with the Marshal Mallow Fishing Hat equipped (x10)|Event|week2|
+Kill a Mirelurk with the Marshal Mallow Fishing Hat equipped (x20)|Event|week1|
+Complete All Regional Fishing Challenges (x4)|Event||
+Catch a Fish in the Skyline Valley with the Marshal Mallow Fishing Hat equiped (x10)|Event|week2|
