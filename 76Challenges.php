@@ -174,13 +174,14 @@
 				'httpUserAgent'               => null,  // Default value
 				'skipRecurrence'              => false, // Default value
 			));
+		//$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
+		$icalURL="https://calendar.google.com/calendar/ical/3d1861cb59dd5cc76b85ba542950afde0459701cad509e64b5d734ea5df33a83%40group.calendar.google.com/public/basic.ics";
 		} catch (\Exception $e) {
 			die($e);
 		}
 		
 		$chalEvent="";
-		//$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
-		$icalURL="https://calendar.google.com/calendar/ical/3d1861cb59dd5cc76b85ba542950afde0459701cad509e64b5d734ea5df33a83%40group.calendar.google.com/public/basic.ics";
+
 		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
 		$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
 		$output = "\n**Atomic Shop**\n";
@@ -190,15 +191,14 @@
 			$now = date('d-M-Y');
 			$check = $dtend->format('d-M-Y');
 			if ( strcmp($now,$check)!=0 ) {
-				// call EventChallengs and put return value in something and append that to the output before return.
-				$chalEvent .= EventChallenges($event->summary,$event->description);
-				if ( $event->summary == "Free & Daily Offers" ) {
-					$output .= "* ".$event->summary . "\n  " . $event->description . ')'."\n";
-				}
+				// if ( $event->summary == "Free & Daily Offers" ) { // commented out since i changed the cal setup
+					// $output .= "* ".$event->summary . "\n";//  " . $event->description . ')'."\n";
+					$output .= "* ".$event->summary . ', Ends on (' . $check . ')'."\n";
+				// }
 			}
 		}
 		$output .="\n";
-		$output .= $chalEvent;
+		// $output .= $chalEvent;
 		return $output;
 	}
 
@@ -353,13 +353,13 @@
 				'httpUserAgent'               => null,  // Default value
 				'skipRecurrence'              => false, // Default value
 			));
+		//$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
+		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
+		$icalURL="https://calendar.google.com/calendar/ical/677a43e0ffb5d922130f03876fe8c0bea6cb2fa558a7f50574cbbaa75564c74e%40group.calendar.google.com/public/basic.ics";
 		} catch (\Exception $e) {
 			die($e);
 		}
 		$chalEvent="";
-		//$ical->initFile('ZPAxXoBAnacByPGk-2023-01-29.ics');
-		$icalURL="https://calendar.google.com/calendar/ical/677a43e0ffb5d922130f03876fe8c0bea6cb2fa558a7f50574cbbaa75564c74e%40group.calendar.google.com/public/basic.ics";
-		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
 		$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
 		$output = "**Current Events**\n";
 		$events = $ical->eventsFromInterval('1 day');
@@ -609,7 +609,7 @@
 		usort($MonthlyChallenge,'cmp');
 		
 		$textareaValue = "Fallout 76 Daily Update\n";
-		//$textareaValue .= strip_tags(atomicShop());
+		$textareaValue .= strip_tags(atomicShop());
 		$textareaValue .= CurrentEvents($Challenges);
 		$textareaValue .= axolotl();
 		$ScoreMult=1;
