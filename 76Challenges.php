@@ -188,9 +188,16 @@
 		$events = $ical->eventsFromInterval('1 day');
 		foreach ($events as $event) {
 			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
+			$dtstart = $ical->iCalDateToDateTime($event->dtstart_array[3]);
 			$now = date('d-M-Y');
 			$check = $dtend->format('d-M-Y');
 			if ( strcmp($now,$check)!=0 ) {
+			// if a atomic shop event is 21 days long and is more than 7 days old dont show it.
+				$event21 = date_diff($dtstart,$dtend);
+				$event7 = date_diff($dtstart,(new \DateTime()));
+				if ( $event21->days = 21 and $event7->days >= 7 ) {
+					continue;
+				}
 				// if ( $event->summary == "Free & Daily Offers" ) { // commented out since i changed the cal setup
 					// $output .= "* ".$event->summary . "\n";//  " . $event->description . ')'."\n";
 					$output .= "* ".$event->summary . ', Ends on (' . $check . ')'."\n";
@@ -472,7 +479,7 @@
 		// print them all purdy
 		$output ="";
 		// look for "Challenge" in the event
-		if ( str_contains(strtolower($CurrentEvent),'challenge') ) {			
+		if ( str_contains(strtolower($CurrentEvent),'week 1') or str_contains(strtolower($CurrentEvent),'week 2')) {			
 			if (strlen($output)==0) {
 				$output .="**$CurrentEvent**\n\nChallenge (Count) Reward\n";
 			// }
