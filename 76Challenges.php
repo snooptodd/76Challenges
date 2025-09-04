@@ -200,7 +200,7 @@
 				}
 				// if ( $event->summary == "Free & Daily Offers" ) { // commented out since i changed the cal setup
 					// $output .= "* ".$event->summary . "\n";//  " . $event->description . ')'."\n";
-					$output .= "* ".$event->summary . ', Ends on (' . $check . ')'."\n";
+					$output .= "* ".$event->summary . ', Leaves on (' . $check . ')'."\n";
 				// }
 			}
 		}

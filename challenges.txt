@@ -18,7 +18,7 @@ Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. (x10)|Daily||250
 Collect Wood (x5)|Daily||250
 Kill a Super Mutant (x5)|Daily||250
 Kill a Scorched (x10)|Daily||250
-Build a Floor or Wall Decoration in a Workshop or C.A.M.P. (x5)|Daily||250
+Build a Decoration in a Workshop or C.A.M.P. (x5)|Daily||250
 Kill a Creature while in a Team (x10)|Daily||250
 Kill a Feral Ghoul (x10)|Daily||250
 Kill a Creature (x12)|Daily||250
@@ -94,7 +94,7 @@ Complete the Event: "A Colossal Problem" (x1)|Weekly||1000
 Kill a Glowing Creature (x10)|Weekly||1000
 Consume an Alcoholic Beverage (x15)|Weekly||1000
 Plant a Crop in a Workshop or C.A.M.P. (x25)|Weekly||1000
-Build a Floor or Wall Decoration in a Workshop or C.A.M.P. (x25)|Weekly||1000
+Build a Decoration in a Workshop or C.A.M.P. (x25)|Weekly||1000
 Gain XP (x2500)|Daily||250
 Complete the Event: "Encryptid" (x1)|Weekly||1000
 Repair Armor, Weapons, or Power Armor (x10)|Weekly||1000
@@ -112,12 +112,12 @@ Kill a Cultist (x30)|Weekly||1000
 Collect Purified Water (x25)|Weekly||1000
 Kill a Blood Eagle (x30)|Weekly||1000
 Visit your Shelter (x5)|Weekly||1000
-Build a Floor or Wall Decoration in a Shelter (x5)|Daily||250
+Build a Decoration in a Shelter (x5)|Daily||250
 Visit another Player's Shelter (x3)|Weekly||1000
 Visit your Shelter (x1)|Daily||250
 Build Anything in a Shelter (x10)|Daily||250
 Visit another Player's Shelter (x1)|Daily||250
-Build a Floor or Wall in a Shelter (x10)|Daily||250
+Build a Floor, Wall, or Roof in a Shelter (x10)|Daily||250
 Complete Shelters Daily Challenges! (x3)|Weekly||1000
 Under Rank 25: Gain XP (x1000)|Daily||50
 Under Rank 25: Gain XP (x1000)|Weekly||100
@@ -337,11 +337,11 @@ Take a Camera Picture at Nuka-World On Tour (x1)|Daily||250
 Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
 Plant a Crop in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
 Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
-Build a Floor or Wall Decoration in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
+Build a Decoration in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
 Plant a Crop in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
 Build Anything in a Workshop or C.A.M.P. in Free Cam (x25)|Weekly||1000
 Build Anything in a Workshop or C.A.M.P. in Free Cam (x10)|Daily||250
-Build a Floor or Wall Decoration in a Workshop or C.A.M.P. in Free Cam (x5)|Daily||250
+Build a Decoration in a Workshop or C.A.M.P. in Free Cam (x5)|Daily||250
 Collect or Scrap Coal (x5)|Daily||250
 Kill a Radstag (x5)|Daily||250
 Consume an Alcoholic Beverage while on a Team (x5)|Daily||250
@@ -350,13 +350,12 @@ Consume an Alcoholic Beverage while on a Team and Wearing a Costume (x10)|Daily|
 Kill a Festive Scorched while on a Team (x10)|Daily||250
 Complete the Event: "Fasnacht Day" while wearing a Fasnacht Mask (x1)|Daily||250
 Eat a Cooked Meal in a Teammate's C.A.M.P. (x5)|Daily||250
-Build a Floor or Wall in a Shelter in Free Cam (x10)|Daily||250
+Build a Floor, Wall, or Roof in a Shelter in Free Cam (x10)|Daily||250
 Drink Nuka-Twist (x5)|Weekly||1000
 Drink Nuka-Twist (x2)|Daily||250
-Build a Floor or Wall Decoration in a Shelter in Free Cam (x5)|Daily||250
+Build a Decoration in a Shelter in Free Cam (x5)|Daily||250
 Build Anything in a Shelter in Free Cam (x10)|Daily||250
-Eat a Cobbler, which is not a Pie. (x1)|Daily||250
-Deal a Critical Hit to an Enemy using Automatic Weapons (x5)|Daily||250
+Deal a Critical Hit to an Enemy using Automatic Weapons in VATS (x5)|Daily||250
 Collect Pre-war Food (x20)|Weekly||1000
 Kill Cultists with a Shotgun (x5)|Daily||250
 Collect Stimpaks or Chems (x5)|Daily||250
@@ -365,7 +364,7 @@ Take a Camera Picture of a Snallygaster (x1)|Daily||250
 Deal Cryo Damage to enemies (x300)|Weekly||1000
 Deal Fire Damage to Enemies (x500)|Weekly||1000
 Collect Stimpaks or Chems (x20)|Weekly||1000
-Deal a Critical Hit to an Enemy using Automatic Weapons (x10)|Weekly||1000
+Deal a Critical Hit to an Enemy using Automatic Weapons in VATS (x10)|Weekly||1000
 Kill Cultists during The Mothman Equinox event (x30)|Weekly||1000
 Take a Picture of a Sheepsquatch (x1)|Weekly||1000
 Build Defense, Appliance or Crafting items in a Workshop or C.A.M.P. (x10)|Weekly||1000
@@ -374,7 +373,7 @@ Kill a Cryptid with a Railway Rifle or Missile launcher (x3)|Weekly||1000
 Take a Picture of a Grafton Monster (x1)|Weekly||1000
 Kill a Cryptid with a Bow or Crossbow (x3)|Weekly||1000
 Collect Pre-war Food (x5)|Daily||250
-Kill Enemies with Unarmed Weapons while intoxicated on Nuka-Cola Dark (x3)|Weekly||1000
+Kill Enemies with Fists Weapons while intoxicated on Nuka-Cola Dark (x3)|Weekly||1000
 Build light sources in a Workshop or C.A.M.P. (x3)|Daily||250
 Kill a Cryptid with a Bow or Crossbow (x1)|Daily||250
 Build light sources in a Workshop or C.A.M.P. (x10)|Weekly||1000
@@ -384,9 +383,9 @@ Kill Cultists during The Mothman Equinox event (x10)|Daily||250
 Take a Picture of a Wendigo (x1)|Weekly||1000
 Deal Cryo Damage to enemies (x300)|Daily||250
 Build Defense, Appliance, or Crafting items in a Workshop or C.A.M.P. (x3)|Daily||250
-Build turrets or traps in a Workshop or C.A.M.P. (x3)|Daily||250
+Build a Turret or Trap in a Workshop or C.A.M.P. (x3)|Daily||250
 Consume a Nukashine in a Teammate's C.A.M.P. (x1)|Weekly||1000
-Build turrets or traps in a Workshop or C.A.M.P. (x10)|Weekly||1000
+Build a Turret or Trap in a Workshop or C.A.M.P. (x10)|Weekly||1000
 Cripple a Human's Head (x15)|Weekly||1000
 Cripple a Ghoul's Leg (x2)|Daily||250
 Hunt Rabbits (x2)|Daily|🐰|250
@@ -406,6 +405,7 @@ Cripple a Deathclaw's Head (x3)|Weekly||1000
 Cripple a Human's Head (x2)|Daily||250
 Collect Mirelurk Eggs (x5)|Daily||250
 Complete Daily or Weekly Challenges while wearing Bunny Ears (x5)|Event||1000
+Eat a Cobbler, which is not a Pie. (x1)|Daily||250
 Kill Radstags during The Mothman Equinox event (x5)|Daily||250
 Sell Mirelurk Queen Steak to an NPC vendor (x1)|Weekly||1000
 Sell Ribeye Steak to an NPC vendor (x1)|Daily||250
@@ -428,13 +428,13 @@ Kill a Mutated Enemy (x30)|Weekly||1000
 Complete a Mutated Public Event (x3)|Weekly||1000
 Craft Infusions (x4)|Weekly||1000
 Collect Guitars or Toasters (x2)|Daily||250
-Deal a Critical Hit to a Radtoad (x8)|Daily||250
+Deal a Critical Hit to a Radtoad in VATS (x8)|Daily||250
 Cripple a Super Mutant's Arm (x2)|Daily||250
 Cripple a Mirelurk's Limb (x2)|Daily||250
 Kill a Canine (x5)|Daily||250
 Collect a Teddy Bear (x3)|Daily||250
 Kill an Enemy with a Tesla Rifle or Cryolator (x10)|Daily||250
-Deal a Critical Hit to a Sentry Bot (x8)|Daily||250
+Deal a Critical Hit to a Sentry Bot in VATS (x8)|Daily||250
 Kill an Enemy with a Thrown Weapon (x10)|Daily||250
 Sell a Shotgun to an NPC vendor (x1)|Daily||250
 Sell Swamp Tofu to an NPC vendor (x1)|Daily||250
@@ -450,12 +450,12 @@ Collect Brain Fungus (x25)|Weekly||1000
 Kill an Enemy with a Thrown Weapon (x30)|Weekly||1000
 Scrap Syringers (x8)|Weekly||1000
 Scrap a Pipe Gun (x20)|Weekly||1000
-Deal a Critical Hit to a Radtoad (x15)|Weekly||1000
+Deal a Critical Hit to a Radtoad in VATS (x15)|Weekly||1000
 Cripple a Super Mutant's Arm (x16)|Weekly||1000
 Build a Generator in a C.A.M.P. or Workshop (x5)|Weekly||1000
 Craft a Throwable Weapon (x30)|Weekly||1000
 Mod an Energy Weapon (x5)|Weekly||1000
-Deal a Critical Hit to a Sentry Bot (x15)|Weekly||1000
+Deal a Critical Hit to a Sentry Bot in VATS (x15)|Weekly||1000
 Collect a Teddy Bear (x9)|Weekly||1000
 Kill an Enemy with a Tesla Rifle or Cryolator (x30)|Weekly||1000
 Collect a Guitar or Toaster (x9)|Weekly||1000
@@ -549,7 +549,7 @@ Collect a Microscope or Biometric Scanner (x2)|Daily||250
 Kill a Brahmin (x6)|Weekly||1000
 Sell a Weapon to an NPC vendor (x15)|Weekly||1000
 Craft any Plushie at a Tinkerer's Bench (x3)|Weekly||1000
-Build a Floor or Wall Decoration in a Shelter (x25)|Weekly||1000
+Build a Decoration in a Shelter (x25)|Weekly||1000
 Collect a Fuel Tank or Gas Canister (x5)|Weekly||1000
 Kill a Brahmin (x2)|Daily||250
 Collect a Fuel Tank or Gas Canister (x2)|Daily||250
@@ -643,6 +643,18 @@ Complete the Event: "Mischief Night" (x1)|Daily||250
 Complete the "Mischief Night" Daily Challenge (x3)|Weekly||1000
 Complete the Event: "Mischief Night" (x5)|Weekly||1000
 Complete a Caravan Quest (x1)|Daily||250
+Deal a Critical Hit to a Beezlebaby or Beezlebub  during The Big Bloom Event (x1)|Event||250
+Deal a Critical Hit to an Enemy during The Big Bloom Event (x3)|Event||250
+Kill an Insect during The Big Bloom Event (x5)|Event||250
+Kill an Overgrown during The Big Bloom Event (x3)|Event||250
+Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x1)|Event||250
+Kill an Insect during The Big Bloom Event (x30)|Event||1000
+Complete the Event: "The Big Bloom" (x1)|Event||250
+Harvest a Crystalcup, Radlily or Carnal Weeper during the Big Bloom Event (x5)|Event||250
+Kill an Overgrown during The Big Bloom Event (x3)|Event||1000
+ Complete a "The Big Bloom"  Weekly Challenge (x2)|Event||2500
+Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x10)|Event||1000
+Complete the Event: "The Big Bloom" (x5)|Event||1000
 Kill a Mutant Hound while wearing the Doctor Head Mirror (x5)|Event|week2|Perk Card Pack (x3)
 Scrap junk to produce Fiber Optics while wearing the Doctor Head Mirror (x5)|Event|week1|Perk Card Pack (x3)
 Collect Nuclear Waste while wearing the Doctor Head Mirror (x10)|Event|week1|Scouts Banner
@@ -658,18 +670,6 @@ Collect a Microscope while wearing the Doctor Head Mirror (x10)|Event|week1|Lunc
 Collect Energy Ammo while wearing the Doctor Head Mirror (x500)|Event|week2|Nuka-Cola Mix Pack
 Collect a Human Skull or Skull part while wearing the Doctor Head Mirror (x5)|Event|week1|250
 Kill an Insect while wearing the Doctor Head Mirror (x10)|Event|week2|Basic Repair Kit (x3)
-Deal a Critical Hit to a Beezlebaby or Beezlebub  during The Big Bloom Event (x1)|Event||250
-Deal a Critical Hit to an Enemy during The Big Bloom Event (x3)|Event||250
-Kill an Insect during The Big Bloom Event (x5)|Event||250
-Kill an Overgrown during The Big Bloom Event (x3)|Event||250
-Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x1)|Event||250
-Kill an Insect during The Big Bloom Event (x30)|Event||1000
-Complete the Event: "The Big Bloom" (x1)|Event||250
-Harvest a Crystalcup, Radlily or Carnal Weeper during the Big Bloom Event (x5)|Event||250
-Kill an Overgrown during The Big Bloom Event (x3)|Event||1000
- Complete a "The Big Bloom"  Weekly Challenge (x2)|Event||2500
-Kill a Beezlebaby or Beezlebub during The Big Bloom Event (x10)|Event||1000
-Complete the Event: "The Big Bloom" (x5)|Event||1000
 Kill an Insect during The Big Bloom Event while wearing a Flower Crown (x5)|Daily||250
 Kill an Insect during The Big Bloom Event (x30)|Weekly||1000
 Complete the Event: "The Big Bloom" (x5)|Weekly||1000
