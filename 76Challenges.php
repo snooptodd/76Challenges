@@ -140,18 +140,18 @@
 		$dec=strtotime('first tuesday of december');
 		$output.="\n\n";
 		$output .= match (true) {
-			$now >= $dec => "Stone Axolotl, \nRegions: Toxic Valley & Ash Heap",
-			$now >= $nov => "Speckled Axolotl, \nRegions: Cranberry Bog & Forest",
-			$now >= $oct => "Spotted Axolotl, \nRegions: Savage Divide & Toxic Valley",
-			$now >= $sep => "Shadow Axolotl, \nRegions: Toxic Valley & Ash Heap",
-			$now >= $aug => "Striped Axolotl, \nRegions: Skyline Valley & Mire",
-			$now >= $july => "Scaled Axolotl, \nRegions: Forest & Ash Heap",
-			$now >= $june => "Banded Axolotl, \nRegions: Toxic Valley & Mire",
-			$now >= $may => "Purple Axolotl, \nRegions: Skyline Valley & Cranberry Bog",
-			$now >= $apr => "Dotted Axolotl, \nRegions:  Mire & Ash Heap",
-			$now >= $mar => "Clay Axolotl, \nRegions: Skyline Valley & Toxic Valley",
-			$now >= $feb => "Pink Axolotl, \nRegions: Cranberry Bog & Forest",
-			$now >= $jan => "Charcoal Axolotl, \nRegions: Skyline Valley & Savage Divide"
+			$now >= $dec => "Stone Axolotl, \nRegions: Toxic Valley & Ash Heap\nChanges on (".date(j-M-y,$dec).")",
+			$now >= $nov => "Speckled Axolotl, \nRegions: Cranberry Bog & Forest\nChanges on (".date(j-M-y,$nov).")",
+			$now >= $oct => "Spotted Axolotl, \nRegions: Savage Divide & Toxic Valley\nChanges on (".date(j-M-y,$oct).")",
+			$now >= $sep => "Shadow Axolotl, \nRegions: Toxic Valley & Ash Heap\nChanges on (".date(j-M-y,$sep).")",
+			$now >= $aug => "Striped Axolotl, \nRegions: Skyline Valley & Mire\nChanges on (".date(j-M-y,$aug).")",
+			$now >= $july => "Scaled Axolotl, \nRegions: Forest & Ash Heap\nChanges on )".date(j-M-y,$july).")",
+			$now >= $june => "Banded Axolotl, \nRegions: Toxic Valley & Mire\nChanges on )".date(j-M-y,$june).")",	
+			$now >= $may => "Purple Axolotl, \nRegions: Skyline Valley & Cranberry Bog\nChanges on )".date(j-M-y,$may).")",
+			$now >= $apr => "Dotted Axolotl, \nRegions:  Mire & Ash Heap\nChanges on )".date(j-M-y,$apr).")",
+			$now >= $mar => "Clay Axolotl, \nRegions: Skyline Valley & Toxic Valley\nChanges on (".date(j-M-y,$mar).")",
+			$now >= $feb => "Pink Axolotl, \nRegions: Cranberry Bog & Forest\nChanges on (".date(j-M-y,$feb).")",
+			$now >= $jan => "Charcoal Axolotl, \nRegions: Skyline Valley & Savage Divide\nChanges on (".date(j-M-y,$jan).")",
 		};
 		$output .="\n\n";
 		return $output;
@@ -180,7 +180,7 @@
 			die($e);
 		}
 		
-		$chalEvent="";
+		//$chalEvent="";
 
 		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
 		$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
@@ -376,9 +376,13 @@
 			$check = $dtend->format('d-M-Y');
 			if ( strcmp($now,$check)!=0 ) {
 				// call EventChallengs and put return value in something and append that to the output before return.
-				$chalEvent .= EventChallenges($event->summary,$event->description);
-				if ( $event->description == "Estimated" ) {
+				//$chalEvent .= EventChallenges($event->summary,$event->description);
+				if ( strtolower($event->description) == "estimated" ) {
 					$output .= "* ".$event->summary . ', Estimated end date (' . $check . ')'."\n";
+				} elseif ( str_contains(strtolower($event->summary),"axolotl") ) {
+					$output .= "* ".$event->summary .", Regon: ".$event->description. ', End on (' . $check . ')'."\n";
+				} elseif ( str_contains(($event->summary),"EVENT") ) {
+					$chalEvent .= EventChallenges($event->summary,$event->description);
 				} else {
 					$output .= "* ".$event->summary . ', Ends on (' . $check . ')'."\n";
 				}
@@ -481,46 +485,13 @@
 		// look for "Challenge" in the event
 		if ( str_contains(strtolower($CurrentEvent),'week 1') or str_contains(strtolower($CurrentEvent),'week 2')) {			
 			if (strlen($output)==0) {
-				$output .="**$CurrentEvent**\n\nChallenge (Count) Reward\n";
-			// }
-			// $cWeek = 'week1';
-			// if ( str_contains($CurrentEvent,'Week 2')) {
-			// 	$cWeek = 'week2';
-			// }
+				$output .="**".str_replace("EVENT ","",$CurrentEvent)."**\n\nChallenge (Count) Reward\n";
 				$aCurrentDiscription=preg_split("/\r\n|\n|\r/", $CurrentDiscription);
 				foreach ($aCurrentDiscription as $key => $value) {
 					$expcvalue = explode('|',$value); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
-					// I think it is probably better to have the discription of the calander enty be used as is and not modified as musch
-				// 	$colonpositon = strpos($expcvalue[0],':');
-				// 	if (! $colonpositon) {
-				// 		$cleanChallenge = trim($expcvalue[0]);
-				// 	} else {
-				// 		$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
-				// 	}
-				// 	$output .= '* ' . $cleanChallenge . ' ' . $expcvalue[3] . "\n";
 					$output .= $expcvalue[0].' '. $expcvalue[3]."\n";
 				}
 			}
-			//foreach line of challenges check if its an event and check if it matches the current event and the week
-			// get event into seperate words so we can search the challenge array for 
-			// foreach (explode(' ',$CurrentEvent) as $ekey => $evalue) {
-			// 	foreach ($ChallengeArray as $ckey => $cvalue) { 
-			// 		$expcvalue = explode('|',$cvalue); // Spring Cleaning: Kill an Alien with the Cremator (x20)|Event|week1|250
-			// 		if ( strcmp(strtolower($expcvalue[1]),'event') == 0 ) { // we only care about event challenges
-			// 			//$dtemp = strpos(strtolower($expcvalue[0]),strtolower($evalue)); // debug 
-			// 			if ( strpos(strtolower($expcvalue[0]),strtolower($evalue)) === 0 ) { // look for current word of the event at the begining of the challenge
-			// 				if ( strcmp($expcvalue[2],$cWeek) == 0 || strcmp($expcvalue[2],"") == 0 ) {
-			// 					$colonpositon = strpos($expcvalue[0],':');
-			// 					$cleanChallenge = trim(substr($expcvalue[0],$colonpositon+1));
-			// 					//$output .= '* ' . $expcvalue[0] . ' ' . $expcvalue[3] . "\n";
-			// 					$output .= '* ' . $cleanChallenge . ' ' . $expcvalue[3] . "\n";
-			// 				}
-			// 			}
-			// 		}
-			// 	}
-			// }
-			// KISS
-			
 			$output .= "\n";
 		}
 
@@ -618,7 +589,7 @@
 		$textareaValue = "Fallout 76 Daily Update\n";
 		$textareaValue .= strip_tags(atomicShop());
 		$textareaValue .= CurrentEvents($Challenges);
-		$textareaValue .= axolotl();
+		//$textareaValue .= axolotl();
 		$ScoreMult=1;
 		if (str_contains(strtolower($textareaValue),'double score')) {
 			$ScoreMult = 2;
