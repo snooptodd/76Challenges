@@ -380,7 +380,7 @@
 				if ( strtolower($event->description) == "estimated" ) {
 					$output .= "* ".$event->summary . ', Estimated end date (' . $check . ')'."\n";
 				} elseif ( str_contains(strtolower($event->summary),"axolotl") ) {
-					$output .= "* ".$event->summary .", Region: ".$event->description. ', End on (' . $check . ')'."\n";
+					$output .= "* ".$event->summary .", Region: ".$event->description. ', Ends on (' . $check . ')'."\n";
 				} elseif ( str_contains(($event->summary),"EVENT") ) {
 					$chalEvent .= EventChallenges($event->summary,$event->description);
 				} else {
