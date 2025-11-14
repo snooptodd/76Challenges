@@ -27,8 +27,7 @@ textarea { width: 100%; height: 300px; margin-top: 20px; font-family: monospace;
 async function loadChallenges() {
     const response = await fetch('challenges.txt');
     const text = await response.text();
-    const lines = text.trim().split('
-');
+    const lines = text.trim().split('\r\n');
     const categories = { Daily: [], Weekly: [], Monthly: [], Event: [] };
     lines.forEach(line => {
         const parts = line.split('|');
@@ -92,10 +91,8 @@ async function minervaStatus() {
     const inventoryResponse = await fetch('MinervaEnventory.txt');
     const locationText = await locationResponse.text();
     const inventoryText = await inventoryResponse.text();
-    const locations = locationText.trim().split('
-').map(line => { const [start, end, loc, lists] = line.split(','); return { start: new Date(start), end: new Date(end), location: loc, lists: lists.split('|') }; });
-    const inventory = inventoryText.trim().split('
-').map(line => { const [list, item, cost] = line.split('|'); return { list: list, item: item, cost: parseInt(cost) }; });
+    const locations = locationText.trim().split('\r\n').map(line => { const [start, end, loc, lists] = line.split(','); return { start: new Date(start), end: new Date(end), location: loc, lists: lists.split('|') }; });
+    const inventory = inventoryText.trim().split('\r\n').map(line => { const [list, item, cost] = line.split('|'); return { list: list, item: item, cost: parseInt(cost) }; });
     const now = new Date(); let currentLocation = 'Away'; let nextLocation = ''; let currentLists = [];
     locations.forEach(loc => { if (now >= loc.start && now <= loc.end) { currentLocation = loc.location; currentLists = loc.lists; } if (!nextLocation && loc.start >= now) { nextLocation = `She will next be at ${loc.location} on ${loc.start.toDateString()}`; } });
     const container = document.createElement('div'); container.id = 'minerva'; container.innerHTML = '<h2>Minerva</h2>';
@@ -104,23 +101,23 @@ async function minervaStatus() {
 }
 
 document.getElementById('exportBtn').addEventListener('click', () => {
-    let markdown = '# Fallout 76 Dashboard
-
+    let markdown = '# Fallout 76 Dashboard\
+\
 ';
-    markdown += '## Monthly Axolotl
-' + (document.getElementById('axolotl')?.innerText || '') + '
-
+    markdown += '## Monthly Axolotl\
+' + (document.getElementById('axolotl')?.innerText || '') + '\
+\
 ';
-    markdown += '## Minerva
-' + (document.getElementById('minerva')?.innerText || '') + '
-
+    markdown += '## Minerva\
+' + (document.getElementById('minerva')?.innerText || '') + '\
+\
 ';
-    markdown += '## Current Events
+    markdown += '## Current Events\
 ';
     document.querySelectorAll('#events li').forEach(li => { markdown += `- ${li.innerText}
 `; });
-    markdown += '
-## Challenges
+    markdown += '\
+## Challenges\
 ';
     document.querySelectorAll('#app h3').forEach(h3 => { markdown += `
 ### ${h3.innerText}
