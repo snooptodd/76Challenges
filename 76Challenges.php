@@ -4,50 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>76 Challenges</title>
-	<style>
-	.warning {
-	background-color: yellow;
-	text-align: center;
-	}
-	table {
-		border-collapse: collapse;
-	}
-	th {
-		border: none;
-		/* background_color: lightgrey; */
-	}
-	td {
-		border: 1px solid black;
-	}
-	textarea {
-		width: 50rem;
-		height: 50rem;
-		/* padding: 12px 20px; */
-		box-sizing: border-box;
-		border: 1px solid black;
-		border-radius: 4px;
-		/* background-color: #f8f8f8; */
-		/*resize: none;*/
-	}
-	select {
-		width: fit-content;
-		/*padding: 16px 20px;*/
-		border: 1px solid black;
-		border-radius: 4px;
-		/* background-color: #f1f1f1; */
-	}
-	input.text {
-		width: fit-content;
-		padding: 0px;
-		border: none;
-		/* border-radius: 4px; */
-		/* background-color: #f1f1f1; */
-	}
-	div {
-		max-height: 40000px;
-		max-width: 100%;
-	}
-</style>
+	<link rel="stylesheet" href="76Challenges.css" />
+	
 </head>
 
 <body>
@@ -193,9 +151,9 @@
 			$check = $dtend->format('d-M-Y');
 			if ( strcmp($now,$check)!=0 ) {
 			// if a atomic shop event is 21 days long and is more than 7 days old dont show it.
-				$event21 = date_diff($dtstart,$dtend);
+ 				$event21 = date_diff($dtstart,$dtend);
 				$event7 = date_diff($dtstart,(new \DateTime()));
-				if ( $event21->days = 21 and $event7->days >= 7 ) {
+				if ( $event21->days == 21 and $event7->days >= 7 ) {
 					continue;
 				}
 				// if ( $event->summary == "Free & Daily Offers" ) { // commented out since i changed the cal setup
@@ -249,10 +207,10 @@
 	}
 
 	//create data list for html input tag 
-	// if event and $value[1] is event then echo
-	// if Monthly and $value[1] is Monthly then echo
-	// if Weekly and $value[1] is Weekly then echo
-	// if daily and $value[1] is Daily then echom
+	// if event and $value[1] is event then put in evnet datalist
+	// if Monthly and $value[1] is Monthly then put in event datalist
+	// if Weekly and $value[1] is Weekly then put in event datalist
+	// if daily and $value[1] is Daily then put in event datalist
 	function datalist($alist){
 		$tmpevent = '<datalist id=EventChallenges>';
 		$tmpmonthly = '<datalist id=MonthlyChallenges>';
