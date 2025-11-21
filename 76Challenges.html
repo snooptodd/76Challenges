@@ -21,13 +21,14 @@
     <div id="dailyOps"></div>
     <div id="atomicShop"></div>
     <div id="currentEvents"></div>
+    <div id="axolotl"></div>
     <div id="event"></div>
     <div id="Minerva"></div>
-    <div id="axolotl"></div>
 </div>
 <div style='text-align:center;'>
     <button id='exportBtn'>Build Markdown</button>
     <button id='copyBtn'>Copy Markdown</button>
+    <button id='toggleMonthlyEventBtn'>Show/Hide Monthly & Event Challenges</button>
 </div>
 <textarea id='markdownOutput' placeholder='Markdown export will appear here'></textarea>
 
@@ -215,7 +216,7 @@ function formatEndDate(end) {
     const day = d.getDate();
     const year = d.getFullYear();
     const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return `${day}${monthNames[d.getMonth()]}${year}`;
+    return `${day}-${monthNames[d.getMonth()]}-${year}`;
 }
 
 async function inputtext(count, datalist) {
@@ -326,7 +327,7 @@ function axolotlRotation() {
         document.getElementById('app').appendChild(container);
     }
     // use formatEndDate for user-facing date so all dates look the same
-    container.innerHTML = `<p>${currentAxolotl.name} Regions: ${currentAxolotl.regions} Changes on: ${formatEndDate(nextChangeDate.toISOString())}</p>`;
+    container.innerHTML = `<p>${currentAxolotl.name} Regions: ${currentAxolotl.regions} Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
 }
 
 
@@ -356,7 +357,11 @@ async function minervaStatus() {
     }
     container.innerHTML = '<h2>Minerva</h2>';
     if (currentLocation === 'Away') { 
-        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}<br>${nextLocation}</p>`; 
+        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p>`;
+        const list = document.createElement('ul');
+        const li = document.createElement('li');
+        li.textContent = nextLocation;
+        list.appendChild(li); 
     } else { 
         container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p>`; 
         const list = document.createElement('ul'); 
@@ -368,8 +373,9 @@ async function minervaStatus() {
                 list.appendChild(li); 
             } 
         }); 
-        container.appendChild(list); 
+    // container.appendChild(list); 
     }
+    container.appendChild(list); 
 }
 
 // Daily Ops function
@@ -698,16 +704,16 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     // list items become markdown list items
     // challenges include 1ˢᵗ if checkbox is checked
     let markdown = 'Fallout 76 Daily Update';
-    markdown += '\r\n\r\n';
+    markdown += '\r\n';
     markdown += '**Atomic Shop**';
-    markdown += '\r\n\r\n';
+    markdown += '\r\n';
     document.querySelectorAll('#atomicShop li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
-    markdown += 'r\n\r\n'; 
+    markdown += '\r\n'; 
     markdown += '**Current Events**'; 
-    markdown += '\r\n\r\n';
+    markdown += '\r\n';
     document.querySelectorAll('#currentEvents li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
     // markdown += 'r\n\r\n'; 
-    markdown += '* ' + (document.getElementById('axolotl')?.innerText || '') + '\r\n\r\n';
+    markdown += '* ' + (document.getElementById('axolotl')?.innerText || '') + '\r\n';
     document.querySelectorAll('#events li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
     // if no challenges selected then do not include section
     // select input boxes and get their data-text for each category
