@@ -29,7 +29,9 @@
     <button id='exportBtn'>Build Markdown</button>
     <button id='copyBtn'>Copy Markdown</button>
 </div>
-<textarea id='markdownOutput' placeholder='Markdown export will appear here'></textarea>
+<div id="textarea">
+    <textarea id='markdownOutput' placeholder='Markdown export will appear here'></textarea>
+</div>
 
 <script>
 // Google API client configuration and helper functions
@@ -428,10 +430,10 @@ async function dailyOps() {
         return input;
     };
 
-    const locInput = makeInput('LocationList', 'Select Location');
-    const factionInput = makeInput('EnemyFactionList', 'Select Enemy Faction');
-    const mut1Input = makeInput('EnemyMut1List', "Select Mutation A" ,dayOdd ? 'Savage Strike' : 'Piercing Gaze');
-    const mut2Input = makeInput('EnemyMut2List', 'Select Mutation B');
+    const locInput = makeInput('LocationList', 'Select Location'); locInput.id = 'DailyOpsLocation';
+    const factionInput = makeInput('EnemyFactionList', 'Select Enemy Faction'); factionInput.id = 'DailyOpsEnemyFaction';
+    const mut1Input = makeInput('EnemyMut1List', "Select Mutation A" ,dayOdd ? 'Savage Strike' : 'Piercing Gaze'); mut1Input.id = 'DailyOpsEnemyMut1';
+    const mut2Input = makeInput('EnemyMut2List', 'Select Mutation B'); mut2Input.id = 'DailyOpsEnemyMut2';
 
     const row = (labelText, el) => { const lbl = document.createElement('label'); lbl.textContent = labelText + ': '; lbl.appendChild(el); return lbl; };
 
@@ -726,7 +728,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
             const input = inputs[i + 1];
             if (input.dataset.text) {
                 // space before 1st due to loadChallenges alignment
-                const fo1stText = checkbox.checked ? ' 1ˢˢ':'';
+                const fo1stText = checkbox.checked ? ' 1ˢᵗ':'';
                 if (double === 2) {
                     // if double =2 then multiply any daily challenge points by 2
                     if (category === 'Daily') {
