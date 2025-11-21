@@ -142,7 +142,7 @@
 
 		//$icalURL="http://nextcloud.ktntg.com/remote.php/dav/public-calendars/ZPAxXoBAnacByPGk/?export";
 		$ical->initUrl($icalURL, $username = '', $password = '', $userAgent = null);
-		$output = "\n**Atomic Shop**\n";
+		$output = "**Atomic Shop**\n";
 		$events = $ical->eventsFromInterval('1 day');
 		foreach ($events as $event) {
 			$dtend = $ical->iCalDateToDateTime($event->dtend_array[3]);
@@ -264,16 +264,16 @@
 		$output = "";
 		if ( ($aChallenge[3][0]) !== ''){
 			if ( $select_prefix == 'w' ) {
-				$output .= "**Weekly Challenges**\n\n";
+				$output .= "**Weekly Challenges**\n";
 				$output .= "Challenge (Count) S.C.O.R.E.\n";
 			} elseif ( $select_prefix == 'm' ) {
-				$output .= "**Monthly  Challenges**\n\n";
+				$output .= "**Monthly  Challenges**\n";
 				$output .= "Challenge (Count) S.C.O.R.E.\n";
 			} elseif ( $select_prefix == 'd' ) {
-				$output .= "**Daily Challenges**\n\n";
+				$output .= "**Daily Challenges**\n";
 				$output .= "Challenge (Count) S.C.O.R.E.\n";
 			} elseif ($select_prefix == 'e') {
-				$output .= "**Event Challenges**\n\nChallenge (Count) Reward\n";
+				$output .= "**Event Challenges**\nChallenge (Count) Reward\n";
 			}
 			foreach ($aChallenge as $key => $value) {
 				if ( $value[0] ) {
@@ -417,9 +417,9 @@
 			}
 		}
 		if (($MinervaLocationResult=='Away') & !($MinervaNextLocation=='') ) {
-			$output =  "**Minerva's Location: $MinervaLocationResult**\n\n$MinervaNextLocation\n";
+			$output =  "**Minerva's Location: $MinervaLocationResult**\n$MinervaNextLocation\n";
 		} elseif ( !($MinervaLocationResult=='Away') & !($MinervaNextLocation=='') ) {
-			$output =  "**Minerva's Location: $MinervaLocationResult**\n\n";
+			$output =  "**Minerva's Location: $MinervaLocationResult**\n";
 			$output .=  "Name (Gold Price)\n";
 			foreach ($MinervaEnventory as $MEkey => $MEvalue) {
 				$MEline = explode('|',$MEvalue);
