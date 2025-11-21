@@ -46,7 +46,7 @@ input.textbox {
     /* background-color: #f1f1f1; */
 }
 input.text {
-    width: 50%;
+    width: 100%;
     padding: 0px;
     border: 1px solid black;
     /* border-radius: 4px; */
