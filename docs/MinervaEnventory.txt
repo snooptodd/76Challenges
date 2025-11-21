@@ -1,0 +1,242 @@
+01|Secret Service Left Arm|750
+01|Secret Service Right Arm|750
+01|Secret Service Helmet|1650
+01|Secret Service Left Leg|750
+01|Secret Service Right Leg|750
+01|Secret Service Chest Piece|1250
+01|Farmable Dirt Tiles|500
+01|Sympto-Matic|2000
+01|Super Reactor|2000
+01|War Glaive|2667
+01|Gauss Minigun Gunner Sights|50
+01|Gauss Minigun Tesla Capacitor|100
+01|Gauss Minigun Tesla Dynamo|100
+01|Chemist's Backpack Mod|350
+01|Cattle Prod|250
+01|Face Breaker|1000
+02|Grocer's Backpack Mod|350
+02|Scavenged Solar Panel|2000
+02|Strangler Heart Left Arm|1000
+02|Strangler Heart Right Arm|1000
+02|Strangler Heart Helmet|1650
+02|Strangler Heart Left Leg|1000
+02|Strangler Heart Right Leg|1000
+02|Strangler Heart Chest Piece|1250
+02|Dynamite|100
+02|Gauss Pistol|250
+02|Treated Lining Secret Service Underarmor|50
+02|Resistant Lining Secret Service Underarmor|100
+02|Floater Gnasher Grenade|150
+02|Auto Grenade Launcher Blood Eagle Paint|350
+03|Chinese Stealth Armor|4000
+03|Chinese Stealth Helmet|1650
+03|Gauntlet|250
+03|War Glaive Cryo Blade|200
+03|War Glaive Plasma Blade|200
+03|Secret Service Jet Pack Armor|2000
+03|Secret Service Pocketed Armor Limb|250
+03|Secret Service Pocketed Armor Torso|250
+03|T-65 Overdrive Servos|750
+03|T-65 Medic Pump|250
+03|T-65 Stealth Boy|750
+03|Chicken Coop|750
+05|Gauss Pistol Aligned Short Barrel|150
+05|Gauss Pistol Drum Magazine|100
+05|Gauss Pistol Refined Receiver|200
+05|Gauss Minigun|750
+05|Thorn Armor Left Arm|750
+05|Thorn Armor Right Arm|750
+05|Thorn Armor Left Leg|750
+05|Thorn Armor Right Leg|750
+05|Thorn Armor Chest Piece|1000
+05|Protective Lining Secret Service Underarmor|150
+05|Shielded Lining Secret Service Underarmor|200
+06|War Glaive Flaming Blade|200
+06|War Glaive Shock Blade|200
+06|Whistle in the Dark|1333
+06|Water Well|750
+06|Ultra-Light Build Secret Service Armor Limbs|500
+06|Lighter Build Secret Service Armor Limbs|250
+06|Plasma Caster|750
+06|T-65 Calibrated Shocks|750
+06|T-65 Rusty Knuckles|250
+06|T-65 Jet Pack|2000
+06|Secret Service Underarmor|250
+06|The Gutter|1333
+07|Gauss Shotgun|500
+07|Floater Flamer Grenade|150
+07|Gauss Shotgun Extended Barrel|150
+07|Gauss Shotgun Extended Magazine|100
+07|Gauss Shotgun Hardened Receiver|200
+07|Brotherhood Recon Left Arm|1333
+07|Brotherhood Recon Right Arm|1333
+07|Brotherhood Recon Helmet|2667
+07|Brotherhood Recon Left Leg|1333
+07|Brotherhood Recon Right Leg|1333
+07|Brotherhood Recon Chest Piece|2000
+07|Ammo Converter|1250
+07|Kids Truck Bed|500
+07|Umbrella Hat|100
+09|T-65 Left Arm|1000
+09|T-65 Right Arm|1000
+09|T-65 Helm|1650
+09|T-65 Left Leg|1000
+09|T-65 Right Leg|1000
+09|T-65 Torso|1250
+09|Plasma Caster Aligned Sniper Barrel|150
+09|Plasma Caster Calibrated Capacitor|200
+09|Plasma Caster Pulse Capacitor|200
+09|Dynamite Bundle|200
+09|Crusader Pistol|2667
+09|Asylum Light|1000
+09|Meat Bag Stash Box|1000
+09|Ghoul Chair|500
+09|Gorilla Chair|500
+10|Gauss Shotgun Precise Stock|100
+10|Gauss Shotgun Vicious Receiver|200
+10|Gauss Shotgun Refined Receiver|200
+10|Gauntlet|250
+10|Gauss Minigun Triple Barrel|150
+10|Flare|50
+10|Brotherhood Recon Pocketed Armor Limb|250
+10|Brotherhood Recon Pocketed Armor Torso|250
+10|Turbo-Fert Fertilizer|750
+10|Hellstorm Missile Launcher|2667
+10|Unstoppable Monster|1333
+10|Cowboy Chaps|150
+10|Cowboy Duster|150
+10|Cowboy Hat|100
+11|Solar Armor Left Arm|750
+11|Solar Armor Right Arm|750
+11|Solar Armor Left Leg|750
+11|Solar Armor Right Leg|750
+11|Solar Armor Chest Piece|1000
+11|Plasma Caster True Long Barrel|150
+11|Plasma Caster True Capacitor|200
+11|Floater Freezer Grenade|150
+11|Super Mutant Tube|2000
+11|Science Chalkboards|1000
+11|Plasma Cutter Cryo Blade|200
+11|Plasma Cutter Flaming Blade|200
+11|Plasma Cutter Shock Blade|200
+11|Floater Tubes|2000
+13|Gauss Pistol Suppressed Barrel|150
+13|Gauss Pistol Vicious Receiver|200
+13|Gauss Pistol Hardened Receiver|200
+13|Plasma Cutter|2667
+13|Emmett Mountain Disposal Signs|1000
+13|Hello Neon Sign|1000
+13|BoS Medallion|1000
+13|Brotherhood Recon Jet Pack|2000
+13|Gauss Minigun|750
+13|Caged Bulb Lights|200
+13|Burrows Signs|200
+13|Valley Galleria Signs|200
+13|Steel Bust|500
+13|Foundry Smelter|1000
+14|Hellstorm Missile Launcher Cryo Payload|200
+14|Hellstorm Missile Launcher Napalm Payload|200
+14|Hellstorm Missile Launcher Plasma Payload|200
+14|Wendigo Tube|2000
+14|Medical Malpractice|1333
+14|Enclave Medallion|1000
+14|War Glaive|2667
+14|Water Well|750
+14|Floater Flamer Grenade|150
+14|Flatwoods Monster Tube|2000
+15|Crusader Pistol Cryo Receiver|200
+15|Crusader Pistol Fusion Receiver|200
+15|Crusader Pistol Pyro Receiver|200
+15|Open Neon Sign|1000
+15|Covert Scout Armor Left Arm|1333
+15|Covert Scout Armor Right Arm|1333
+15|Covert Scout Armor Left Leg|1333
+15|Covert Scout Armor Right Leg|1333
+15|Covert Scout Armor Chest Piece|2000
+15|Covert Scout Armor Mask|2667
+17|Secret Service Left Arm|750
+17|Secret Service Right Arm|750
+17|Secret Service Helmet|1650
+17|Secret Service Left Leg|750
+17|Secret Service Right Leg|750
+17|Secret Service Chest Piece|1250
+17|Farmable Dirt Tiles|500
+17|Sympto-Matic|2000
+17|Super Reactor|2000
+17|War Glaive|2667
+17|Gauss Minigun Gunner Sights|50
+17|Gauss Minigun Tesla Capacitor|100
+17|Gauss Minigun Tesla Dynamo|100
+17|Chemist's Backpack Mod|350
+17|Cattle Prod|250
+18|Grocer's Backpack Mod|350
+18|Scavenged Solar Panel|2000
+18|Strangler Heart Left Arm|1000
+18|Strangler Heart Right Arm|1000
+18|Strangler Heart Helmet|1650
+18|Strangler Heart Left Leg|1000
+18|Strangler Heart Right Leg|1000
+18|Strangler Heart Chest Piece|1250
+18|Dynamite|100
+18|Gauss Pistol|250
+18|Treated Lining Secret Service Underarmor|50
+18|Resistant Lining Secret Service Underarmor|100
+18|Floater Gnasher Grenade|150
+18|Sole Survivor|1333
+18|X-01 Scorched Paint|500
+19|Chinese Stealth Armor|4000
+19|Chinese Stealth Helmet|1650
+19|Gauntlet|250
+19|War Glaive Cryo Blade|200
+19|War Glaive Plasma Blade|200
+19|Secret Service Jet Pack Armor|2000
+19|Secret Service Pocketed Armor Limb|250
+19|Secret Service Pocketed Armor Torso|250
+19|T-65 Overdrive Servos|750
+19|T-65 Medic Pump|250
+19|T-65 Stealth Boy|750
+19|Mirelurk King Tube|2000
+19|Hellfire Prototype Power Armor Paint|2000
+19|Long Aquarium Signs|350
+19|Atlantic Emblem|500
+19|Aquarium Signs|250
+21|Gauss Pistol Aligned Short Barrel|150
+21|Gauss Pistol Drum Magazine|100
+21|Gauss Pistol Refined Receiver|200
+21|Gauss Minigun|750
+21|Thorn Armor Left Arm|750
+21|Thorn Armor Right Arm|750
+21|Thorn Armor Left Leg|750
+21|Thorn Armor Right Leg|750
+21|Thorn Armor Chest Piece|1000
+21|Protective Lining Secret Service Underarmor|150
+21|Shielded Lining Secret Service Underarmor|200
+21|Mechanic's Best Friend|1333
+21|Medium Supply Crate|1000
+21|Intergalactic Handmade Skin|250
+22|War Glaive Flaming Blade|200
+22|War Glaive Shock Blade|200
+22|Whistle in the Dark|1333
+22|Water Well|750
+22|Ultra-Light Build Secret Service Armor Limbs|500
+22|Lighter Build Secret Service Armor Limbs|250
+22|Plasma Caster|750
+22|T-65 Calibrated Shocks|750
+22|T-65 Rusty Knuckles|250
+22|T-65 Jet Pack|2000
+22|Secret Service Underarmor|250
+22|The Gutter|1333
+22|Hot Rod Flames Handmade Skin|350
+23|Arctic Marine Left Arm|1333
+23|Arctic Marine Right Arm|1333
+23|Arctic Marine Left Leg|1333
+23|Arctic Marine Right Leg|1333
+23|Arctic Marine Torso|2000
+23|Arctic Marine Armor Helmet|2667
+23|Brotherhood of Steel Minigun Paint|1333
+23|Slocum Joe's Power Armor Paint|2000
+23|Crusader Pistol|2667
+23|Gauss Minigun|750
+23|Meat Bag Stash Box|1000
+23|Wendigo Tube|2000
+23|Alien Backpack|500

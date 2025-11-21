@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>76 Challenges</title>
+<link rel="stylesheet" href="./76Challenges.css" />
+</head>
+<body>
+<h1>Fallout 76 Challenges</h1>
+<div id="authControls" style="text-align:right;margin-bottom:8px;"></div>
+<div id="Datalists">
+    <datalist id="Daily"></datalist>
+    <datalist id="Weekly"></datalist>
+    <datalist id="Monthly"></datalist>
+    <datalist id="Event"></datalist>
+    <datalist id="Lifetime"></datalist>
+</div>
+<div id='app'>
+    <div id="challenges"></div>
+    <div id="dailyOps"></div>
+    <div id="atomicShop"></div>
+    <div id="currentEvents"></div>
+    <div id="event"></div>
+    <div id="Minerva"></div>
+    <div id="axolotl"></div>
+</div>
+<div style='text-align:center;'>
+    <button id='exportBtn'>Build Markdown</button>
+    <button id='copyBtn'>Copy Markdown</button>
+</div>
+<textarea id='markdownOutput' placeholder='Markdown export will appear here'></textarea>
+
+<script>
+// Google API client configuration and helper functions
+const GAPI_CLIENT_ID = '1003932562826-to5gbs5u7flo1jik55mijep1h2tpv2k3.apps.googleusercontent.com';
+const GAPI_API_KEY = 'AIzaSyD2wJYJTZjm-cEFIFJa3zu3oZIQxVREiw4';
+const GAPI_DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'];
+const GAPI_SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
+let gapiInitialized = false;
+function loadGapiScript() {
+    return new Promise((resolve, reject) => {
+        if (window.gapi) return resolve(window.gapi);
+        const s = document.createElement('script');
+        s.src = 'https://apis.google.com/js/api.js';
+        s.async = true;
+        s.defer = true;
+        s.onload = () => resolve(window.gapi);
+        s.onerror = reject;
+        document.head.appendChild(s);
+    });
+}
+
+async function loadGisScript() {
+    return new Promise((resolve, reject) => {
+        if (window.google && window.google.accounts && window.google.accounts.oauth2) return resolve(window.google);
+        const s = document.createElement('script');
+        s.src = 'https://accounts.google.com/gsi/client';
+        s.async = true;
+        s.defer = true;
+        s.onload = () => resolve(window.google);
+        s.onerror = reject;
+        document.head.appendChild(s);
+    });
+}
+
+async function initGoogleClient() {
+    if (gapiInitialized) return window.gapi;
+    // load gapi client & init only the client part (no auth2)
+    await loadGapiScript();
+    await new Promise((resolve) => window.gapi.load('client', resolve));
+    await window.gapi.client.init({ apiKey: GAPI_API_KEY, discoveryDocs: GAPI_DISCOVERY_DOCS });
+    // load GIS and create token client for OAuth
+    await loadGisScript();
+    // create token client that will supply an access token for gapi.client requests
+    window.gisTokenClient = google.accounts.oauth2.initTokenClient({
+        client_id: GAPI_CLIENT_ID,
+        scope: GAPI_SCOPES,
+        callback: (resp) => {
+            if (resp.error) {
+                console.error('GIS token error', resp);
+                return;
+            }
+            // set token for gapi.client usage
+            window.gapi.client.setToken({ access_token: resp.access_token });
+            // optional hook for callers waiting on auth
+            if (typeof window.onGisAuth === 'function') window.onGisAuth(resp);
+            // update any visible auth UI
+            try { if (typeof updateAuthUI === 'function') updateAuthUI(); } catch (e) { /* ignore */ }
+        }
+    });
+    gapiInitialized = true;
+    return window.gapi;
+}
+
+function isAuthorized() {
+    try {
+        const t = window.gapi && window.gapi.client && window.gapi.client.getToken && window.gapi.client.getToken();
+        return !!(t && t.access_token);
+    } catch (e) { return false; }
+}
+
+// Update auth controls UI (status + sign-in/sign-out buttons)
+function updateAuthUI() {
+    const container = document.getElementById('authControls');
+    if (!container) return;
+    container.innerHTML = '';
+    const status = document.createElement('span');
+    status.id = 'authStatus';
+    status.style.marginRight = '8px';
+    status.textContent = isAuthorized() ? 'Signed in' : 'Signed out';
+    container.appendChild(status);
+
+    if (isAuthorized()) {
+        const btn = document.createElement('button');
+        btn.textContent = 'Sign Out';
+        btn.addEventListener('click', async () => { try { await signOut(); } catch (e) { console.error(e); } });
+        container.appendChild(btn);
+    } else {
+        const btn = document.createElement('button');
+        btn.textContent = 'Sign In';
+        btn.addEventListener('click', async () => { try { await signIn(); } catch (e) { console.error(e); } });
+        container.appendChild(btn);
+    }
+}
+
+// Sign-in helper that waits for the GIS callback and resolves when token is available
+// Accepts an optional `onSignedInCallback` which will be called after sign-in completes.
+function signIn(onSignedInCallback) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            await initGoogleClient();
+        } catch (e) {
+            return reject(e);
+        }
+        const existing = window.gapi && window.gapi.client && window.gapi.client.getToken && window.gapi.client.getToken();
+        // setup temporary handler before requesting token to avoid race
+        const timeout = setTimeout(() => {
+            window.onGisAuth = null;
+            reject(new Error('GIS auth timeout'));
+        }, 30000);
+        window.onGisAuth = async (resp) => {
+            clearTimeout(timeout);
+            window.onGisAuth = null;
+            if (resp && resp.error) return reject(resp);
+            try { if (typeof updateAuthUI === 'function') updateAuthUI(); } catch (e) {}
+            // call optional callback after UI update
+            try { if (typeof onSignedInCallback === 'function') onSignedInCallback(resp); } catch (e) { console.error('onSignedInCallback error', e); }
+            try {
+                // after resolving, run any queued post-auth actions asynchronously and in sequence
+                const q = Array.isArray(window.postAuthQueue) ? window.postAuthQueue : [];
+                if (q && q.length) {
+                    // drain by awaiting each action; support async functions that return promises
+                    while (q.length) {
+                        const fn = q.shift();
+                        try {
+                            const result = fn && typeof fn === 'function' ? fn() : null;
+                            if (result && typeof result.then === 'function') {
+                                // await promise-like results
+                                await result;
+                            }
+                        } catch (e) {
+                            console.error('postAuth action error', e);
+                        }
+                    }
+                }
+                window.postAuthQueue = [];
+            } catch (e) { console.error('postAuth queue run error', e); }
+            resolve(resp);
+        };
+        try {
+            window.gisTokenClient.requestAccessToken({ prompt: existing ? '' : 'consent' });
+        } catch (err) {
+            clearTimeout(timeout);
+            window.onGisAuth = null;
+            reject(err);
+        }
+    });
+}
+
+// Sign out and revoke token (if present)
+async function signOut() {
+    try {
+        const t = window.gapi && window.gapi.client && window.gapi.client.getToken && window.gapi.client.getToken();
+        if (t && t.access_token && window.google && window.google.accounts && window.google.accounts.oauth2) {
+            // revoke via google.accounts.oauth2.revoke
+            await new Promise((resolve) => {
+                try {
+                    google.accounts.oauth2.revoke(t.access_token, () => { resolve(); });
+                } catch (e) { resolve(); }
+            });
+        }
+        if (window.gapi && window.gapi.client && window.gapi.client.setToken) window.gapi.client.setToken('');
+    } catch (e) {
+        console.error('signOut error', e);
+    }
+    try { if (typeof updateAuthUI === 'function') updateAuthUI(); } catch (e) {}
+}
+
+// Post-auth action queue helpers
+window.postAuthQueue = window.postAuthQueue || [];
+function enqueuePostAuthAction(fn) {
+    if (typeof fn === 'function') {
+        window.postAuthQueue = window.postAuthQueue || [];
+        window.postAuthQueue.push(fn);
+    }
+}
+
+// Helper: format an event end date as dMonYYYY (e.g. 3Nov1999)
+function formatEndDate(end) {
+    if (!end) return '';
+    // end may be an object with .date (YYYY-MM-DD) or .dateTime
+    const ds = end.date || end.dateTime || end;
+    const d = new Date(ds);
+    const day = d.getDate();
+    const year = d.getFullYear();
+    const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${day}${monthNames[d.getMonth()]}${year}`;
+}
+
+async function inputtext(count, datalist) {
+    // create input text boxes with datalist
+    // add FO1st check box before each input box
+    // monthly and event challenges are not needed for most users so hide by default unless user enables via button. 
+    let container = document.getElementById(`${datalist}Container`);
+    if (!container) {
+        container = document.createElement('div');
+        container.id = `${datalist}Container`;
+    }
+    // reset container contents
+    container.innerHTML = `<h2>${datalist} Challenges</h2><br>1ˢᵗ      Challenge<br>`;
+    for (let i = 0; i < count; i++) {
+        //const input = document.createElement('checkbox');checkbox.setAttribute('type', 'checkbox'); checkbox.className = 'challenge-checkbox'; container.appendChild(checkbox);document.createElement('input'); input.setAttribute('list', datalist); input.className = 'challenge-checkbox'; input.dataset.text = ''; input.placeholder = `Select ${datalist} Challenge ${i + 1}`;
+        const checkbox = document.createElement('input');
+            checkbox.setAttribute('id', `${datalist}checkbox${i}`);
+            checkbox.setAttribute('type', 'checkbox');
+            checkbox.className = 'checkbox';
+        const input = document.createElement('input');
+            input.setAttribute('id', `${datalist}list${i}`);
+            input.setAttribute('list', datalist);
+            input.className = 'textbox';
+            input.dataset.text = '';
+            input.placeholder = `Select ${datalist} Challenge ${i + 1}`;
+        input.addEventListener('change', (e) => { e.target.dataset.text = e.target.value; });
+        if (datalist==='Daily') {
+            if (i === 0 ) { checkbox.checked=true; };
+            if (i === 1 ) { input.setAttribute('data-text',' ⭐ Gold Star: Complete a Daily Challenge (x6) 1000'); input.value=' ⭐ Gold Star: Complete a Daily Challenge (x6) 1000'; };
+        }
+        if (datalist==='Weekly') {
+            if (i === 0 ) { input.value=' ⭐ Complete a Gold Star Daily Challenge! (x3) 1500'; input.setAttribute('data-text',' ⭐ Complete a Gold Star Daily Challenge! (x3) 1500'); };
+            if (i === 1 ) { input.value=' 🔁 Repeatable Under Rank 100: Gain XP (x10000) 100'; input.setAttribute('data-text',' 🔁 Repeatable Under Rank 100: Gain XP (x10000) 100') }; 
+            if (i === 2 ) { input.value=' 🔁 Repeatable at Rank 100 and above: Complete a Public Event (x3) 300'; input.setAttribute('data-text',' 🔁 Repeatable at Rank 100 and above: Complete a Public Event (x3) 300')};
+        }
+        container.appendChild(checkbox); container.appendChild(input); container.appendChild(document.createElement('br'));
+    }
+    // append to the dedicated challenges area
+    const challengesArea = document.getElementById('challenges') || document.getElementById('app');
+    if (!challengesArea.contains(container)) { challengesArea.appendChild(container); }
+}
+
+async function loadChallenges() {
+    // Fetch and parse challenges and create datalist for each category
+    // input file format: Challenge|Type|Flair|Reward
+    const response = await fetch('challenges.txt');
+    const text = await response.text();
+    const lines = text.trim().split('\r\n');
+    const categories = { Daily: [], Weekly: [], Monthly: [], Event: [] };
+    lines.forEach(line => {
+        const parts = line.split('|');
+        if (parts.length >= 2) {
+            const challenge = parts[0];
+            const type = parts[1];
+            const flair = parts[2];
+            const reward = parts[3];
+            if (categories[type]) { 
+                categories[type].push({ text: `${flair} ${challenge} ${reward}` });
+            }
+        }
+    });
+    // Populate datalists
+    for (const [category, challenges] of Object.entries(categories)) {
+        const datalist = document.getElementById(category);
+        challenges.forEach(challenge => {
+            const option = document.createElement('option');
+            option.value = challenge.text;
+            datalist.appendChild(option);
+        });
+        // Create input text boxes for each category
+        await inputtext(13, category);
+
+        // Hide Monthly and Event containers by default (optional for most users)
+        if (category === 'Monthly' || category === 'Event') {
+            const container = document.getElementById(`${category}Container`);
+            if (container) {
+                container.style.display = 'none';
+                container.classList.add('optional-challenges');
+            }
+        }
+    }
+}
+
+function axolotlRotation() {
+    const now = new Date(); const year = now.getFullYear();
+    const axolotlMap = [
+        {name: 'Charcoal Axolotl', regions: 'Skyline Valley & Savage Divide'},
+        {name: 'Pink Axolotl', regions: 'Cranberry Bog & Forest'},
+        {name: 'Clay Axolotl', regions: 'Skyline Valley & Toxic Valley'},
+        {name: 'Dotted Axolotl', regions: 'Mire & Ash Heap'},
+        {name: 'Purple Axolotl', regions: 'Skyline Valley & Cranberry Bog'},
+        {name: 'Banded Axolotl', regions: 'Toxic Valley & Mire'},
+        {name: 'Scaled Axolotl', regions: 'Forest & Ash Heap'},
+        {name: 'Striped Axolotl', regions: 'Skyline Valley & Mire'},
+        {name: 'Shadow Axolotl', regions: 'Toxic Valley & Ash Heap'},
+        {name: 'Spotted Axolotl', regions: 'Savage Divide & Toxic Valley'},
+        {name: 'Speckled Axolotl', regions: 'Cranberry Bog & Forest'},
+        {name: 'Stone Axolotl', regions: 'Toxic Valley & Ash Heap'}
+    ];
+    function firstTuesday(month) { const date = new Date(year, month, 1); while (date.getDay() !== 2) { date.setDate(date.getDate() + 1); } return date; }
+    let currentIndex = 0; for (let i = 11; i >= 0; i--) { if (now >= firstTuesday(i)) { currentIndex = i; break; } }
+    const currentAxolotl = axolotlMap[currentIndex]; const nextChangeDate = firstTuesday((currentIndex + 1) % 12);
+    // write into the existing axolotl div if present, otherwise create and append
+    let container = document.getElementById('axolotl');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'axolotl';
+        document.getElementById('app').appendChild(container);
+    }
+    // use formatEndDate for user-facing date so all dates look the same
+    container.innerHTML = `<p>${currentAxolotl.name} Regions: ${currentAxolotl.regions} Changes on: ${formatEndDate(nextChangeDate.toISOString())}</p>`;
+}
+
+
+async function minervaStatus() {
+    const locationResponse = await fetch('MinervaLocation.txt');
+    const inventoryResponse = await fetch('MinervaEnventory.txt');
+    const locationText = await locationResponse.text();
+    const inventoryText = await inventoryResponse.text();
+    const locations = locationText.trim().split('\r\n').map(line => { const [start, end, loc, lists] = line.split(','); return { start: new Date(start), end: new Date(end), location: loc, lists: lists.split('|') }; });
+    const inventory = inventoryText.trim().split('\r\n').map(line => { const [list, item, cost] = line.split('|'); return { list: list, item: item, cost: parseInt(cost) }; });
+    const now = new Date(); let currentLocation = 'Away'; let nextLocation = ''; let currentLists = [];
+    locations.forEach(loc => { 
+        if (now >= loc.start && now <= loc.end) { 
+            currentLocation = loc.location; currentLists = loc.lists; 
+        } 
+        if (!nextLocation && loc.start >= now) { 
+            // format the date for consistent display
+            nextLocation = `She will next be at ${loc.location} on ${formatEndDate(loc.start.toISOString())}`; 
+        } 
+    });
+    // write into the existing Minerva area (capital M in HTML). fall back to #minerva if needed
+    let container = document.getElementById('Minerva') || document.getElementById('minerva');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'Minerva';
+        document.getElementById('app').appendChild(container);
+    }
+    container.innerHTML = '<h2>Minerva</h2>';
+    if (currentLocation === 'Away') { 
+        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}<br>${nextLocation}</p>`; 
+    } else { 
+        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p>`; 
+        const list = document.createElement('ul'); 
+        inventory.forEach(item => { 
+            if (currentLists.includes(item.list)) { 
+                const discounted = Math.round(item.cost * 0.75); 
+                const li = document.createElement('li'); 
+                li.textContent = `${item.item} (${discounted} gold)`; 
+                list.appendChild(li); 
+            } 
+        }); 
+        container.appendChild(list); 
+    }
+}
+
+// Daily Ops function
+// create input text boxes for Location, Enemy Faction, Enemy Mutations 1 and 2 with datalists
+// based on day even/odd select mutation order
+async function dailyOps() {
+    const Location = ['Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic','Glassed Caverns','Atlantic City Community Center'];
+    const EnemyFaction = ['Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown'];
+    const EnemyMutations1 = ['Piercing Gaze', 'Savage Strike'];
+    const EnemyMutations2 = ['Reflective Skin', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud'];
+    function getDaysSinceEpoch() { return Math.floor(Date.now() / 1000 / (24 * 60 * 60)); }
+    const dayOdd = getDaysSinceEpoch() % 2 === 1;
+
+    // Create datalists for these options inside the existing `Datalists` container
+    const lists = [
+        { id: 'LocationList', items: Location.slice(1) },
+        { id: 'EnemyFactionList', items: EnemyFaction.slice(1) },
+        { id: 'EnemyMut1List', items: EnemyMutations1 },
+        { id: 'EnemyMut2List', items: EnemyMutations2.slice(1) }
+    ];
+    const datalistsContainer = document.getElementById('Datalists');
+    lists.forEach(list => {
+        let dl = document.getElementById(list.id);
+        if (!dl) {
+            dl = document.createElement('datalist');
+            dl.id = list.id;
+            datalistsContainer.appendChild(dl);
+        }
+        // clear and populate
+        dl.innerHTML = '';
+        list.items.forEach(item => {
+            const opt = document.createElement('option');
+            opt.value = item;
+            dl.appendChild(opt);
+        });
+    });
+
+    // Build the UI for daily ops inside the existing #dailyOps element
+    let container = document.getElementById('dailyOps');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'dailyOps';
+        document.getElementById('app').appendChild(container);
+    }
+    container.innerHTML = '<h2>Daily Ops</h2>';
+
+    const makeInput = (listId, placeholder, prefill ) => {
+        const input = document.createElement('input');
+        input.setAttribute('list', listId);
+        input.className = 'dailyops-input';
+        if (prefill) {
+            input.value = prefill;
+            input.setAttribute('data-text', prefill);
+        }
+        input.placeholder = placeholder;
+        return input;
+    };
+
+    const locInput = makeInput('LocationList', 'Select Location');
+    const factionInput = makeInput('EnemyFactionList', 'Select Enemy Faction');
+    const mut1Input = makeInput('EnemyMut1List', "Select Mutation A" ,dayOdd ? 'Savage Strike' : 'Piercing Gaze');
+    const mut2Input = makeInput('EnemyMut2List', 'Select Mutation B');
+
+    const row = (labelText, el) => { const lbl = document.createElement('label'); lbl.textContent = labelText + ': '; lbl.appendChild(el); return lbl; };
+
+    container.appendChild(row('Location', locInput)); container.appendChild(document.createElement('br'));
+    container.appendChild(row('Enemy Faction', factionInput)); container.appendChild(document.createElement('br'));
+    container.appendChild(row('Mutation 1', mut1Input)); container.appendChild(document.createElement('br'));
+    container.appendChild(row('Mutation 2', mut2Input)); container.appendChild(document.createElement('br'));
+
+}
+
+async function atomicShop() {
+    // list my atomic shop google calendar using google calendar api.
+    // show only this weeks atomic shop items and the daily featured item. 
+    // determined by event start date of tuesday of the current week.
+    // section title is 'Atomic Shop'
+    // line output format is: title, Leaves on ("end date(d-M-y)") 
+    // do not include the item discription.
+
+    // client ID and API key from the Developer Console.
+    const CALENDAR_ID = '3d1861cb59dd5cc76b85ba542950afde0459701cad509e64b5d734ea5df33a83@group.calendar.google.com';
+    // Use gapi client if initialized and signed in; otherwise fall back to public API key fetch
+    try {
+        const now = new Date();
+
+        // time window still used for API queries (today -> +0 days)
+        const timeMin = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
+        const timeMax = new Date(now.getTime() + 0 * 24 * 60 * 60 * 1000).toISOString();
+
+        let allItems = [];
+
+        // prepare container early and offer sign-in if not initialized/signed-in
+        let container = document.getElementById('atomicShop');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'atomicShop';
+            document.getElementById('app').appendChild(container);
+        }
+        container.innerHTML = '<h2>Atomic Shop</h2>';
+        // Try to initialize gapi client but don't force sign-in here
+        try { await initGoogleClient(); } catch (e) { /* ignore init error and fall back */ }
+
+        // Use a safe authorization check; do not rely on gapi.auth2 (not initialized here)
+        if (isAuthorized()) {
+            // use authorized gapi client
+            const response = await window.gapi.client.calendar.events.list({ calendarId: CALENDAR_ID, timeMin, timeMax, singleEvents: true, orderBy: 'startTime' });
+            allItems = Array.isArray(response.result.items) ? response.result.items.filter(i => i.status !== 'cancelled') : [];
+        } else {
+                // Request sign-in via the central authControls UI and re-run atomicShop after sign-in
+                enqueuePostAuthAction(() => { atomicShop(); });
+                try { updateAuthUI(); } catch (e) { /* ignore */ }
+            // fallback to public API key fetch (may fail for private calendar)
+            const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${GAPI_API_KEY}&timeMin=${encodeURIComponent(timeMin)}&timeMax=${encodeURIComponent(timeMax)}&singleEvents=true&orderBy=startTime`;
+            const res = await fetch(url);
+            if (!res.ok) {
+                // if unauthorized, let user sign in via button
+                if (res.status === 403 || res.status === 401) {
+                    container.innerHTML += '<p>Calendar requires authorization. Please sign in to Google.</p>';
+                }
+                throw new Error(`Calendar fetch failed: ${res.status}`);
+            }
+            const data = await res.json();
+            allItems = Array.isArray(data.items) ? data.items.filter(i => i.status !== 'cancelled') : [];
+        }
+
+        // helper to format end date as dMonYYYY (e.g. 3Nov1999) — uses top-level `formatEndDate`
+
+        // featured item for today (from allItems)
+        const todayIso = new Date().toISOString().slice(0,10);
+        const featured = allItems.find(ev => {
+            if (!ev.start) return false;
+            if (ev.start.date) return ev.start.date === todayIso;
+            if (ev.start.dateTime) return ev.start.dateTime.slice(0,10) === todayIso;
+            return false;
+        });
+
+        if (featured) {
+            const end = featured.end || {};
+            container.innerHTML += `<p><strong>Featured Today:</strong> ${featured.summary}, Leaves on (${formatEndDate(end)})</p>`;
+        }
+
+        // filter items: include any event with a start, but skip very long events
+        // per comment: if an atomic shop event is = 21 days long and its start is more than 7 days ago, don't show it.
+        // if end date is today also skip it
+        const weeklyItems = allItems.filter(ev => {
+            if (!ev.start) return false;
+            const startStr = ev.start.date || (ev.start.dateTime && ev.start.dateTime.slice(0,10));
+            if (!startStr) return false;
+            const endStr = ev.end && (ev.end.date || (ev.end.dateTime && ev.end.dateTime.slice(0,10)));
+
+            if (endStr) {
+                const startDate = new Date(startStr);
+                const endDate = new Date(endStr);
+                const durationDays = Math.round((endDate.getTime() - startDate.getTime()) / (24 * 60 * 60 * 1000));
+                const ageDays = Math.round((Date.now() - startDate.getTime()) / (24 * 60 * 60 * 1000));
+                if (durationDays === 21 && ageDays > 7 || endStr === todayIso) return false;
+            }
+            return true;
+        });
+
+        if (weeklyItems.length === 0) {
+            container.innerHTML += '<p>No atomic shop items found that started on Tuesday of this week.</p>';
+            return;
+        }
+
+        const list = document.createElement('ul');
+        weeklyItems.forEach(ev => {
+            const end = ev.end || {};
+            const li = document.createElement('li');
+            li.textContent = `${ev.summary}, Leaves on (${formatEndDate(end)})`;
+            list.appendChild(li);
+        });
+        container.appendChild(list);
+    } catch (err) {
+        console.error('atomicShop error:', err);
+        const container = document.getElementById('atomicShop') || document.getElementById('app');
+        if (container) container.innerHTML = '<h2>Atomic Shop</h2><p>Error loading atomic shop items.</p>';
+    }
+}
+
+async function currentEvents() {
+    // list todays current events from my Fallout76 google calendar using google calendar api.
+    // section title is 'Current Events'
+    // do not show past events.
+    // sorted by end date ascending.
+    // each line format is: event.summary, Ends on ("end date(dMyyyy)").
+    // do not include the event discription unless overridden by the double comments.
+    // // if event summary starts with Season and the discription contains "estimated" then change "Ends on" to "Estimated end date" .
+    // // if the event summary contains "Axolotl" then include the discription after the summary.
+    // // if the event summary starts with "EVENT" then call the event function with the data of the event and do not include in this section.
+
+    //client ID and API key from the Developer Console.
+    const CLIENT_ID = '1003932562826-to5gbs5u7flo1jik55mijep1h2tpv2k3.apps.googleusercontent.com';
+    const API_KEY = 'AIzaSyD2wJYJTZjm-cEFIFJa3zu3oZIQxVREiw4';
+    const CALENDAR_ID = '677a43e0ffb5d922130f03876fe8c0bea6cb2fa558a7f50574cbbaa75564c74e@group.calendar.google.com';
+
+    try {
+        const now = new Date();
+        // Query window: today only (start of day -> end of day)
+        const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
+        const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999).toISOString();
+        const timeMin = startOfToday;
+        const timeMax = endOfToday;
+
+        // ensure gapi is initialized (will load scripts if needed)
+        try { await initGoogleClient(); } catch (e) { /* ignore init errors and fallback */ }
+
+        let items = [];
+        if (isAuthorized()) {
+            const resp = await window.gapi.client.calendar.events.list({ calendarId: CALENDAR_ID, timeMin, timeMax, singleEvents: true, orderBy: 'startTime', maxResults: 250 });
+            items = Array.isArray(resp.result.items) ? resp.result.items.filter(i => i.status !== 'cancelled') : [];
+        } else {
+            // ask user to sign in via central UI and re-run currentEvents after sign-in
+            enqueuePostAuthAction(() => { currentEvents(); });
+            try { updateAuthUI(); } catch (e) {}
+            const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(CALENDAR_ID)}/events?key=${API_KEY}&timeMin=${encodeURIComponent(timeMin)}&timeMax=${encodeURIComponent(timeMax)}&singleEvents=true&orderBy=startTime&maxResults=250`;
+            const res = await fetch(url);
+            if (!res.ok) {
+                if (res.status === 401 || res.status === 403) {
+                    const container = document.getElementById('currentEvents') || document.getElementById('app');
+                    if (container) container.innerHTML = '<h2>Current Events</h2><p>Calendar requires authorization. Please sign in to Google.</p>';
+                    return;
+                }
+                throw new Error(`Calendar fetch failed: ${res.status}`);
+            }
+            const data = await res.json();
+            items = Array.isArray(data.items) ? data.items.filter(i => i.status !== 'cancelled') : [];
+        }
+
+        // filter out past events and handle EVENT items separately
+        const nowMs = Date.now();
+        const visible = [];
+        const eventItems = [];
+        items.forEach(ev => {
+            if (!ev.start || !ev.end) return; // need end to determine if past
+            const endStr = ev.end.dateTime || ev.end.date;
+            const endDate = new Date(endStr);
+            if (endDate.getTime() < nowMs) return; // skip past
+
+            const summary = ev.summary || '';
+            if (/^EVENT\b/i.test(summary)) {
+                eventItems.push(ev);
+                return; // don't include in current events list
+            }
+            visible.push(ev);
+        });
+
+        // sort by end date ascending
+        visible.sort((a,b) => {
+            const aEnd = new Date(a.end.dateTime || a.end.date);
+            const bEnd = new Date(b.end.dateTime || b.end.date);
+            return aEnd - bEnd;
+        });
+
+        // render into #currentEvents container
+        let container = document.getElementById('currentEvents');
+        if (!container) {
+            container = document.createElement('div');
+            container.id = 'currentEvents';
+            document.getElementById('app').appendChild(container);
+            }
+        container.innerHTML = '<h2>Current Events</h2>';
+        const ul = document.createElement('ul');
+
+        visible.forEach(ev => {
+            const end = ev.end || {};
+            const summary = ev.summary || '';
+            const desc = ev.description || '';
+
+            // special label for Season/estimated
+            let label = 'Ends on';
+            if (/^Season\b/i.test(summary) && /estimated/i.test(desc)) label = 'Estimated end date';
+
+            const li = document.createElement('li');
+            let text = `${summary}, ${label} (${formatEndDate(end)})`;
+            if (/Axolotl/i.test(summary) && desc) {
+                text += ` — ${desc.replace(/\s+/g,' ')} `;
+                return;
+            }
+            li.textContent = text;
+            ul.appendChild(li);
+        });
+        container.appendChild(ul);
+
+        // render EVENT items (call event() to create their sections)
+        if (eventItems.length > 0) {
+            eventItems.forEach(ev => { try { event(ev); } catch (e) { console.error('event render error', e); } });
+        }
+
+    } catch (err) {
+        console.error('currentEvents error:', err);
+        const container = document.getElementById('currentEvents') || document.getElementById('app');
+        if (container) container.innerHTML = '<h2>Current Events</h2><p>Error loading current events.</p>';
+    }
+}
+
+async function event(ev) {
+    // ev is the calendar event object whose summary starts with 'EVENT'
+    if (!ev) return;
+    try {
+        const container = document.getElementById('event') || document.getElementById('app');
+        if (!container) return;
+        // create a subsection for this event
+        const section = document.createElement('div');
+        const rawSummary = ev.summary || '';
+        const title = rawSummary.replace(/^EVENT\s*/i, '');
+        section.innerHTML = `<h2>${title}</h2>`;
+        const desc = ev.description || '';
+        if (desc.trim()) {
+            const ul = document.createElement('ul');
+            desc.split(/\r?\n/).map(s => s.trim()).filter(Boolean).forEach(line => {
+                const li = document.createElement('li');
+                li.textContent = line;
+                ul.appendChild(li);
+            });
+            section.appendChild(ul);
+        }
+        container.appendChild(section);
+    } catch (e) { console.error('event() error', e); }
+}
+
+document.getElementById('exportBtn').addEventListener('click', () => {
+    // generate markdown output of the current dashboard state
+    // div headings become bold section titles 
+    // list items become markdown list items
+    // challenges include 1ˢᵗ if checkbox is checked
+    let markdown = 'Fallout 76 Daily Update';
+    markdown += '\r\n\r\n';
+    markdown += '**Atomic Shop**';
+    markdown += '\r\n\r\n';
+    document.querySelectorAll('#atomicShop li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
+    markdown += 'r\n\r\n'; 
+    markdown += '**Current Events**'; 
+    markdown += '\r\n\r\n';
+    document.querySelectorAll('#currentEvents li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
+    // markdown += 'r\n\r\n'; 
+    markdown += '* ' + (document.getElementById('axolotl')?.innerText || '') + '\r\n\r\n';
+    document.querySelectorAll('#events li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
+    // if no challenges selected then do not include section
+    // select input boxes and get their data-text for each category
+    // if checkbox is checked then include FO1st in markdown for each challenge
+    ['Daily', 'Weekly', 'Monthly', 'Event'].forEach(category => {
+        let categoryHasSelection = false;
+        let categoryMarkdown = `\r\n**${category} Challenges**\r\n`;
+        const container = document.getElementById(`${category}Container`);
+        const inputs = container.querySelectorAll('input.checkbox, input.textbox');
+        for (let i = 0; i < inputs.length; i += 2) {
+            const checkbox = inputs[i];
+            const input = inputs[i + 1];
+            if (input.dataset.text) {
+                // space before 1st due to loadChallenges alignment
+                const fo1stText = checkbox.checked ? ' 1ˢˢ':'';
+                categoryMarkdown += `*${fo1stText}${input.dataset.text}\r\n`;
+                // default selections do not count 
+                // so only mark categoryHasSelection true if i >= 8 ie 4th challenge or later
+                // this is lazy but in practice works since there will always be at least 4 challenges selected
+                if (i >= 8) {categoryHasSelection = true;}
+            }
+        }
+        if (categoryHasSelection) {
+            markdown += categoryMarkdown;
+        }
+    });
+    document.querySelectorAll('#Minerva li').forEach(li => { 
+        // first line should be bolded rest are list items
+        if (li === li.parentElement.firstChild) {
+            markdown += `\r\n**${li.innerText}**\r\n`;
+        } else {    
+            markdown += `* ${li.innerText}\r\n`; 
+        }
+    });
+    markdown += '\r\n';
+    // daily ops
+    // if mutation 1 is savage strike then title is Daily OPS: Decryption else Daily OPS: Uplink
+    // markdown should look like:
+    // **Daily OPS: Decryption**
+    // * Location: Watoga Raider Arena
+    // * Enemy Faction: Scorched
+    // * Enemy Mutations: Savage Strike, Vaporous: Volatile and Active Camouflage Mutations
+    const mut1 = document.querySelector('#dailyOps input[list="EnemyMut1List"]')?.value || '';
+    const mut2 = document.querySelector('#dailyOps input[list="EnemyMut2List"]')?.value || '';
+    const location = document.querySelector('#dailyOps input[list="LocationList"]')?.value || '';
+    const faction = document.querySelector('#dailyOps input[list="EnemyFactionList"]')?.value || '';
+    const dailyOpsTitle = mut1 === 'Savage Strike' ? 'Daily OPS: Decryption' : 'Daily OPS: Uplink';
+    markdown += `**${dailyOpsTitle}**\r\n`;
+    if (location) markdown += `* Location: ${location}\r\n`;
+    if (faction) markdown += `* Enemy Faction: ${faction}\r\n`;
+    if (mut1 || mut2) {
+        const mutations = [mut1, mut2].filter(Boolean).join(', ');
+        markdown += `* Enemy Mutations: ${mutations}\r\n`;
+    }
+    // output to textarea    
+    document.getElementById('markdownOutput').value = markdown;
+    // const blob = new Blob([markdown], { type: 'text/plain' });
+    // const url = URL.createObjectURL(blob);
+    // const a = document.createElement('a'); a.href = url; a.download = 'dashboard_export.md'; a.click(); URL.revokeObjectURL(url);
+});
+
+document.getElementById('copyBtn').addEventListener('click', () => {
+    const textarea = document.getElementById('markdownOutput');
+    textarea.select();
+    document.execCommand('copy');
+    alert('Markdown copied to clipboard!');
+});
+
+function toggleOptionalChallenges() {
+    const containers = document.querySelectorAll('.optional-challenges');
+    if (!containers.length) return;
+    // all optional containers share the same visibility state; check first
+    const hidden = containers[0].style.display === 'none';
+    containers.forEach(c => { c.style.display = hidden ? '' : 'none'; });
+    const btn = document.getElementById('toggleOptionalBtn');
+    if (btn) btn.textContent = hidden ? 'Hide Monthly & Event Challenges' : 'Show Monthly & Event Challenges';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadChallenges();
+    axolotlRotation();
+    minervaStatus();
+    dailyOps();
+    // initialize Google API client (loads the script) and populate atomic shop
+    initGoogleClient().then(() => { try { updateAuthUI(); } catch (e) {} }).catch(() => { try { updateAuthUI(); } catch (e) {} });
+    currentEvents();
+    atomicShop();
+
+    // add toggle button next to export/copy controls to allow users to show/hide Monthly & Event challenges
+    const controlsDiv = document.querySelector('div[style*="text-align:center"]');
+    if (controlsDiv && !document.getElementById('toggleOptionalBtn')) {
+        const toggleBtn = document.createElement('button');
+        toggleBtn.id = 'toggleOptionalBtn';
+        toggleBtn.textContent = 'Show Monthly & Event Challenges';
+        toggleBtn.addEventListener('click', toggleOptionalChallenges);
+        // insert before export button so it's visible
+        const exportBtn = document.getElementById('exportBtn');
+        controlsDiv.insertBefore(toggleBtn, exportBtn);
+    }
+});
+</script>
+</body>
+</html>

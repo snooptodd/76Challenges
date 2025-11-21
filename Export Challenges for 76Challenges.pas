@@ -44,14 +44,14 @@ begin
    Exit;
   if Pos('zzz', EditorID(e)) = 1 then
    Exit;
-  if Pos('_Epic', EditorID(e)) <> 0 then
-   Exit;
+  // if Pos('_Epic', EditorID(e)) <> 0 then
+  //  Exit;
   if Pos('POST', EditorID(e)) = 1 then
    Exit;
   if Pos('CUT', EditorID(e)) = 1 then
    Exit;
-  if Pos('Challenge_', EditorID(e)) = 1 then
-   Exit;
+  // if Pos('Challenge_', EditorID(e)) = 1 then
+  //  Exit;
   if Pos('ATX_DE2021_', EditorID(e)) = 1 then
    Exit;
   if Pos('ATX_DE2022_', EditorID(e)) = 1 then
@@ -74,6 +74,15 @@ begin
   elementRequiredCount := GetElementEditValues(e, 'TNAM');
   elementChallengeFrequency := GetElementEditValues(e, 'CNAM');
   elementReward := GetElementEditValues(e, 'MNAM');
+
+  // if elementChallengeFrequency is not 'Daily', 'Weekly', 'Monthly' or 'Event', then skip it
+  if (Pos('Daily', elementChallengeFrequency) = 0) and
+     (Pos('Weekly', elementChallengeFrequency) = 0) and
+     (Pos('Monthly', elementChallengeFrequency) = 0) and
+     (Pos('Event', elementChallengeFrequency) = 0) then begin
+     AddMessage('Skipping ' + EditorID(e) + ' with frequency ' + elementChallengeFrequency);
+     Exit;
+  end;
 
   // get 'rewards' element ElementByName(e,'Rewards')
   // get 'reward' child element ElementByName(rewards, 'reward') 
@@ -129,10 +138,10 @@ begin
     elementFlair := '🎂' 
   
   else if Pos('_Week1', EditorID(e)) <> 0 then
-    elementFlair := 'week1' 
+    elementFlair := 'Week1' 
     
   else if Pos('_Week2', EditorID(e)) <> 0 then
-    elementFlair := 'week1' 
+    elementFlair := 'Week2' 
   
   else if Pos('event', elementChallengeFrequency) <> 0 then
     elementFlair := '' 
