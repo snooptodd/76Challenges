@@ -21,15 +21,17 @@
     <div id="dailyOps"></div>
     <div id="atomicShop"></div>
     <div id="currentEvents"></div>
+    <div id="axolotl"></div>
     <div id="event"></div>
     <div id="Minerva"></div>
-    <div id="axolotl"></div>
 </div>
 <div style='text-align:center;'>
     <button id='exportBtn'>Build Markdown</button>
     <button id='copyBtn'>Copy Markdown</button>
 </div>
-<textarea id='markdownOutput' placeholder='Markdown export will appear here'></textarea>
+<div id="textarea">
+    <textarea id='markdownOutput' placeholder='Markdown export will appear here'></textarea>
+</div>
 
 <script>
 // Google API client configuration and helper functions
@@ -215,7 +217,7 @@ function formatEndDate(end) {
     const day = d.getDate();
     const year = d.getFullYear();
     const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return `${day}${monthNames[d.getMonth()]}${year}`;
+    return `${day}-${monthNames[d.getMonth()]}-${year}`;
 }
 
 async function inputtext(count, datalist) {
@@ -326,7 +328,7 @@ function axolotlRotation() {
         document.getElementById('app').appendChild(container);
     }
     // use formatEndDate for user-facing date so all dates look the same
-    container.innerHTML = `<p>${currentAxolotl.name} Regions: ${currentAxolotl.regions} Changes on: ${formatEndDate(nextChangeDate.toISOString())}</p>`;
+    container.innerHTML = `<p>${currentAxolotl.name} Regions: ${currentAxolotl.regions} Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
 }
 
 
@@ -356,7 +358,7 @@ async function minervaStatus() {
     }
     container.innerHTML = '<h2>Minerva</h2>';
     if (currentLocation === 'Away') { 
-        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}<br>${nextLocation}</p>`; 
+        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p>${nextLocation}</p>`; 
     } else { 
         container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p>`; 
         const list = document.createElement('ul'); 
@@ -428,10 +430,10 @@ async function dailyOps() {
         return input;
     };
 
-    const locInput = makeInput('LocationList', 'Select Location');
-    const factionInput = makeInput('EnemyFactionList', 'Select Enemy Faction');
-    const mut1Input = makeInput('EnemyMut1List', "Select Mutation A" ,dayOdd ? 'Savage Strike' : 'Piercing Gaze');
-    const mut2Input = makeInput('EnemyMut2List', 'Select Mutation B');
+    const locInput = makeInput('LocationList', 'Select Location'); locInput.id = 'DailyOpsLocation';
+    const factionInput = makeInput('EnemyFactionList', 'Select Enemy Faction'); factionInput.id = 'DailyOpsEnemyFaction';
+    const mut1Input = makeInput('EnemyMut1List', "Select Mutation A" ,dayOdd ? 'Savage Strike' : 'Piercing Gaze'); mut1Input.id = 'DailyOpsEnemyMut1';
+    const mut2Input = makeInput('EnemyMut2List', 'Select Mutation B'); mut2Input.id = 'DailyOpsEnemyMut2';
 
     const row = (labelText, el) => { const lbl = document.createElement('label'); lbl.textContent = labelText + ': '; lbl.appendChild(el); return lbl; };
 
@@ -698,20 +700,24 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     // list items become markdown list items
     // challenges include 1ˢᵗ if checkbox is checked
     let markdown = 'Fallout 76 Daily Update';
-    markdown += '\r\n\r\n';
+    let double = 1;
+    markdown += '\r\n';
     markdown += '**Atomic Shop**';
-    markdown += '\r\n\r\n';
+    markdown += '\r\n';
     document.querySelectorAll('#atomicShop li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
-    markdown += 'r\n\r\n'; 
+    markdown += '\r\n'; 
     markdown += '**Current Events**'; 
-    markdown += '\r\n\r\n';
-    document.querySelectorAll('#currentEvents li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
+    markdown += '\r\n';
+    document.querySelectorAll('#currentEvents li').forEach(li => { if (/double score/i.test(li.innerText)) { double = 2;} markdown += `* ${li.innerText}\r\n`; });
     // markdown += 'r\n\r\n'; 
-    markdown += '* ' + (document.getElementById('axolotl')?.innerText || '') + '\r\n\r\n';
-    document.querySelectorAll('#events li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
+    markdown += '* ' + (document.getElementById('axolotl')?.innerText || '') + '\r\n';
+    document.querySelectorAll('#events li').forEach(li => {markdown += `* ${li.innerText}\r\n`;  });
     // if no challenges selected then do not include section
     // select input boxes and get their data-text for each category
     // if checkbox is checked then include FO1st in markdown for each challenge
+    // account for double score weekends. 
+    // when double score event is found in current events. 
+    // double score for daily challenges only
     ['Daily', 'Weekly', 'Monthly', 'Event'].forEach(category => {
         let categoryHasSelection = false;
         let categoryMarkdown = `\r\n**${category} Challenges**\r\n`;
@@ -722,7 +728,20 @@ document.getElementById('exportBtn').addEventListener('click', () => {
             const input = inputs[i + 1];
             if (input.dataset.text) {
                 // space before 1st due to loadChallenges alignment
-                const fo1stText = checkbox.checked ? ' 1ˢˢ':'';
+                const fo1stText = checkbox.checked ? ' 1ˢᵗ':'';
+                if (double === 2) {
+                    // if double =2 then multiply any daily challenge points by 2
+                    if (category === 'Daily') {
+                        const pointMatch = input.dataset.text.match(/(.*\s)(\d+)(\s*)$/);
+                        if (pointMatch) {
+                            const baseText = pointMatch[1];
+                            const points = parseInt(pointMatch[2], 10);
+                            const suffix = pointMatch[3];
+                            const newPoints = points * 2;
+                            input.dataset.text = `${baseText}${newPoints}${suffix}`;
+                        }
+                    }
+                }
                 categoryMarkdown += `*${fo1stText}${input.dataset.text}\r\n`;
                 // default selections do not count 
                 // so only mark categoryHasSelection true if i >= 8 ie 4th challenge or later
@@ -734,14 +753,25 @@ document.getElementById('exportBtn').addEventListener('click', () => {
             markdown += categoryMarkdown;
         }
     });
-    document.querySelectorAll('#Minerva li').forEach(li => { 
-        // first line should be bolded rest are list items
-        if (li === li.parentElement.firstChild) {
-            markdown += `\r\n**${li.innerText}**\r\n`;
-        } else {    
-            markdown += `* ${li.innerText}\r\n`; 
-        }
-    });
+    // minerva
+    // markdown should look like:
+    // **Minerva's Location: Watoga**
+    // * Item 1 (cost)
+    // * Item 2 (cost)
+    // or if away:
+    // **Minerva's Location: Away**
+    // She will next be at LOCATION on (date)
+    markdown += '\r\n';
+    const minervaLocationElem = document.querySelector('#Minerva p');
+    const minervaLocation = minervaLocationElem ? minervaLocationElem.innerText.replace("Minerva's Location: ","") : 'Unknown';
+    markdown += `**Minerva's Location: ${minervaLocation}**\r\n`;
+    if (minervaLocation === 'Away') {
+        const nextText = document.querySelector('#Minerva p:nth-of-type(2)')?.innerText || '';
+        markdown += `${nextText}\r\n`;
+    } else {
+        document.querySelectorAll('#Minerva li').forEach(li => { markdown += `* ${li.innerText}\r\n`; });
+    }
+
     markdown += '\r\n';
     // daily ops
     // if mutation 1 is savage strike then title is Daily OPS: Decryption else Daily OPS: Uplink
