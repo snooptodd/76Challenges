@@ -387,10 +387,10 @@ async function dailyOps() {
 
     // Create datalists for these options inside the existing `Datalists` container
     const lists = [
-        { id: 'LocationList', items: Location.slice(1) },
-        { id: 'EnemyFactionList', items: EnemyFaction.slice(1) },
+        { id: 'LocationList', items: Location },
+        { id: 'EnemyFactionList', items: EnemyFaction },
         { id: 'EnemyMut1List', items: EnemyMutations1 },
-        { id: 'EnemyMut2List', items: EnemyMutations2.slice(1) }
+        { id: 'EnemyMut2List', items: EnemyMutations2 }
     ];
     const datalistsContainer = document.getElementById('Datalists');
     lists.forEach(list => {
