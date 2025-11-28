@@ -17,8 +17,9 @@
     <datalist id="Lifetime"></datalist>
 </div>
 <div id='app'>
+    <!-- daily ops is unresponive if below challengs ?something weird with chrome? -->
+    <div id="dailyOps"></div> 
     <div id="challenges"></div>
-    <div id="dailyOps"></div>
     <div id="atomicShop"></div>
     <div id="currentEvents"></div>
     <div id="axolotl"></div>
@@ -818,13 +819,14 @@ function toggleOptionalChallenges() {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadChallenges();
-    axolotlRotation();
-    minervaStatus();
+    currentEvents();
     dailyOps();
     // initialize Google API client (loads the script) and populate atomic shop
     initGoogleClient().then(() => { try { updateAuthUI(); } catch (e) {} }).catch(() => { try { updateAuthUI(); } catch (e) {} });
-    currentEvents();
     atomicShop();
+    currentEvents();
+    axolotlRotation();
+    minervaStatus();
 
     // add toggle button next to export/copy controls to allow users to show/hide Monthly & Event challenges
     const controlsDiv = document.querySelector('div[style*="text-align:center"]');
