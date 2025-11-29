@@ -685,9 +685,27 @@ async function event(ev) {
         if (desc.trim()) {
             const ul = document.createElement('ul');
             desc.split(/\r?\n/).map(s => s.trim()).filter(Boolean).forEach(line => {
-                const li = document.createElement('li');
-                li.textContent = line;
-                ul.appendChild(li);
+                // if starts with - then make it a nested list item.
+                if (line.startsWith('-')) {
+                    let lastLi = ul.lastElementChild;
+                    if (!lastLi) {
+                        lastLi = document.createElement('li');
+                        ul.appendChild(lastLi);
+                    }
+                    let nestedUl = lastLi.querySelector('ul');
+                    if (!nestedUl) {
+                        nestedUl = document.createElement('ul');
+                        lastLi.appendChild(nestedUl);
+                    }
+                    const nestedLi = document.createElement('li');
+                    nestedLi.textContent = line.slice(1).trim();
+                    nestedUl.appendChild(nestedLi);
+                    return;
+                } else {
+                    const li = document.createElement('li');
+                    li.textContent = line;
+                    ul.appendChild(li);
+                }
             });
             section.appendChild(ul);
         }
@@ -712,7 +730,45 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     document.querySelectorAll('#currentEvents li').forEach(li => { if (/double score/i.test(li.innerText)) { double = 2;} markdown += `* ${li.innerText}\r\n`; });
     // markdown += 'r\n\r\n'; 
     markdown += '* ' + (document.getElementById('axolotl')?.innerText || '') + '\r\n';
-    document.querySelectorAll('#events li').forEach(li => {markdown += `* ${li.innerText}\r\n`;  });
+    // format any EVENT sections into markdown
+    const eventContainer = document.getElementById('event');
+    if (eventContainer) {
+        Array.from(eventContainer.children).forEach(section => {
+            const title = section.querySelector('h2')?.innerText || '';
+            if (title) markdown += `\r\n**${title}**\r\n`;
+            // paragraphs become bullet lines
+            section.querySelectorAll('p').forEach(p => { if (p.innerText.trim()) markdown += `* ${p.innerText.trim()}\r\n`; });
+
+            // render lists preserving nesting
+            function getLiText(li) {
+                let text = '';
+                li.childNodes.forEach(node => {
+                    if (node.nodeType === Node.ELEMENT_NODE && (node.tagName.toLowerCase() === 'ul' || node.tagName.toLowerCase() === 'ol')) {
+                        // skip nested lists here
+                        return;
+                    }
+                    text += node.textContent || '';
+                });
+                return text.trim();
+            }
+            function renderList(ul, depth = 0) {
+                const indent = '  '.repeat(depth);
+                Array.from(ul.children).forEach(li => {
+                    if (li.tagName.toLowerCase() !== 'li') return;
+                    const text = getLiText(li);
+                    if (text) markdown += `${indent}* ${text}\r\n`;
+                    // render any direct nested ULs inside this LI
+                    Array.from(li.querySelectorAll(':scope > ul')).forEach(nested => renderList(nested, depth + 1));
+                });
+            }
+
+            // find top-level ULs inside the section (skip ULs that are inside LIs)
+            Array.from(section.querySelectorAll('ul')).forEach(ul => {
+                if (ul.parentElement && ul.parentElement.tagName.toLowerCase() === 'li') return; // nested, handled by parent
+                renderList(ul, 0);
+            });
+        });
+    }
     // if no challenges selected then do not include section
     // select input boxes and get their data-text for each category
     // if checkbox is checked then include FO1st in markdown for each challenge
@@ -819,7 +875,6 @@ function toggleOptionalChallenges() {
 
 document.addEventListener('DOMContentLoaded', () => {
     loadChallenges();
-    currentEvents();
     dailyOps();
     // initialize Google API client (loads the script) and populate atomic shop
     initGoogleClient().then(() => { try { updateAuthUI(); } catch (e) {} }).catch(() => { try { updateAuthUI(); } catch (e) {} });
