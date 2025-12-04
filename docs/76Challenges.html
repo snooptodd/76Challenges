@@ -381,16 +381,16 @@ async function minervaStatus() {
 async function dailyOps() {
     const Location = ['Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic','Glassed Caverns','Atlantic City Community Center'];
     const EnemyFaction = ['Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown'];
-    const EnemyMutations1 = ['Piercing Gaze', 'Savage Strike'];
+    const EnemyMutations1 = ['Piercing Gaze', 'Elite Enemies'];
     const EnemyMutations2 = ['Reflective Skin', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud'];
     function getDaysSinceEpoch() { return Math.floor(Date.now() / 1000 / (24 * 60 * 60)); }
-    const dayOdd = getDaysSinceEpoch() % 2 === 1;
+    const dayOdd = getDaysSinceEpoch() % 2;
 
     // Create datalists for these options inside the existing `Datalists` container
     const lists = [
         { id: 'LocationList', items: Location.sort() },
         { id: 'EnemyFactionList', items: EnemyFaction.sort() },
-        { id: 'EnemyMut1List', items: EnemyMutations1.sort() },
+        // { id: 'EnemyMut1List', items: EnemyMutations1.sort() },
         { id: 'EnemyMut2List', items: EnemyMutations2.sort() }
     ];
     const datalistsContainer = document.getElementById('Datalists');
@@ -433,7 +433,7 @@ async function dailyOps() {
 
     const locInput = makeInput('LocationList', 'Select Location'); locInput.id = 'DailyOpsLocation';
     const factionInput = makeInput('EnemyFactionList', 'Select Enemy Faction'); factionInput.id = 'DailyOpsEnemyFaction';
-    const mut1Input = makeInput('EnemyMut1List', "Select Mutation A" ,dayOdd ? 'Savage Strike' : 'Piercing Gaze'); mut1Input.id = 'DailyOpsEnemyMut1';
+    const mut1Input = makeInput('EnemyMut1List', "Select Mutation A" , EnemyMutations1[dayOdd]); mut1Input.id = 'DailyOpsEnemyMut1';
     const mut2Input = makeInput('EnemyMut2List', 'Select Mutation B'); mut2Input.id = 'DailyOpsEnemyMut2';
 
     const row = (labelText, el) => { const lbl = document.createElement('label'); lbl.textContent = labelText + ': '; lbl.appendChild(el); return lbl; };
