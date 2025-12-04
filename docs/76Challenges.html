@@ -460,8 +460,11 @@ async function atomicShop() {
         const now = new Date();
 
         // time window still used for API queries (today -> +0 days)
-        const timeMin = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
-        const timeMax = new Date(now.getTime() + 0 * 24 * 60 * 60 * 1000).toISOString();
+        // timeMin is today at 12:00:00 to avoid timezone issues (i hope) 
+        const timeMin = new Date(now.getFullYear(), now.getMonth(), now.getDate(),12,0,0,0,0).toISOString();
+        //timeMin is timeMin + 1hr 
+        // const timeMax = new Date(now.getTime() + 0 * 24 * 60 * 60 * 1000).toISOString();
+        const timeMax = new Date(now.getFullYear(), now.getMonth(), now.getDate(),13,0,0,0,0).toISOString();
 
         let allItems = [];
 
@@ -501,36 +504,24 @@ async function atomicShop() {
 
         // helper to format end date as dMonYYYY (e.g. 3Nov1999) — uses top-level `formatEndDate`
 
-        // featured item for today (from allItems)
-        const todayIso = new Date().toISOString().slice(0,10);
-        const featured = allItems.find(ev => {
-            if (!ev.start) return false;
-            if (ev.start.date) return ev.start.date === todayIso;
-            if (ev.start.dateTime) return ev.start.dateTime.slice(0,10) === todayIso;
-            return false;
+        // sort by end date ascending
+        allItems.sort((a,b) => {
+            const aEnd = new Date(a.end.dateTime || a.end.date);
+            const bEnd = new Date(b.end.dateTime || b.end.date);
+            return aEnd - bEnd;
         });
 
-        if (featured) {
-            const end = featured.end || {};
-            container.innerHTML += `<p><strong>Featured Today:</strong> ${featured.summary}, Leaves on (${formatEndDate(end)})</p>`;
-        }
-
-        // filter items: include any event with a start, but skip very long events
-        // per comment: if an atomic shop event is = 21 days long and its start is more than 7 days ago, don't show it.
-        // if end date is today also skip it
+        // if an atomic shop event is = 21 days long and its start is more than 7 days ago, don't show it.
+        // check for evnets that end today and filter them out. (they should not appeear in ev but just in case)
         const weeklyItems = allItems.filter(ev => {
             if (!ev.start) return false;
-            const startStr = ev.start.date || (ev.start.dateTime && ev.start.dateTime.slice(0,10));
-            if (!startStr) return false;
-            const endStr = ev.end && (ev.end.date || (ev.end.dateTime && ev.end.dateTime.slice(0,10)));
-
-            if (endStr) {
-                const startDate = new Date(startStr);
-                const endDate = new Date(endStr);
-                const durationDays = Math.round((endDate.getTime() - startDate.getTime()) / (24 * 60 * 60 * 1000));
-                const ageDays = Math.round((Date.now() - startDate.getTime()) / (24 * 60 * 60 * 1000));
-                if (durationDays === 21 && ageDays > 7 || endStr === todayIso) return false;
-            }
+            if (!ev.end) return false;
+            const startDate = new Date(ev.start.dateTime);
+            const endDate = new Date(ev.end.dateTime);
+            const durationDays = Math.round((endDate - startDate) / (24 * 60 * 60 * 1000));
+            const ageDays = Math.round((Date.now() - startDate.getTime()) / (24 * 60 * 60 * 1000));
+            if (durationDays === 21 && ageDays > 7) return false;
+            if (endDate < now) return false;
             return true;
         });
 
@@ -572,9 +563,9 @@ async function currentEvents() {
 
     try {
         const now = new Date();
-        // Query window: today only (start of day -> end of day)
-        const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate()).toISOString();
-        const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999).toISOString();
+        // Query window: today only (12 to 13 to avoid timezone issues)
+        const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(),12,0,0,0).toISOString();
+        const endOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate(),13,0,0,0).toISOString();
         const timeMin = startOfToday;
         const timeMax = endOfToday;
 
