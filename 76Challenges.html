@@ -512,6 +512,7 @@ async function atomicShop() {
         });
 
         // if an atomic shop event is = 21 days long and its start is more than 7 days ago, don't show it.
+        // check for evnets that end today and filter them out. (they should not appeear in ev but just in case)
         const weeklyItems = allItems.filter(ev => {
             if (!ev.start) return false;
             if (!ev.end) return false;
@@ -520,6 +521,7 @@ async function atomicShop() {
             const durationDays = Math.round((endDate - startDate) / (24 * 60 * 60 * 1000));
             const ageDays = Math.round((Date.now() - startDate.getTime()) / (24 * 60 * 60 * 1000));
             if (durationDays === 21 && ageDays > 7) return false;
+            if (endDate < now) return false;
             return true;
         });
 
