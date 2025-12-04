@@ -511,37 +511,15 @@ async function atomicShop() {
             return aEnd - bEnd;
         });
 
-        // featured item for today (from allItems)
-        const todayIso = new Date().toISOString().slice(0,10);
-        const featured = allItems.find(ev => {
-            if (!ev.start) return false;
-            if (ev.start.date) return ev.start.date === todayIso;
-            if (ev.start.dateTime) return ev.start.dateTime.slice(0,10) === todayIso;
-            return false;
-        });
-
-        if (featured) {
-            const end = featured.end || {};
-            container.innerHTML += `<p><strong>Featured Today:</strong> ${featured.summary}, Leaves on (${formatEndDate(end)})</p>`;
-        }
-
-        // filter items: include any event with a start, but skip very long events
-        // per comment: if an atomic shop event is = 21 days long and its start is more than 7 days ago, don't show it.
-        // if end date is today also skip it
-        // I dont like converting dates to strings and back. there has to be a better way.
+        // if an atomic shop event is = 21 days long and its start is more than 7 days ago, don't show it.
         const weeklyItems = allItems.filter(ev => {
             if (!ev.start) return false;
-            const startStr = ev.start.date || (ev.start.dateTime && ev.start.dateTime.slice(0,10));
-            if (!startStr) return false;
-            const endStr = ev.end && (ev.end.date || (ev.end.dateTime && ev.end.dateTime.slice(0,10)));
-
-            if (endStr) {
-                const startDate = new Date(startStr);
-                const endDate = new Date(endStr);
-                const durationDays = Math.round((endDate.getTime() - startDate.getTime()) / (24 * 60 * 60 * 1000));
-                const ageDays = Math.round((Date.now() - startDate.getTime()) / (24 * 60 * 60 * 1000));
-                if (durationDays === 21 && ageDays > 7 || endStr === todayIso) return false;
-            }
+            if (!ev.end) return false;
+            const startDate = new Date(ev.start.dateTime);
+            const endDate = new Date(ev.end.dateTime);
+            const durationDays = Math.round((endDate - startDate) / (24 * 60 * 60 * 1000));
+            const ageDays = Math.round((Date.now() - startDate.getTime()) / (24 * 60 * 60 * 1000));
+            if (durationDays === 21 && ageDays > 7) return false;
             return true;
         });
 
