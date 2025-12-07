@@ -28,6 +28,7 @@
 </div>
 <div style='text-align:center;'>
     <button id='exportBtn'>Build Markdown</button>
+    <button id='buildjson'>Build json</button>
     <button id='copyBtn'>Copy Markdown</button>
 </div>
 <div id="textarea">
@@ -604,11 +605,11 @@ async function currentEvents() {
             const endDate = new Date(endStr);
             if (endDate.getTime() < nowMs) return; // skip past
 
-            const summary = ev.summary || '';
-            if (/^EVENT\b/i.test(summary)) {
-                eventItems.push(ev);
-                return; // don't include in current events list
-            }
+            // const summary = ev.summary || '';
+            // if (/^EVENT\b/i.test(summary)) {
+            //     eventItems.push(ev);
+            //     return; // don't include in current events list
+            // }
             visible.push(ev);
         });
 
@@ -643,6 +644,10 @@ async function currentEvents() {
             if (/Axolotl/i.test(summary) && desc) {
                 text += ` — ${desc.replace(/\s+/g,' ')} `;
                 return;
+            }
+            if (/^EVENT\b/i.test(summary)) {
+                eventItems.push(ev);
+                text = text.replace(/^EVENT\s*/i, '');
             }
             li.textContent = text;
             ul.appendChild(li);
@@ -703,6 +708,18 @@ async function event(ev) {
         container.appendChild(section);
     } catch (e) { console.error('event() error', e); }
 }
+// json output
+// it will look like:
+// {
+// "Atom Shop": [{"Text": "","Atoms": "","DateLeaves": ""}],
+// "Current Events": [{"Text": "", "Estimated": False,"DateLeaves": ""}],
+// "Special Events": [{"Flair":"","Text": "","Count": "","Reward": ""}],
+// "Daily Challenges": [{"Flair":"","Text": "","Count": "","Reward": ""}],
+// "Weekly Challenges": [{"Flair":"","Text": "","Count": "","Reward": ""}],
+// "Minerva": [{"Location": "away", "entries": [ {"text":"", "Count": "","Reward": ""} ]}],
+// "DailyOp": [{"Mode":"", "Location": "","Enemy": "", "Mutation1":"", "Mutation2":""}]
+// }
+
 
 document.getElementById('exportBtn').addEventListener('click', () => {
     // generate markdown output of the current dashboard state

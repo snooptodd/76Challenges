@@ -32,7 +32,7 @@
     <button id='copyBtn'>Copy Markdown</button>
 </div>
 <div id="textarea">
-    <textarea id='markdownOutput' placeholder='Markdown export will appear here'></textarea>
+    <textarea id='markdownOutput' placeholder='Export will appear here'></textarea>
 </div>
 
 <script>
@@ -555,7 +555,7 @@ async function currentEvents() {
     // do not include the event discription unless overridden by the double comments.
     // // if event summary starts with Season and the discription contains "estimated" then change "Ends on" to "Estimated end date" .
     // // if the event summary contains "Axolotl" then include the discription after the summary.
-    // // if the event summary starts with "EVENT" then call the event function with the data of the event and do not include in this section.
+    // // if the event summary starts with "EVENT" then call the event function with the data of the event.
 
     //client ID and API key from the Developer Console.
     const CLIENT_ID = '1003932562826-to5gbs5u7flo1jik55mijep1h2tpv2k3.apps.googleusercontent.com';
@@ -709,16 +709,194 @@ async function event(ev) {
     } catch (e) { console.error('event() error', e); }
 }
 // json output
-// it will look like:
+// json template
 // {
-// "Atom Shop": [{"Text": "","Atoms": "","DateLeaves": ""}],
-// "Current Events": [{"Text": "", "Estimated": False,"DateLeaves": ""}],
-// "Special Events": [{"Flair":"","Text": "","Count": "","Reward": ""}],
-// "Daily Challenges": [{"Flair":"","Text": "","Count": "","Reward": ""}],
-// "Weekly Challenges": [{"Flair":"","Text": "","Count": "","Reward": ""}],
-// "Minerva": [{"Location": "away", "entries": [ {"text":"", "Count": "","Reward": ""} ]}],
-// "DailyOp": [{"Mode":"", "Location": "","Enemy": "", "Mutation1":"", "Mutation2":""}]
+// "Atom Shop":{"entries":[{"Text":"","Atoms":"","DateLeaves":""}]},
+// "Current Events":{"entries":[{"Text":"","Estimated":false,"DateLeaves":""}]},
+// "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
+// "Special Events":{"Title":"","entries":[{"Text":"","Count":"","Reward":"","Subentries":[{"text":"","Count":"","Reward":""}]}]},
+// "Daily Challenges":{"entries":[{"Flair":"","Text":"","Count":"","Reward":""}]},
+// "Weekly Challenges":{"entries":[{"Flair":"","Text":"","Count":"","Reward":""}]},
+// "Monthly Challenges":{"entries":[{"Flair":"","Text":"","Count":"","Reward":""}]},
+// "Minerva":{"Location":"","LeavesOn":"","NextLocation":"","entries":[{"Plan":"","Gold":""}]},
+// "DailyOp":{"Mode":"","Location":"","Enemy":"","Mutation1":"","Mutation2":""}
 // }
+
+function buildJson() {
+    const out = {
+        "Atom Shop": { entries: [] },
+        "Current Events": { entries: [] },
+        "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
+        "Special Events": { Title: '', Leaves: '', entries: [] },
+        "Daily Challenges": { entries: [] },
+        "Weekly Challenges": { entries: [] },
+        "Monthly Challenges": { entries: [] },
+        "Minerva": { Location: '', LeavesOn: '', NextLocation: '', entries: [] },
+        "DailyOp": { Mode: '', Location: '', Enemy: '', Mutation1: '', Mutation2: '' }
+    };
+
+    // Atom Shop
+    document.querySelectorAll('#atomicShop li').forEach(li => {
+        const raw = li.textContent.trim();
+        const Match = raw.match(/^(.*)\((\d+⚛️.*|Free!)\),.*\((\d+-\w+-\d+)\)\s*$/);
+        const Text = Match ? Match[1].trim(): '';
+        const Atoms = Match ? Match[2].trim() : '';
+        const DateLeaves = Match ? Match[3].trim() : '';
+        out['Atom Shop'].entries.push({ Text, Atoms, DateLeaves });
+    });
+
+    // Current Events
+    document.querySelectorAll('#currentEvents li').forEach(li => {
+        const raw = li.textContent.trim();
+        const Estimated = /Estimated/i.test(raw);
+        const dateMatch = raw.match(/\(([^)]+)\)\s*$/);
+        const DateLeaves = dateMatch ? dateMatch[1].trim() : '';
+        const Text = raw.replace(/,?\s*(Ends on|Estimated end date).*$/i, '').trim();
+        out['Current Events'].entries.push({ Text, Estimated, DateLeaves });
+    });
+
+    // Axolotl
+    const axolotlDiv = document.getElementById('axolotl');
+    if (axolotlDiv) {
+        const p = axolotlDiv.querySelector('p');
+        if (p) {
+            const text = p.innerText.trim();
+            const nameMatch = text.match(/^(.+?)\s+Regions:/);
+            const regionsMatch = text.match(/Regions:\s+(.+?)\s+Changes on:/);
+            const changeMatch = text.match(/Changes on:\s*\(([^)]+)\)/);
+            if (nameMatch) out['Axolotl'].CurrentAxolotl = nameMatch[1].trim();
+            if (regionsMatch) out['Axolotl'].Regions = regionsMatch[1].trim();
+            if (changeMatch) out['Axolotl'].NextChange = changeMatch[1].trim();
+        }
+    }   
+
+    // Special Events - use first h2 in #event as Title if present
+    // TODO this is fucked up and needs to be reworked to handle nested lists properly
+    // nested events should be subentries of their parent event and will have {"text":"","Count":"","Reward":""}
+    // so an event with subentries will have 
+    // {"Text":"","Count":"","Reward":"","Subentries":[{"text":"","Count":"","Reward":""},...]}
+    // "text" "count" and "reward" have the same format as challenges
+    const eventContainer = document.getElementById('event');
+    if (eventContainer) {
+        const firstH2 = eventContainer.querySelector('h2');
+        if (firstH2) out['Special Events'].Title = firstH2.innerText.trim();
+        // add entries for each subsection (h2 + its list items)
+        // need to account for nested structure
+        Array.from(eventContainer.children).forEach(section => {
+            const title = section.querySelector('h2')?.innerText?.trim() || '';
+            if (!title) return;
+            const lis = Array.from(section.querySelectorAll('li')).map(li => li.innerText.trim());
+            // handle top-level list items and preserve nested lists as a nested array
+            const topLevelLis = Array.from(section.querySelectorAll(':scope > ul > li'));
+            if (topLevelLis.length) {
+                topLevelLis.forEach(li => {
+                    // get the text of the li excluding any nested UL text
+                    let text = '';
+                    li.childNodes.forEach(node => {
+                        if (node.nodeType === Node.ELEMENT_NODE && (node.tagName.toLowerCase() === 'ul' || node.tagName.toLowerCase() === 'ol')) {
+                            return; // skip nested lists
+                        }
+                        text += node.textContent || '';
+                    });
+                    text = text.trim();
+
+                    // collect direct nested list items (one level deep)
+                    const nested = Array.from(li.querySelectorAll(':scope > ul > li')).map(n => n.innerText.trim());
+
+                    if (nested.length) {
+                        out['Special Events'].entries.push({
+                            Flair: '',
+                            Text: text,
+                            Count: '',
+                            Reward: '',
+                            Subentries: nested
+                        });
+                    } else {
+                        out['Special Events'].entries.push({
+                            Flair: '',
+                            Text: text,
+                            Count: '',
+                            Reward: ''
+                        });
+                    }
+                });
+            } else {
+                // fallback: no lists found, use title as single entry
+                out['Special Events'].entries.push({ Flair: '', Text: title, Count: '', Reward: '' });
+            }
+            if (lis.length) {
+                lis.forEach(text => out['Special Events'].entries.push({ Flair: '', Text: text, Count: '', Reward: '' }));
+            } else {
+                out['Special Events'].entries.push({ Flair: '', Text: title, Count: '', Reward: '' });
+            }
+        });
+    }
+
+    // Challenges helper
+    function extractChallengeContainer(containerId, targetKey) {
+        const container = document.getElementById(containerId + 'Container');
+        if (!container) return;
+        const inputs = container.querySelectorAll('input.checkbox, input.textbox');
+        for (let i = 0; i < inputs.length; i += 2) {
+            const checkbox = inputs[i];
+            const input = inputs[i + 1];
+            if (!input) continue;
+            const raw = input.dataset.text || input.value || '';
+            if (!raw) continue;
+            const Match = raw.match(/^(.*)\(x(\d+)\)\s(\d+)\s*$/);
+            const Flair = checkbox.checked ? '1ˢᵗ' : '';
+            const Text = Match ? Match[1].trim() : '';
+            const Count = Match ? Match[2].trim() : '';
+            const Reward= Match ? Match[3].trim() : '';
+            out[targetKey].entries.push({ Flair, Text, Count, Reward });
+        }
+    }
+
+    extractChallengeContainer('Daily', 'Daily Challenges');
+    extractChallengeContainer('Weekly', 'Weekly Challenges');
+    extractChallengeContainer('Monthly', 'Monthly Challenges');
+
+    // Minerva
+    // needs to parse location, next location, leaves on and entries
+    const minerva = document.getElementById('Minerva');
+    if (minerva) {
+        const p = minerva.querySelector('p');
+        if (p) out['Minerva'].Location = p.innerText.replace(/Minerva's Location:\s*/i, '').trim();
+        const secondP = minerva.querySelectorAll('p')[1];
+        if (secondP) {
+            const txt = secondP.innerText.trim();
+            // try to parse 'She will next be at LOCATION on DATE'
+            const m = txt.match(/She will next be at\s+(.+)\s+on\s+(.+)/i);
+            if (m) {
+                out['Minerva'].NextLocation = m[1].trim();
+                out['Minerva'].LeavesOn = m[2].trim();
+            } else {
+                out['Minerva'].LeavesOn = txt;
+            }
+        }
+        minerva.querySelectorAll('li').forEach(li => {
+            const t = li.textContent.trim();
+            const m = t.match(/(.+)\((\d+)\s*gold\)/i);
+            if (m) out['Minerva'].entries.push({ Plan: m[1].trim(), Gold: `${m[2]}` });
+            else out['Minerva'].entries.push({ Plan: t, Gold: '' });
+        });
+    }
+
+    // DailyOp
+    const mut1 = document.querySelector('#dailyOps input[list="EnemyMut1List"]')?.value || '';
+    const mut2 = document.querySelector('#dailyOps input[list="EnemyMut2List"]')?.value || '';
+    const loc = document.querySelector('#dailyOps input[list="LocationList"]')?.value || '';
+    const enemy = document.querySelector('#dailyOps input[list="EnemyFactionList"]')?.value || '';
+    const Mode = mut1 === 'Savage Strike' ? 'Decryption' : 'Uplink';
+    out['DailyOp'] = { Mode, Location: loc, Enemy: enemy, Mutation1: mut1, Mutation2: mut2 };
+
+    // dump to textarea
+    const textarea = document.getElementById('markdownOutput');
+    if (textarea) textarea.value = JSON.stringify(out, null, 2);
+}
+
+const buildJsonBtn = document.getElementById('buildjson');
+if (buildJsonBtn) buildJsonBtn.addEventListener('click', buildJson);
 
 
 document.getElementById('exportBtn').addEventListener('click', () => {
