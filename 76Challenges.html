@@ -771,11 +771,10 @@ function buildJson() {
     }   
 
     // Special Events - use first h2 in #event as Title if present
-    // TODO this is fucked up and needs to be reworked to handle nested lists properly
-    // nested events should be subentries of their parent event and will have {"text":"","Count":"","Reward":""}
-    // so an event with subentries will have 
+    // an event with children will have 
     // {"Text":"","Count":"","Reward":"","Subentries":[{"text":"","Count":"","Reward":""},...]}
-    // "text" "count" and "reward" have the same format as challenges
+    // event format is h2 + ul > li (with possible nested ul > li)
+    // each event format is text (xCount) reward
     const eventContainer = document.getElementById('event');
     if (eventContainer) {
         const firstH2 = eventContainer.querySelector('h2');
@@ -785,50 +784,64 @@ function buildJson() {
         Array.from(eventContainer.children).forEach(section => {
             const title = section.querySelector('h2')?.innerText?.trim() || '';
             if (!title) return;
-            const lis = Array.from(section.querySelectorAll('li')).map(li => li.innerText.trim());
             // handle top-level list items and preserve nested lists as a nested array
             const topLevelLis = Array.from(section.querySelectorAll(':scope > ul > li'));
             if (topLevelLis.length) {
                 topLevelLis.forEach(li => {
                     // get the text of the li excluding any nested UL text
-                    let text = '';
+                    let text = count = reward = '';
                     li.childNodes.forEach(node => {
                         if (node.nodeType === Node.ELEMENT_NODE && (node.tagName.toLowerCase() === 'ul' || node.tagName.toLowerCase() === 'ol')) {
                             return; // skip nested lists
                         }
-                        text += node.textContent || '';
+                        // text += node.textContent || '';
+                        const Match = node.textContent.match(/^(.*)\(x(\d+)\)\s(\d+)\s*$/);
+                            text = Match ? Match[1].trim() : node.textContent.trim();
+                            count = Match ? Match[2].trim() : '';
+                            reward= Match ? Match[3].trim() : '';
+                        // out['Special Events'].entries.push({ Text, Count, Reward });
                     });
-                    text = text.trim();
 
                     // collect direct nested list items (one level deep)
-                    const nested = Array.from(li.querySelectorAll(':scope > ul > li')).map(n => n.innerText.trim());
+                    const nested = Array.from(li.querySelectorAll(':scope > ul > li')).map(n => {
+                        let nText = nCount = nReward = '';
+                        n.childNodes.forEach(nNode => {
+                            if (nNode.nodeType === Node.ELEMENT_NODE && (nNode.tagName.toLowerCase() === 'ul' || nNode.tagName.toLowerCase() === 'ol')) {
+                                return; // skip deeper nested lists
+                            }
+                            const nMatch = nNode.textContent.match(/^(.*)\(x(\d+)\)\s(\d+)\s*$/);
+                            nText = nMatch ? nMatch[1].trim() : nNode.textContent.trim();
+                            nCount = nMatch ? nMatch[2].trim() : '';
+                            nReward= nMatch ? nMatch[3].trim() : '';
+                        });
+                        return { Text: nText, Count: nCount, Reward: nReward };
+                    });
 
                     if (nested.length) {
                         out['Special Events'].entries.push({
-                            Flair: '',
                             Text: text,
-                            Count: '',
-                            Reward: '',
+                            Count: count,
+                            Reward: reward,
                             Subentries: nested
                         });
                     } else {
                         out['Special Events'].entries.push({
-                            Flair: '',
                             Text: text,
-                            Count: '',
-                            Reward: ''
+                            Count: count,
+                            Reward: reward
                         });
                     }
                 });
             } else {
                 // fallback: no lists found, use title as single entry
-                out['Special Events'].entries.push({ Flair: '', Text: title, Count: '', Reward: '' });
+                out['Special Events'].entries.push({ Text: title, Count: '', Reward: '' });
             }
-            if (lis.length) {
-                lis.forEach(text => out['Special Events'].entries.push({ Flair: '', Text: text, Count: '', Reward: '' }));
-            } else {
-                out['Special Events'].entries.push({ Flair: '', Text: title, Count: '', Reward: '' });
-            }
+            // const lis = Array.from(section.querySelectorAll('li')).map(li => li.innerText.trim());
+            // if (lis.length) {
+            //     lis.forEach(text => out['Special Events'].entries.push({ Flair: '', Text: text, Count: '', Reward: '' }));
+            // } else {
+            //     out['Special Events'].entries.push({ Flair: '', Text: title, Count: '', Reward: '' });
+            // }
         });
     }
 
