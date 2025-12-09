@@ -751,7 +751,6 @@ function buildJson() {
         const Estimated = /Estimated/i.test(raw);
         const dateMatch = raw.match(/\(([^)]+)\)\s*$/);
         const DateLeaves = dateMatch ? dateMatch[1].trim() : '';
-        const Text = raw.replace(/,?\s*(Ends on|Estimated end date).*$/i, '').trim();
         out['Current Events'].entries.push({ Text, Estimated, DateLeaves });
     });
 
@@ -857,6 +856,16 @@ function buildJson() {
             const Text = Match ? Match[1].trim() : '';
             const Count = Match ? Match[2].trim() : '';
             const Reward= Match ? Match[3].trim() : '';
+            // doube reward if double score event is active and is daily challenges
+            if (targetKey === 'Daily Challenges') {
+                const currentEvents = out['Current Events'].entries;
+                const doubleActive = currentEvents.some(ev => /Double S/i.test(ev.Text));
+                if (doubleActive && Reward) {
+                    const doubled = parseInt(Reward, 10) * 2;
+                    out['Daily Challenges'].entries.push({ Flair, Text, Count, Reward: `${doubled}` });
+                    continue;
+                }
+            }
             out[targetKey].entries.push({ Flair, Text, Count, Reward });
         }
     }
