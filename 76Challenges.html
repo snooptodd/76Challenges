@@ -794,12 +794,12 @@ function buildJson() {
                         if (node.nodeType === Node.ELEMENT_NODE && (node.tagName.toLowerCase() === 'ul' || node.tagName.toLowerCase() === 'ol')) {
                             return; // skip nested lists
                         }
-                        // text += node.textContent || '';
-                        const Match = node.textContent.match(/^(.*)\(x(\d+)\)\s(\d+)\s*$/);
-                            text = Match ? Match[1].trim() : node.textContent.trim();
-                            count = Match ? Match[2].trim() : '';
-                            reward= Match ? Match[3].trim() : '';
-                        // out['Special Events'].entries.push({ Text, Count, Reward });
+                        const Mtext = node.textContent.match(/^(.*)\(x/);
+                        const Mcount = node.textContent.match(/\(x(\d+)\)/);
+                        const Mreward = node.textContent.match(/x\d+\) (.*)$/);
+                            text = Mtext ? Mtext[1].trim() : node.textContent.trim();
+                            count = Mcount ? Mcount[1].trim() : '';
+                            reward= Mreward ? Mreward[1].trim() : '';
                     });
 
                     // collect direct nested list items (one level deep)
@@ -809,10 +809,12 @@ function buildJson() {
                             if (nNode.nodeType === Node.ELEMENT_NODE && (nNode.tagName.toLowerCase() === 'ul' || nNode.tagName.toLowerCase() === 'ol')) {
                                 return; // skip deeper nested lists
                             }
-                            const nMatch = nNode.textContent.match(/^(.*)\(x(\d+)\)\s(\d+)\s*$/);
-                            nText = nMatch ? nMatch[1].trim() : nNode.textContent.trim();
-                            nCount = nMatch ? nMatch[2].trim() : '';
-                            nReward= nMatch ? nMatch[3].trim() : '';
+                            const nMtext = nNode.textContent.match(/^(.*)\(x/);
+                            const nMcount = nNode.textContent.match(/\(x(\d+)\)/);
+                            const nMreward = nNode.textContent.match(/x\d+\) (.*)$/);
+                            nText = nMtext ? nMtext[1].trim() : nNode.textContent.trim();
+                            nCount = nMcount ? nMcount[1].trim() : '';
+                            nReward= nMreward ? nMreward[1].trim() : '';
                         });
                         return { Text: nText, Count: nCount, Reward: nReward };
                     });
@@ -836,12 +838,6 @@ function buildJson() {
                 // fallback: no lists found, use title as single entry
                 out['Special Events'].entries.push({ Text: title, Count: '', Reward: '' });
             }
-            // const lis = Array.from(section.querySelectorAll('li')).map(li => li.innerText.trim());
-            // if (lis.length) {
-            //     lis.forEach(text => out['Special Events'].entries.push({ Flair: '', Text: text, Count: '', Reward: '' }));
-            // } else {
-            //     out['Special Events'].entries.push({ Flair: '', Text: title, Count: '', Reward: '' });
-            // }
         });
     }
 
