@@ -36,8 +36,8 @@ begin
   //    sScore := 400;
   //end; 
 
-  if Pos('_META', EditorID(e)) <> 0 then
-    Exit;
+  // if Pos('_META', EditorID(e)) <> 0 then
+  //   Exit;
   if Pos('_SUB_', EditorID(e)) <> 0 then
     Exit;
   if Pos('Sub_', EditorID(e)) <> 0 then
@@ -74,6 +74,13 @@ begin
   elementRequiredCount := GetElementEditValues(e, 'TNAM');
   elementChallengeFrequency := GetElementEditValues(e, 'CNAM');
   elementReward := GetElementEditValues(e, 'MNAM');
+  elementChallengeCategory := GetElementEditValues(e, 'ENAM');
+  // need to check if sub challenges exist and get their info and somehow link it all together
+  elementSCFL := ElementBySignature(e, 'SCFL'); // get 'SubChallenge completion List' element
+  elementSCFL_link := LinksTo(elementSCFL); // open the flst
+  // get FormIDs of all challenges in the flst
+  numSubChallenges := ElementCount(ElementByPath(elementSCFL_link, 'FormIDs'));
+
 
   // if elementChallengeFrequency is not 'Daily', 'Weekly', 'Monthly' or 'Event', then skip it
   if (Pos('Daily', elementChallengeFrequency) = 0) and

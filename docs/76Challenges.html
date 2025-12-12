@@ -727,7 +727,7 @@ function buildJson() {
         "Atom Shop": { entries: [] },
         "Current Events": { entries: [] },
         "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
-        "Special Events": { Title: '', Leaves: '', entries: [] },
+        "Special Events": { Title: '', entries: [] },
         "Daily Challenges": { entries: [] },
         "Weekly Challenges": { entries: [] },
         "Monthly Challenges": { entries: [] },
@@ -748,6 +748,8 @@ function buildJson() {
     // Current Events
     document.querySelectorAll('#currentEvents li').forEach(li => {
         const raw = li.textContent.trim();
+        const TextMatch = raw.match(/^(.*),\s*(Ends on|Estimated end date)\s*\(([^)]+)\)\s*$/);
+        const Text = TextMatch ? TextMatch[1].trim() : '';
         const Estimated = /Estimated/i.test(raw);
         const dateMatch = raw.match(/\(([^)]+)\)\s*$/);
         const DateLeaves = dateMatch ? dateMatch[1].trim() : '';
