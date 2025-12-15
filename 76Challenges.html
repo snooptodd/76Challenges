@@ -341,14 +341,15 @@ async function minervaStatus() {
     const inventoryText = await inventoryResponse.text();
     const locations = locationText.trim().split('\r\n').map(line => { const [start, end, loc, lists] = line.split(','); return { start: new Date(start), end: new Date(end), location: loc, lists: lists.split('|') }; });
     const inventory = inventoryText.trim().split('\r\n').map(line => { const [list, item, cost] = line.split('|'); return { list: list, item: item, cost: parseInt(cost) }; });
-    const now = new Date(); let currentLocation = 'Away'; let nextLocation = ''; let currentLists = [];
+    const now = new Date(); let currentLocation = 'Away'; let nextLocation = ''; let currentLists = []; let nextDate = null; let currentLeaveDate = null;
     locations.forEach(loc => { 
         if (now >= loc.start && now <= loc.end) { 
-            currentLocation = loc.location; currentLists = loc.lists; 
+            currentLocation = loc.location; currentLists = loc.lists; currentLeaveDate = loc.end;
         } 
         if (!nextLocation && loc.start >= now) { 
             // format the date for consistent display
-            nextLocation = `She will next be at ${loc.location} on ${formatEndDate(loc.start.toISOString())}`; 
+            // nextLocation = `She will next be at ${loc.location} on ${formatEndDate(loc.start.toISOString())}`;
+            nextLocation = loc.location; nextDate = loc.start;
         } 
     });
     // write into the existing Minerva area (capital M in HTML). fall back to #minerva if needed
@@ -360,9 +361,9 @@ async function minervaStatus() {
     }
     container.innerHTML = '<h2>Minerva</h2>';
     if (currentLocation === 'Away') { 
-        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p>${nextLocation}</p>`; 
+        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p></p><p>She will next be at ${nextLocation} on ${formatEndDate(nextDate.toISOString())}</p>`; 
     } else { 
-        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p>`; 
+        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p>She will leave on ${formatEndDate(currentLeaveDate.toISOString())}</p><p>She will next be at ${nextLocation} on ${formatEndDate(nextDate.toISOString())}</p>`;
         const list = document.createElement('ul'); 
         inventory.forEach(item => { 
             if (currentLists.includes(item.list)) { 
@@ -718,7 +719,7 @@ async function event(ev) {
 // "Daily Challenges":{"entries":[{"Flair":"","Text":"","Count":"","Reward":""}]},
 // "Weekly Challenges":{"entries":[{"Flair":"","Text":"","Count":"","Reward":""}]},
 // "Monthly Challenges":{"entries":[{"Flair":"","Text":"","Count":"","Reward":""}]},
-// "Minerva":{"Location":"","LeavesOn":"","NextLocation":"","entries":[{"Plan":"","Gold":""}]},
+// "Minerva":{"Location":"","LeavesOn":"","NextLocation":"","NextLeavesOn":"","entries":[{"Plan":"","Gold":""}]},
 // "DailyOp":{"Mode":"","Location":"","Enemy":"","Mutation1":"","Mutation2":""}
 // }
 
@@ -731,7 +732,7 @@ function buildJson() {
         "Daily Challenges": { entries: [] },
         "Weekly Challenges": { entries: [] },
         "Monthly Challenges": { entries: [] },
-        "Minerva": { Location: '', LeavesOn: '', NextLocation: '', entries: [] },
+        "Minerva": { Location: '', LeavesOn: '', NextLocation: '', NextLeavesOn: '', entries: [] },
         "DailyOp": { Mode: '', Location: '', Enemy: '', Mutation1: '', Mutation2: '' }
     };
 
@@ -885,13 +886,21 @@ function buildJson() {
         const secondP = minerva.querySelectorAll('p')[1];
         if (secondP) {
             const txt = secondP.innerText.trim();
+            // try to parse 'She will leave on DATE'
+            const m = txt.match(/She will leave on\s+(.+)/i);
+            if (m) out['Minerva'].LeavesOn = m[1].trim();
+            else out['Minerva'].LeavesOn = txt;
+        }
+        const thirdP = minerva.querySelectorAll('p')[2];
+        if (thirdP) {
+            const txt = thirdP.innerText.trim();
             // try to parse 'She will next be at LOCATION on DATE'
             const m = txt.match(/She will next be at\s+(.+)\s+on\s+(.+)/i);
             if (m) {
                 out['Minerva'].NextLocation = m[1].trim();
-                out['Minerva'].LeavesOn = m[2].trim();
+                out['Minerva'].NextLeavesOn = m[2].trim();
             } else {
-                out['Minerva'].LeavesOn = txt;
+                out['Minerva'].NextLeavesOn = txt;
             }
         }
         minerva.querySelectorAll('li').forEach(li => {
