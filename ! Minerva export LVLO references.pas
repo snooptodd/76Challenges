@@ -24,7 +24,7 @@ unit UserScript;
 
 var // Initialize variables
   slExport: TStringList;
-  currentItemEDID, filename, value, Minerva_Inventory_ListID, FULLname, GoldBullionValue, GoldBullionValueGLOB, s, valueType: string;
+  currentItemEDID, filename, value, Minerva_Inventory_ListID, FULLname, GoldBullionValue, GoldBullionValueGLOB, s, valueType, formid: string;
   Minerva_LeveledListEntries, Minerva_CurrentLeveledListEntry, Minerva_CurrentLeveledListRecord, Minerva_CurrentLVLO, Minerva_CurrentReference : IInterface;
   Minerva_Inventory_LeveledListEntries, Minerva_Inventory_currentLeveledListEntry, Minerva_Inventory_currentLeveledListRecord, Minerva_Inventory_currentLVLO, Minerva_Inventory_currentReference : IInterface;
   i, j: integer;
@@ -36,6 +36,7 @@ end;
 
 function Process(e: IInterface): integer;
 begin
+  formid := IntToHex(FixedFormID(e),8);
   // filename := EditorID(e); // Get EDID for filename
   // slExport.Add(IntToHex(FormID(e) and $FFFFFF, 8) + ',' + EditorID(e)); // Add selected record's FormID & EDID to top of CSV
   // slExport.Add('FormID,EDID,FULL'); //Row headers
@@ -71,9 +72,9 @@ begin
       if pos('M',Minerva_Inventory_ListID) = 0 then begin // if this is not a 'big' sale add to s
         // if GoldBullionValueGLOB has a value then that is used for the gold value of the item
         if GoldBullionValueGLOB = '' then 
-          s := Minerva_Inventory_ListID + '|' + FULLname + '|' + GoldBullionValue
+          s := Minerva_Inventory_ListID + '|' + FULLname + '|' + GoldBullionValue + '|' + formid
         else 
-          s := Minerva_Inventory_ListID + '|' + FULLname + '|' + StringReplace(GoldBullionValueGLOB,'.000000','',[rfReplaceAll, rfIgnoreCase]);
+          s := Minerva_Inventory_ListID + '|' + FULLname + '|' + StringReplace(GoldBullionValueGLOB,'.000000','',[rfReplaceAll, rfIgnoreCase]); + '|' + formid;
         AddMessage(s);
         slExport.add(s);
       end;

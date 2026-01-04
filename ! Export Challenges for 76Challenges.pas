@@ -10,7 +10,7 @@ const
   sRecordsToSkip = 'REFR,PGRD,PHZD,ACHR,NAVM,NAVI,LAND';
 
 var
-  slExport, slTemp, elementFullName,FullName, elementChallengeFrequency, elementRequiredCount, elementFlair, elementReward, elementReward2: TStringList;
+  slExport, slTemp, elementFullName,FullName, elementChallengeFrequency, elementRequiredCount, elementFlair, elementReward, elementReward2, formid: TStringList;
   sScore : integer;
   L0, L1, L2, L3, L4, L5, L6, L7: IInterface;
 
@@ -65,6 +65,8 @@ begin
   if Pos('ATOMS_', EditorID(e)) = 1 then
    Exit;
   
+
+  formid := IntToHex(FixedFormID(e),8);
   elementFullName := GetElementEditValues(e, 'FULL');
   // if (Pos(': ',elementFullName)) > 0 then
   //   FullName := RightStr(elementFullName,StrLen(elementFullName)-Pos(': ',elementFullName)-1)
@@ -74,12 +76,12 @@ begin
   elementRequiredCount := GetElementEditValues(e, 'TNAM');
   elementChallengeFrequency := GetElementEditValues(e, 'CNAM');
   elementReward := GetElementEditValues(e, 'MNAM');
-  elementChallengeCategory := GetElementEditValues(e, 'ENAM');
-  // need to check if sub challenges exist and get their info and somehow link it all together
-  elementSCFL := ElementBySignature(e, 'SCFL'); // get 'SubChallenge completion List' element
-  elementSCFL_link := LinksTo(elementSCFL); // open the flst
-  // get FormIDs of all challenges in the flst
-  numSubChallenges := ElementCount(ElementByPath(elementSCFL_link, 'FormIDs'));
+  // elementChallengeCategory := GetElementEditValues(e, 'ENAM');
+  // // need to check if sub challenges exist and get their info and somehow link it all together
+  // elementSCFL := ElementBySignature(e, 'SCFL'); // get 'SubChallenge completion List' element
+  // elementSCFL_link := LinksTo(elementSCFL); // open the flst
+  // // get FormIDs of all challenges in the flst
+  // numSubChallenges := ElementCount(ElementByPath(elementSCFL_link, 'FormIDs'));
 
 
   // if elementChallengeFrequency is not 'Daily', 'Weekly', 'Monthly' or 'Event', then skip it
@@ -156,7 +158,7 @@ begin
   else
     elementFlair := '';
 
-slTemp := FullName + ' (x' + elementRequiredCount + ')|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward + elementReward2;
+slTemp := FullName + '|' + elementRequiredCount + '|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward + elementReward2 + '|' + formid;
 
 slExport.add(slTemp);
 //AddMessage(slTemp);

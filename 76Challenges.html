@@ -248,12 +248,12 @@ async function inputtext(count, datalist) {
         input.addEventListener('change', (e) => { e.target.dataset.text = e.target.value; });
         if (datalist==='Daily') {
             if (i === 0 ) { checkbox.checked=true; };
-            if (i === 1 ) { input.setAttribute('data-text',' ⭐ Gold Star: Complete a Daily Challenge (x6) 1000'); input.value=' ⭐ Gold Star: Complete a Daily Challenge (x6) 1000'; };
+            if (i === 1 ) { input.setAttribute('data-text','Gold Star: Complete a Daily Challenge|6|Daily|⭐|1000|005B759C'); input.value='Gold Star: Complete a Daily Challenge|6|Daily|⭐|1000|005B759C'; };
         }
         if (datalist==='Weekly') {
-            if (i === 0 ) { input.value=' ⭐ Complete a Gold Star Daily Challenge! (x3) 1500'; input.setAttribute('data-text',' ⭐ Complete a Gold Star Daily Challenge! (x3) 1500'); };
-            if (i === 1 ) { input.value=' 🔁 Repeatable Under Rank 100: Gain XP (x10000) 100'; input.setAttribute('data-text',' 🔁 Repeatable Under Rank 100: Gain XP (x10000) 100') }; 
-            if (i === 2 ) { input.value=' 🔁 Repeatable at Rank 100 and above: Complete a Public Event (x3) 300'; input.setAttribute('data-text',' 🔁 Repeatable at Rank 100 and above: Complete a Public Event (x3) 300')};
+            if (i === 0 ) { input.value='Complete a Gold Star Daily Challenge!|3|Weekly|⭐|1500|005B73E6'; input.setAttribute('data-text','Complete a Gold Star Daily Challenge!|3|Weekly|⭐|1500|005B73E6'); };
+            if (i === 1 ) { input.value='Repeatable Under Rank 100: Gain XP|10000|Weekly|🔁|100|005B759D'; input.setAttribute('data-text','Repeatable Under Rank 100: Gain XP|10000|Weekly|🔁|100|005B759D') }; 
+            if (i === 2 ) { input.value='Repeatable at Rank 100 or above: Complete a Public Event|3|Weekly|🔁|300|007A1431'; input.setAttribute('data-text','Repeatable at Rank 100 or above: Complete a Public Event|3|Weekly|🔁|300|007A1431')};
         }
         container.appendChild(checkbox); container.appendChild(input); container.appendChild(document.createElement('br'));
     }
@@ -263,9 +263,11 @@ async function inputtext(count, datalist) {
 }
 
 async function loadChallenges() {
-    // Fetch and parse challenges and create datalist for each category
-    // input file format: Challenge|Type|Flair|Reward
-    const response = await fetch('challenges.txt');
+    // load but don parse challenges.txt
+    // challenges will be parsed by the markdown or json build functions.
+    // Fetch challenges and create datalist for each category
+    // input file format: Challenge|count|Type|Flair|Reward|FormID
+    const response = await fetch('dmp_challenges.txt');
     const text = await response.text();
     const lines = text.trim().split('\r\n');
     const categories = { Daily: [], Weekly: [], Monthly: [], Event: [] };
@@ -273,11 +275,14 @@ async function loadChallenges() {
         const parts = line.split('|');
         if (parts.length >= 2) {
             const challenge = parts[0];
-            const type = parts[1];
-            const flair = parts[2];
-            const reward = parts[3];
+            const count = parts[1];
+            const type = parts[2];
+            const flair = parts[3];
+            const reward = parts[4];
+            const formID = parts[5];
             if (categories[type]) { 
-                categories[type].push({ text: `${flair} ${challenge} ${reward}` });
+                // categories[type].push({ text: `${flair} ${challenge} ${reward}` });
+                categories[type].push({ text: `${line}` });
             }
         }
     });
@@ -854,22 +859,27 @@ function buildJson() {
             if (!input) continue;
             const raw = input.dataset.text || input.value || '';
             if (!raw) continue;
-            const Match = raw.match(/^(.*)\(x(\d+)\)\s(\d+)\s*$/);
-            const Flair = checkbox.checked ? '1ˢᵗ' : '';
-            const Text = Match ? Match[1].trim() : '';
-            const Count = Match ? Match[2].trim() : '';
-            const Reward= Match ? Match[3].trim() : '';
+            // format Challenge|count|Type|Flair|Reward|FormID
+            const Match = raw.split('|');
+            const FoFirst = checkbox.checked ? '1ˢᵗ' : '';
+            const Text = Match ? Match[0].trim() : '';
+            const Count = Match ? Match[1].trim() : '';
+            const Flair2 = Match ? Match[3].trim() : '';
+            const Reward= Match ? Match[4].trim() : '';
+            const FormID = Match ? Match[5].trim() : '';
+            // for now cat FoFirst and flair2 together
+            const fullFlair = FoFirst && Flair2 ? `${FoFirst} ${Flair2}` : (FoFirst || Flair2);
             // doube reward if double score event is active and is daily challenges
             if (targetKey === 'Daily Challenges') {
                 const currentEvents = out['Current Events'].entries;
                 const doubleActive = currentEvents.some(ev => /Double S/i.test(ev.Text));
                 if (doubleActive && Reward) {
                     const doubled = parseInt(Reward, 10) * 2;
-                    out['Daily Challenges'].entries.push({ Flair, Text, Count, Reward: `${doubled}` });
+                    out['Daily Challenges'].entries.push({ Flair: `${fullFlair}`, Text, Count, Reward: `${doubled}`, FormID });
                     continue;
                 }
             }
-            out[targetKey].entries.push({ Flair, Text, Count, Reward });
+            out[targetKey].entries.push({ Flair: `${fullFlair}`, Text, Count, Reward, FormID });
         }
     }
 
@@ -1000,21 +1010,26 @@ document.getElementById('exportBtn').addEventListener('click', () => {
             const input = inputs[i + 1];
             if (input.dataset.text) {
                 // space before 1st due to loadChallenges alignment
-                const fo1stText = checkbox.checked ? ' 1ˢᵗ':'';
+                const fo1stText = checkbox.checked ? '1ˢᵗ':'';
+                // split data-text into parts
+                // format Challenge|count|Type|Flair|Reward|FormID
+                const raw = input.dataset.text;
+                const parts = raw.split('|');
+                const challengeText = parts[0] || '';
+                const CountText = parts[1] || '';
+                const TypeText = parts[2] || '';
+                const FlairText = parts[3] || '';
+                let RewardText = parts[4] || '';
+                // if double score weekend and daily challenges then double the points in pointText                
                 if (double === 2) {
                     // if double =2 then multiply any daily challenge points by 2
                     if (category === 'Daily') {
-                        const pointMatch = input.dataset.text.match(/(.*\s)(\d+)(\s*)$/);
-                        if (pointMatch) {
-                            const baseText = pointMatch[1];
-                            const points = parseInt(pointMatch[2], 10);
-                            const suffix = pointMatch[3];
-                            const newPoints = points * 2;
-                            input.dataset.text = `${baseText}${newPoints}${suffix}`;
+                        if (RewardText) {
+                            RewardText = (parseInt(RewardText, 10) * 2).toString();
                         }
                     }
                 }
-                categoryMarkdown += `*${fo1stText}${input.dataset.text}\r\n`;
+                categoryMarkdown += `* ${fo1stText} ${FlairText} ${challengeText} (x${CountText}) ${RewardText}\r\n`;
                 // default selections do not count 
                 // so only mark categoryHasSelection true if i >= 8 ie 4th challenge or later
                 // this is lazy but in practice works since there will always be at least 4 challenges selected
