@@ -370,6 +370,8 @@ async function minervaStatus() {
     } else { 
         container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p>She will leave on ${formatEndDate(currentLeaveDate.toISOString())}</p><p>She will next be at ${nextLocation} on ${formatEndDate(nextDate.toISOString())}</p>`;
         const list = document.createElement('ul'); 
+        // sort inventory alphabetically by item name
+        inventory.sort((a,b) => a.item.localeCompare(b.item));
         inventory.forEach(item => { 
             if (currentLists.includes(item.list)) { 
                 const discounted = Math.round(item.cost * 0.75); 
