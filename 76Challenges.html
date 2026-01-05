@@ -254,6 +254,7 @@ async function inputtext(count, datalist) {
             if (i === 0 ) { input.value='Complete a Gold Star Daily Challenge!|3|Weekly|⭐|1500|005B73E6'; input.setAttribute('data-text','Complete a Gold Star Daily Challenge!|3|Weekly|⭐|1500|005B73E6'); };
             if (i === 1 ) { input.value='Repeatable Under Rank 100: Gain XP|10000|Weekly|🔁|100|005B759D'; input.setAttribute('data-text','Repeatable Under Rank 100: Gain XP|10000|Weekly|🔁|100|005B759D') }; 
             if (i === 2 ) { input.value='Repeatable at Rank 100 or above: Complete a Public Event|3|Weekly|🔁|300|007A1431'; input.setAttribute('data-text','Repeatable at Rank 100 or above: Complete a Public Event|3|Weekly|🔁|300|007A1431')};
+            if (i === 3 ) { input.value='Gleaming Depths - Complete All Encounters|5|Weekly||⭐⭐⭐⭐📦|00843ECA' }; input.setAttribute('data-text','Gleaming Depths - Complete All Encounters|5|Weekly||⭐⭐⭐⭐📦|00843ECA');
         }
         container.appendChild(checkbox); container.appendChild(input); container.appendChild(document.createElement('br'));
     }
@@ -870,18 +871,18 @@ function buildJson() {
             const Reward= Match ? Match[4].trim() : '';
             const FormID = Match ? Match[5].trim() : '';
             // for now cat FoFirst and flair2 together
-            const fullFlair = FoFirst && Flair2 ? `${FoFirst} ${Flair2}` : (FoFirst || Flair2);
+            const Flair = FoFirst && Flair2 ? `${FoFirst} ${Flair2}` : (FoFirst || Flair2);
             // doube reward if double score event is active and is daily challenges
             if (targetKey === 'Daily Challenges') {
                 const currentEvents = out['Current Events'].entries;
                 const doubleActive = currentEvents.some(ev => /Double S/i.test(ev.Text));
                 if (doubleActive && Reward) {
                     const doubled = parseInt(Reward, 10) * 2;
-                    out['Daily Challenges'].entries.push({ Flair: `${fullFlair}`, Text, Count, Reward: `${doubled}`, FormID });
+                    out['Daily Challenges'].entries.push({ Flair, Text, Count, Reward: `${doubled}`, FormID });
                     continue;
                 }
             }
-            out[targetKey].entries.push({ Flair: `${fullFlair}`, Text, Count, Reward, FormID });
+            out[targetKey].entries.push({ Flair, Text, Count, Reward, FormID });
         }
     }
 

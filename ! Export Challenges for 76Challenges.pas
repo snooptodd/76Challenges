@@ -36,27 +36,23 @@ begin
   //    sScore := 400;
   //end; 
 
-  // if Pos('_META', EditorID(e)) <> 0 then
-  //   Exit;
   if Pos('_SUB_', EditorID(e)) <> 0 then
     Exit;
   if Pos('Sub_', EditorID(e)) <> 0 then
    Exit;
   if Pos('zzz', EditorID(e)) = 1 then
    Exit;
-  // if Pos('_Epic', EditorID(e)) <> 0 then
-  //  Exit;
   if Pos('POST', EditorID(e)) = 1 then
    Exit;
   if Pos('CUT', EditorID(e)) = 1 then
    Exit;
-  // if Pos('Challenge_', EditorID(e)) = 1 then
-  //  Exit;
   if Pos('ATX_DE2021_', EditorID(e)) = 1 then
    Exit;
   if Pos('ATX_DE2022_', EditorID(e)) = 1 then
    Exit;
   if Pos('ATX_DE2023_', EditorID(e)) = 1 then
+   Exit;
+  if Pos('ATX_DE2024_', EditorID(e)) = 1 then
    Exit;
   if Pos('TEST', EditorID(e)) = 1 then
    Exit;
@@ -157,6 +153,9 @@ begin
   
   else
     elementFlair := '';
+  
+  if Pos('¬¬¬¬', elementReward) <> 0 then
+    elementReward := '⭐⭐⭐⭐📦';
 
 slTemp := FullName + '|' + elementRequiredCount + '|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward + elementReward2 + '|' + formid;
 
