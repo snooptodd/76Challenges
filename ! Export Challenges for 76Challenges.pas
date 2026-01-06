@@ -157,11 +157,18 @@ begin
   if Pos('¬¬¬¬', elementReward) <> 0 then
     elementReward := '⭐⭐⭐⭐📦';
 
-slTemp := FullName + '|' + elementRequiredCount + '|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward + elementReward2 + '|' + formid;
+  slTemp := FullName + '|' + elementRequiredCount + '|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward + elementReward2 + '|' + formid;
 
-slExport.add(slTemp);
-//AddMessage(slTemp);
-AddMessage(EditorID(e));
+  slExport.add(slTemp);
+  //AddMessage(slTemp);
+  AddMessage(EditorID(e));
+  formid := '';
+  FullName := '';
+  elementChallengeFrequency := '';
+  elementRequiredCount := '';
+  elementFlair := '';
+  elementReward := '';
+  elementReward2 := '';
 
 end;
 

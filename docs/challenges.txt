@@ -929,7 +929,7 @@ Catch a Fish while intoxicated with the Marshal Mallow Fishing Hat equipped|10|E
 Catch a Fish in the Ash Heap with the Marshal Mallow Fishing Hat equipped|10|Event|Week2||0082BB9D
 Kill a Mirelurk with the Marshal Mallow Fishing Hat equipped|20|Event|Week1||0082BB9E
 Complete All Regional Fishing Challenges|4|Event|Week2||0082BB9C
-Gleaming Depths - Complete All Encounters|5|Weekly||¬¬¬¬|00843ECA
+Gleaming Depths - Complete All Encounters|5|Weekly||⭐⭐⭐⭐📦|00843ECA
 Catch a Fish in the Skyline Valley with the Marshal Mallow Fishing Hat equiped|10|Event|Week2||00841326
 Kill a Human while wearing a Costume|30|Event|🎃||00845DC4
 Collect a Human Skull or Skull part while wearing a Costume|20|Event|🎃||00845DD1
