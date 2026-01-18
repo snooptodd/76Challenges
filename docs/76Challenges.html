@@ -250,7 +250,8 @@ async function inputtext(count, datalist) {
             if (i === 0 ) { checkbox.checked=true; };
             if (i === 1 ) { input.setAttribute('data-text','Gold Star: Complete a Daily Challenge|6|Daily|⭐|1000|005B759C'); input.value='Gold Star: Complete a Daily Challenge|6|Daily|⭐|1000|005B759C'; };
         }
-        if (datalist==='Weekly') {
+        // if datalist= weekly and day is tuesday then prefill with known weekly challenges.
+        if (datalist==='Weekly' && new Date().getDay() === 2 ) {
             if (i === 0 ) { input.value='Complete a Gold Star Daily Challenge!|3|Weekly|⭐|1500|005B73E6'; input.setAttribute('data-text','Complete a Gold Star Daily Challenge!|3|Weekly|⭐|1500|005B73E6'); };
             if (i === 1 ) { input.value='Repeatable Under Rank 100: Gain XP|10000|Weekly|🔁|100|005B759D'; input.setAttribute('data-text','Repeatable Under Rank 100: Gain XP|10000|Weekly|🔁|100|005B759D') }; 
             if (i === 2 ) { input.value='Repeatable at Rank 100 or above: Complete a Public Event|3|Weekly|🔁|300|007A1431'; input.setAttribute('data-text','Repeatable at Rank 100 or above: Complete a Public Event|3|Weekly|🔁|300|007A1431') };
@@ -367,9 +368,9 @@ async function minervaStatus() {
     }
     container.innerHTML = '<h2>Minerva</h2>';
     if (currentLocation === 'Away') { 
-        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p></p><p>She will next be at ${nextLocation} on ${formatEndDate(nextDate.toISOString())}</p>`; 
+        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p>She will next be at ${nextLocation} on ${formatEndDate(nextDate.toISOString())}</p>`; 
     } else { 
-        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p>She will leave on ${formatEndDate(currentLeaveDate.toISOString())}</p><p>She will next be at ${nextLocation} on ${formatEndDate(nextDate.toISOString())}</p>`;
+        container.innerHTML += `<p><strong>Minerva's Location:</strong> ${currentLocation}</p><p>She will next be at ${nextLocation} on ${formatEndDate(nextDate.toISOString())}</p><p>She will leave on ${formatEndDate(currentLeaveDate.toISOString())}</p>`;
         const list = document.createElement('ul'); 
         // sort inventory alphabetically by item name
         inventory.sort((a,b) => a.item.localeCompare(b.item));
@@ -899,14 +900,6 @@ function buildJson() {
         const secondP = minerva.querySelectorAll('p')[1];
         if (secondP) {
             const txt = secondP.innerText.trim();
-            // try to parse 'She will leave on DATE'
-            const m = txt.match(/She will leave on\s+(.+)/i);
-            if (m) out['Minerva'].LeavesOn = m[1].trim();
-            else out['Minerva'].LeavesOn = txt;
-        }
-        const thirdP = minerva.querySelectorAll('p')[2];
-        if (thirdP) {
-            const txt = thirdP.innerText.trim();
             // try to parse 'She will next be at LOCATION on DATE'
             const m = txt.match(/She will next be at\s+(.+)\s+on\s+(.+)/i);
             if (m) {
@@ -915,6 +908,14 @@ function buildJson() {
             } else {
                 out['Minerva'].NextLeavesOn = txt;
             }
+        }
+        const thirdP = minerva.querySelectorAll('p')[2];
+        if (thirdP) {
+            const txt = thirdP.innerText.trim();
+            // try to parse 'She will leave on DATE'
+            const m = txt.match(/She will leave on\s+(.+)/i);
+            if (m) out['Minerva'].LeavesOn = m[1].trim();
+            else out['Minerva'].LeavesOn = txt;
         }
         minerva.querySelectorAll('li').forEach(li => {
             const t = li.textContent.trim();
