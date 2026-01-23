@@ -154,7 +154,7 @@ begin
   else
     elementFlair := '';
   
-  if Pos('¬¬¬¬', elementReward) <> 0 then
+  if Pos('00843ECA', formid) <> 0 then
     elementReward := '⭐⭐⭐⭐📦';
 
   slTemp := FullName + '|' + elementRequiredCount + '|' + elementChallengeFrequency + '|' + elementFlair + '|' + elementReward + elementReward2 + '|' + formid;
