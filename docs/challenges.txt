@@ -893,6 +893,7 @@ Scrap junk to produce Plastic|10|Daily||250|0050DB99
 Kill a Super Mutant|5|Daily||250|0050C611
 Kill a Scorched|10|Daily||250|0050C60A
 Build a Decoration in a Workshop or C.A.M.P.|5|Daily||250|0050C600
+Build Anything in a Workshop or C.A.M.P.|10|Daily||250|0050C5FE
 Collect an audio Holotape|1|Daily||250|0050C5FA
 Kill a Mirelurk|5|Daily||250|0050C5F5
 Build a Floor, Wall, or Roof in a Workshop or C.A.M.P.|10|Daily||250|0050C5F2
