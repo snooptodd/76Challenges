@@ -1,960 +1,975 @@
-Collect a Bag of Chlorine while wearing the Tough Love Helmet|8|Event|Week1||008A45B5
-Collect a RadAway while wearing the Tough Love Helmet|20|Event|Week2||00885C78
-Scrap Junk to Produce Steel while wearing the Tough Love Helmet|50|Event|Week1||00885C77
-Collect a Stimpak while wearing the Tough Love Helmet|20|Event|Week2||00885C76
-Harvest a Firecap while wearing the Tough Love Helmet|20|Event|Week2||00885C75
-Harvest Brain Fungus while wearing the Tough Love Helmet|30|Event|Week2||00885C74
-Craft a Psycho while wearing the Tough Love Helmet|10|Event|Week1||00885C73
-Craft a Mentats while wearing the Tough Love Helmet|10|Event|Week2||00885C72
-Harvest a Carrot Flower while wearing the Tough Love Helmet|20|Event|Week2||00885C71
-Complete a Week 1 Challenge|6|Event|Week1||0086826A
-Harvest a Toxic Soot Flower while wearing the Tough Love Helmet|25|Event|Week1||00868269
-Travel on Foot while wearing the Tough Love Helmet|15|Event|Week1||00868268
-Collect a Med-X while wearing the Tough Love Helmet|10|Event|Week1||00868265
-Complete a Weekly Completion Challenge|2|Event|||00868264
-Complete a Week 2 Challenge|6|Event|Week2||00868263
-Complete all Challenges to Kill an Enemy|4|Event|Week2||00863015
-Complete all Challenges to Kill an Enemy|4|Event|Week1||00863014
-Kill an Enemy in the Burning Springs Region with the Sunset Sarsaparilla Deputy Hat equipped|175|Event|||00863013
-Kill a Burning Ogua with the Sunset Sarsaparilla Deputy Hat Equipped|1|Event|Week2||00863012
-Collect a Deathclaw Egg with the Sunset Sarsaparilla Deputy Hat Equipped|3|Event|Week2||00863011
-Kill a Corrosive Stingwing with the Sunset Sarsaparilla Deputy Hat Equipped|30|Event|Week2||00863010
-Build a Turret or Trap in a Workshop or C.A.M.P. with the Sunset Sarsaparilla Deputy Hat Equipped|5|Event|Week2||0086300F
-Kill an Insect with a Pistol and the Sunset Sarsaparilla Deputy Hat Equipped|25|Event|Week1||0086300E
-Kill a Radhog with the Sunset Sarsaparilla Deputy Hat Equipped|15|Event|Week1||0086300D
-Kill a Burning Radscorpion with the Sunset Sarsaparilla Deputy Hat Equipped|20|Event|Week2||0086300C
-Kill an Enemy in the Burning Springs Region with a Pistol and the Sunset Sarsaparilla Deputy Hat equipped|35|Event|Week1||0086300B
-Catch a Fish in Burning Springs with the Sunset Sarsaparilla Deputy Hat Equipped|10|Event|Week2||0086300A
-Cripple a Human Head with a Pistol and the Sunset Sarsaparilla Deputy Hat Equipped|15|Event|Week1||00863009
-Modify a Pistol with the Sunset Sarsaparilla Deputy Hat Equipped|5|Event|Week1||00863008
-Eat Pre-war Food with the Sunset Sarsaparilla Deputy Hat Equipped|25|Event|Week1||00863007
-Kill a Rusted Deathclaw with the Sunset Sarsaparilla Deputy Hat equipped|3|Event|Week1||00863006
-Kill Humans in the Burning Springs region with the Sunset Sarsaparilla Deputy Hat Equipped|30|Event|Week2||00863005
-Epic - Complete a Head Hunt|6|Weekly||1500|0085A440
-Complete a Head Hunt|4|Weekly||1000|0085A43F
-Epic - Complete a Grunt Hunt|20|Weekly||1500|0085A43E
-Complete a Grunt Hunt|10|Weekly||1000|0085A43D
-Epic - Kill a Rust Raider|45|Weekly||1500|0085A43C
-Kill a Rust Raider|30|Weekly||1000|0085A43B
-Epic - Kill a Radhog|24|Weekly||1500|0085A43A
-Kill a Radhog|18|Weekly||1000|0085A439
-Epic - Kill an Enemy with any Shotgun|40|Weekly||1500|0085A438
-Kill an Enemy with any Shotgun|25|Weekly||1000|0085A437
-Epic - Kill an Enemy in the Burning Springs Region|50|Weekly||1500|0085A436
-Kill an Enemy in the Burning Springs Region|30|Weekly||1000|0085A435
-Epic - Kill an Enemy with any Pistol|40|Weekly||1500|0085A434
-Kill an Enemy with any Pistol|25|Weekly||1000|0085A433
-Epic - Kill an Enemy with any Energy Weapon|40|Weekly||1500|0085A432
-Kill an Enemy with any Energy Weapon|25|Weekly||1000|0085A431
-Epic - Kill a Corrosive Stingwing|35|Weekly||1500|0085A430
-Kill a CorrosiveStingwing|25|Weekly||1000|0085A42F
-Epic - Kill a Burning Radscorpion|25|Weekly||1500|0085A42E
-Kill a Burning Radscorpion|15|Weekly||1000|0085A42D
-Epic - Kill a Rusted Deathclaw|6|Weekly||1500|0085A42C
-Kill a Rusted Deathclaw|4|Weekly||1000|0085A42B
-Harvest a Slipper Cactus|25|Weekly||1000|0085A42A
-Epic - Harvest a Firecracker Berry|35|Weekly||1500|0085A429
-Harvest a Firecracker Berry|20|Weekly||1000|0085A428
-Epic - Harvest a Firecap|45|Weekly||1500|0085A427
-Harvest a Firecap|25|Weekly||1000|0085A426
-Catch a Fish in the Burning Springs Region|15|Weekly||1000|0085A425
-Epic - Complete a Head Hunt|1|Daily||400|0085A424
-Epic - Complete a Grunt Hunt|5|Daily||400|0085A423
-Complete a Grunt Hunt|2|Daily||250|0085A422
-Take a Camera Picture at the Starlight Drive-In|1|Daily||250|0085A421
-Take a Camera Picture at the Super Duper Mart|1|Daily||250|0085A420
-Take a Camera Picture at The Rust Kingdom|1|Daily||250|0085A41F
-Take a Camera Picture at Dino Peaks Mini Golf|1|Daily||250|0085A41E
-Epic - Kill a Rust Raider|15|Daily||400|0085A41D
-Kill a Rust Raider|5|Daily||250|0085A41C
-Epic - Kill a Radhog|10|Daily||400|0085A41B
-Kill a Radhog|5|Daily||250|0085A41A
-Epic - Kill an Enemy with any Shotgun|16|Daily||400|0085A419
-Kill an Enemy with any Shotgun|8|Daily||250|0085A418
-Epic - Kill an Enemy in the Burning Springs Region|20|Daily||400|0085A417
-Kill an Enemy in the Burning Springs Region|5|Daily||250|0085A416
-Epic - Kill an Enemy with any Pistol|16|Daily||400|0085A415
-Kill an Enemy with any Pistol|8|Daily||250|0085A414
-Epic - Kill an Enemy with any Energy Weapon|16|Daily||400|0085A413
-Kill an Enemy with any Energy Weapon|8|Daily||250|0085A412
-Epic - Kill a Bleached Ogua|1|Daily||400|0085A411
-Epic - Kill a Corrosive Stingwing|12|Daily||400|0085A410
-Kill a Corrosive Stingwing|5|Daily||250|0085A40F
-Epic - Kill a Burning Radscorpion|6|Daily||400|0085A40E
-Kill a Burning Radscorpion|3|Daily||250|0085A40D
-Epic - Kill a Rusted Deathclaw|3|Daily||400|0085A40C
-Kill a Rusted Deathclaw|1|Daily||250|0085A40B
-Epic - Harvest a Slipper Cactus|15|Daily||400|0085A40A
-Harvest a Slipper Cactus|5|Daily||250|0085A409
-Epic - Harvest a Firecracker Berry|15|Daily||400|0085A408
-Harvest a Firecracker Berry|5|Daily||250|0085A407
-Epic - Harvest a Firecap|15|Daily||400|0085A406
-Harvest a Firecap|5|Daily||250|0085A405
-Epic - Catch a Fish in the Burning Springs Region|10|Daily||400|0085A404
-Catch a Fish in the Burning Springs Region|2|Daily||250|0085A403
-Complete a "Trick or Treat" Challenge|5|Event|🎃||008571A2
-Complete a "Trick or Treat" Challenge|5|Event|🎃||008571A1
-Complete a "Give out Candy" Challenge|5|Event|🎃||008571A0
-Complete a "Give out Candy" Challenge|5|Event|🎃||0085719F
-Scrap junk to produce Fertilizer while wearing a Costume|25|Event|🎃||0085719E
-Craft a Melee Weapon while wearing a Costume|15|Event|🎃||0085719D
-Collect a Scalpel or Surgical Scalpel while wearing a Costume|5|Event|🎃||0085719C
-Trick or Treat from another Players' Candy Bowl|3|Event|🎃||0085719B
-Catch a Fish while wearing a Costume|10|Event|🎃||0085719A
-Build a Candy Bowl and give out Candy from your C.A.M.P.|1|Event|🎃||00857199
-Collect a Human Skull or Skull part while wearing a Costume|20|Event|🎃||00845DD1
-Kill a Spooky Scorched while wearing a Costume|25|Event|🎃||00845DCF
-Kill a Spooky Scorched while wearing a Costume|25|Event|🎃||00845DCE
-Complete the "Give out Candy" and "Trick or Treat" Completion Challenges|4|Event|🎃||00845DCD
-Cripple a Human Limb while wearing a Costume|30|Event|🎃||00845DCC
-Eat Candy while in a Costume|30|Event|🎃||00845DC9
-Kill a Human while wearing a Costume|30|Event|🎃||00845DC4
-Gleaming Depths - Complete All Encounters|5|Weekly||⭐⭐⭐⭐📦|00843ECA
-Catch a Fish in the Skyline Valley with the Marshal Mallow Fishing Hat equiped|10|Event|Week2||00841326
-Catch a Fish in the Cranberry Bog with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA5
-Complete All Regional Fishing Challenges|3|Event|Week1||0082BBA4
-Catch a Fish in the Mire with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA3
-Catch a Fish in the Forest with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA2
-Catch a Fish while intoxicated with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA1
-Collect Bait with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA0
-Craft a Replica Fishing Rod at the Tinker's Workbench with the Marshal Mallow Fishing Hat equipped|2|Event|Week1||0082BB9F
-Kill a Mirelurk with the Marshal Mallow Fishing Hat equipped|20|Event|Week1||0082BB9E
-Catch a Fish in the Ash Heap with the Marshal Mallow Fishing Hat equipped|10|Event|Week2||0082BB9D
-Complete All Regional Fishing Challenges|4|Event|Week2||0082BB9C
-Catch a Fish while intoxicated with the Marshal Mallow Fishing Hat equipped|10|Event|Week2||0082BB9B
-Catch a Fish in the Savage Divide with the Marshal Mallow Fishing Hat equipped|10|Event|Week2||0082BB9A
-Catch a Fish in the Toxic Valley with the Marshal Mallow Fishing Hat equiped|10|Event|Week2||0082BB99
-Kill a Gulper with the Marshal Mallow Fishing Hat equipped|20|Event|Week2||0082BB97
-Kill a Mirelurk Queen with the Marshal Mallow Fishing Hat equipped|3|Event|Week2||0082BB96
-Catch a Fish with the Marshal Mallow Fishing Hat equipped|76|Event|||0082BB95
-Epic - Catch a Fish while not intoxicated|10|Daily||400|00805AA7
-Cook Grilled Fish while Intoxicated|1|Daily||250|00805AA6
-Eat a Fish|5|Daily||250|00805AA5
-Catch a Fish while it is Raining|2|Weekly||1000|00805AA4
-Eat a Fish Bit|6|Daily||250|00805AA3
-Destroy a Protectron with the Money Bag Backpack equipped|50|Event|Week2||00800567
-Craft Ballistic Ammo with the Money Bag Backpack equipped|760|Event|Week2||00800566
-Collect Stimpaks or Chems with the Money Bag Backpack equipped|76|Event|Week2||00800563
-Craft a Molotov with the Money Bag Backpack equipped|15|Event|Week1||00800562
-Epic - Catch a Fish|32|Weekly||1500|007FE613
-Craft Fish Bits|35|Weekly||1000|007FE612
-Cook Brain Fungus Soup|1|Daily||250|007FE611
-Epic - Cook Deathclaw Steak|1|Daily||400|007FE610
-Catch a Fish in the Cranberry Bog Region|2|Daily||250|007FE60F
-Epic - Catch a Fish|10|Daily||400|007FE60E
-Catch a Fish in the Toxic Valley Region|2|Daily||250|007FE60D
-Cook Yao Guai Ribs|1|Daily||250|007FE60C
-Catch a Fish in the Forest Region|2|Daily||250|007FE60B
-Cook Grilled Fish|3|Daily||250|007FE609
-Catch a Fish|3|Daily||250|007FE608
-Craft Fish Bits|5|Daily||250|007FE607
-Cook Mole Rat Chunks|3|Daily||250|007FE606
-Catch a Fish in the Ash Heap Region|2|Daily||250|007FE605
-Cook Roasted Mirelurk Meat|3|Daily||250|007FE604
-Catch a Fish while Intoxicated|3|Daily||250|007FE603
-Catch a Fish in the Mire Region|2|Daily||250|007FE602
-Catch a Fish in the Savage Divide Region|2|Daily||250|007FE601
-Catch a Fish in the Skyline Valley Region|2|Daily||250|007FE600
-Sell Grilled Fish to an NPC vendor|1|Daily||250|007FE5FF
-Epic - Craft Fish Bits|70|Weekly||1500|007FE5FE
-Catch a Fish|21|Weekly||1000|007FE5FD
-Appalachian Outlaws: Complete Week 1 and 2 Challenges|2|Event|||007FDA7B
-Appalachian Outlaws: Complete Week 2 Challenges|7|Event|Week2||007FDA7A
-Appalachian Outlaws: Complete Week 1 Challenges|7|Event|Week1||007FDA79
-Consume an Alcoholic Beverage with the Money Bag Backpack equipped|20|Event|Week2||007F9CE2
-Hack a Terminal with the Money Bag Backpack equipped|3|Event|Week2||007F9CE1
-Scrap Junk to Collect Gold with the Money Bag Backpack equipped|5|Event|Week2||007F9CDF
-Collect a Cigar Box with the Money Bag Backpack equipped|3|Event|Week2||007F9CDE
-Kill an Enemy with the Money Bag Backpack equipped|500|Event|Week1||007F9CDD
-Pick a Lock with the Money Bag Backpack equipped|1|Event|Week1||007F9CDA
-Collect a Pack or Carton of Cigarettes with the Money Bag Backpack equipped|5|Event|Week1||007F9CD9
-Kill a Human with the Money Bag Backpack equipped|76|Event|Week1||007F205D
-Scrap Junk to Collect Silver with the Money Bag Backpack equipped|5|Event|Week1||007F205C
-Collect Pre-War Money with the Money Bag Backpack equipped|76|Event|Week1||007F2035
-Collect Soap|500|Monthly||1000|007F1CBA
-Kill an Enemy in the Skyline Valley Region|5|Daily||250|007D0EBC
-Kill an Enemy in the Toxic Valley Region|5|Daily||250|007D0EBB
-Kill an Enemy in the Savage Divide Region|5|Daily||250|007D0EBA
-Kill an Enemy in the Mire Region|5|Daily||250|007D0EB9
-Kill an Enemy in the Cranberry Bog Region|5|Daily||250|007D0EB8
-Kill an Enemy in the Ash Heap Region|5|Daily||250|007D0EB7
-Kill an Enemy in the Forest Region|5|Daily||250|007D0EB6
-Kill an Overgrown during The Big Bloom Event|3|Daily||250|007CFA19
-Kill an Overgrown during The Big Bloom Event while wearing a Flower Crown|3|Daily||250|007CFA18
-Complete the Event: "The Big Bloom"|5|Weekly||1000|007CFA17
-Kill a Beezlebaby or Beezlebub during The Big Bloom Event|10|Weekly||1000|007CFA16
-Kill an Insect during The Big Bloom Event|30|Weekly||1000|007CFA15
-Kill an Insect during The Big Bloom Event|5|Daily||250|007CFA14
-Craft a Flower Crown|1|Daily||250|007CFA13
-Complete the Event: "The Big Bloom"|1|Daily||250|007CFA12
-Kill an Insect during The Big Bloom Event while wearing a Flower Crown|5|Daily||250|007CFA11
-Complete a Caravan Quest|1|Daily||250|007AACD4
-Complete the Event: "Mischief Night"|5|Weekly||1000|007A9EEB
-Complete the "Mischief Night" Daily Challenge|3|Weekly||1000|007A9EEA
-Complete the Event: "Mischief Night"|1|Daily||250|007A9EE9
-Repeatable at Rank 100 or above: Complete a Public Event|3|Weekly|🔁|300|007A1431
-Take a Camera picture at a Best Build C.A.M.P.|1|Daily||250|0079B994
-Like a Best Build C.A.M.P.|1|Daily||250|0079B993
-Visit a Best Build C.A.M.P.|1|Daily||250|0079B992
-Use Photomode to take a Photo at a Best Build C.A.M.P.|1|Daily||250|0079B991
-Visit a Best Build C.A.M.P.|4|Weekly||1000|0079B990
-Like a Best Build C.A.M.P.|4|Weekly||1000|0079B98F
-Cripple a Super Mutant's Limb|30|Weekly||1000|00797314
-Cripple a Super Mutant's Leg|18|Weekly||1000|00797313
-Cripple a Super Mutant's Head|10|Weekly||1000|00797312
-Cripple a Super Mutant's Leg|2|Daily||250|00797311
-Kill a Lost|15|Weekly||1000|0079729D
-Collect a Board Game|4|Weekly||1000|0079729C
-Kill a Lost|5|Daily||250|0079729B
-Collect a Board Game|1|Daily||250|0079729A
-Collect Soap|14|Weekly||1000|00797097
-Collect Soap|2|Daily||250|00797096
-Drink Purified Water|15|Weekly||1000|00796EDD
-Collect Toilet Paper|2|Daily||250|00796EDC
-Drink Purified Water|2|Daily||250|00796EDB
-Collect a box of Sugar Bombs|1|Daily||250|00796EDA
-Expeditions: Complete any mission in Atlantic City!|2|Weekly|🗺️|1000|0072DA68
-Expeditions: Complete The Most Sensational Game|1|Daily|🗺️|250|0072DA67
-Expeditions: Complete Tax Evasion|1|Daily|🗺️|250|0072DA66
-Kill an Overgrown|30|Weekly||1000|0072DA65
-Kill a Lesser Devil|30|Weekly||1000|0072DA64
-Kill a Lesser Devil|5|Daily||250|0072DA63
-Kill an Overgrown|5|Daily||250|0072DA62
-Cripple enemy limbs|30|Weekly||1000|006EDB6D
-Cripple enemy limbs|6|Daily||250|006EDB6C
-Epic - Scrap a Comrade Chubs|1|Weekly||1500|006E4746
-Epic - Consume Stimpaks or Chems|15|Weekly||1500|006E4745
-Epic - Collect a Jangles The Moon Monkey|1|Weekly||1500|006E4744
-Epic - Kill a Communist|3|Weekly||1500|006E4743
-Epic - Kill a Human with Radiation Damage|12|Weekly||1500|006E4742
-Epic - Kill a Human with Radiation Damage|3|Daily||400|006E4741
-Epic - Kill a Mole Rat with Explosives|1|Daily||400|006E4740
-Epic - Consume Ground Mole Rat|1|Daily||400|006E473F
-Epic - Kill a Brahmin with Fire Damage|1|Daily||400|006E473E
-Epic - Cook a Cramburger|1|Daily||400|006E473D
-Collect a Fuel Tank or Gas Canister|2|Daily||250|006E473C
-Drink Tea|5|Weekly||1000|006E473B
-Collect a Fuel Tank or Gas Canister|5|Weekly||1000|006E473A
-Collect a Garden Gnome|5|Weekly||1000|006E4739
-Build a Decoration in a Shelter|25|Weekly||1000|006E4738
-Craft any Plushie at a Tinkerer's Bench|3|Weekly||1000|006E4737
-Sell a Weapon to an NPC vendor|15|Weekly||1000|006E4736
-Kill a Brahmin|6|Weekly||1000|006E4735
-Collect a Microscope or Biometric Scanner|2|Daily||250|006E4734
-Build a Generator in a Shelter|3|Weekly||1000|006E4733
-Build a Generator in a Shelter|1|Daily||250|006E4732
-Drink Tea|1|Daily||250|006E4731
-Sell a Weapon to an NPC vendor|5|Daily||250|006E4730
-Craft any Plushie at a Tinkerer's Bench|1|Daily||250|006E472F
-Craft any Flair at a Tinkerer's Bench|1|Daily||250|006E472E
-Mod an Ballistic Weapon|1|Daily||250|006E472D
-Kill a Brahmin|2|Daily||250|006E472C
-Craft any Flair at a Tinkerer's Bench|3|Weekly||1000|006E472B
-Epic - Complete an Event in the Ash Heap Region|3|Weekly||1500|006E3CB2
-Epic - Complete an Event in the Forest Region|3|Weekly||1500|006E3CB1
-Epic - Complete an Event in the Cranberry Bog Region|3|Weekly||1500|006E3CB0
-Epic - Complete an Event in the Mire Region|3|Weekly||1500|006E3CAF
-Kill a Scorched|30|Weekly||1000|006E3431
-Kill a Mirelurk|30|Weekly||1000|006E3430
-Kill a Feral Ghoul|30|Weekly||1000|006E342F
-Kill a Super Mutant|30|Weekly||1000|006E0EA5
-Epic - Kill Feral Ghouls with a Shotgun|5|Daily||400|006DEAFE
-Epic - Kill Animals with a Pipe Gun|5|Daily||400|006DEA51
-Epic - Cripple a Deathclaw's Head|1|Daily||400|006DEA50
-Epic - Kill a Legendary 3-Star Creature|1|Daily||400|006DEA4F
-Epic - Kill a Cryptid with a Melee Weapon|1|Daily||400|006DEA4E
-Epic - Destroy Robots with a Rifle|5|Daily||400|006DEA4D
-Epic - Kill Insects with an Energy Weapon|5|Daily||400|006DEA4C
-Epic - Kill Super Mutants with a Heavy Gun|5|Daily||400|006DEA4B
-Epic - Kill a Blood Eagle with a Blunt Weapon|5|Daily||400|006DEA4A
-Epic - Kill Cultists with a Sharp Weapon|5|Daily||400|006DEA49
-Epic - Destroy Robots with an Energy Weapon|5|Daily||400|006DEA48
-Epic - Kill Cultists with a Shotgun|5|Daily||400|006DEA47
-Epic - Complete an Event in the Cranberry Bog Region|1|Daily||400|006DEA46
-Epic - Complete an Event in the Savage Divide Region|1|Daily||400|006DEA45
-Epic - Complete an Event in the Toxic Valley Region|1|Daily||400|006DEA44
-Epic - Complete an Event in the Mire Region|1|Daily||400|006DEA43
-Craft Ballistic Ammo|65|Weekly||1000|006CDE4E
-Craft Energy Ammo|45|Weekly||1000|006CDE4D
-Craft any Chems|6|Weekly||1000|006CDE4C
-Craft Bulk Wood|3|Weekly||1000|006CDE4B
-Craft Bulk Aluminum|3|Weekly||1000|006CDE4A
-Craft Bulk Steel|3|Weekly||1000|006CDE49
-Eat a Pumpkin|15|Weekly||1000|006CDE48
-Collect Energy Ammo|40|Weekly||1000|006CDE47
-Collect Ballistic Ammo|60|Weekly||1000|006CDE46
-Eat a Vegetable|25|Weekly||1000|006CDE45
-Consume any Chems|9|Weekly||1000|006CDE44
-Collect a Lighter, Cigarette or Cigar|15|Weekly||1000|006CDE43
-Collect a Burnt Book|25|Weekly||1000|006CDE42
-Collect RadAway or Rad-X|15|Weekly||1000|006CDE41
-Deal a Critical Hit to an Enemy in VATS|25|Weekly||1000|006CDE40
-Cripple a Blood Eagle's Leg|18|Weekly||1000|006CDE3F
-Cripple a Blood Eagle's Arm|18|Weekly||1000|006CDE3E
-Cripple a Scorched's Arm|18|Weekly||1000|006CDE3D
-Cripple a Scorched's Leg|18|Weekly||1000|006CDE3C
-Kill a Mutant Hound|9|Weekly||1000|006CDE3B
-Kill a Human Enemy|30|Weekly||1000|006CDE3A
-Kill a Yao Guai|3|Weekly||1000|006CDE39
-Kill an Angler|9|Weekly||1000|006CDE38
-Kill a Mole Rat|15|Weekly||1000|006CDE37
-Craft Energy Ammo|15|Daily||250|006CDC5A
-Craft Ballistic Ammo|25|Daily||250|006CCCAF
-Craft any Chems|2|Daily||250|006CCCAE
-Craft Bulk Wood|1|Daily||250|006CCCAD
-Craft Bulk Aluminum|1|Daily||250|006CCCAC
-Craft Bulk Steel|1|Daily||250|006CCCAB
-Eat a Pumpkin|5|Daily||250|006CCCAA
-Collect Energy Ammo|20|Daily||250|006CCCA9
-Collect Ballistic Ammo|20|Daily||250|006CCCA8
-Eat a Vegetable|10|Daily||250|006CCCA7
-Collect a Lighter, Cigarette or Cigar|5|Daily||250|006CCCA6
-Consume any Chems|3|Daily||250|006CCCA5
-Collect a Burnt Book|5|Daily||250|006CCCA4
-Collect RadAway or Rad-X|5|Daily||250|006CCCA3
-Kill an Angler|5|Daily||250|006CCA67
-Kill a Yao Guai|1|Daily||250|006CCA66
-Kill a Human Enemy|10|Daily||250|006CCA65
-Kill a Mutant Hound|3|Daily||250|006CCA64
-Cripple a Blood Eagle's Leg|2|Daily||250|006CCA63
-Cripple a Scorched's Leg|2|Daily||250|006CCA62
-Cripple a Scorched's Arm|2|Daily||250|006CCA61
-Cripple a Blood Eagle's Arm|2|Daily||250|006CCA60
-Deal a Critical Hit to an Enemy in VATS|10|Daily||250|006CCA5F
-Kill a Mole Rat|5|Daily||250|006CCA5E
-Epic - Build Anything in a Workshop or C.A.M.P.|30|Weekly||1500|006C6DA2
-Epic - Repair an Energy Weapon|5|Weekly||1500|006C6DA1
-Epic - Scrap junk to produce Crystal|20|Weekly||1500|006C6DA0
-Epic - Repair a Melee Weapon|8|Weekly||1500|006C6D9F
-Epic - Repair a Ranged Weapon|8|Weekly||1500|006C6D9E
-Complete the Event: "Safe & Sound"|3|Weekly||1000|006C6D5C
-Complete the Event: "Safe & Sound"|1|Daily||250|006C6D5B
-Complete the Event: "Beasts of Burden"|3|Weekly||1000|006C6D5A
-Complete the Event: "Beasts of Burden"|1|Daily||250|006C6D59
-Epic - Kill an Insect with a Sharp or Thrown Weapon|30|Weekly||1500|006C4EFA
-Epic - Kill Floaters With Automatic Weapons|10|Weekly||1500|006C4EF9
-Epic - Cripple a Protectron's Head with a Rifle|25|Weekly||1500|006C4EF8
-Epic - Cripple a Ghoul's Leg|20|Weekly||1500|006C4EF7
-Epic - Deal a Critical Hit to an Enemy with a Shotgun in VATS|40|Weekly||1500|006C4EF6
-Epic - Eat a Cooked Meal|75|Weekly||1500|006C4EF5
-Epic - Collect Pre-war Food|30|Weekly||1500|006C4EF4
-Epic - Collect Stimpaks or Chems|30|Weekly||1500|006C4EF3
-Epic - Complete Daily Quests|15|Weekly||1500|006C4EF2
-Epic - Eat a Meat-based Meal|35|Weekly||1500|006C4EF1
-Epic - Collect any flavor of Nuka-Cola|30|Weekly||1500|006C4EF0
-Epic - Complete an Event in the Savage Divide Region|3|Weekly||1500|006C4EEF
-Epic - Complete an Event in the Toxic Valley Region|3|Weekly||1500|006C4EEE
-Epic - Complete an Event while wearing a Costume|15|Weekly||1500|006C4EED
-Epic - Complete an Event while Well Fed|15|Weekly||1500|006C4EEC
-Epic - Destroy a Robot with a Pistol|15|Daily||400|006C4EEB
-Epic - Kill Mole Miners with a Heavy Gun|15|Daily||400|006C4EEA
-Epic - Kill a Mirelurk with a Blunt Weapon|15|Daily||400|006C4EE9
-Epic - Kill Cultists with Energy Weapons|10|Daily||400|006C4EE8
-Epic - Kill a Scorched with a Rifle|15|Daily||400|006C4EE7
-Epic - Build a Decoration in a Shelter in Free Cam|15|Daily||400|006C4EE6
-Epic - Build a Turret or Trap in a Workshop or C.A.M.P.|6|Daily||400|006C4EE5
-Epic - Craft Ammo at a Workbench|75|Daily||400|006C4EE4
-Epic - Scrap junk to produce Wood|15|Daily||400|006C4EE3
-Epic - Collect Mothman Eggs|5|Daily||400|006C4EE2
-Epic - Harvest a Wild Plant or Fungi|15|Daily||400|006C4EE1
-Epic - Eat Mutant Hound Chops|3|Daily||400|006C4EE0
-Epic - Eat Dog Food|10|Daily||400|006C4EDF
-Epic - Collect Purified Water|10|Daily||400|006C4EDE
-Epic - Complete an Event in the Ash Heap Region|1|Daily||400|006C4EDD
-Epic - Claim a Workshop While Well Fed|1|Daily||400|006C4EDC
-Epic - Complete Daily Quests while on a Public Team|2|Daily||400|006C4EDB
-Epic - Complete an Event in the Forest Region|1|Daily||400|006C4EDA
-Take a Camera Picture of a Mega Sloth|1|Weekly||1000|006AFD10
-Take a Camera Picture of a Cat|1|Daily||250|006AFD0F
-Loot Chests|10|Daily||250|006AFD0A
-Mod an Energy Weapon|1|Daily||250|006AFD09
-Collect a Teapot|2|Daily||250|006AFD08
-Build a Bed, Table, or Stairs in a Workshop or C.A.M.P.|3|Daily||250|006ACAA7
-Build a Generator in a C.A.M.P. or Workshop|1|Daily||250|006ACAA6
-Take a Camera Picture of a Mirelurk Hunter|1|Daily||250|006ACAA5
-Take a Camera Picture of an Eyebot|1|Daily||250|006ACAA4
-Take a Camera Picture of a Stingwing|1|Daily||250|006ACAA3
-Take a Camera Picture of a Fog Crawler|1|Daily||250|006ACAA2
-Cripple a Mole Miner's Head|2|Daily||250|006ACAA1
-Cripple a Super Mutant's Head|2|Daily||250|006ACAA0
-Epic - Hack a Terminal|15|Weekly||1500|006ACA9F
-Epic - Hack a Skill Level 3 Terminal|6|Weekly||1500|006ACA9E
-Epic - Pick Hard Locks|6|Weekly||1500|006ACA9D
-Epic - Pick a Lock|15|Weekly||1500|006ACA9C
-Epic - Sell a Speed Demon Serum to an NPC vendor|1|Weekly||1500|006ACA9B
-Epic - Sell an Electrically Charged Serum to an NPC vendor|1|Weekly||1500|006ACA9A
-Epic - Build a light source in a Workshop or C.A.M.P.|25|Weekly||1500|006ACA99
-Epic - Collect a Legendary Module|20|Weekly||1500|006ACA98
-Epic - Collect a Teddy Bear|20|Weekly||1500|006ACA97
-Epic - Collect a 20lb Dumbbell|9|Weekly||1500|006ACA96
-Epic - Scrap a Gauss Rifle|3|Weekly||1500|006ACA95
-Epic - Scrap a Shishkebab|3|Weekly||1500|006ACA94
-Epic - Scrap a Broadsider|3|Weekly||1500|006ACA93
-Epic - Craft a Fusion Core|4|Weekly||1500|006ACA92
-Epic - Kill a Canine with a Melee Weapon|30|Weekly||1500|006ACA91
-Epic - Kill a Super Mutant with a Rifle|15|Weekly||1500|006ACA90
-Epic - Cripple a Super Mutant's Arm|20|Weekly||1500|006ACA8F
-Epic - Kill a Deathclaw with a Pistol|3|Weekly||1500|006ACA8E
-Epic - Sell an Assaultron Head to a Non Player Vendor|1|Daily||400|006ACA8D
-Epic - Collect Brain Fungus|15|Daily||400|006ACA8C
-Epic - Craft a Fusion Core|1|Daily||400|006ACA8B
-Epic - Cripple a Super Mutant's Arm|6|Daily||400|006ACA8A
-Collect Brain Fungus|5|Daily||250|006ACA89
-Epic - Take a Camera Picture of a Super Mutant Suicider|1|Daily||400|006ACA88
-Epic - Scrap a Shishkebab|1|Daily||400|006ACA87
-Epic - Collect a 20lb Dumbbell|3|Daily||400|006ACA86
-Epic - Scrap a Broadsider|1|Daily||400|006ACA85
-Epic - Kill a Deathclaw with a Pistol|1|Daily||400|006ACA84
-Epic - Kill a Super Mutant with a Rifle|15|Daily||400|006ACA83
-Epic - Collect a Teddy Bear|9|Daily||400|006ACA82
-Epic - Scrap a Gauss Rifle|1|Daily||400|006ACA81
-Epic - Kill a Canine with a Melee Weapon|20|Daily||400|006ACA80
-Buiild Musical Instruments in a Workshop or C.A.M.P.|15|Weekly||1000|006AC4C3
-Build a Generator in a C.A.M.P. or Workshop|5|Weekly||1000|006AC4C2
-Mod an Energy Weapon|5|Weekly||1000|006AC4C1
-Craft a Throwable Weapon|30|Weekly||1000|006AC4C0
-Scrap a Pipe Gun|20|Weekly||1000|006AC4BF
-Scrap Syringers|8|Weekly||1000|006AC4BE
-Collect Brain Fungus|25|Weekly||1000|006AC4BD
-Collect a Teddy Bear|9|Weekly||1000|006AC4BC
-Collect a Teapot|9|Weekly||1000|006AC4BB
-Collect a Guitar or Toaster|9|Weekly||1000|006AC4BA
-Cripple a Mirelurk's Limb|30|Weekly||1000|006AC4B9
-Cripple a Super Mutant's Arm|16|Weekly||1000|006AC4B8
-Deal a Critical Hit to a Sentry Bot in VATS|15|Weekly||1000|006AC4B7
-Deal a Critical Hit to a Radtoad in VATS|15|Weekly||1000|006AC4B6
-Kill an Enemy with a Thrown Weapon|30|Weekly||1000|006AC4B5
-Kill an Enemy with a Tesla Rifle or Cryolator|30|Weekly||1000|006AC4B4
-Kill a Canine|30|Weekly||1000|006AC4B3
-Craft a Throwable Weapon|2|Daily||250|006AAA4C
-Scrap a Pipe Gun|3|Daily||250|006AAA4B
-Scrap a Syringer|1|Daily||250|006AAA4A
-Sell a Shotgun to an NPC vendor|1|Daily||250|006AAA49
-Sell a Ski Sword to an NPC vendor|1|Daily||250|006AAA48
-Sell a Tesla Rifle to an NPC vendor|1|Daily||250|006AAA47
-Sell a Black Powder Pistol to an NPC vendor|1|Daily||250|006AAA46
-Sell Swamp Tofu to an NPC vendor|1|Daily||250|006AAA45
-Sell Bloatfly Meat to an NPC vendor|1|Daily||250|006AAA44
-Sell a Sweet Roll to an NPC vendor|1|Daily||250|006AAA43
-Collect a Teddy Bear|3|Daily||250|006A2759
-Collect Guitars or Toasters|2|Daily||250|006A2758
-Kill an Enemy with a Tesla Rifle or Cryolator|10|Daily||250|006A2757
-Kill an Enemy with a Thrown Weapon|10|Daily||250|006A2756
-Kill a Canine|5|Daily||250|006A2755
-Deal a Critical Hit to a Radtoad in VATS|8|Daily||250|006A2754
-Deal a Critical Hit to a Sentry Bot in VATS|8|Daily||250|006A2753
-Cripple a Super Mutant's Arm|2|Daily||250|006A2752
-Cripple a Mirelurk's Limb|2|Daily||250|006A2751
-Epic - Rank up a Perk Card|6|Weekly||1500|0069FA01
-Epic - Sell a Ballistic Weapon to an NPC vendor|15|Weekly||1500|0069FA00
-Epic - Purchase Items|40|Weekly||1500|0069F9FF
-Epic - Use a Magazines or Bobblehead|3|Weekly||1500|0069F9FD
-Epic - Simultaneously Hold Two Workshops|2|Weekly||1500|0069F3F8
-Build a Decoration in a Shelter|25|Weekly||1500|0069F3F7
-Epic - Build a Resource in a Workshop or C.A.M.P.|10|Weekly||1500|0069F3F6
-Epic - Build a Turret or Trap in a Workshop or C.A.M.P.|12|Weekly||1500|0069F3F5
-Epic - Claim a Workshop|6|Weekly||1500|0069F3F4
-Epic - Eat a Cooked Meal that use Cranberries|3|Weekly||1500|0069F3F3
-Epic - Collect Raw Flux|5|Weekly||1500|0069F3F2
-Epic - Collect Complete Robot Models|3|Weekly||1500|0069F3F1
-Epic - Consume any Mutation Serum|1|Weekly||1500|0069F3F0
-Epic - Consume a Nukashine|3|Weekly||1500|0069F3EF
-Epic - Collect Ultracite Ore or Ultracite Scrap|20|Weekly||1500|0069F3EE
-Epic - Eat a Scorchbeast Mixed Meat Stew or Deathclaw Wellington|1|Weekly||1500|0069F3ED
-Epic - Craft a Mini Nuke|5|Weekly||1500|0069EF9B
-Epic - Mod an Armor|25|Weekly||1500|0069EF9A
-Epic - Mod a Weapon|25|Weekly||1500|0069EF99
-Epic - Craft Steins (Misc. Versions)|10|Weekly||1500|0069EF98
-Epic - Scrap junk to produce Ballistic Fiber|25|Weekly||1500|0069EF97
-Epic - Complete a Daily Operation while Mutated|3|Weekly||1500|0069EF96
-Epic - Expeditions - Union Dues: Collect Steel Ingots from The Pitt!|15|Weekly|🗺️|1500|0069EF94
-Epic - Complete encounters at the Whitespring Refuge|7|Weekly||1500|0069EF93
-Epic - Complete an Event|5|Weekly||1500|0069EF92
-Epic - Expeditions: Complete a mission in The Pitt while Well Fed|1|Daily|🗺️|400|0069E926
-Epic - Complete a Daily Operation while Wearing a Costume|1|Daily||400|0069E925
-Epic - Complete a Daily Quest|2|Daily||400|0069E924
-Epic - Complete an Event while in a Team|2|Daily||400|0069E923
-Epic - Complete an Event|2|Daily||400|0069E922
-Epic - Kill a Creature with a Hammer|15|Weekly||1500|0069CBFC
-Epic - Kill a Creature While Mutated|25|Weekly||1500|0069CBFA
-Epic - Kill a Deathclaw or Radscorpion|3|Weekly||1500|0069CBF9
-Epic - Deal a Critical Hit to an Enemy with a Revolver Weapon in VATS|30|Weekly||1500|0069CBF8
-Epic - Cripple a Super Mutant's Head|15|Weekly||1500|0069CBF7
-Epic - Cripple Legs of Enemies Using Explosives, Missiles, or Mini Nukes|20|Weekly||1500|0069CBF6
-Epic - Take a Camera Picture of a Cryptid|1|Weekly||1500|0069B032
-Epic: Take a Picture of the Grafton Monster While Mutated|1|Weekly||1500|0069B030
-Epic: Take a Camera Picture of a Glowing Cryptid|1|Weekly||1500|0069B02F
-Epic: Take a Camera Picture of an Albino or Glowing Radstag|1|Weekly||1500|0069B02E
-Craft Infusions|4|Weekly||1000|0069AFB1
-Complete a Mutated Public Event|3|Weekly||1000|0069AFB0
-Kill a Mutated Enemy|30|Weekly||1000|0069AFAF
-Craft an Infusion|1|Daily||250|0069AFAE
-Kill a Mutated Enemy|10|Daily||250|0069AFAD
-Complete a Mutated Public Event|1|Daily||250|0069AFAC
-Epic - Cripple a Sentry Bot's Arm|4|Daily||400|0069226F
-Build a Heavy Cryo Turret in a Workshop or C.A.M.P.|9|Weekly||1000|0069226E
-Build a Heavy Cryo Turret in a Workshop or C.A.M.P.|1|Daily||250|0069226D
-Epic - Catch a Disease|1|Daily||400|0069226C
-Kill Creatures with the Cold Shoulder|30|Weekly||1000|0069226B
-Kill Radstags during The Mothman Equinox event|5|Daily||250|0069226A
-Kill Creatures with the Cold Shoulder|10|Daily||250|00692269
-Sell Missile Launcher to an NPC vendor|1|Weekly||1000|00692268
-Sell Pumpkin Pie to an NPC vendor|1|Weekly||1000|00692267
-Sell Mirelurk Queen Steak to an NPC vendor|1|Weekly||1000|00692266
-Sell Scorchbeast Steak to an NPC vendor|1|Weekly||1000|00692265
-Sell Yao Guai Ribs to an NPC vendor|1|Weekly||1000|00692264
-Sell Mothman Egg Omelette to an NPC vendor|1|Daily||250|00692263
-Sell Ribeye Steak to an NPC vendor|1|Daily||250|00692262
-Sell Mutant Hound Chops to an NPC vendor|1|Daily||250|00692261
-Sell Wolf Ribs to an NPC vendor|1|Daily||250|00692260
-Sell Glowing Fungus Soup to an NPC vendor|1|Daily||250|0069225F
-Epic - Read a Magazine|1|Daily||400|006902AD
-Epic - Rank up a Perk Card|3|Daily||400|006902AC
-Epic - Hack a Terminal|3|Daily||400|006902AB
-Epic - Pick a Lock|3|Daily||400|006902AA
-Epic - Take a Camera Picture of a Power Armored Blood Eagle|1|Daily||400|006902A9
-Epic - Take a Camera Picture of a Hermit Crab|1|Daily||400|006902A8
-Epic - Take a Camera Picture of a Mirelurk King|1|Daily||400|006902A7
-Epic - Take a Camera Picture of a Honey Beast|1|Daily||400|006902A6
-Epic - Take a Camera Picture of a Super Mutant Behemoth|1|Daily||400|006902A5
-Epic - Build a Heavy machinegun turret in a Workshop or C.A.M.P.|5|Daily||400|006902A4
-Epic - Plant a Crop in a Workshop or C.A.M.P.|16|Daily||400|006902A3
-Epic - Build a Decoration in a Shelter|10|Daily||400|006902A2
-Epic - Claim a Workshop|3|Daily||400|006902A1
-Epic - Build a Turret or Trap in a Workshop or C.A.M.P. in Free Cam|6|Daily||400|006902A0
-Epic - Craft a Grenade, Mine, or Thrown Weapon|10|Daily||400|0069029F
-Epic - Scrap junk to produce Ballistic Fiber|5|Daily||400|0069029E
-Epic - Scrap Pre-War Money|10|Daily||400|0069029D
-Epic - Scrap a Board Game|2|Daily||400|0069029C
-Epic - Mod a Weapon|5|Daily||400|0069029B
-Epic - Drink Nuka-Cola|6|Daily||400|0069029A
-Epic - Consume Radscorpion Meat|3|Daily||400|00690299
-Epic - Collect a Bobblehead|1|Daily||400|00690298
-Epic - Collect a Magazine|1|Daily||400|00690297
-Epic - Collect Caps|400|Daily||400|00690296
-Epic - Kill a Mole Miner with Automatic Weapons|5|Daily||400|00690295
-Epic - Destroy a Robot with a Blunt Weapon|5|Daily||400|00690294
-Epic - Kill Super Mutants with a Shotgun|5|Daily||400|00690293
-Epic - Kill Glowing Trogs|3|Daily||400|00690292
-St Patrick's Day: Kill Enemies with Green Weapons|3|Event||1000|0068DE15
-St Patrick's Day: Take Photos of Green Creatures|3|Event||1000|0068DE11
-Complete Daily or Weekly Challenges while wearing Bunny Ears|5|Event||1000|0068DE10
-Eat Mystery Candy|3|Daily||250|0068DBE4
-Cripple a Protectron or a Robobrain's Arm|16|Weekly||1000|0068DBE3
-Collect Mothman Eggs|5|Daily||250|0068DBE2
-Kill Cultists during The Mothman Equinox event with the Cold Shoulder|30|Weekly||1000|0068DBE1
-Cripple a Protectron or a Robobrain's Arm|2|Daily||250|0068DBE0
-Hunt Rabbits|2|Daily|🐰|250|0068DBDF
-Kill Cryptids with the Cold Shoulder|3|Weekly||1000|0068DBDD
-Collect Mirelurk Eggs|5|Daily||250|0068DBDC
-Cripple a Spooky Scorched's Leg|10|Daily||250|0068DBDB
-Cripple a Deathclaw's Head|3|Weekly||1000|0068DBDA
-Collect Deathclaw eggs|1|Daily||250|0068DBD9
-Cripple a Ghoul's Leg|15|Weekly||1000|0068DBD8
-Kill a Cryptid with the Cold Shoulder|1|Daily||250|0068DBD7
-Cripple a Human's Head|15|Weekly||1000|0068DBD6
-Cripple a Spooky Scorched's Leg|10|Weekly||1000|0068DBD5
-Cripple a Human's Head|2|Daily||250|0068DBD4
-Kill Cultists during The Mothman Equinox event with the Cold Shoulder|10|Daily||250|0068DBD3
-Cripple a Ghoul's Leg|2|Daily||250|0068DBD2
-Eat a Cobbler, which is not a Pie.|1|Daily||250|0068D9AB
-Deal Cryo Damage to enemies|300|Weekly||1000|0068AA72
-Deal Cryo Damage to enemies|300|Daily||250|0068AA71
-Deal Fire Damage to Enemies|500|Weekly||1000|0068AA70
-Deal Fire Damage to Enemies|100|Daily||250|0068AA6F
-Deal a Critical Hit to an Enemy using Automatic Weapons in VATS|10|Weekly||1000|0068AA6E
-Deal a Critical Hit to an Enemy using Automatic Weapons in VATS|5|Daily||250|0068AA6D
-Kill Cultists during The Mothman Equinox event|30|Weekly||1000|0068AA6C
-Kill Cultists during The Mothman Equinox event|10|Daily||250|0068AA6B
-Build Defense, Appliance or Crafting items in a Workshop or C.A.M.P.|10|Weekly||1000|0068AA6A
-Build Defense, Appliance, or Crafting items in a Workshop or C.A.M.P.|3|Daily||250|0068AA69
-Kill a Cryptid with a Railway Rifle or Missile launcher|3|Weekly||1000|0068AA68
-Epic - Kill a Cryptid with a Melee Weapon|3|Weekly||1500|0068AA67
-Kill a Cryptid with a Bow or Crossbow|3|Weekly||1000|0068AA66
-Build a Turret or Trap in a Workshop or C.A.M.P.|10|Weekly||1000|0068AA65
-Kill Enemies with Fists Weapons while intoxicated on Nuka-Cola Dark|3|Weekly||1000|0068AA64
-Epic - Destroy Robots with an Energy Weapon|15|Weekly||1500|0068AA63
-Epic - Kill Cultists with a Shotgun|25|Weekly||1500|0068AA62
-Consume a Nukashine in a Teammate's C.A.M.P.|1|Weekly||1000|0068AA61
-Build light sources in a Workshop or C.A.M.P.|10|Weekly||1000|0068AA60
-Collect Legendary Modules|10|Weekly||1000|0068AA5F
-Collect Stimpaks or Chems|20|Weekly||1000|0068AA5E
-Collect Pre-war Food|20|Weekly||1000|0068AA5D
-Take a Picture of a Sheepsquatch|1|Weekly||1000|0068AA5C
-Take a Picture of a Wendigo|1|Weekly||1000|0068AA5B
-Take a Picture of a Grafton Monster|1|Weekly||1000|0068AA5A
-Build a Turret or Trap in a Workshop or C.A.M.P.|3|Daily||250|0068AA59
-Build light sources in a Workshop or C.A.M.P.|3|Daily||250|0068AA58
-Kill Cultists with a Shotgun|5|Daily||250|0068AA55
-Kill a Cryptid with a Railway Rifle or Missile launcher|1|Daily||250|0068AA54
-Kill a Cryptid with a Bow or Crossbow|1|Daily||250|0068AA52
-Collect Stimpaks or Chems|5|Daily||250|0068AA51
-Collect Pre-war Food|5|Daily||250|0068AA50
-Take a Camera Picture of a Radscorpion|1|Daily||250|0068AA4F
-Take a Camera Picture of a Snallygaster|1|Daily||250|0068AA4E
-Build Anything in a Shelter in Free Cam|10|Daily||250|00682915
-Drink Nuka-Twist|5|Weekly||1000|00682914
-Drink Nuka-Twist|2|Daily||250|00682913
-Build a Floor, Wall, or Roof in a Shelter in Free Cam|10|Daily||250|00682911
-Build a Decoration in a Shelter in Free Cam|5|Daily||250|0068290F
-Kill a Festive Scorched while on a Team and Wearing a Costume|10|Daily||250|00681818
-Kill a Festive Scorched while on a Team|10|Daily||250|00681817
-Consume an Alcoholic Beverage while on a Team and Wearing a Costume|10|Daily||250|00681816
-Consume an Alcoholic Beverage while on a Team|5|Daily||250|00681815
-Kill a Radstag|5|Daily||250|00681814
-Collect or Scrap Coal|5|Daily||250|00681813
-Eat a Cooked Meal in a Teammate's C.A.M.P.|5|Daily||250|00681812
-Complete the Event: "Fasnacht Day" while wearing a Fasnacht Mask|1|Daily||250|00681811
-Build a Decoration in a Workshop or C.A.M.P. in Free Cam|25|Weekly||1000|00681810
-Build Anything in a Workshop or C.A.M.P. in Free Cam|25|Weekly||1000|0068180F
-Plant a Crop in a Workshop or C.A.M.P. in Free Cam|25|Weekly||1000|0068180E
-Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam|25|Weekly||1000|0068180D
-Plant a Crop in a Workshop or C.A.M.P. in Free Cam|10|Daily||250|0068180C
-Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam|10|Daily||250|0068180B
-Build Anything in a Workshop or C.A.M.P. in Free Cam|10|Daily||250|0068180A
-Build a Decoration in a Workshop or C.A.M.P. in Free Cam|5|Daily||250|00681809
-Complete Events at Nuka-World On Tour|2|Weekly||1000|00678054
-Take a Camera Picture at Nuka-World On Tour|1|Daily||250|00678053
-Use Photomode to Take a Photo at Nuka-World On Tour|1|Daily||250|00678052
-Complete the Event: "Seismic Activity"|1|Weekly||1000|00677A13
-Take a Camera Picture of the Ultracite Abomination|1|Weekly||1000|00677A12
-Use Photomode to Take a Photo in Camden Park|1|Daily||250|00677A11
-Drink Nuka-Cola Wild|5|Weekly||1000|00677A10
-Drink Nuka-Cola Quantum|5|Weekly||1000|00677A0F
-Drink Nuka-Orange|5|Weekly||1000|00677A0E
-Drink Nuka-Grape|5|Weekly||1000|00677A0D
-Drink Nuka-Cola Dark|5|Weekly||1000|00677A0C
-Drink Nuka-Cola Cranberry|5|Weekly||1000|00677A0B
-Drink Nuka-Cherry|5|Weekly||1000|00677A0A
-Collect any flavor of Nuka-Cola|20|Weekly||1000|00677A09
-Complete the Event: "Tunnel Of Love"|1|Daily||250|00677A08
-Complete the Event: "Spin The Wheel"|1|Daily||250|00677A07
-Complete the Event: "Most Wanted"|1|Daily||250|00677A06
-Take a Camera Picture in Camden Park|1|Daily||250|00677A04
-Drink Nuka-Cola Wild|2|Daily||250|00677A03
-Drink Nuka-Cola Quantum|2|Daily||250|00677A02
-Drink Nuka-Orange|2|Daily||250|00677A01
-Drink Nuka-Grape|2|Daily||250|00677A00
-Drink Nuka-Cola Dark|2|Daily||250|006779FF
-Drink Nuka-Cola Cranberry|2|Daily||250|006779FE
-Drink Nuka-Cherry|2|Daily||250|006779FD
-Collect any flavor of Nuka-Cola|5|Daily||250|006779FC
-Scrap Headwear|10|Weekly||1000|0066986B
-Epic - Kill Super Mutants with a Heavy Gun|25|Weekly||1500|0066986A
-Kill a Snallygaster|10|Weekly||1000|00669869
-Destroy Robots with a Rifle|25|Weekly||1000|00669868
-Destroy a Robot|30|Weekly||1000|00669867
-Kill a Mole Miner|30|Weekly||1000|00669866
-Epic - Kill Insects with an Energy Weapon|15|Weekly||1500|00669865
-Kill Insects|30|Weekly||1000|00669864
-Kill a Honey Beast|5|Weekly||1000|00669863
-Kill a Gulper|10|Weekly||1000|00669862
-Kill a Floater|10|Weekly||1000|00669861
-Epic - Kill Feral Ghouls with a Shotgun|25|Weekly||1500|00669860
-Epic - Kill Cultists with a Sharp Weapon|25|Weekly||1500|0066985F
-Epic - Kill a Blood Eagle with a Blunt Weapon|25|Weekly||1500|0066985E
-Destroy an Assaultron|5|Weekly||1000|0066985D
-Kill Animals with a Pipe Gun|25|Weekly||1000|0066985C
-Scrap junk to produce Wood|30|Weekly||1000|0066985B
-Scrap junk to produce Steel|30|Weekly||1000|0066985A
-Scrap junk to produce Springs|15|Weekly||1000|00669859
-Scrap junk to produce Silver|10|Weekly||1000|00669858
-Scrap junk to produce Screws|15|Weekly||1000|00669857
-Scrap junk to produce Rubber|30|Weekly||1000|00669856
-Scrap junk to produce Plastic|30|Weekly||1000|00669855
-Scrap junk to produce Oil|15|Weekly||1000|00669854
-Scrap junk to produce Leather|30|Weekly||1000|00669853
-Scrap junk to produce Lead|30|Weekly||1000|00669852
-Scrap junk to produce Gold|10|Weekly||1000|00669851
-Scrap junk to produce Glass|30|Weekly||1000|00669850
-Scrap junk to produce Gears|15|Weekly||1000|0066984F
-Scrap junk to produce Fiber Optics|10|Weekly||1000|0066984E
-Scrap junk to produce Fiberglass|15|Weekly||1000|0066984D
-Scrap junk to produce Fertilizer|15|Weekly||1000|0066984C
-Scrap junk to produce Crystal|15|Weekly||1000|0066984B
-Scrap junk to produce Cork|15|Weekly||1000|0066984A
-Scrap junk to produce Copper|15|Weekly||1000|00669849
-Scrap junk to produce Concrete|30|Weekly||1000|00669848
-Scrap junk to produce Cloth|30|Weekly||1000|00669847
-Scrap junk to produce Circuitry|15|Weekly||1000|00669846
-Scrap junk to produce Ceramic|15|Weekly||1000|00669845
-Scrap junk to produce Bone|15|Weekly||1000|00669844
-Scrap junk to produce Black Titanium|10|Weekly||1000|00669843
-Scrap junk to produce Ballistic Fiber|10|Weekly||1000|00669842
-Scrap junk to produce Asbestos|15|Weekly||1000|00669841
-Scrap junk to produce Antiseptic|15|Weekly||1000|00669840
-Scrap junk to produce Aluminum|15|Weekly||1000|0066983F
-Scrap junk to produce Adhesive|15|Weekly||1000|0066983E
-Scrap junk to produce Acid|15|Weekly||1000|0066983D
-Scrap Headwear|1|Daily||250|006696D6
-Kill a Snallygaster|3|Daily||250|006696D4
-Kill Insects|5|Daily||250|006696D1
-Kill a Honey Beast|1|Daily||250|006696D0
-Kill a Gulper|3|Daily||250|006696CF
-Kill a Floater|3|Daily||250|006696CE
-Destroy an Assaultron|1|Daily||250|006696CA
-Kill Animals with a Pipe Gun|3|Daily||250|006696C9
-Scrap junk to produce Wood|10|Daily||250|006696C8
-Scrap junk to produce Steel|10|Daily||250|006696C7
-Scrap junk to produce Silver|3|Daily||250|006696C6
-Scrap junk to produce Oil|5|Daily||250|006696C5
-Scrap junk to produce Leather|10|Daily||250|006696C4
-Scrap junk to produce Lead|10|Daily||250|006696C3
-Scrap junk to produce Gold|3|Daily||250|006696C2
-Scrap junk to produce Glass|10|Daily||250|006696C1
-Scrap junk to produce Gears|5|Daily||250|006696C0
-Scrap junk to produce Fiber Optics|3|Daily||250|006696BF
-Scrap junk to produce Fiberglass|5|Daily||250|006696BE
-Scrap junk to produce Fertilizer|5|Daily||250|006696BD
-Scrap junk to produce Crystal|5|Daily||250|006696BC
-Scrap junk to produce Cork|5|Daily||250|006696BB
-Scrap junk to produce Copper|5|Daily||250|006696BA
-Scrap junk to produce Concrete|10|Daily||250|006696B9
-Scrap junk to produce Cloth|10|Daily||250|006696B8
-Scrap junk to produce Circuitry|5|Daily||250|006696B7
-Scrap junk to produce Ceramic|5|Daily||250|006696B6
-Scrap junk to produce Bone|5|Daily||250|006696B5
-Scrap junk to produce Black Titanium|3|Daily||250|006696B4
-Scrap junk to produce Ballistic Fiber|3|Daily||250|006696B3
-Scrap junk to produce Asbestos|5|Daily||250|006696B2
-Scrap junk to produce Antiseptic|5|Daily||250|006696B1
-Scrap junk to produce Adhesive|5|Daily||250|006696B0
-Scrap junk to produce Acid|5|Daily||250|006696AF
-Expeditions: Collect Stamps|5|Weekly|🗺️|1000|006679E8
-Collect Vertibird Fuel|300|Weekly|🗺️|1000|006679E7
-Collect Vertibird Fuel|100|Daily|🗺️|250|006679E6
-Expeditions: Complete Mutual Aid|1|Daily|🗺️|250|00667536
-Repair an Auto Axe|1|Daily||250|006648FA
-Kill a Trog with an Auto Axe|30|Weekly||1000|006648F9
-Kill a Trog Superior or Trog Devourer|1|Daily||250|006648F8
-Kill a Trog Fledgling|10|Daily||250|006648F7
-Kill a Trog|10|Daily||250|006648F6
-Expeditions - From Ashes to Fire: Collect Fallen Prisoners' Collars|5|Weekly|🗺️|1000|006648F5
-Kill a Fanatic Conqueror|1|Daily||250|006648F4
-Kill a Fanatic|10|Daily||250|006648F3
-Use Photomode to Take a Photo in The Pitt!|1|Weekly|🗺️|1000|006648F2
-Expeditions: Complete any mission in the Pitt while wearing Union Power Armor|1|Weekly|🗺️|1000|006648F1
-Complete an encounter at the Whitespring Refuge|1|Daily||250|006648F0
-Expeditions: Complete any mission in The Pitt while in a Team|1|Weekly|🗺️|1000|006648EF
-Kill an enemy with an Auto Axe|20|Daily||250|006648EE
-Take a Camera Picture of a Fanatic Conqueror|1|Weekly||1000|006648ED
-Expeditions: Complete any mission in the Pitt while wearing a Responders outfit|1|Weekly|🗺️|1000|006648EC
-Take a Camera Picture of a Trog Superior or Trog Devourer in The Pitt!|1|Weekly||1000|006648EB
-Mod an Auto Axe|1|Daily||250|006648EA
-Kill a Trog|50|Weekly||1000|006648E9
-Kill a Fanatic|50|Weekly||1000|006648E8
-Kill a Glowing Trog|1|Daily||250|006648E7
-Kill a Trog with an Auto Axe|5|Daily||250|006648E6
-Expeditions - Union Dues: Collect Steel Ingots from The Pitt!|5|Weekly|🗺️|1000|006648E5
-Destroy a Robot with an Auto Axe|10|Daily||250|006648E4
-Complete an encounter at the Whitespring Refuge|5|Weekly||1000|006648E3
-Kill a Fanatic with an Auto Axe|30|Weekly||1000|006648E2
-Destroy a Fanatic Protectron|5|Daily||250|006648E1
-Kill a Fanatic with an Auto Axe|5|Daily||250|006648E0
-Destroy a Protectron while intoxicated by Hard Lemonade|1|Daily||250|00655D30
-Kill a Creature while intoxicated by Hard Lemonade|5|Daily||250|00655D2F
-Complete a "Photograph Creature" Daily Challenge|5|Weekly||1000|00655D2E
-Complete a "While Intoxicated" Daily Challenge|5|Weekly||1000|00655D2D
-Kill a Creature while intoxicated by Lead Champagne|5|Daily||250|00655D2C
-Take a Camera Picture of a Super Mutant|1|Daily||250|00655D2B
-Take a Camera Picture of a Super Mutant while intoxicated by Lead Champagne|1|Daily||250|00655D2A
-Kill a Super Mutant while intoxicated by Lead Champagne|1|Daily||250|00655D29
-Kill a Creature while intoxicated by Mire Magic Moonshine|5|Daily||250|00655D28
-Take a Camera Picture of a Gulper while intoxicated by Mire Magic Moonshine|1|Daily||250|00655D27
-Take a Camera Picture of a Gulper|1|Daily||250|00655D26
-Kill a Gulper while intoxicated by Mire Magic Moonshine|1|Daily||250|00655D25
-Complete an "Event in Region" Daily Challenge|5|Weekly||1000|006510AF
-Complete the Event: "Test Your Metal"|5|Weekly||1000|00650F5D
-Complete the Event: "Moonshine Jamboree"|5|Weekly||1000|00650F5C
-Complete the Event: "Eviction Notice"|5|Weekly||1000|00650F5B
-Complete the "Test Your Metal" Daily Challenge|5|Weekly||1000|00650F5A
-Complete the "Moonshine Jamboree" Daily Challenge|5|Weekly||1000|00650F59
-Complete the "Eviction Notice" Daily Challenge|5|Weekly||1000|00650F58
-Complete the Event: "Test Your Metal"|1|Daily||250|00650F57
-Complete the Event: "Eviction Notice"|1|Daily||250|00650F56
-Complete the Event: "Moonshine Jamboree"|1|Daily||250|00650F55
-Expeditions: Complete a Refuge Daily!|1|Weekly|🗺️|1000|0064B9BC
-Expeditions: Complete Recipe for Success|1|Daily|🗺️|250|0064B9BB
-Expeditions: Complete Code Blue|1|Daily|🗺️|250|0064B9BA
-Expeditions: Complete A Refugee's Guide|1|Daily|🗺️|250|0064B9B9
-Expeditions: Complete a Refuge Daily|1|Daily|🗺️|250|0064B9B8
-Expeditions: Complete any Mission!|1|Weekly|🗺️|1000|0064B9B7
-Expeditions: Complete any mission in The Pitt!|1|Weekly|🗺️|1000|0064B9B6
-Expeditions: Complete From Ashes to Fire in The Pitt!|1|Weekly|🗺️|1000|0064B9B5
-Expeditions: Complete Union Dues in The Pitt!|1|Weekly|🗺️|1000|0064B9B4
-Complete Expeditions Daily Challenges|3|Weekly|🗺️|1000|0064B9B3
-Expeditions: Complete a mission in The Pitt|1|Daily|🗺️|250|0064B9B2
-Kill a Creature while Well Fed|10|Daily||250|0063EF8C
-Kill a Creature while Well Fed|20|Weekly||1000|0063EF8B
-Complete an Event while Well Fed|1|Daily||250|0063EF8A
-Take a Camera Picture of an Alien Enemy|1|Daily||250|0063EF89
-Take a Camera Picture of Captain Alpha|1|Weekly||1000|0063EF88
-Take a Camera Picture of Lieutenant Kappa|1|Weekly||1000|0063EF87
-Complete an Event while Well Fed|10|Weekly||1000|0063EF86
-Take a Camera Picture of Captain Omega|1|Weekly||1000|0063EF85
-Take a Camera Picture of an Alien Invader|1|Daily||250|0063EF84
-Take a Camera Picture of an Alien Drone|1|Daily||250|0063EF83
-Complete the Event: "Invaders From Beyond"|5|Weekly||1000|0063EB41
-Kill a Spooky Scorched|10|Weekly||1000|0063EB40
-Kill a Spooky Scorched|10|Daily||250|0063EB3F
-Complete the "Invaders From Beyond" Daily Challenge|5|Weekly||1000|0063EB3E
-Complete the Event: "Invaders From Beyond"|1|Daily||250|0063EB3D
-Take a Camera Picture of General Zeta|1|Weekly||1000|0063EB3C
-Complete a "Grahm's Meat-Cook" Daily Challenge|5|Weekly||1000|0063001C
-Complete the "Fasnacht" Daily Challenge|5|Weekly||1000|0063001B
-Kill a Festive Scorched|10|Weekly||1000|0062FE9C
-Kill a Festive Scorched|10|Daily||250|0062FE9B
-Complete the "The Mothman Equinox" Daily Challenge|5|Weekly||1000|0062FE99
-Complete the Event: "The Mothman Equinox"|5|Weekly||1000|0062FE98
-Complete the Event: "The Mothman Equinox"|1|Daily||250|0062FE97
-Collect Legendary Scrip|500|Weekly||1000|0062FE96
-Collect Gold Bullion|150|Weekly||1000|0062FE95
-Collect Gold Bullion|20|Daily||250|0062FE93
-Collect Legendary Scrip|50|Daily||250|0062FE92
-Complete an Event while Wearing a Costume|2|Weekly||1000|00621172
-Complete an Event while Wearing a Costume|1|Daily||250|00621171
-Kill a Creature while Wearing a Costume|20|Weekly||1000|0062116E
-Kill a Creature while Wearing a Costume|10|Daily||250|0062116D
-Kill a Treasure Hunter|1|Daily||250|0060EC37
-Complete the Event: "Fasnacht Day"|1|Daily||250|0060EC30
-Under Rank 75: Gain XP|1000|Daily||50|0060E6D9
-Under Rank 50: Gain XP|1000|Daily||50|0060E6D8
-Under Rank 25: Gain XP|1000|Daily||50|0060E6D7
-Above Rank 100: Gain XP|1000|Daily||50|0060E6D6
-Above Rank 100: Gain XP|1000|Weekly||100|0060E6D5
-Complete the Event: "Primal Cuts"|1|Daily||250|0060E6D4
-Complete the Event: "Grahm's Meat-Cook"|1|Daily||250|0060E6D3
-Complete the Event: "Riding Shotgun"|1|Weekly||1000|0060E6D2
-Complete the Event: "Radiation Rumble"|1|Weekly||1000|0060E6D1
-Complete the Event: "Project Paradise"|1|Weekly||1000|0060E6D0
-Complete the Event: "Grahm's Meat-Cook"|5|Weekly||1000|0060E6CF
-Under Rank 75: Gain XP|1000|Weekly||100|0060E6CE
-Under Rank 50: Gain XP|1000|Weekly||100|0060E6CD
-Under Rank 25: Gain XP|1000|Weekly||100|0060E6CC
-Complete the Event: "Fasnacht Day"|5|Weekly||1000|0060E6CB
-Complete the Event: "Scorched Earth"|1|Weekly||1000|0060E6CA
-Visit your Shelter|5|Weekly||1000|005EBE96
-Visit another Player's Shelter|3|Weekly||1000|005EBE95
-Complete Shelters Daily Challenges!|3|Weekly||1000|005EBE94
-Visit your Shelter|1|Daily||250|005EBE93
-Visit another Player's Shelter|1|Daily||250|005EBE92
-Build a Floor, Wall, or Roof in a Shelter|10|Daily||250|005EBE91
-Build Anything in a Shelter|10|Daily||250|005EBE90
-Build a Decoration in a Shelter|5|Daily||250|005EBE8F
-Buy an item from or Sell an item to another Player|15|Weekly||1000|005E4B61
-Scrap Pre-War Money|50|Weekly||1000|005E4B60
-Repair Armor, Weapons, or Power Armor|10|Weekly||1000|005E4B5F
-Complete the Event: "Encryptid"|1|Weekly||1000|005E4B5E
-Kill a Glowing Creature|10|Weekly||1000|005E4B5D
-Kill a Cultist|30|Weekly||1000|005E4B5C
-Kill a Blood Eagle|30|Weekly||1000|005E4B5B
-Craft Ammo at a Workbench|250|Weekly||1000|005E4B5A
-Drink Nuka-Cola|25|Weekly||1000|005E4B59
-Eat Pre-war Food|25|Weekly||1000|005E4B58
-Eat a Meat-based Meal|10|Weekly||1000|005E4B57
-Eat a Cooked Meal|30|Weekly||1000|005E4B56
-Consume an Alcoholic Beverage|15|Weekly||1000|005E4B55
-Collect Purified Water|25|Weekly||1000|005E4B54
-Collect Caps|2500|Weekly||1000|005E4B53
-Build a Floor, Wall, or Roof in a Workshop or C.A.M.P.|25|Weekly||1000|005E4B52
-Plant a Crop in a Workshop or C.A.M.P.|25|Weekly||1000|005E4B51
-Build Anything in a Workshop or C.A.M.P.|25|Weekly||1000|005E4B50
-Build a Decoration in a Workshop or C.A.M.P.|25|Weekly||1000|005E4B4F
-Gain XP|2500|Daily||250|005E4B4E
-Complete the Event: "A Colossal Problem"|1|Weekly||1000|005D2AFB
-Complete Daily Operations Daily Challenges!|5|Weekly||1000|005D22E4
-Complete Daily Operations on a Public Team!|5|Weekly||1000|005D22DF
-Complete Daily Operations!|7|Weekly||1000|005D22DD
-Complete a Daily Operation on a Public Team!|1|Daily||250|005D22DC
-Complete a Daily Operation!|1|Daily||250|005D22DA
-Kill a Blood Eagle|10|Daily||250|005C6EC8
-Kill a Cultist|10|Daily||250|005C6EC7
-Repeatable Under Rank 100: Complete a Public Event|1|Weekly|🔁|100|005C5E4A
-Claim a Workshop|3|Weekly||1000|005C2FE4
-Kill a Legendary Enemy|5|Weekly||1000|005C2FE3
-Complete an Event while in a Team|1|Daily||250|005C2FE2
-Kill a Creature|20|Weekly||1000|005C2FE1
-Repeatable Under Rank 100: Gain XP|10000|Weekly|🔁|100|005B759D
-Gold Star: Complete a Daily Challenge|6|Daily|⭐|1000|005B759C
-Complete a Gold Star Daily Challenge!|3|Weekly|⭐|1500|005B73E6
-Level up!|3|Weekly||1000|005B73E5
-Use Photomode in your own C.A.M.P.|1|Daily||250|0054767A
-Use Photomode in a Teammate's C.A.M.P.|1|Daily||250|00547679
-Mod a piece of Armor|5|Daily||250|0050DC30
-Join a Team with another Player|1|Daily||250|0050DC17
-Scrap Pre-War Money|5|Daily||250|0050DBE3
-Scrap junk to produce Rubber|5|Daily||250|0050DBDA
-Build up a Workshop or C.A.M.P.|5|Weekly||1000|0050DBB1
-Collect Purified Water|5|Daily||250|0050DBAE
-Buy an item from or Sell an item to another Player|1|Daily||250|0050DBA8
-Scrap junk to produce Springs|5|Daily||250|0050DB9C
-Scrap junk to produce Screws|5|Daily||250|0050DB9A
-Scrap junk to produce Plastic|10|Daily||250|0050DB99
+Collect Caps|100|Daily||250|003B7FDA
+Epic - Kill the Mothman|1|Daily||400|003B8011
+Kill a Cryptid|1|Daily||250|003B7FFF
+Craft a Grenade, Mine, or Thrown Weapon|5|Daily||250|003B7FAA
+Cook a Meat-Based Meal|5|Daily||250|003B7FC2
+Cook a Meal with Plants or Fungi|5|Daily||250|003B7FC1
+Kill a Deathclaw|1|Daily||250|003B8008
+Craft Ammo at a Workbench|50|Daily||250|003B7FB4
+Craft or Scrap Armor|5|Daily||250|003B7FE0
+Craft or Scrap a piece of Power Armor|1|Daily||250|003B7FE5
+Level up!|1|Daily||250|003B8024
+Scrap junk to produce Aluminum|5|Daily||250|003B8047
+Use Photomode to Take a Photo|3|Daily||250|003B8043
+Kill a Mole Miner|10|Daily||250|0050C5DA
+Build Anything in a Workshop or C.A.M.P.|10|Daily||250|0050C5FE
+Collect an audio Holotape|1|Daily||250|0050C5FA
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P.|10|Daily||250|0050C5F2
+Collect Wood|5|Daily||250|0050C5EC
 Kill a Super Mutant|5|Daily||250|0050C611
 Kill a Scorched|10|Daily||250|0050C60A
 Build a Decoration in a Workshop or C.A.M.P.|5|Daily||250|0050C600
-Build Anything in a Workshop or C.A.M.P.|10|Daily||250|0050C5FE
-Collect an audio Holotape|1|Daily||250|0050C5FA
-Kill a Mirelurk|5|Daily||250|0050C5F5
-Build a Floor, Wall, or Roof in a Workshop or C.A.M.P.|10|Daily||250|0050C5F2
-Collect Wood|5|Daily||250|0050C5EC
-Kill a Creature|12|Daily||250|0050C5DE
 Kill a Creature while in a Team|10|Daily||250|0050C5DC
-Kill a Mole Miner|10|Daily||250|0050C5DA
 Kill a Feral Ghoul|10|Daily||250|0050C5D0
-Kill a Legendary Creature|5|Weekly||1000|0048681C
-Destroy Assorted Robots|5|Weekly||1000|00486814
-Kill a Huge Creature|3|Weekly||1000|00486801
-Gather Building Supplies|5|Weekly||1000|0048638E
-Complete an Event while in a Team|10|Weekly||1000|00452EE6
-Harvest a Wild Plant or Fungi|30|Weekly||1000|00452ED0
-Craft or Scrap Clothing, Armor or a Weapon|25|Weekly||1000|00452ECF
-Deal a Critical Hit to an Enemy in VATS|25|Weekly||1000|00452E6B
-Complete an Event|1|Daily||250|004502ED
-Eat a Meat-based Meal|10|Daily||250|0044D4BA
-Eat Dog Food|5|Daily||250|0044D4B4
-Mod a Weapon|3|Daily||250|0044D4B2
-Craft or Scrap a Melee Weapon|5|Daily||250|0044D4AC
-Craft or Scrap a Ranged Weapon|5|Daily||250|0044D4AA
+Kill a Creature|12|Daily||250|0050C5DE
+Kill a Mirelurk|5|Daily||250|0050C5F5
+Scrap Pre-War Money|5|Daily||250|0050DBE3
+Scrap junk to produce Screws|5|Daily||250|0050DB9A
+Collect Purified Water|5|Daily||250|0050DBAE
+Build up a Workshop or C.A.M.P.|5|Weekly||1000|0050DBB1
+Buy an item from or Sell an item to another Player|1|Daily||250|0050DBA8
+Scrap junk to produce Plastic|10|Daily||250|0050DB99
+Scrap junk to produce Rubber|5|Daily||250|0050DBDA
+Scrap junk to produce Springs|5|Daily||250|0050DB9C
+Join a Team with another Player|1|Daily||250|0050DC17
+Mod a piece of Armor|5|Daily||250|0050DC30
+Eat a Plant-based Meal|10|Daily||250|0043A180
+Hack a Terminal|1|Daily||250|0043A182
+Eat Pre-war Food|5|Daily||250|0043A185
+Complete an Event or Activity|3|Weekly||1000|0043A1CA
+Claim a Workshop|1|Daily||250|0043A1C7
+Eat a Cooked Meal|10|Daily||250|0043A1BC
+Plant a Crop in a Workshop or C.A.M.P.|5|Daily||250|0043A1B7
+Use Photomode while in a Team|1|Daily||250|0043A198
+Kill a Legendary Enemy|1|Daily||250|0043A1B9
+Pick a Lock|1|Daily||250|0043A1A2
+Complete a Daily Quest|1|Daily||250|0043A1C3
 Eat a Cake, Pie, or Candy|5|Daily||250|0044D468
-Chew some Bubblegum|1|Daily||250|0044D465
-Drink Nuka-Cola|3|Daily||250|0044D463
-Scrap a Board Game|1|Daily||250|0044D45C
+Rank up a Perk Card|1|Daily||250|0044D437
 Harvest a Wild Plant or Fungi|12|Daily||250|0044D452
+Scrap a Board Game|1|Daily||250|0044D45C
+Complete a Quest|1|Daily||250|0044D433
+Harvest Corn, Razorgrain, or a Tato Plant|12|Daily||250|0044D436
+Drink Nuka-Cola|3|Daily||250|0044D463
+Chew some Bubblegum|1|Daily||250|0044D465
 Repair Armor, Weapons, or Power Armor|5|Daily||250|0044D446
 Kill a Glowing Creature|1|Daily||250|0044D444
 Destroy a Robot|10|Daily||250|0044D442
-Rank up a Perk Card|1|Daily||250|0044D437
-Harvest Corn, Razorgrain, or a Tato Plant|12|Daily||250|0044D436
-Complete a Quest|1|Daily||250|0044D433
-Complete an Event|3|Weekly||1000|0043A1CA
-Claim a Workshop|1|Daily||250|0043A1C7
-Complete a Daily Quest|1|Daily||250|0043A1C3
-Eat a Cooked Meal|10|Daily||250|0043A1BC
-Kill a Legendary Enemy|1|Daily||250|0043A1B9
-Plant a Crop in a Workshop or C.A.M.P.|5|Daily||250|0043A1B7
-Pick a Lock|1|Daily||250|0043A1A2
-Use Photomode while in a Team|1|Daily||250|0043A198
-Eat Pre-war Food|5|Daily||250|0043A185
-Hack a Terminal|1|Daily||250|0043A182
-Eat a Plant-based Meal|10|Daily||250|0043A180
-Ferment an Alcoholic Beverage|3|Daily||250|0042CA72
-Epic - Kill a Sheepsquatch|1|Daily||400|0041F3FB
-Kill a Wendigo|1|Daily||250|0041F3F9
-Complete the Event: "Encryptid"|1|Daily||250|004167D6
-Consume a "Vintage" Alcoholic Beverage|1|Daily||250|0040A1DF
-Craft an Alcoholic Beverage|1|Daily||250|003F6CD3
+Mod a Weapon|3|Daily||250|0044D4B2
+Craft or Scrap a Melee Weapon|5|Daily||250|0044D4AC
+Craft or Scrap a Ranged Weapon|5|Daily||250|0044D4AA
+Eat Dog Food|5|Daily||250|0044D4B4
+Eat a Meat-based Meal|10|Daily||250|0044D4BA
+Complete an Event or Activity|1|Daily||250|004502ED
+Craft or Scrap Clothing, Armor or a Weapon|25|Weekly||1000|00452ECF
+Harvest a Wild Plant or Fungi|30|Weekly||1000|00452ED0
+Complete an Event or Activity while in a Team|10|Weekly||1000|00452EE6
+Deal a Critical Hit to an Enemy in VATS|25|Weekly||1000|00452E6B
+Gather Building Supplies|5|Weekly||1000|0048638E
+Destroy Assorted Robots|5|Weekly||1000|00486814
+Kill a Huge Creature|3|Weekly||1000|00486801
+Kill a Legendary Creature|5|Weekly||1000|0048681C
 Consume an Alcoholic Beverage|10|Daily||250|003F6CD0
-Scrap junk to produce Aluminum|5|Daily||250|003B8047
-Use Photomode to Take a Photo|3|Daily||250|003B8043
-Level up!|1|Daily||250|003B8024
-Epic - Kill the Mothman|1|Daily||400|003B8011
-Kill a Deathclaw|1|Daily||250|003B8008
-Kill a Cryptid|1|Daily||250|003B7FFF
-Craft or Scrap a piece of Power Armor|1|Daily||250|003B7FE5
-Craft or Scrap Armor|5|Daily||250|003B7FE0
-Collect Caps|100|Daily||250|003B7FDA
-Cook a Meat-Based Meal|5|Daily||250|003B7FC2
-Cook a Meal with Plants or Fungi|5|Daily||250|003B7FC1
-Craft Ammo at a Workbench|50|Daily||250|003B7FB4
-Craft a Grenade, Mine, or Thrown Weapon|5|Daily||250|003B7FAA
+Craft an Alcoholic Beverage|1|Daily||250|003F6CD3
+Consume a "Vintage" Alcoholic Beverage|1|Daily||250|0040A1DF
+Complete the Event: "Encryptid"|1|Daily||250|004167D6
+Kill a Wendigo|1|Daily||250|0041F3F9
+Epic - Kill a Sheepsquatch|1|Daily||400|0041F3FB
+Ferment an Alcoholic Beverage|3|Daily||250|0042CA72
+Use Photomode in your own C.A.M.P.|1|Daily||250|0054767A
+Use Photomode in a Teammate's C.A.M.P.|1|Daily||250|00547679
+Level up!|3|Weekly||1000|005B73E5
+Complete a Gold Star Daily Challenge!|3|Weekly|⭐|1500|005B73E6
+Repeatable Under Rank 100: Gain XP|10000|Weekly|🔁|100|005B759D
+Gold Star: Complete a Daily Challenge|6|Daily|⭐|1000|005B759C
+Kill a Legendary Enemy|5|Weekly||1000|005C2FE3
+Kill a Creature|20|Weekly||1000|005C2FE1
+Claim a Workshop|3|Weekly||1000|005C2FE4
+Complete an Event or Activity while in a Team|1|Daily||250|005C2FE2
+Repeatable Under Rank 100: Complete a Public Event|1|Weekly|🔁|100|005C5E4A
+Kill a Blood Eagle|10|Daily||250|005C6EC8
+Kill a Cultist|10|Daily||250|005C6EC7
+Complete Daily Operations!|7|Weekly||1000|005D22DD
+Complete a Daily Operation on a Public Team!|1|Daily||250|005D22DC
+Complete Daily Operations on a Public Team!|5|Weekly||1000|005D22DF
+Complete a Daily Operation!|1|Daily||250|005D22DA
+Complete Daily Operations Daily Challenges!|5|Weekly||1000|005D22E4
+Complete the Event: "A Colossal Problem"|1|Weekly||1000|005D2AFB
+Kill a Glowing Creature|10|Weekly||1000|005E4B5D
+Consume an Alcoholic Beverage|15|Weekly||1000|005E4B55
+Plant a Crop in a Workshop or C.A.M.P.|25|Weekly||1000|005E4B51
+Build a Decoration in a Workshop or C.A.M.P.|25|Weekly||1000|005E4B4F
+Gain XP|2500|Daily||250|005E4B4E
+Complete the Event: "Encryptid"|1|Weekly||1000|005E4B5E
+Repair Armor, Weapons, or Power Armor|10|Weekly||1000|005E4B5F
+Eat a Cooked Meal|30|Weekly||1000|005E4B56
+Scrap Pre-War Money|50|Weekly||1000|005E4B60
+Buy an item from or Sell an item to another Player|15|Weekly||1000|005E4B61
+Eat a Meat-based Meal|10|Weekly||1000|005E4B57
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P.|25|Weekly||1000|005E4B52
+Eat Pre-war Food|25|Weekly||1000|005E4B58
+Drink Nuka-Cola|25|Weekly||1000|005E4B59
+Collect Caps|2500|Weekly||1000|005E4B53
+Build Anything in a Workshop or C.A.M.P.|25|Weekly||1000|005E4B50
+Craft Ammo at a Workbench|250|Weekly||1000|005E4B5A
+Kill a Cultist|30|Weekly||1000|005E4B5C
+Collect Purified Water|25|Weekly||1000|005E4B54
+Kill a Blood Eagle|30|Weekly||1000|005E4B5B
+Visit your Shelter|5|Weekly||1000|005EBE96
+Build a Decoration in a Shelter|5|Daily||250|005EBE8F
+Visit another Player's Shelter|3|Weekly||1000|005EBE95
+Visit your Shelter|1|Daily||250|005EBE93
+Build Anything in a Shelter|10|Daily||250|005EBE90
+Visit another Player's Shelter|1|Daily||250|005EBE92
+Build a Floor, Wall, or Roof in a Shelter|10|Daily||250|005EBE91
+Complete Shelters Daily Challenges!|3|Weekly||1000|005EBE94
+Under Rank 25: Gain XP|1000|Daily||50|0060E6D7
+Under Rank 25: Gain XP|1000|Weekly||100|0060E6CC
+Complete the Event: "Scorched Earth"|1|Weekly||1000|0060E6CA
+Under Rank 50: Gain XP|1000|Daily||50|0060E6D8
+Under Rank 75: Gain XP|1000|Daily||50|0060E6D9
+Under Rank 75: Gain XP|1000|Weekly||100|0060E6CE
+Complete the Event: "Primal Cuts"|1|Daily||250|0060E6D4
+Complete the Event: "Grahm's Meat-Cook"|5|Weekly||1000|0060E6CF
+Complete the Event: "Radiation Rumble"|1|Weekly||1000|0060E6D1
+Complete the Event: "Project Paradise"|1|Weekly||1000|0060E6D0
+Complete the Event: "Riding Shotgun"|1|Weekly||1000|0060E6D2
+Above Rank 100: Gain XP|1000|Daily||50|0060E6D6
+Complete the Event: "Grahm's Meat-Cook"|1|Daily||250|0060E6D3
+Complete the Event: "Fasnacht Day"|5|Weekly||1000|0060E6CB
+Under Rank 50: Gain XP|1000|Weekly||100|0060E6CD
+Above Rank 100: Gain XP|1000|Weekly||100|0060E6D5
+Complete the Event: "Fasnacht Day"|1|Daily||250|0060EC30
+Kill a Treasure Hunter|1|Daily||250|0060EC37
+Complete an Event or Activity while Wearing a Costume|1|Daily||250|00621171
+Kill a Creature while Wearing a Costume|20|Weekly||1000|0062116E
+Kill a Creature while Wearing a Costume|10|Daily||250|0062116D
+Complete an Event or Activity while Wearing a Costume|2|Weekly||1000|00621172
+Complete the Event: "The Mothman Equinox"|1|Daily||250|0062FE97
+Collect Legendary Scrip|50|Daily||250|0062FE92
+Collect Legendary Scrip|500|Weekly||1000|0062FE96
+Kill a Festive Scorched|10|Daily||250|0062FE9B
+Collect Gold Bullion|20|Daily||250|0062FE93
+Complete the "The Mothman Equinox" Daily Challenge|5|Weekly||1000|0062FE99
+Complete the Event: "The Mothman Equinox"|5|Weekly||1000|0062FE98
+Kill a Festive Scorched|10|Weekly||1000|0062FE9C
+Collect Gold Bullion|150|Weekly||1000|0062FE95
+Complete the "Fasnacht" Daily Challenge|5|Weekly||1000|0063001B
+Complete a "Grahm's Meat-Cook" Daily Challenge|5|Weekly||1000|0063001C
+Complete the Event: "Invaders From Beyond"|1|Daily||250|0063EB3D
+Complete the "Invaders From Beyond" Daily Challenge|5|Weekly||1000|0063EB3E
+Take a Camera Picture of General Zeta|1|Weekly||1000|0063EB3C
+Kill a Spooky Scorched|10|Daily||250|0063EB3F
+Kill a Spooky Scorched|10|Weekly||1000|0063EB40
+Complete the Event: "Invaders From Beyond"|5|Weekly||1000|0063EB41
+Complete an Event or Activity while Well Fed|1|Daily||250|0063EF8A
+Complete an Event or Activity while Well Fed|10|Weekly||1000|0063EF86
+Take a Camera Picture of an Alien Invader|1|Daily||250|0063EF84
+Take a Camera Picture of an Alien Drone|1|Daily||250|0063EF83
+Take a Camera Picture of Lieutenant Kappa|1|Weekly||1000|0063EF87
+Kill a Creature while Well Fed|20|Weekly||1000|0063EF8B
+Take a Camera Picture of an Alien Enemy|1|Daily||250|0063EF89
+Take a Camera Picture of Captain Omega|1|Weekly||1000|0063EF85
+Kill a Creature while Well Fed|10|Daily||250|0063EF8C
+Take a Camera Picture of Captain Alpha|1|Weekly||1000|0063EF88
+Complete the "Moonshine Jamboree" Daily Challenge|5|Weekly||1000|00650F59
+Complete the Event: "Eviction Notice"|1|Daily||250|00650F56
+Complete the "Eviction Notice" Daily Challenge|5|Weekly||1000|00650F58
+Complete the Event: "Eviction Notice"|5|Weekly||1000|00650F5B
+Complete the Event: "Test Your Metal"|1|Daily||250|00650F57
+Complete the Event: "Test Your Metal"|5|Weekly||1000|00650F5D
+Complete the Event: "Moonshine Jamboree"|1|Daily||250|00650F55
+Complete the "Test Your Metal" Daily Challenge|5|Weekly||1000|00650F5A
+Complete the Event: "Moonshine Jamboree"|5|Weekly||1000|00650F5C
+Complete an "Event in Region" Daily Challenge|5|Weekly||1000|006510AF
+Kill a Creature while intoxicated by Lead Champagne|5|Daily||250|00655D2C
+Kill a Creature while intoxicated by Mire Magic Moonshine|5|Daily||250|00655D28
+Kill a Gulper while intoxicated by Mire Magic Moonshine|1|Daily||250|00655D25
+Take a Camera Picture of a Gulper|1|Daily||250|00655D26
+Take a Camera Picture of a Gulper while intoxicated by Mire Magic Moonshine|1|Daily||250|00655D27
+Complete a "While Intoxicated" Daily Challenge|5|Weekly||1000|00655D2D
+Kill a Super Mutant while intoxicated by Lead Champagne|1|Daily||250|00655D29
+Destroy a Protectron while intoxicated by Hard Lemonade|1|Daily||250|00655D30
+Kill a Creature while intoxicated by Hard Lemonade|5|Daily||250|00655D2F
+Take a Camera Picture of a Super Mutant|1|Daily||250|00655D2B
+Complete a "Photograph Creature" Daily Challenge|5|Weekly||1000|00655D2E
+Take a Camera Picture of a Super Mutant while intoxicated by Lead Champagne|1|Daily||250|00655D2A
+Expeditions: Complete a mission in The Pitt|1|Daily|🗺️|250|0064B9B2
+Complete Expeditions Daily Challenges|3|Weekly|🗺️|1000|0064B9B3
+Expeditions: Complete any mission in The Pitt!|1|Weekly|🗺️|1000|0064B9B6
+Expeditions: Complete any Mission!|1|Weekly|🗺️|1000|0064B9B7
+Expeditions: Complete Union Dues in The Pitt!|1|Weekly|🗺️|1000|0064B9B4
+Expeditions: Complete A Refugee's Guide|1|Daily|🗺️|250|0064B9B9
+Expeditions: Complete a Refuge Daily|1|Daily|🗺️|250|0064B9B8
+Expeditions: Complete Code Blue|1|Daily|🗺️|250|0064B9BA
+Expeditions: Complete Recipe for Success|1|Daily|🗺️|250|0064B9BB
+Expeditions: Complete From Ashes to Fire in The Pitt!|1|Weekly|🗺️|1000|0064B9B5
+Expeditions: Complete a Refuge Daily!|1|Weekly|🗺️|1000|0064B9BC
+Complete an encounter at the Whitespring Refuge|1|Daily||250|006648F0
+Destroy a Robot with an Auto Axe|10|Daily||250|006648E4
+Expeditions: Complete any mission in the Pitt while wearing Union Power Armor|1|Weekly|🗺️|1000|006648F1
+Use Photomode to Take a Photo in The Pitt!|1|Weekly|🗺️|1000|006648F2
+Expeditions - Union Dues: Collect Steel Ingots from The Pitt!|5|Weekly|🗺️|1000|006648E5
+Repair an Auto Axe|1|Daily||250|006648FA
+Kill a Trog Superior or Trog Devourer|1|Daily||250|006648F8
+Kill a Fanatic|10|Daily||250|006648F3
+Kill a Trog|10|Daily||250|006648F6
+Destroy a Fanatic Protectron|5|Daily||250|006648E1
+Kill a Fanatic Conqueror|1|Daily||250|006648F4
+Kill a Trog with an Auto Axe|5|Daily||250|006648E6
+Expeditions - From Ashes to Fire: Collect Fallen Prisoners' Collars|5|Weekly|🗺️|1000|006648F5
+Expeditions: Complete any mission in The Pitt while in a Team|1|Weekly|🗺️|1000|006648EF
+Complete an encounter at the Whitespring Refuge|5|Weekly||1000|006648E3
+Take a Camera Picture of a Fanatic Conqueror|1|Weekly||1000|006648ED
+Kill a Fanatic with an Auto Axe|5|Daily||250|006648E0
+Take a Camera Picture of a Trog Superior or Trog Devourer in The Pitt!|1|Weekly||1000|006648EB
+Kill a Trog|50|Weekly||1000|006648E9
+Kill a Fanatic with an Auto Axe|30|Weekly||1000|006648E2
+Kill a Trog with an Auto Axe|30|Weekly||1000|006648F9
+Kill a Trog Fledgling|10|Daily||250|006648F7
+Kill a Glowing Trog|1|Daily||250|006648E7
+Kill a Fanatic|50|Weekly||1000|006648E8
+Kill an enemy with an Auto Axe|20|Daily||250|006648EE
+Mod an Auto Axe|1|Daily||250|006648EA
+Expeditions: Complete any mission in the Pitt while wearing a Responders outfit|1|Weekly|🗺️|1000|006648EC
+Expeditions: Complete Mutual Aid|1|Daily|🗺️|250|00667536
+Expeditions: Collect Stamps|5|Weekly|🗺️|1000|006679E8
+Collect Vertibird Fuel|100|Daily|🗺️|250|006679E6
+Collect Vertibird Fuel|300|Weekly|🗺️|1000|006679E7
+Scrap junk to produce Ceramic|5|Daily||250|006696B6
+Scrap junk to produce Cork|5|Daily||250|006696BB
+Scrap junk to produce Steel|10|Daily||250|006696C7
+Scrap junk to produce Adhesive|5|Daily||250|006696B0
+Scrap junk to produce Cloth|10|Daily||250|006696B8
+Scrap junk to produce Lead|10|Daily||250|006696C3
+Scrap junk to produce Gold|3|Daily||250|006696C2
+Scrap junk to produce Fertilizer|5|Daily||250|006696BD
+Scrap junk to produce Concrete|10|Daily||250|006696B9
+Scrap junk to produce Gears|5|Daily||250|006696C0
+Scrap junk to produce Fiberglass|5|Daily||250|006696BE
+Scrap junk to produce Copper|5|Daily||250|006696BA
+Scrap junk to produce Silver|3|Daily||250|006696C6
+Scrap junk to produce Glass|10|Daily||250|006696C1
+Kill Insects|5|Daily||250|006696D1
+Kill a Gulper|3|Daily||250|006696CF
+Kill a Snallygaster|3|Daily||250|006696D4
+Kill a Honey Beast|1|Daily||250|006696D0
+Scrap junk to produce Acid|5|Daily||250|006696AF
+Scrap junk to produce Asbestos|5|Daily||250|006696B2
+Scrap junk to produce Oil|5|Daily||250|006696C5
+Scrap junk to produce Fiber Optics|3|Daily||250|006696BF
+Scrap junk to produce Wood|10|Daily||250|006696C8
+Scrap junk to produce Ballistic Fiber|3|Daily||250|006696B3
+Scrap junk to produce Crystal|5|Daily||250|006696BC
+Scrap Headwear|1|Daily||250|006696D6
+Kill Animals with a Pipe Gun|3|Daily||250|006696C9
+Scrap junk to produce Black Titanium|3|Daily||250|006696B4
+Scrap junk to produce Bone|5|Daily||250|006696B5
+Scrap junk to produce Leather|10|Daily||250|006696C4
+Destroy an Assaultron|1|Daily||250|006696CA
+Kill a Floater|3|Daily||250|006696CE
+Scrap junk to produce Circuitry|5|Daily||250|006696B7
+Scrap junk to produce Antiseptic|5|Daily||250|006696B1
+Scrap junk to produce Plastic|30|Weekly||1000|00669855
+Scrap junk to produce Cloth|30|Weekly||1000|00669847
+Scrap junk to produce Concrete|30|Weekly||1000|00669848
+Scrap junk to produce Gold|10|Weekly||1000|00669851
+Scrap junk to produce Glass|30|Weekly||1000|00669850
+Kill a Mole Miner|30|Weekly||1000|00669866
+Scrap junk to produce Acid|15|Weekly||1000|0066983D
+Epic - Kill Super Mutants with a Heavy Gun|25|Weekly||1500|0066986A
+Scrap junk to produce Adhesive|15|Weekly||1000|0066983E
+Destroy Robots with a Rifle|25|Weekly||1000|00669868
+Scrap junk to produce Bone|15|Weekly||1000|00669844
+Epic - Kill Insects with an Energy Weapon|15|Weekly||1500|00669865
+Scrap junk to produce Springs|15|Weekly||1000|00669859
+Kill a Honey Beast|5|Weekly||1000|00669863
+Scrap junk to produce Gears|15|Weekly||1000|0066984F
+Kill a Floater|10|Weekly||1000|00669861
+Scrap junk to produce Fiber Optics|10|Weekly||1000|0066984E
+Epic - Kill Cultists with a Sharp Weapon|25|Weekly||1500|0066985F
+Scrap junk to produce Leather|30|Weekly||1000|00669853
+Destroy an Assaultron|5|Weekly||1000|0066985D
+Scrap junk to produce Lead|30|Weekly||1000|00669852
+Scrap junk to produce Oil|15|Weekly||1000|00669854
+Scrap junk to produce Circuitry|15|Weekly||1000|00669846
+Scrap junk to produce Silver|10|Weekly||1000|00669858
+Scrap junk to produce Ballistic Fiber|10|Weekly||1000|00669842
+Scrap junk to produce Aluminum|15|Weekly||1000|0066983F
+Scrap junk to produce Copper|15|Weekly||1000|00669849
+Scrap junk to produce Cork|15|Weekly||1000|0066984A
+Scrap junk to produce Rubber|30|Weekly||1000|00669856
+Kill a Snallygaster|10|Weekly||1000|00669869
+Scrap junk to produce Wood|30|Weekly||1000|0066985B
+Kill Insects|30|Weekly||1000|00669864
+Scrap junk to produce Asbestos|15|Weekly||1000|00669841
+Epic - Kill Feral Ghouls with a Shotgun|25|Weekly||1500|00669860
+Scrap junk to produce Ceramic|15|Weekly||1000|00669845
+Kill Animals with a Pipe Gun|25|Weekly||1000|0066985C
+Scrap junk to produce Screws|15|Weekly||1000|00669857
+Scrap junk to produce Steel|30|Weekly||1000|0066985A
+Scrap junk to produce Black Titanium|10|Weekly||1000|00669843
+Scrap junk to produce Crystal|15|Weekly||1000|0066984B
+Destroy a Robot|30|Weekly||1000|00669867
+Scrap junk to produce Fiberglass|15|Weekly||1000|0066984D
+Epic - Kill a Blood Eagle with a Blunt Weapon|25|Weekly||1500|0066985E
+Scrap junk to produce Fertilizer|15|Weekly||1000|0066984C
+Scrap junk to produce Antiseptic|15|Weekly||1000|00669840
+Kill a Gulper|10|Weekly||1000|00669862
+Scrap Headwear|10|Weekly||1000|0066986B
+Drink Nuka-Cola Dark|2|Daily||250|006779FF
+Drink Nuka-Orange|5|Weekly||1000|00677A0E
+Drink Nuka-Orange|2|Daily||250|00677A01
+Take a Camera Picture of the Ultracite Abomination|1|Weekly||1000|00677A12
+Collect any flavor of Nuka-Cola|20|Weekly||1000|00677A09
+Take a Camera Picture in Camden Park|1|Daily||250|00677A04
+Complete the Event: "Seismic Activity"|1|Weekly||1000|00677A13
+Complete the Event: "Most Wanted"|1|Daily||250|00677A06
+Use Photomode to Take a Photo in Camden Park|1|Daily||250|00677A11
+Drink Nuka-Cola Cranberry|2|Daily||250|006779FE
+Drink Nuka-Cherry|5|Weekly||1000|00677A0A
+Drink Nuka-Cola Quantum|5|Weekly||1000|00677A0F
+Complete the Event: "Tunnel Of Love"|1|Daily||250|00677A08
+Drink Nuka-Grape|2|Daily||250|00677A00
+Drink Nuka-Grape|5|Weekly||1000|00677A0D
+Drink Nuka-Cola Dark|5|Weekly||1000|00677A0C
+Drink Nuka-Cola Quantum|2|Daily||250|00677A02
+Drink Nuka-Cola Wild|2|Daily||250|00677A03
+Drink Nuka-Cola Wild|5|Weekly||1000|00677A10
+Drink Nuka-Cherry|2|Daily||250|006779FD
+Collect any flavor of Nuka-Cola|5|Daily||250|006779FC
+Drink Nuka-Cola Cranberry|5|Weekly||1000|00677A0B
+Complete the Event: "Spin The Wheel"|1|Daily||250|00677A07
+Complete Events at Nuka-World On Tour|2|Weekly||1000|00678054
+Use Photomode to Take a Photo at Nuka-World On Tour|1|Daily||250|00678052
+Take a Camera Picture at Nuka-World On Tour|1|Daily||250|00678053
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam|10|Daily||250|0068180B
+Plant a Crop in a Workshop or C.A.M.P. in Free Cam|10|Daily||250|0068180C
+Build a Floor, Wall, or Roof in a Workshop or C.A.M.P. in Free Cam|25|Weekly||1000|0068180D
+Build a Decoration in a Workshop or C.A.M.P. in Free Cam|25|Weekly||1000|00681810
+Plant a Crop in a Workshop or C.A.M.P. in Free Cam|25|Weekly||1000|0068180E
+Build Anything in a Workshop or C.A.M.P. in Free Cam|25|Weekly||1000|0068180F
+Build Anything in a Workshop or C.A.M.P. in Free Cam|10|Daily||250|0068180A
+Build a Decoration in a Workshop or C.A.M.P. in Free Cam|5|Daily||250|00681809
+Collect or Scrap Coal|5|Daily||250|00681813
+Kill a Radstag|5|Daily||250|00681814
+Consume an Alcoholic Beverage while on a Team|5|Daily||250|00681815
+Kill a Festive Scorched while on a Team and Wearing a Costume|10|Daily||250|00681818
+Consume an Alcoholic Beverage while on a Team and Wearing a Costume|10|Daily||250|00681816
+Kill a Festive Scorched while on a Team|10|Daily||250|00681817
+Complete the Event: "Fasnacht Day" while wearing a Fasnacht Mask|1|Daily||250|00681811
+Eat a Cooked Meal in a Teammate's C.A.M.P.|5|Daily||250|00681812
+Build a Floor, Wall, or Roof in a Shelter in Free Cam|10|Daily||250|00682911
+Drink Nuka-Twist|5|Weekly||1000|00682914
+Drink Nuka-Twist|2|Daily||250|00682913
+Build a Decoration in a Shelter in Free Cam|5|Daily||250|0068290F
+Build Anything in a Shelter in Free Cam|10|Daily||250|00682915
+Eat a Cobbler, which is not a Pie.|1|Daily||250|0068D9AB
+Epic - Craft a Grenade, Mine, or Thrown Weapon|10|Daily||400|0069029F
+Epic - Collect a Magazine|1|Daily||400|00690297
+Epic - Kill Super Mutants with a Shotgun|5|Daily||400|00690293
+Epic - Kill Glowing Trogs|3|Daily||400|00690292
+Epic - Scrap junk to produce Ballistic Fiber|5|Daily||400|0069029E
+Epic - Rank up a Perk Card|3|Daily||400|006902AC
+Epic - Collect Caps|400|Daily||400|00690296
+Epic - Pick a Lock|3|Daily||400|006902AA
+Epic - Scrap a Board Game|2|Daily||400|0069029C
+Epic - Take a Camera Picture of a Hermit Crab|1|Daily||400|006902A8
+Epic - Build a Turret or Trap in a Workshop or C.A.M.P. in Free Cam|6|Daily||400|006902A0
+Epic - Take a Camera Picture of a Honey Beast|1|Daily||400|006902A6
+Epic - Drink Nuka-Cola|6|Daily||400|0069029A
+Epic - Build a Heavy machinegun turret in a Workshop or C.A.M.P.|5|Daily||400|006902A4
+Epic - Destroy a Robot with a Blunt Weapon|5|Daily||400|00690294
+Epic - Build a Decoration in a Shelter|10|Daily||400|006902A2
+Epic - Collect a Bobblehead|1|Daily||400|00690298
+Epic - Claim a Workshop|3|Daily||400|006902A1
+Epic - Read a Magazine|1|Daily||400|006902AD
+Epic - Scrap Pre-War Money|10|Daily||400|0069029D
+Epic - Take a Camera Picture of a Power Armored Blood Eagle|1|Daily||400|006902A9
+Epic - Kill a Mole Miner with Automatic Weapons|5|Daily||400|00690295
+Epic - Take a Camera Picture of a Super Mutant Behemoth|1|Daily||400|006902A5
+Epic - Consume Radscorpion Meat|3|Daily||400|00690299
+Epic - Plant a Crop in a Workshop or C.A.M.P.|16|Daily||400|006902A3
+Epic - Hack a Terminal|3|Daily||400|006902AB
+Epic - Mod a Weapon|5|Daily||400|0069029B
+Epic - Take a Camera Picture of a Mirelurk King|1|Daily||400|006902A7
+Deal a Critical Hit to an Enemy using Automatic Weapons in VATS|5|Daily||250|0068AA6D
+Collect Pre-war Food|20|Weekly||1000|0068AA5D
+Kill Cultists with a Shotgun|5|Daily||250|0068AA55
+Collect Stimpaks or Chems|5|Daily||250|0068AA51
+Take a Camera Picture of a Radscorpion|1|Daily||250|0068AA4F
+Take a Camera Picture of a Snallygaster|1|Daily||250|0068AA4E
+Deal Cryo Damage to enemies|300|Weekly||1000|0068AA72
+Deal Fire Damage to Enemies|500|Weekly||1000|0068AA70
+Collect Stimpaks or Chems|20|Weekly||1000|0068AA5E
+Deal a Critical Hit to an Enemy using Automatic Weapons in VATS|10|Weekly||1000|0068AA6E
+Kill Cultists during The Mothman Equinox event|30|Weekly||1000|0068AA6C
+Take a Picture of a Sheepsquatch|1|Weekly||1000|0068AA5C
+Build Defense, Appliance or Crafting items in a Workshop or C.A.M.P.|10|Weekly||1000|0068AA6A
+Kill a Cryptid with a Railway Rifle or Missile launcher|1|Daily||250|0068AA54
+Kill a Cryptid with a Railway Rifle or Missile launcher|3|Weekly||1000|0068AA68
+Take a Picture of a Grafton Monster|1|Weekly||1000|0068AA5A
+Kill a Cryptid with a Bow or Crossbow|3|Weekly||1000|0068AA66
+Collect Pre-war Food|5|Daily||250|0068AA50
+Kill Enemies with Fists Weapons while intoxicated on Nuka-Cola Dark|3|Weekly||1000|0068AA64
+Build light sources in a Workshop or C.A.M.P.|3|Daily||250|0068AA58
+Epic - Kill Cultists with a Shotgun|25|Weekly||1500|0068AA62
+Kill a Cryptid with a Bow or Crossbow|1|Daily||250|0068AA52
+Build light sources in a Workshop or C.A.M.P.|10|Weekly||1000|0068AA60
+Collect Legendary Modules|10|Weekly||1000|0068AA5F
+Deal Fire Damage to Enemies|100|Daily||250|0068AA6F
+Kill Cultists during The Mothman Equinox event|10|Daily||250|0068AA6B
+Take a Picture of a Wendigo|1|Weekly||1000|0068AA5B
+Epic - Kill a Cryptid with a Melee Weapon|3|Weekly||1500|0068AA67
+Epic - Destroy Robots with an Energy Weapon|15|Weekly||1500|0068AA63
+Deal Cryo Damage to enemies|300|Daily||250|0068AA71
+Build Defense, Appliance, or Crafting items in a Workshop or C.A.M.P.|3|Daily||250|0068AA69
+Build a Turret or Trap in a Workshop or C.A.M.P.|3|Daily||250|0068AA59
+Consume a Nukashine in a Teammate's C.A.M.P.|1|Weekly||1000|0068AA61
+Build a Turret or Trap in a Workshop or C.A.M.P.|10|Weekly||1000|0068AA65
+Cripple a Human's Head|15|Weekly||1000|0068DBD6
+Cripple a Ghoul's Leg|2|Daily||250|0068DBD2
+Hunt Rabbits|2|Daily|🐰|250|0068DBDF
+Collect Deathclaw eggs|1|Daily||250|0068DBD9
+Cripple a Protectron or a Robobrain's Arm|16|Weekly||1000|0068DBE3
+Kill Cultists during The Mothman Equinox event with the Cold Shoulder|10|Daily||250|0068DBD3
+Kill Cultists during The Mothman Equinox event with the Cold Shoulder|30|Weekly||1000|0068DBE1
+Kill a Cryptid with the Cold Shoulder|1|Daily||250|0068DBD7
+Cripple a Protectron or a Robobrain's Arm|2|Daily||250|0068DBE0
+Kill Cryptids with the Cold Shoulder|3|Weekly||1000|0068DBDD
+Cripple a Spooky Scorched's Leg|10|Weekly||1000|0068DBD5
+Cripple a Spooky Scorched's Leg|10|Daily||250|0068DBDB
+Collect Mothman Eggs|5|Daily||250|0068DBE2
+Cripple a Ghoul's Leg|15|Weekly||1000|0068DBD8
+Eat Mystery Candy|3|Daily||250|0068DBE4
+Cripple a Deathclaw's Head|3|Weekly||1000|0068DBDA
+Cripple a Human's Head|2|Daily||250|0068DBD4
+Collect Mirelurk Eggs|5|Daily||250|0068DBDC
+St Patrick's Day: Kill Enemies with Green Weapons|3|Event||1000|0068DE15
+Complete Daily or Weekly Challenges while wearing Bunny Ears|5|Event||1000|0068DE10
+St Patrick's Day: Take Photos of Green Creatures|3|Event||1000|0068DE11
+Kill Radstags during The Mothman Equinox event|5|Daily||250|0069226A
+Sell Mirelurk Queen Steak to an NPC vendor|1|Weekly||1000|00692266
+Sell Ribeye Steak to an NPC vendor|1|Daily||250|00692262
+Sell Wolf Ribs to an NPC vendor|1|Daily||250|00692260
+Sell Glowing Fungus Soup to an NPC vendor|1|Daily||250|0069225F
+Kill Creatures with the Cold Shoulder|10|Daily||250|00692269
+Sell Mothman Egg Omelette to an NPC vendor|1|Daily||250|00692263
+Kill Creatures with the Cold Shoulder|30|Weekly||1000|0069226B
+Sell Pumpkin Pie to an NPC vendor|1|Weekly||1000|00692267
+Epic - Catch a Disease|1|Daily||400|0069226C
+Sell Scorchbeast Steak to an NPC vendor|1|Weekly||1000|00692265
+Sell Mutant Hound Chops to an NPC vendor|1|Daily||250|00692261
+Build a Heavy Cryo Turret in a Workshop or C.A.M.P.|9|Weekly||1000|0069226E
+Sell Missile Launcher to an NPC vendor|1|Weekly||1000|00692268
+Build a Heavy Cryo Turret in a Workshop or C.A.M.P.|1|Daily||250|0069226D
+Sell Yao Guai Ribs to an NPC vendor|1|Weekly||1000|00692264
+Epic - Cripple a Sentry Bot's Arm|4|Daily||400|0069226F
+Complete a Mutated Public Event|1|Daily||250|0069AFAC
+Kill a Mutated Enemy|10|Daily||250|0069AFAD
+Craft an Infusion|1|Daily||250|0069AFAE
+Kill a Mutated Enemy|30|Weekly||1000|0069AFAF
+Complete a Mutated Public Event|3|Weekly||1000|0069AFB0
+Craft Infusions|4|Weekly||1000|0069AFB1
+Epic: Take a Picture of the Grafton Monster While Mutated|1|Weekly||1500|0069B030
+Epic: Take a Camera Picture of an Albino or Glowing Radstag|1|Weekly||1500|0069B02E
+Epic - Take a Camera Picture of a Cryptid|1|Weekly||1500|0069B032
+Epic: Take a Camera Picture of a Glowing Cryptid|1|Weekly||1500|0069B02F
+Epic - Deal a Critical Hit to an Enemy with a Revolver Weapon in VATS|30|Weekly||1500|0069CBF8
+Epic - Cripple a Super Mutant's Head|15|Weekly||1500|0069CBF7
+Epic - Kill a Creature While Mutated|25|Weekly||1500|0069CBFA
+Epic - Kill a Deathclaw or Radscorpion|3|Weekly||1500|0069CBF9
+Epic - Cripple Legs of Enemies Using Explosives, Missiles, or Mini Nukes|20|Weekly||1500|0069CBF6
+Epic - Kill a Creature with a Hammer|15|Weekly||1500|0069CBFC
+Epic - Complete an Event or Activity while in a Team|2|Daily||400|0069E923
+Epic - Complete a Daily Quest|2|Daily||400|0069E924
+Epic - Expeditions: Complete a mission in The Pitt while Well Fed|1|Daily|🗺️|400|0069E926
+Epic - Complete an Event or Activity|2|Daily||400|0069E922
+Epic - Complete a Daily Operation while Wearing a Costume|1|Daily||400|0069E925
+Epic - Mod a Weapon|25|Weekly||1500|0069EF99
+Epic - Complete encounters at the Whitespring Refuge|7|Weekly||1500|0069EF93
+Epic - Complete an Event or Activity|5|Weekly||1500|0069EF92
+Epic - Complete a Daily Operation while Mutated|3|Weekly||1500|0069EF96
+Epic - Mod an Armor|25|Weekly||1500|0069EF9A
+Epic - Craft Steins (Misc. Versions)|10|Weekly||1500|0069EF98
+Epic - Expeditions - Union Dues: Collect Steel Ingots from The Pitt!|15|Weekly|🗺️|1500|0069EF94
+Epic - Craft a Mini Nuke|5|Weekly||1500|0069EF9B
+Epic - Scrap junk to produce Ballistic Fiber|25|Weekly||1500|0069EF97
+Epic - Eat a Cooked Meal that use Cranberries|3|Weekly||1500|0069F3F3
+Epic - Collect Ultracite Ore or Ultracite Scrap|20|Weekly||1500|0069F3EE
+Epic - Eat a Scorchbeast Mixed Meat Stew or Deathclaw Wellington|1|Weekly||1500|0069F3ED
+Epic - Simultaneously Hold Two Workshops|2|Weekly||1500|0069F3F8
+Epic - Consume a Nukashine|3|Weekly||1500|0069F3EF
+Epic - Build a Resource in a Workshop or C.A.M.P.|10|Weekly||1500|0069F3F6
+Epic - Consume any Mutation Serum|1|Weekly||1500|0069F3F0
+Epic - Claim a Workshop|6|Weekly||1500|0069F3F4
+Epic - Collect Raw Flux|5|Weekly||1500|0069F3F2
+Epic - Collect Complete Robot Models|3|Weekly||1500|0069F3F1
+Epic - Build a Turret or Trap in a Workshop or C.A.M.P.|12|Weekly||1500|0069F3F5
+Build a Decoration in a Shelter|25|Weekly||1500|0069F3F7
+Epic - Use a Magazines or Bobblehead|3|Weekly||1500|0069F9FD
+Epic - Sell a Ballistic Weapon to an NPC vendor|15|Weekly||1500|0069FA00
+Epic - Purchase Items|40|Weekly||1500|0069F9FF
+Epic - Rank up a Perk Card|6|Weekly||1500|0069FA01
+Collect Guitars or Toasters|2|Daily||250|006A2758
+Deal a Critical Hit to a Radtoad in VATS|8|Daily||250|006A2754
+Cripple a Super Mutant's Arm|2|Daily||250|006A2752
+Cripple a Mirelurk's Limb|2|Daily||250|006A2751
+Kill a Canine|5|Daily||250|006A2755
+Collect a Teddy Bear|3|Daily||250|006A2759
+Kill an Enemy with a Tesla Rifle or Cryolator|10|Daily||250|006A2757
+Deal a Critical Hit to a Sentry Bot in VATS|8|Daily||250|006A2753
+Kill an Enemy with a Thrown Weapon|10|Daily||250|006A2756
+Sell a Shotgun to an NPC vendor|1|Daily||250|006AAA49
+Sell Swamp Tofu to an NPC vendor|1|Daily||250|006AAA45
+Sell a Sweet Roll to an NPC vendor|1|Daily||250|006AAA43
+Scrap a Syringer|1|Daily||250|006AAA4A
+Craft a Throwable Weapon|2|Daily||250|006AAA4C
+Sell a Black Powder Pistol to an NPC vendor|1|Daily||250|006AAA46
+Scrap a Pipe Gun|3|Daily||250|006AAA4B
+Sell a Ski Sword to an NPC vendor|1|Daily||250|006AAA48
+Sell Bloatfly Meat to an NPC vendor|1|Daily||250|006AAA44
+Sell a Tesla Rifle to an NPC vendor|1|Daily||250|006AAA47
+Collect Brain Fungus|25|Weekly||1000|006AC4BD
+Kill an Enemy with a Thrown Weapon|30|Weekly||1000|006AC4B5
+Scrap Syringers|8|Weekly||1000|006AC4BE
+Scrap a Pipe Gun|20|Weekly||1000|006AC4BF
+Deal a Critical Hit to a Radtoad in VATS|15|Weekly||1000|006AC4B6
+Cripple a Super Mutant's Arm|16|Weekly||1000|006AC4B8
+Build a Generator in a C.A.M.P. or Workshop|5|Weekly||1000|006AC4C2
+Craft a Throwable Weapon|30|Weekly||1000|006AC4C0
+Mod an Energy Weapon|5|Weekly||1000|006AC4C1
+Deal a Critical Hit to a Sentry Bot in VATS|15|Weekly||1000|006AC4B7
+Collect a Teddy Bear|9|Weekly||1000|006AC4BC
+Kill an Enemy with a Tesla Rifle or Cryolator|30|Weekly||1000|006AC4B4
+Collect a Guitar or Toaster|9|Weekly||1000|006AC4BA
+Cripple a Mirelurk's Limb|30|Weekly||1000|006AC4B9
+Kill a Canine|30|Weekly||1000|006AC4B3
+Collect a Teapot|9|Weekly||1000|006AC4BB
+Buiild Musical Instruments in a Workshop or C.A.M.P.|15|Weekly||1000|006AC4C3
+Epic - Sell an Electrically Charged Serum to an NPC vendor|1|Weekly||1500|006ACA9A
+Epic - Kill a Deathclaw with a Pistol|1|Daily||400|006ACA84
+Epic - Scrap a Gauss Rifle|1|Daily||400|006ACA81
+Build a Bed, Table, or Stairs in a Workshop or C.A.M.P.|3|Daily||250|006ACAA7
+Epic - Scrap a Shishkebab|1|Daily||400|006ACA87
+Take a Camera Picture of a Mirelurk Hunter|1|Daily||250|006ACAA5
+Epic - Cripple a Super Mutant's Arm|20|Weekly||1500|006ACA8F
+Take a Camera Picture of a Stingwing|1|Daily||250|006ACAA3
+Epic - Collect a Teddy Bear|9|Daily||400|006ACA82
+Cripple a Mole Miner's Head|2|Daily||250|006ACAA1
+Epic - Sell an Assaultron Head to a Non Player Vendor|1|Daily||400|006ACA8D
+Epic - Hack a Terminal|15|Weekly||1500|006ACA9F
+Epic - Scrap a Broadsider|1|Daily||400|006ACA85
+Epic - Pick Hard Locks|6|Weekly||1500|006ACA9D
+Epic - Craft a Fusion Core|1|Daily||400|006ACA8B
+Epic - Sell a Speed Demon Serum to an NPC vendor|1|Weekly||1500|006ACA9B
+Epic - Build a light source in a Workshop or C.A.M.P.|25|Weekly||1500|006ACA99
+Epic - Collect a Teddy Bear|20|Weekly||1500|006ACA97
+Epic - Scrap a Gauss Rifle|3|Weekly||1500|006ACA95
+Collect Brain Fungus|5|Daily||250|006ACA89
+Epic - Scrap a Broadsider|3|Weekly||1500|006ACA93
+Epic - Kill a Canine with a Melee Weapon|20|Daily||400|006ACA80
+Epic - Kill a Canine with a Melee Weapon|30|Weekly||1500|006ACA91
+Epic - Kill a Super Mutant with a Rifle|15|Weekly||1500|006ACA90
+Take a Camera Picture of an Eyebot|1|Daily||250|006ACAA4
+Epic - Collect a 20lb Dumbbell|3|Daily||400|006ACA86
+Cripple a Super Mutant's Head|2|Daily||250|006ACAA0
+Epic - Collect Brain Fungus|15|Daily||400|006ACA8C
+Epic - Pick a Lock|15|Weekly||1500|006ACA9C
+Epic - Collect a Legendary Module|20|Weekly||1500|006ACA98
+Epic - Cripple a Super Mutant's Arm|6|Daily||400|006ACA8A
+Epic - Scrap a Shishkebab|3|Weekly||1500|006ACA94
+Epic - Kill a Super Mutant with a Rifle|15|Daily||400|006ACA83
+Build a Generator in a C.A.M.P. or Workshop|1|Daily||250|006ACAA6
+Epic - Kill a Deathclaw with a Pistol|3|Weekly||1500|006ACA8E
+Epic - Hack a Skill Level 3 Terminal|6|Weekly||1500|006ACA9E
+Epic - Collect a 20lb Dumbbell|9|Weekly||1500|006ACA96
+Epic - Take a Camera Picture of a Super Mutant Suicider|1|Daily||400|006ACA88
+Take a Camera Picture of a Fog Crawler|1|Daily||250|006ACAA2
+Epic - Craft a Fusion Core|4|Weekly||1500|006ACA92
+Collect a Teapot|2|Daily||250|006AFD08
+Mod an Energy Weapon|1|Daily||250|006AFD09
+Loot Chests|10|Daily||250|006AFD0A
+Take a Camera Picture of a Cat|1|Daily||250|006AFD0F
+Take a Camera Picture of a Mega Sloth|1|Weekly||1000|006AFD10
+Epic - Kill Floaters With Automatic Weapons|10|Weekly||1500|006C4EF9
+Epic - Kill a Mirelurk with a Blunt Weapon|15|Daily||400|006C4EE9
+Epic - Harvest a Wild Plant or Fungi|15|Daily||400|006C4EE1
+Epic - Complete an Event in the Ash Heap Region|1|Daily||400|006C4EDD
+Epic - Complete Daily Quests while on a Public Team|2|Daily||400|006C4EDB
+Epic - Complete an Event or Activity in the Forest Region|1|Daily||400|006C4EDA
+Epic - Kill an Insect with a Sharp or Thrown Weapon|30|Weekly||1500|006C4EFA
+Epic - Cripple a Protectron's Head with a Rifle|25|Weekly||1500|006C4EF8
+Epic - Kill Cultists with Energy Weapons|10|Daily||400|006C4EE8
+Epic - Deal a Critical Hit to an Enemy with a Shotgun in VATS|40|Weekly||1500|006C4EF6
+Epic - Eat Mutant Hound Chops|3|Daily||400|006C4EE0
+Epic - Collect Pre-war Food|30|Weekly||1500|006C4EF4
+Epic - Build a Decoration in a Shelter in Free Cam|15|Daily||400|006C4EE6
+Epic - Complete Daily Quests|15|Weekly||1500|006C4EF2
+Epic - Claim a Workshop While Well Fed|1|Daily||400|006C4EDC
+Epic - Collect any flavor of Nuka-Cola|30|Weekly||1500|006C4EF0
+Epic - Craft Ammo at a Workbench|75|Daily||400|006C4EE4
+Epic - Complete an Event in or Activity the Toxic Valley Region|3|Weekly||1500|006C4EEE
+Epic - Collect Purified Water|10|Daily||400|006C4EDE
+Epic - Complete an Event or Activity while Well Fed|15|Weekly||1500|006C4EEC
+Epic - Collect Mothman Eggs|5|Daily||400|006C4EE2
+Epic - Kill Mole Miners with a Heavy Gun|15|Daily||400|006C4EEA
+Epic - Cripple a Ghoul's Leg|20|Weekly||1500|006C4EF7
+Epic - Kill a Scorched with a Rifle|15|Daily||400|006C4EE7
+Epic - Collect Stimpaks or Chems|30|Weekly||1500|006C4EF3
+Epic - Eat Dog Food|10|Daily||400|006C4EDF
+Epic - Complete an Event in or Activity the Savage Divide Region|3|Weekly||1500|006C4EEF
+Epic - Scrap junk to produce Wood|15|Daily||400|006C4EE3
+Epic - Destroy a Robot with a Pistol|15|Daily||400|006C4EEB
+Epic - Eat a Cooked Meal|75|Weekly||1500|006C4EF5
+Epic - Build a Turret or Trap in a Workshop or C.A.M.P.|6|Daily||400|006C4EE5
+Epic - Complete an Event or Activity while wearing a Costume|15|Weekly||1500|006C4EED
+Epic - Eat a Meat-based Meal|35|Weekly||1500|006C4EF1
+Complete the Event: "Safe & Sound"|1|Daily||250|006C6D5B
+Complete the Event: "Safe & Sound"|3|Weekly||1000|006C6D5C
+Complete the Event: "Beasts of Burden"|1|Daily||250|006C6D59
+Complete the Event: "Beasts of Burden"|3|Weekly||1000|006C6D5A
+Epic - Repair an Energy Weapon|5|Weekly||1500|006C6DA1
+Epic - Build Anything in a Workshop or C.A.M.P.|30|Weekly||1500|006C6DA2
+Epic - Repair a Ranged Weapon|8|Weekly||1500|006C6D9E
+Epic - Repair a Melee Weapon|8|Weekly||1500|006C6D9F
+Epic - Scrap junk to produce Crystal|20|Weekly||1500|006C6DA0
+Cripple a Blood Eagle's Arm|2|Daily||250|006CCA60
+Cripple a Scorched's Arm|2|Daily||250|006CCA61
+Cripple a Scorched's Leg|2|Daily||250|006CCA62
+Cripple a Blood Eagle's Leg|2|Daily||250|006CCA63
+Deal a Critical Hit to an Enemy in VATS|10|Daily||250|006CCA5F
+Kill a Mutant Hound|3|Daily||250|006CCA64
+Kill a Human Enemy|10|Daily||250|006CCA65
+Kill a Yao Guai|1|Daily||250|006CCA66
+Kill an Angler|5|Daily||250|006CCA67
+Kill a Mole Rat|5|Daily||250|006CCA5E
+Collect RadAway or Rad-X|5|Daily||250|006CCCA3
+Collect a Burnt Book|5|Daily||250|006CCCA4
+Consume any Chems|3|Daily||250|006CCCA5
+Collect a Lighter, Cigarette or Cigar|5|Daily||250|006CCCA6
+Eat a Vegetable|10|Daily||250|006CCCA7
+Collect Ballistic Ammo|20|Daily||250|006CCCA8
+Collect Energy Ammo|20|Daily||250|006CCCA9
+Craft Bulk Wood|1|Daily||250|006CCCAD
+Eat a Pumpkin|5|Daily||250|006CCCAA
+Craft Bulk Steel|1|Daily||250|006CCCAB
+Craft Bulk Aluminum|1|Daily||250|006CCCAC
+Craft any Chems|2|Daily||250|006CCCAE
+Craft Ballistic Ammo|25|Daily||250|006CCCAF
+Craft Energy Ammo|15|Daily||250|006CDC5A
+Craft Bulk Aluminum|3|Weekly||1000|006CDE4A
+Kill a Human Enemy|30|Weekly||1000|006CDE3A
+Craft Bulk Wood|3|Weekly||1000|006CDE4B
+Craft any Chems|6|Weekly||1000|006CDE4C
+Kill a Mutant Hound|9|Weekly||1000|006CDE3B
+Craft Energy Ammo|45|Weekly||1000|006CDE4D
+Craft Ballistic Ammo|65|Weekly||1000|006CDE4E
+Cripple a Scorched's Leg|18|Weekly||1000|006CDE3C
+Cripple a Scorched's Arm|18|Weekly||1000|006CDE3D
+Craft Bulk Steel|3|Weekly||1000|006CDE49
+Kill a Yao Guai|3|Weekly||1000|006CDE39
+Collect Energy Ammo|40|Weekly||1000|006CDE47
+Eat a Vegetable|25|Weekly||1000|006CDE45
+Kill a Mole Rat|15|Weekly||1000|006CDE37
+Cripple a Blood Eagle's Arm|18|Weekly||1000|006CDE3E
+Cripple a Blood Eagle's Leg|18|Weekly||1000|006CDE3F
+Deal a Critical Hit to an Enemy in VATS|25|Weekly||1000|006CDE40
+Collect RadAway or Rad-X|15|Weekly||1000|006CDE41
+Collect a Burnt Book|25|Weekly||1000|006CDE42
+Collect a Lighter, Cigarette or Cigar|15|Weekly||1000|006CDE43
+Consume any Chems|9|Weekly||1000|006CDE44
+Collect Ballistic Ammo|60|Weekly||1000|006CDE46
+Kill an Angler|9|Weekly||1000|006CDE38
+Eat a Pumpkin|15|Weekly||1000|006CDE48
+Epic - Complete an Event or Activity in the Mire Region|1|Daily||400|006DEA43
+Epic - Complete an Event or Activity in the Savage Divide Region|1|Daily||400|006DEA45
+Epic - Kill Animals with a Pipe Gun|5|Daily||400|006DEA51
+Epic - Kill Cultists with a Sharp Weapon|5|Daily||400|006DEA49
+Epic - Cripple a Deathclaw's Head|1|Daily||400|006DEA50
+Epic - Destroy Robots with an Energy Weapon|5|Daily||400|006DEA48
+Epic - Kill a Legendary 3-Star Creature|1|Daily||400|006DEA4F
+Epic - Complete an Event or Activity in the Toxic Valley Region|1|Daily||400|006DEA44
+Epic - Kill a Cryptid with a Melee Weapon|1|Daily||400|006DEA4E
+Epic - Kill Cultists with a Shotgun|5|Daily||400|006DEA47
+Epic - Destroy Robots with a Rifle|5|Daily||400|006DEA4D
+Epic - Kill Insects with an Energy Weapon|5|Daily||400|006DEA4C
+Epic - Complete an Event or Activity in the Cranberry Bog Region|1|Daily||400|006DEA46
+Epic - Kill Super Mutants with a Heavy Gun|5|Daily||400|006DEA4B
+Epic - Kill a Blood Eagle with a Blunt Weapon|5|Daily||400|006DEA4A
+Epic - Kill Feral Ghouls with a Shotgun|5|Daily||400|006DEAFE
+Kill a Super Mutant|30|Weekly||1000|006E0EA5
+Epic - Kill a Brahmin with Fire Damage|1|Daily||400|006E473E
+Craft any Flair at a Tinkerer's Bench|1|Daily||250|006E472E
+Epic - Consume Ground Mole Rat|1|Daily||400|006E473F
+Epic - Kill a Mole Rat with Explosives|1|Daily||400|006E4740
+Craft any Plushie at a Tinkerer's Bench|1|Daily||250|006E472F
+Epic - Kill a Human with Radiation Damage|3|Daily||400|006E4741
+Epic - Consume Stimpaks or Chems|15|Weekly||1500|006E4745
+Drink Tea|1|Daily||250|006E4731
+Epic - Kill a Communist|3|Weekly||1500|006E4743
+Epic - Kill a Human with Radiation Damage|12|Weekly||1500|006E4742
+Sell a Weapon to an NPC vendor|5|Daily||250|006E4730
+Epic - Collect a Jangles The Moon Monkey|1|Weekly||1500|006E4744
+Epic - Cook a Cramburger|1|Daily||400|006E473D
+Mod an Ballistic Weapon|1|Daily||250|006E472D
+Drink Tea|5|Weekly||1000|006E473B
+Epic - Scrap a Comrade Chubs|1|Weekly||1500|006E4746
+Build a Generator in a Shelter|1|Daily||250|006E4732
+Build a Generator in a Shelter|3|Weekly||1000|006E4733
+Collect a Garden Gnome|5|Weekly||1000|006E4739
+Craft any Flair at a Tinkerer's Bench|3|Weekly||1000|006E472B
+Collect a Microscope or Biometric Scanner|2|Daily||250|006E4734
+Kill a Brahmin|6|Weekly||1000|006E4735
+Sell a Weapon to an NPC vendor|15|Weekly||1000|006E4736
+Craft any Plushie at a Tinkerer's Bench|3|Weekly||1000|006E4737
+Build a Decoration in a Shelter|25|Weekly||1000|006E4738
+Collect a Fuel Tank or Gas Canister|5|Weekly||1000|006E473A
+Kill a Brahmin|2|Daily||250|006E472C
+Collect a Fuel Tank or Gas Canister|2|Daily||250|006E473C
+Kill a Scorched|30|Weekly||1000|006E3431
+Kill a Feral Ghoul|30|Weekly||1000|006E342F
+Kill a Mirelurk|30|Weekly||1000|006E3430
+Epic - Complete an Event or Activity in the Mire Region|3|Weekly||1500|006E3CAF
+Epic - Complete an Event or Activity in the Ash Heap Region|3|Weekly||1500|006E3CB2
+Epic - Complete an Event or Activity in the Cranberry Bog Region|3|Weekly||1500|006E3CB0
+ Epic - Complete an Event or Activity in the Forest Region|3|Weekly||1500|006E3CB1
+Cripple enemy limbs|6|Daily||250|006EDB6C
+Cripple enemy limbs|30|Weekly||1000|006EDB6D
+Expeditions: Complete any mission in Atlantic City!|2|Weekly|🗺️|1000|0072DA68
+Kill a Lesser Devil|30|Weekly||1000|0072DA64
+Kill an Overgrown|5|Daily||250|0072DA62
+Kill an Overgrown|30|Weekly||1000|0072DA65
+Expeditions: Complete The Most Sensational Game|1|Daily|🗺️|250|0072DA67
+Kill a Lesser Devil|5|Daily||250|0072DA63
+Expeditions: Complete Tax Evasion|1|Daily|🗺️|250|0072DA66
+Drink Purified Water|15|Weekly||1000|00796EDD
+Drink Purified Water|2|Daily||250|00796EDB
+Collect a box of Sugar Bombs|1|Daily||250|00796EDA
+Collect Toilet Paper|2|Daily||250|00796EDC
+Collect Soap|2|Daily||250|00797096
+Collect Soap|14|Weekly||1000|00797097
+Kill a Lost|15|Weekly||1000|0079729D
+Collect a Board Game|4|Weekly||1000|0079729C
+Collect a Board Game|1|Daily||250|0079729A
+Kill a Lost|5|Daily||250|0079729B
+Cripple a Super Mutant's Head|10|Weekly||1000|00797312
+Cripple a Super Mutant's Leg|18|Weekly||1000|00797313
+Cripple a Super Mutant's Leg|2|Daily||250|00797311
+Cripple a Super Mutant's Limb|30|Weekly||1000|00797314
+Visit a Best Build C.A.M.P.|1|Daily||250|0079B992
+Visit a Best Build C.A.M.P.|4|Weekly||1000|0079B990
+Like a Best Build C.A.M.P.|4|Weekly||1000|0079B98F
+Use Photomode to take a Photo at a Best Build C.A.M.P.|1|Daily||250|0079B991
+Like a Best Build C.A.M.P.|1|Daily||250|0079B993
+Take a Camera picture at a Best Build C.A.M.P.|1|Daily||250|0079B994
+Repeatable at Rank 100 or above: Complete a Public Event|3|Weekly|🔁|300|007A1431
+Complete the Event: "Mischief Night"|1|Daily||250|007A9EE9
+Complete the "Mischief Night" Daily Challenge|3|Weekly||1000|007A9EEA
+Complete the Event: "Mischief Night"|5|Weekly||1000|007A9EEB
+Complete a Caravan Quest|1|Daily||250|007AACD4
+Kill an Insect during The Big Bloom Event while wearing a Flower Crown|5|Daily||250|007CFA11
+Kill an Insect during The Big Bloom Event|30|Weekly||1000|007CFA15
+Complete the Event: "The Big Bloom"|5|Weekly||1000|007CFA17
+Kill an Insect during The Big Bloom Event|5|Daily||250|007CFA14
+Complete the Event: "The Big Bloom"|1|Daily||250|007CFA12
+Craft a Flower Crown|1|Daily||250|007CFA13
+Kill an Overgrown during The Big Bloom Event while wearing a Flower Crown|3|Daily||250|007CFA18
+Kill a Beezlebaby or Beezlebub during The Big Bloom Event|10|Weekly||1000|007CFA16
+Kill an Overgrown during The Big Bloom Event|3|Daily||250|007CFA19
+Kill an Enemy in the Mire Region|5|Daily||250|007D0EB9
+Kill an Enemy in the Ash Heap Region|5|Daily||250|007D0EB7
+Kill an Enemy in the Forest Region|5|Daily||250|007D0EB6
+Kill an Enemy in the Skyline Valley Region|5|Daily||250|007D0EBC
+Kill an Enemy in the Cranberry Bog Region|5|Daily||250|007D0EB8
+Kill an Enemy in the Savage Divide Region|5|Daily||250|007D0EBA
+Kill an Enemy in the Toxic Valley Region|5|Daily||250|007D0EBB
+Collect Soap|500|Monthly||1000|007F1CBA
+Collect Pre-War Money with the Money Bag Backpack equipped|76|Event|Week1||007F2035
+Scrap Junk to Collect Silver with the Money Bag Backpack equipped|5|Event|Week1||007F205C
+Kill a Human with the Money Bag Backpack equipped|76|Event|Week1||007F205D
+Collect a Cigar Box with the Money Bag Backpack equipped|3|Event|Week2||007F9CDE
+Pick a Lock with the Money Bag Backpack equipped|1|Event|Week1||007F9CDA
+Scrap Junk to Collect Gold with the Money Bag Backpack equipped|5|Event|Week2||007F9CDF
+Collect a Pack or Carton of Cigarettes with the Money Bag Backpack equipped|5|Event|Week1||007F9CD9
+Hack a Terminal with the Money Bag Backpack equipped|3|Event|Week2||007F9CE1
+Kill an Enemy with the Money Bag Backpack equipped|500|Event|Week1||007F9CDD
+Consume an Alcoholic Beverage with the Money Bag Backpack equipped|20|Event|Week2||007F9CE2
+Appalachian Outlaws: Complete Week 1 Challenges|7|Event|Week1||007FDA79
+Appalachian Outlaws: Complete Week 2 Challenges|7|Event|Week2||007FDA7A
+Appalachian Outlaws: Complete Week 1 and 2 Challenges|2|Event|||007FDA7B
+Catch a Fish in the Cranberry Bog Region|2|Daily||250|007FE60F
+Sell Grilled Fish to an NPC vendor|1|Daily||250|007FE5FF
+Epic - Cook Deathclaw Steak|1|Daily||400|007FE610
+Cook Brain Fungus Soup|1|Daily||250|007FE611
+Catch a Fish in the Skyline Valley Region|2|Daily||250|007FE600
+Craft Fish Bits|35|Weekly||1000|007FE612
+Epic - Catch a Fish|32|Weekly||1500|007FE613
+Catch a Fish in the Savage Divide Region|2|Daily||250|007FE601
+Catch a Fish in the Mire Region|2|Daily||250|007FE602
+Epic - Catch a Fish|10|Daily||400|007FE60E
+Epic - Craft Fish Bits|70|Weekly||1500|007FE5FE
+Cook Yao Guai Ribs|1|Daily||250|007FE60C
+Catch a Fish while Intoxicated|3|Daily||250|007FE603
+Cook Roasted Mirelurk Meat|3|Daily||250|007FE604
+Catch a Fish in the Ash Heap Region|2|Daily||250|007FE605
+Cook Mole Rat Chunks|3|Daily||250|007FE606
+Craft Fish Bits|5|Daily||250|007FE607
+Catch a Fish|3|Daily||250|007FE608
+Cook Grilled Fish|3|Daily||250|007FE609
+Catch a Fish in the Forest Region|2|Daily||250|007FE60B
+Catch a Fish|21|Weekly||1000|007FE5FD
+Catch a Fish in the Toxic Valley Region|2|Daily||250|007FE60D
+Craft a Molotov with the Money Bag Backpack equipped|15|Event|Week1||00800562
+Craft Ballistic Ammo with the Money Bag Backpack equipped|760|Event|Week2||00800566
+Collect Stimpaks or Chems with the Money Bag Backpack equipped|76|Event|Week2||00800563
+Destroy a Protectron with the Money Bag Backpack equipped|50|Event|Week2||00800567
+Cook Grilled Fish while Intoxicated|1|Daily||250|00805AA6
+Catch a Fish while it is Raining|2|Weekly||1000|00805AA4
+Eat a Fish Bit|6|Daily||250|00805AA3
+Epic - Catch a Fish while not intoxicated|10|Daily||400|00805AA7
+Eat a Fish|5|Daily||250|00805AA5
+Kill a Gulper with the Marshal Mallow Fishing Hat equipped|20|Event|Week2||0082BB97
+Catch a Fish in the Toxic Valley with the Marshal Mallow Fishing Hat equiped|10|Event|Week2||0082BB99
+Catch a Fish with the Marshal Mallow Fishing Hat equipped|76|Event|||0082BB95
+Collect Bait with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA0
+Craft a Replica Fishing Rod at the Tinker's Workbench with the Marshal Mallow Fishing Hat equipped|2|Event|Week1||0082BB9F
+Catch a Fish in the Cranberry Bog with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA5
+Catch a Fish in the Savage Divide with the Marshal Mallow Fishing Hat equipped|10|Event|Week2||0082BB9A
+Catch a Fish in the Forest with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA2
+Catch a Fish in the Mire with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA3
+Complete All Regional Fishing Challenges|3|Event|Week1||0082BBA4
+Kill a Mirelurk Queen with the Marshal Mallow Fishing Hat equipped|3|Event|Week2||0082BB96
+Catch a Fish while intoxicated with the Marshal Mallow Fishing Hat equipped|10|Event|Week2||0082BB9B
+Catch a Fish while intoxicated with the Marshal Mallow Fishing Hat equipped|10|Event|Week1||0082BBA1
+Catch a Fish in the Ash Heap with the Marshal Mallow Fishing Hat equipped|10|Event|Week2||0082BB9D
+Kill a Mirelurk with the Marshal Mallow Fishing Hat equipped|20|Event|Week1||0082BB9E
+Complete All Regional Fishing Challenges|4|Event|Week2||0082BB9C
+Catch a Fish in the Skyline Valley with the Marshal Mallow Fishing Hat equiped|10|Event|Week2||00841326
+Kill a Human while wearing a Costume|30|Event|🎃||00845DC4
+Collect a Human Skull or Skull part while wearing a Costume|20|Event|🎃||00845DD1
+Eat Candy while in a Costume|30|Event|🎃||00845DC9
+Kill a Spooky Scorched while wearing a Costume|25|Event|🎃||00845DCF
+Complete the "Give out Candy" and "Trick or Treat" Completion Challenges|4|Event|🎃||00845DCD
+Cripple a Human Limb while wearing a Costume|30|Event|🎃||00845DCC
+Kill a Spooky Scorched while wearing a Costume|25|Event|🎃||00845DCE
+Gleaming Depths - Complete All Encounters|5|Weekly||⭐⭐⭐⭐📦|00843ECA
+Trick or Treat from another Players' Candy Bowl|3|Event|🎃||0085719B
+Collect a Scalpel or Surgical Scalpel while wearing a Costume|5|Event|🎃||0085719C
+Craft a Melee Weapon while wearing a Costume|15|Event|🎃||0085719D
+Complete a "Trick or Treat" Challenge|5|Event|🎃||008571A1
+Complete a "Give out Candy" Challenge|5|Event|🎃||0085719F
+Scrap junk to produce Fertilizer while wearing a Costume|25|Event|🎃||0085719E
+Complete a "Give out Candy" Challenge|5|Event|🎃||008571A0
+Build a Candy Bowl and give out Candy from your C.A.M.P.|1|Event|🎃||00857199
+Complete a "Trick or Treat" Challenge|5|Event|🎃||008571A2
+Catch a Fish while wearing a Costume|10|Event|🎃||0085719A
+Epic - Kill an Enemy in the Burning Springs Region|20|Daily||400|0085A417
+Epic - Kill a Rust Raider|45|Weekly||1500|0085A43C
+Kill an Enemy in the Burning Springs Region|5|Daily||250|0085A416
+Kill an Enemy with any Shotgun|8|Daily||250|0085A418
+Epic - Harvest a Firecap|45|Weekly||1500|0085A427
+Epic - Kill a Burning Radscorpion|25|Weekly||1500|0085A42E
+Kill a Rust Raider|30|Weekly||1000|0085A43B
+Complete a Head Hunt|4|Weekly||1000|0085A43F
+Complete a Grunt Hunt|2|Daily||250|0085A422
+Kill a Radhog|5|Daily||250|0085A41A
+Take a Camera Picture at the Starlight Drive-In|1|Daily||250|0085A421
+Epic - Complete a Grunt Hunt|20|Weekly||1500|0085A43E
+Epic - Kill an Enemy with any Energy Weapon|40|Weekly||1500|0085A432
+Harvest a Firecap|5|Daily||250|0085A405
+Epic - Kill an Enemy with any Energy Weapon|16|Daily||400|0085A413
+Harvest a Slipper Cactus|25|Weekly||1000|0085A42A
+Epic - Kill an Enemy with any Shotgun|40|Weekly||1500|0085A438
+Epic - Complete a Head Hunt|1|Daily||400|0085A424
+Epic - Kill an Enemy with any Shotgun|16|Daily||400|0085A419
+Kill a Burning Radscorpion|15|Weekly||1000|0085A42D
+Epic - Kill an Enemy with any Pistol|40|Weekly||1500|0085A434
+Epic - Kill a Radhog|10|Daily||400|0085A41B
+Epic - Kill an Enemy with any Pistol|16|Daily||400|0085A415
+Harvest a Slipper Cactus|5|Daily||250|0085A409
+Epic - Harvest a Firecracker Berry|35|Weekly||1500|0085A429
+Kill an Enemy with any Energy Weapon|8|Daily||250|0085A412
+Epic - Harvest a Firecracker Berry|15|Daily||400|0085A408
+Complete a Grunt Hunt|10|Weekly||1000|0085A43D
+Harvest a Firecap|25|Weekly||1000|0085A426
+Epic - Kill a Corrosive Stingwing|35|Weekly||1500|0085A430
+Harvest a Firecracker Berry|5|Daily||250|0085A407
+Catch a Fish in the Burning Springs Region|2|Daily||250|0085A403
+Epic - Kill a Radhog|24|Weekly||1500|0085A43A
+Kill an Enemy with any Pistol|8|Daily||250|0085A414
+Epic - Kill a Rusted Deathclaw|6|Weekly||1500|0085A42C
+Epic - Kill a Rusted Deathclaw|3|Daily||400|0085A40C
+Take a Camera Picture at The Rust Kingdom|1|Daily||250|0085A41F
+Epic - Complete a Grunt Hunt|5|Daily||400|0085A423
+Take a Camera Picture at the Super Duper Mart|1|Daily||250|0085A420
+Kill a Radhog|18|Weekly||1000|0085A439
+Epic - Kill an Enemy in the Burning Springs Region|50|Weekly||1500|0085A436
+Epic - Kill a Bleached Ogua|1|Daily||400|0085A411
+Kill an Enemy with any Energy Weapon|25|Weekly||1000|0085A431
+Take a Camera Picture at Dino Peaks Mini Golf|1|Daily||250|0085A41E
+Epic - Kill a Burning Radscorpion|6|Daily||400|0085A40E
+Kill a Rust Raider|5|Daily||250|0085A41C
+Kill an Enemy with any Pistol|25|Weekly||1000|0085A433
+Kill a Corrosive Stingwing|5|Daily||250|0085A40F
+Kill an Enemy in the Burning Springs Region|30|Weekly||1000|0085A435
+Kill a Burning Radscorpion|3|Daily||250|0085A40D
+Epic - Harvest a Firecap|15|Daily||400|0085A406
+Epic - Kill a Corrosive Stingwing|12|Daily||400|0085A410
+Kill a Rusted Deathclaw|1|Daily||250|0085A40B
+Epic - Catch a Fish in the Burning Springs Region|10|Daily||400|0085A404
+Kill a Rusted Deathclaw|4|Weekly||1000|0085A42B
+Epic - Complete a Head Hunt|6|Weekly||1500|0085A440
+Epic - Harvest a Slipper Cactus|15|Daily||400|0085A40A
+Harvest a Firecracker Berry|20|Weekly||1000|0085A428
+Epic - Kill a Rust Raider|15|Daily||400|0085A41D
+Kill a CorrosiveStingwing|25|Weekly||1000|0085A42F
+Kill an Enemy with any Shotgun|25|Weekly||1000|0085A437
+Catch a Fish in the Burning Springs Region|15|Weekly||1000|0085A425
+Complete all Challenges to Kill an Enemy|4|Event|Week1||00863014
+Kill a Burning Radscorpion with the Sunset Sarsaparilla Deputy Hat Equipped|20|Event|Week2||0086300C
+Modify a Pistol with the Sunset Sarsaparilla Deputy Hat Equipped|5|Event|Week1||00863008
+Kill a Rusted Deathclaw with the Sunset Sarsaparilla Deputy Hat equipped|3|Event|Week1||00863006
+Kill Humans in the Burning Springs region with the Sunset Sarsaparilla Deputy Hat Equipped|30|Event|Week2||00863005
+Complete all Challenges to Kill an Enemy|4|Event|Week2||00863015
+Kill an Enemy in the Burning Springs Region with the Sunset Sarsaparilla Deputy Hat equipped|175|Event|||00863013
+Kill an Enemy in the Burning Springs Region with a Pistol and the Sunset Sarsaparilla Deputy Hat equipped|35|Event|Week1||0086300B
+Collect a Deathclaw Egg with the Sunset Sarsaparilla Deputy Hat Equipped|3|Event|Week2||00863011
+Eat Pre-war Food with the Sunset Sarsaparilla Deputy Hat Equipped|25|Event|Week1||00863007
+Build a Turret or Trap in a Workshop or C.A.M.P. with the Sunset Sarsaparilla Deputy Hat Equipped|5|Event|Week2||0086300F
+Cripple a Human Head with a Pistol and the Sunset Sarsaparilla Deputy Hat Equipped|15|Event|Week1||00863009
+Kill a Radhog with the Sunset Sarsaparilla Deputy Hat Equipped|15|Event|Week1||0086300D
+Kill a Burning Ogua with the Sunset Sarsaparilla Deputy Hat Equipped|1|Event|Week2||00863012
+Catch a Fish in Burning Springs with the Sunset Sarsaparilla Deputy Hat Equipped|10|Event|Week2||0086300A
+Kill an Insect with a Pistol and the Sunset Sarsaparilla Deputy Hat Equipped|25|Event|Week1||0086300E
+Kill a Corrosive Stingwing with the Sunset Sarsaparilla Deputy Hat Equipped|30|Event|Week2||00863010
+Complete a Weekly Completion Challenge|2|Event|||00868264
+Collect a Med-X while wearing the Tough Love Helmet|10|Event|Week1||00868265
+Complete a Week 2 Challenge|6|Event|Week2||00868263
+Harvest a Toxic Soot Flower while wearing the Tough Love Helmet|25|Event|Week1||00868269
+Complete a Week 1 Challenge|6|Event|Week1||0086826A
+Travel on Foot while wearing the Tough Love Helmet|15|Event|Week1||00868268
+Craft a Mentats while wearing the Tough Love Helmet|10|Event|Week2||00885C72
+Harvest a Carrot Flower while wearing the Tough Love Helmet|20|Event|Week2||00885C71
+Collect a Stimpak while wearing the Tough Love Helmet|20|Event|Week2||00885C76
+Collect a RadAway while wearing the Tough Love Helmet|20|Event|Week2||00885C78
+Harvest a Firecap while wearing the Tough Love Helmet|20|Event|Week2||00885C75
+Harvest Brain Fungus while wearing the Tough Love Helmet|30|Event|Week2||00885C74
+Scrap Junk to Produce Steel while wearing the Tough Love Helmet|50|Event|Week1||00885C77
+Craft a Psycho while wearing the Tough Love Helmet|10|Event|Week1||00885C73
+Collect a Bag of Chlorine while wearing the Tough Love Helmet|8|Event|Week1||008A45B5
+Deal Explosive Weapon Damage with the "Rip's Bounty" buff active|2500|Event|||008AFF57
+Deal Energy Weapon Damage with the "Rip's Bounty" buff active|10000|Event|||008AFF4F
+Deal Power Tool Weapon damage with the "Rip's Bounty" buff active|2000|Event|||008AFF58
+Deal Ballistic Weapon Damage with the "Rip's Bounty" buff active|15000|Event|||008AFF59
+Deal Damage with the "Rip's Bounty" buff active|60000|Event|||008AFF50
+Deal Thrown Weapon Damage with the "Rip's Bounty" buff active|2500|Event|||008AFF52
+Deal Shotgun Damage with the "Rip's Bounty" buff active|5000|Event|||008AFF5A
+Deal Archaic Weapon or Bow Damage with the "Rip's Bounty" buff active|5000|Event|||008AFF5B
+Deal Ranged Weapon Damage with the "Rip's Bounty" buff active|25000|Event|||008AFF51
+Deal Fist Weapon Damage with the "Rip's Bounty" buff active|4000|Event|||008AFF5D
+Deal 2H Melee Weapon Damage with the "Rip's Bounty" buff active|3000|Event|||008AFF56
+Deal Pistol Damage with the "Rip's Bounty" buff active|7000|Event|||008AFF4E
+Deal Melee Weapon damage with the "Rip's Bounty" buff active|10000|Event|||008AFF54
+Deal Big Gun Damage with the "Rip's Bounty" buff active|10000|Event|||008AFF53
+Deal 1H Melee Weapon Damage with the "Rip's Bounty" buff active|3000|Event|||008AFF55
