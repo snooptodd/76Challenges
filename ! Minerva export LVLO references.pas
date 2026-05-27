@@ -72,9 +72,9 @@ begin
       if pos('M',Minerva_Inventory_ListID) = 0 then begin // if this is not a 'big' sale add to s
         // if GoldBullionValueGLOB has a value then that is used for the gold value of the item
         if GoldBullionValueGLOB = '' then 
-          s := Minerva_Inventory_ListID + '|' + FULLname + '|' + GoldBullionValue + '|' + formid
+          s := Minerva_Inventory_ListID + '|' + FULLname + '|' + GoldBullionValue
         else 
-          s := Minerva_Inventory_ListID + '|' + FULLname + '|' + StringReplace(GoldBullionValueGLOB,'.000000','',[rfReplaceAll, rfIgnoreCase]); + '|' + formid;
+          s := Minerva_Inventory_ListID + '|' + FULLname + '|' + StringReplace(GoldBullionValueGLOB,'.000000','',[rfReplaceAll, rfIgnoreCase]);
         AddMessage(s);
         slExport.add(s);
       end;

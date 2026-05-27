@@ -83,7 +83,7 @@
 09|T-65 Left Leg|1000
 09|T-65 Right Leg|1000
 09|T-65 Torso|1250
-09|Plasma Caster Aligned Sniper Barrel|150
+09|Plasma Caster Sniper Barrel|150
 09|Plasma Caster Calibrated Capacitor|200
 09|Plasma Caster Pulse Capacitor|200
 09|Dynamite Bundle|200
@@ -111,7 +111,7 @@
 11|Solar Armor Left Leg|750
 11|Solar Armor Right Leg|750
 11|Solar Armor Chest Piece|1000
-11|Plasma Caster True Long Barrel|150
+11|Plasma Caster Signal Dish Barrel|150
 11|Plasma Caster True Capacitor|200
 11|Floater Freezer Grenade|150
 11|Super Mutant Tube|2000
