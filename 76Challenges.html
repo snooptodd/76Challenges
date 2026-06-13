@@ -419,7 +419,7 @@ function seasonalFish() {    // Implementation for seasonal fish
             name: 'Festerkoi',
             locations: 'Ash Heap, Burning Springs, Toxic Valley',
             season: 'Fall',
-            legendary: 'Legendary fall, Location: (tbd)',
+            legendary: 'Sludge Eye, Location: The Sludge Works',
             equinox: getEquinoxSolstice(year, 2) // Autumnal Equinox
         },
         {
@@ -463,9 +463,9 @@ function seasonalFish() {    // Implementation for seasonal fish
     }
     
     // Format output with fish info and next change date
-    let output = `<p>${currentFish.name}<br>Regions: ${currentFish.locations}`;
-    output += `<br>${currentFish.legendary}`;
-    output += `<br>Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
+    let output = `<p>${currentFish.name}, Regions: ${currentFish.locations}, Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
+    output += `<p>${currentFish.legendary}, Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
+    // output += `<br>Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
     
     container.innerHTML = output;
 }
@@ -540,7 +540,7 @@ async function minervaStatus() {
 async function dailyOps() {
     const Location = ['Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic','Glassed Caverns','Atlantic City Community Center'];
     const EnemyFaction = ['Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown'];
-    const EnemyMutations1 = ['Piercing Gaze', 'Elite Enemies'];
+    const EnemyMutations1 = ['Elite Enemies', 'Piercing Gaze'];
     const EnemyMutations2 = ['Reflective Skin', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud'];
     function getDaysSinceEpoch() { return Math.floor(Date.now() / 1000 / (24 * 60 * 60)); }
     const dayOdd = getDaysSinceEpoch() % 2;
@@ -549,7 +549,7 @@ async function dailyOps() {
     const lists = [
         { id: 'LocationList', items: Location.sort() },
         { id: 'EnemyFactionList', items: EnemyFaction.sort() },
-        // { id: 'EnemyMut1List', items: EnemyMutations1.sort() },
+        { id: 'EnemyMut1List', items: EnemyMutations1 },
         { id: 'EnemyMut2List', items: EnemyMutations2.sort() }
     ];
     const datalistsContainer = document.getElementById('Datalists');
@@ -1089,6 +1089,8 @@ function buildJson() {
 const buildJsonBtn = document.getElementById('buildjson');
 if (buildJsonBtn) buildJsonBtn.addEventListener('click', buildJson);
 
+function buildMarkdown() {
+}
 
 document.getElementById('exportBtn').addEventListener('click', () => {
     // generate markdown output of the current dashboard state
@@ -1105,8 +1107,19 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     markdown += '**Current Events**'; 
     markdown += '\r\n';
     document.querySelectorAll('#currentEvents li').forEach(li => { if (/double score/i.test(li.innerText)) { double = 2;} markdown += `* ${li.innerText}\r\n`; });
-    // markdown += 'r\n\r\n'; 
+    markdown += '\r\n**Fishing**\r\n'; 
     markdown += '* ' + (document.getElementById('axolotl')?.innerText || '') + '\r\n';
+    const seasonalFishContainer = document.getElementById('seasonalFish');
+    if (seasonalFishContainer) {
+        const paragraphs = seasonalFishContainer.querySelectorAll('p');
+        if (paragraphs.length > 0) {
+            paragraphs.forEach(p => {
+                if (p.innerText.trim()) markdown += `* ${p.innerText.trim()}\r\n`;
+            });
+        } else {
+            markdown += '* ' + (seasonalFishContainer.innerText || '') + '\r\n';
+        }
+    }
     // format any EVENT sections into markdown
     const eventContainer = document.getElementById('event');
     if (eventContainer) {
