@@ -26,7 +26,10 @@ begin
   
   // This was soo simple. Why did they have to break you?
   // if (Pos('ATX_DE2023_', EditorID(e)) + Pos('SCORE_', EditorID(e))) <> 1 then
-  //   Exit;
+  // ackually i only want score challenges. everything else is handled elsewhere. 
+  
+  if (Pos('SCORE_', EditorID(e))) <> 1 then
+    Exit;
 
   //if Pos('Epic - ',GetElementEditValues(e, 'FULL')) = 1 then
   //begin
@@ -36,30 +39,30 @@ begin
   //    sScore := 400;
   //end; 
 
-  if Pos('_SUB_', EditorID(e)) <> 0 then
-    Exit;
-  if Pos('Sub_', EditorID(e)) <> 0 then
-   Exit;
-  if Pos('zzz', EditorID(e)) = 1 then
-   Exit;
-  if Pos('POST', EditorID(e)) = 1 then
-   Exit;
-  if Pos('CUT', EditorID(e)) = 1 then
-   Exit;
-  if Pos('ATX_DE2021_', EditorID(e)) = 1 then
-   Exit;
-  if Pos('ATX_DE2022_', EditorID(e)) = 1 then
-   Exit;
-  if Pos('ATX_DE2023_', EditorID(e)) = 1 then
-   Exit;
-  if Pos('ATX_DE2024_', EditorID(e)) = 1 then
-   Exit;
-  if Pos('TEST', EditorID(e)) = 1 then
-   Exit;
-  if Pos('ZZZ', EditorID(e)) = 1 then
-   Exit;
-  if Pos('ATOMS_', EditorID(e)) = 1 then
-   Exit;
+  // if Pos('_SUB_', EditorID(e)) <> 0 then
+  //   Exit;
+  // if Pos('Sub_', EditorID(e)) <> 0 then
+  //  Exit;
+  // if Pos('zzz', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('POST', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('CUT', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('ATX_DE2021_', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('ATX_DE2022_', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('ATX_DE2023_', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('ATX_DE2024_', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('TEST', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('ZZZ', EditorID(e)) = 1 then
+  //  Exit;
+  // if Pos('ATOMS_', EditorID(e)) = 1 then
+  //  Exit;
   
 
   formid := IntToHex(FixedFormID(e),8);

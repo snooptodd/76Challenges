@@ -22,7 +22,10 @@
     <div id="challenges"></div>
     <div id="atomicShop"></div>
     <div id="currentEvents"></div>
-    <div id="axolotl"></div>
+    <div id="fishing"><p><h2>Fishing</h2></p>
+        <div id="axolotl"></div>
+        <div id="seasonalFish"></div>
+    </div>
     <div id="event"></div>
     <div id="Minerva"></div>
 </div>
@@ -335,26 +338,155 @@ function axolotlRotation() {
     if (!container) {
         container = document.createElement('div');
         container.id = 'axolotl';
-        document.getElementById('app').appendChild(container);
+        const parent = document.getElementById('fishing') || document.getElementById('app');
+        parent.appendChild(container);
     }
     // use formatEndDate for user-facing date so all dates look the same
-    container.innerHTML = `<p>${currentAxolotl.name} Regions: ${currentAxolotl.regions} Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
+    container.innerHTML = `<p>${currentAxolotl.name}, Regions: ${currentAxolotl.regions}, Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
 }
 
-// Minerva Location fuction
-// Minerva is at a specific location for a set period of time and then moves to another location.
-// she is at one of 5 locations: Foundation, Crater, Fort Atlas, The Whitespring Resort or away.
-// she is at Foundation starting at 12:00 on monday for 2 days.
-// she is at Crater starting at 12:00 on the next monday for 2 days.
-// she is at Fort Atlas starting at 12:00 on the next monday for 2 days.
-// she is at The Whitespring Resort starting at 12:00 on the thursday after for 5 days.
-// the pattern then repeats starting with Foundation.
-// minerva has a rotating inventory of items that changes based on her location.
-// She has 24 different lists of items that rotate every time she changes location.
-// foundation, crater, and fort atlas are single lists that rotate in order (1,2,3,4,5,...24, then back to 1).
-// the whitespring resort has 8 lists that are groups of 3 of the single lists (1-3, 4-6, 7-9, 10-12, 13-15, 16-18, 19-21, 22-24) that rotate in order (1-3, then 4-6, then 7-9, etc. then back to 1-3).
-// the fuction should return away when minerva is not at any location and the current location when she is at a location. it should also return the current inventory lists for that location and when she will leave that location and where she will go next and when she will be there next.
+function seasonalFish() {    // Implementation for seasonal fish
+    //     ### Fish locations
+    // - Orange Overseer: Savage Divide, Skyline Drive, Toxic Valley (Spring, likely Mar-May)
+    // - Fernskipper: Cranberry Bog, Mire, Skyline Drive (Summer, likely Jun-Aug)
+    // - Festerkoi: Ash Heap, Burning Springs, Toxic Valley (Fall, likely Sep-Nov)
+    // - Bogsucker: Ash Heap, Forest, Savage Divide (Winter, likely Dec-Feb)
+
+    // - Glass Ghost (Legend): Glassed Cavern (Summer)
+    // - tbd (Legend): tbd (Fall)
+    // - tbd (Legend): tbd (Winter)
+    // - tbd (Legend): tbd (Spring)
+    // rotation is on the first tuesday after the equniox/solstices. 
+    // The glass ghost is only available in the summer rotation and is a legendary fish that can be caught in the glassed caverns. 
+    // The other three legendary fish are tbd but will follow the same seasonal rotation as the regular fish. 
+    // The function should display the current season's fish and their locations, as well as the next change date for the fish.
+    const now = new Date();
+    const year = now.getFullYear();
+    
+    // Helper to calculate equinox/solstice dates for a given year.
+    // Use an explicit lookup for years we know (2026 included) and fall back to
+    // reasonable defaults if the year isn't in the table.
+    function getEquinoxSolstice(year, eventType) {
+        // eventType: 0=vernal, 1=summer, 2=autumnal, 3=winter
+        const lookup = {
+            // YYYY: { vernal: 'YYYY-MM-DD', summer: 'YYYY-MM-DD', autumnal: 'YYYY-MM-DD', winter: 'YYYY-MM-DD' }
+            2026: { vernal: '2026-03-20', summer: '2026-06-21', autumnal: '2026-09-22', winter: '2026-12-21' },
+            2027: { vernal: '2027-03-20', summer: '2027-06-21', autumnal: '2027-09-23', winter: '2027-12-21' },
+            2028: { vernal: '2028-03-20', summer: '2028-06-20', autumnal: '2028-09-22', winter: '2028-12-21' },
+            2029: { vernal: '2029-03-20', summer: '2029-06-21', autumnal: '2029-09-23', winter: '2029-12-21' },
+            2030: { vernal: '2030-03-20', summer: '2030-06-21', autumnal: '2030-09-23', winter: '2030-12-21' },
+            2031: { vernal: '2031-03-20', summer: '2031-06-21', autumnal: '2031-09-23', winter: '2031-12-21' },
+            2032: { vernal: '2032-03-20', summer: '2032-06-20', autumnal: '2032-09-22', winter: '2032-12-21' },
+            2033: { vernal: '2033-03-20', summer: '2033-06-21', autumnal: '2033-09-23', winter: '2033-12-21' },
+            2034: { vernal: '2034-03-20', summer: '2034-06-21', autumnal: '2034-09-23', winter: '2034-12-21' },
+            2035: { vernal: '2035-03-20', summer: '2035-06-21', autumnal: '2035-09-23', winter: '2035-12-21' }
+        };
+
+        if (lookup[year]) {
+            const rec = lookup[year];
+            if (eventType === 0) return new Date(rec.vernal);
+            if (eventType === 1) return new Date(rec.summer);
+            if (eventType === 2) return new Date(rec.autumnal);
+            return new Date(rec.winter);
+        }
+
+        // Fallback approximate dates (typical calendar dates for the events).
+        const fallbackDates = [
+            new Date(year, 2, 20), // Vernal ~ Mar 20
+            new Date(year, 5, 21), // Summer ~ Jun 21
+            new Date(year, 8, 22), // Autumnal ~ Sep 22
+            new Date(year, 11, 21) // Winter ~ Dec 21
+        ];
+        return fallbackDates[eventType] || fallbackDates[0];
+    }
+    
+    const fishSeasons = [
+        {
+            name: 'Orange Overseer',
+            locations: 'Savage Divide, Skyline Drive, Toxic Valley',
+            season: 'Spring',
+            legendary: 'Legendary spring, Location: (tbd)',
+            equinox: getEquinoxSolstice(year, 0) // Vernal Equinox
+        },
+        {
+            name: 'Fernskipper',
+            locations: 'Cranberry Bog, Mire, Skyline Drive',
+            season: 'Summer',
+            legendary: 'Glass Ghost, Location: Glassed Cavern',
+            equinox: getEquinoxSolstice(year, 1) // Summer Solstice
+        },
+        {
+            name: 'Festerkoi',
+            locations: 'Ash Heap, Burning Springs, Toxic Valley',
+            season: 'Fall',
+            legendary: 'Sludge Eye, Location: The Sludge Works',
+            equinox: getEquinoxSolstice(year, 2) // Autumnal Equinox
+        },
+        {
+            name: 'Bogsucker',
+            locations: 'Ash Heap, Forest, Savage Divide',
+            season: 'Winter',
+            legendary: 'Legendary winter, Location: (tbd)',
+            equinox: getEquinoxSolstice(year, 3) // Winter Solstice
+        }
+    ];
+    
+    // Helper to find first Tuesday after a given date
+    function firstTuesdayAfter(date) {
+        const d = new Date(date);
+        while (d.getDay() !== 2) { // 2 = Tuesday
+            d.setDate(d.getDate() + 1);
+        }
+        return d;
+    }
+    
+    // Determine current fish season
+    let currentFish = fishSeasons[0];
+    let nextChangeDate = firstTuesdayAfter(fishSeasons[0].equinox);
+    
+    for (let i = 0; i < fishSeasons.length; i++) {
+        const rotationDate = firstTuesdayAfter(fishSeasons[i].equinox);
+        if (now >= rotationDate) {
+            currentFish = fishSeasons[i];
+            const nextIndex = (i + 1) % fishSeasons.length;
+            nextChangeDate = firstTuesdayAfter(fishSeasons[nextIndex].equinox);
+        }
+    }
+    
+    // Write into the existing div or create one
+    let container = document.getElementById('seasonalFish');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'seasonalFish';
+        const parent = document.getElementById('fishing') || document.getElementById('app');
+        parent.appendChild(container);
+    }
+    
+    // Format output with fish info and next change date
+    let output = `<p>${currentFish.name}, Regions: ${currentFish.locations}, Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
+    output += `<p>${currentFish.legendary}, Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
+    // output += `<br>Changes on: (${formatEndDate(nextChangeDate.toISOString())})</p>`;
+    
+    container.innerHTML = output;
+}
+
 async function minervaLocation(date) {
+    // Minerva Location fuction
+    // on april 3, 2023 to april 5, 2023 she was at Foundation with list 1
+    // Minerva is at a specific location for a set period of time and then moves to another location.
+    // she is at one of 5 locations: Foundation, Crater, Fort Atlas, The Whitespring Resort or away.
+    // she is at Foundation starting at 12:00 on monday for 2 days.
+    // she is at Crater starting at 12:00 on the next monday for 2 days.
+    // she is at Fort Atlas starting at 12:00 on the next monday for 2 days.
+    // she is at The Whitespring Resort starting at 12:00 on the thursday after for 5 days.
+    // the pattern then repeats starting with Foundation.
+    // minerva has a rotating inventory of items that changes based on her location.
+    // She has 24 different lists of items that rotate every time she changes location.
+    // foundation, crater, and fort atlas are single lists that rotate in order (1,2,3,4,5,...24, then back to 1).
+    // the whitespring resort has 8 lists that are groups of 3 of the single lists (1-3, 4-6, 7-9, 10-12, 13-15, 16-18, 19-21, 22-24) that rotate in order (1-3, then 4-6, then 7-9, etc. then back to 1-3).
+    // the fuction should return away when minerva is not at any location and the current location when she is at a location. 
+    // it should also return the current inventory lists for that location and when she will leave that location and where she will go next and when she will be there next.
+
 }
 
 async function minervaStatus() {
@@ -408,7 +540,7 @@ async function minervaStatus() {
 async function dailyOps() {
     const Location = ['Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic','Glassed Caverns','Atlantic City Community Center'];
     const EnemyFaction = ['Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown'];
-    const EnemyMutations1 = ['Piercing Gaze', 'Elite Enemies'];
+    const EnemyMutations1 = ['Elite Enemies', 'Piercing Gaze'];
     const EnemyMutations2 = ['Reflective Skin', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud'];
     function getDaysSinceEpoch() { return Math.floor(Date.now() / 1000 / (24 * 60 * 60)); }
     const dayOdd = getDaysSinceEpoch() % 2;
@@ -417,7 +549,7 @@ async function dailyOps() {
     const lists = [
         { id: 'LocationList', items: Location.sort() },
         { id: 'EnemyFactionList', items: EnemyFaction.sort() },
-        // { id: 'EnemyMut1List', items: EnemyMutations1.sort() },
+        { id: 'EnemyMut1List', items: EnemyMutations1 },
         { id: 'EnemyMut2List', items: EnemyMutations2.sort() }
     ];
     const datalistsContainer = document.getElementById('Datalists');
@@ -957,6 +1089,8 @@ function buildJson() {
 const buildJsonBtn = document.getElementById('buildjson');
 if (buildJsonBtn) buildJsonBtn.addEventListener('click', buildJson);
 
+function buildMarkdown() {
+}
 
 document.getElementById('exportBtn').addEventListener('click', () => {
     // generate markdown output of the current dashboard state
@@ -973,8 +1107,19 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     markdown += '**Current Events**'; 
     markdown += '\r\n';
     document.querySelectorAll('#currentEvents li').forEach(li => { if (/double score/i.test(li.innerText)) { double = 2;} markdown += `* ${li.innerText}\r\n`; });
-    // markdown += 'r\n\r\n'; 
+    markdown += '\r\n**Fishing**\r\n'; 
     markdown += '* ' + (document.getElementById('axolotl')?.innerText || '') + '\r\n';
+    const seasonalFishContainer = document.getElementById('seasonalFish');
+    if (seasonalFishContainer) {
+        const paragraphs = seasonalFishContainer.querySelectorAll('p');
+        if (paragraphs.length > 0) {
+            paragraphs.forEach(p => {
+                if (p.innerText.trim()) markdown += `* ${p.innerText.trim()}\r\n`;
+            });
+        } else {
+            markdown += '* ' + (seasonalFishContainer.innerText || '') + '\r\n';
+        }
+    }
     // format any EVENT sections into markdown
     const eventContainer = document.getElementById('event');
     if (eventContainer) {
@@ -1131,6 +1276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     atomicShop();
     currentEvents();
     axolotlRotation();
+    seasonalFish();
     minervaStatus();
 
     // add toggle button next to export/copy controls to allow users to show/hide Monthly & Event challenges
