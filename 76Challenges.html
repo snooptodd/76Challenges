@@ -870,7 +870,6 @@ async function event(ev) {
 // json template
 // {
 // "Atom Shop":{"entries":[{"Text":"","Atoms":"","DateLeaves":""}]},
-// "Current Events":{"entries":[{"Text":"","Estimated":false,"DateLeaves":""}]},
 // "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
 // "Special Events":{"Title":"","entries":[{"Text":"","Count":"","Reward":"","Subentries":[{"text":"","Count":"","Reward":""}]}]},
 // "Daily Challenges":{"entries":[{"Flair":"","Text":"","Count":"","Reward":""}]},
@@ -882,15 +881,14 @@ async function event(ev) {
 
 function buildJson() {
     const out = {
-        "Atom Shop": { entries: [] },
-        "Current Events": { entries: [] },
-        "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
+        // "Atom Shop": { entries: [] },
+        // "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
         "Special Events": { Title: '', entries: [] },
         "Daily Challenges": { entries: [] },
         "Weekly Challenges": { entries: [] },
         "Monthly Challenges": { entries: [] },
-        "Minerva": { Location: '', LeavesOn: '', NextLocation: '', NextLeavesOn: '', entries: [] },
-        "DailyOp": { Mode: '', Location: '', Enemy: '', Mutation1: '', Mutation2: '' }
+        // "Minerva": { Location: '', LeavesOn: '', NextLocation: '', NextLeavesOn: '', entries: [] },
+        // "DailyOp": { Mode: '', Location: '', Enemy: '', Mutation1: '', Mutation2: '' }
     };
 
     // Atom Shop
@@ -901,17 +899,6 @@ function buildJson() {
     //     const Atoms = Match ? Match[2].trim() : '';
     //     const DateLeaves = Match ? Match[3].trim() : '';
     //     out['Atom Shop'].entries.push({ Text, Atoms, DateLeaves });
-    // });
-
-    // Current Events
-    // document.querySelectorAll('#currentEvents li').forEach(li => {
-    //     const raw = li.textContent.trim();
-    //     const TextMatch = raw.match(/^(.*),\s*(Ends on|Estimated end date)\s*\(([^)]+)\)\s*$/);
-    //     const Text = TextMatch ? TextMatch[1].trim() : '';
-    //     const Estimated = /Estimated/i.test(raw);
-    //     const dateMatch = raw.match(/\(([^)]+)\)\s*$/);
-    //     const DateLeaves = dateMatch ? dateMatch[1].trim() : '';
-    //     out['Current Events'].entries.push({ Text, Estimated, DateLeaves });
     // });
 
     // Axolotl
@@ -948,7 +935,9 @@ function buildJson() {
             if (topLevelLis.length) {
                 topLevelLis.forEach(li => {
                     // get the text of the li excluding any nested UL text
-                    let text = count = reward = '';
+                    let text = '';
+                    let count = '';
+                    let reward = '';
                     li.childNodes.forEach(node => {
                         if (node.nodeType === Node.ELEMENT_NODE && (node.tagName.toLowerCase() === 'ul' || node.tagName.toLowerCase() === 'ol')) {
                             return; // skip nested lists
@@ -963,7 +952,9 @@ function buildJson() {
 
                     // collect direct nested list items (one level deep)
                     const nested = Array.from(li.querySelectorAll(':scope > ul > li')).map(n => {
-                        let nText = nCount = nReward = '';
+                        let nText = '';
+                        let nCount = '';
+                        let nReward = '';
                         n.childNodes.forEach(nNode => {
                             if (nNode.nodeType === Node.ELEMENT_NODE && (nNode.tagName.toLowerCase() === 'ul' || nNode.tagName.toLowerCase() === 'ol')) {
                                 return; // skip deeper nested lists
@@ -1014,19 +1005,20 @@ function buildJson() {
             // format Challenge|count|Type|Flair|Reward|FormID
             const Match = raw.split('|');
             const FoFirst = checkbox.checked ? '1ˢᵗ' : '';
-            const Text = Match ? Match[0].trim() : '';
-            const Count = Match ? Match[1].trim() : '';
-            const Flair2 = Match ? Match[3].trim() : '';
-            const Reward= Match ? Match[4].trim() : '';
-            const FormID = Match ? Match[5].trim() : '';
+            const Text = (Match[0] || '').trim();
+            const Count = (Match[1] || '').trim();
+            const Flair2 = (Match[3] || '').trim();
+            const Reward = (Match[4] || '').trim();
+            const FormID = (Match[5] || '').trim();
             // for now cat FoFirst and flair2 together
             const Flair = FoFirst && Flair2 ? `${FoFirst} ${Flair2}` : (FoFirst || Flair2);
             // doube reward if double score event is active and is daily challenges
             if (targetKey === 'Daily Challenges') {
-                const currentEvents = out['Current Events'].entries;
-                const doubleActive = currentEvents.some(ev => /Double S/i.test(ev.Text));
-                if (doubleActive && Reward) {
-                    const doubled = parseInt(Reward, 10) * 2;
+                const doubleActive = Array.from(document.querySelectorAll('#currentEvents li'))
+                    .some(li => /double score/i.test(li.textContent));
+                const numericReward = Number.parseInt(Reward, 10);
+                if (doubleActive && Number.isFinite(numericReward)) {
+                    const doubled = numericReward * 2;
                     out['Daily Challenges'].entries.push({ Flair, Text, Count, Reward: `${doubled}`, FormID });
                     continue;
                 }
@@ -1090,9 +1082,6 @@ const buildJsonBtn = document.getElementById('buildjson');
 if (buildJsonBtn) buildJsonBtn.addEventListener('click', buildJson);
 
 function buildMarkdown() {
-}
-
-document.getElementById('exportBtn').addEventListener('click', () => {
     // generate markdown output of the current dashboard state
     // div headings become bold section titles 
     // list items become markdown list items
@@ -1169,6 +1158,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
         let categoryHasSelection = false;
         let categoryMarkdown = `\r\n**${category} Challenges**\r\n`;
         const container = document.getElementById(`${category}Container`);
+        if (!container) return;
         const inputs = container.querySelectorAll('input.checkbox, input.textbox');
         for (let i = 0; i < inputs.length; i += 2) {
             const checkbox = inputs[i];
@@ -1249,7 +1239,9 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     // const blob = new Blob([markdown], { type: 'text/plain' });
     // const url = URL.createObjectURL(blob);
     // const a = document.createElement('a'); a.href = url; a.download = 'dashboard_export.md'; a.click(); URL.revokeObjectURL(url);
-});
+}
+
+document.getElementById('exportBtn').addEventListener('click', buildMarkdown);
 
 document.getElementById('copyBtn').addEventListener('click', () => {
     const textarea = document.getElementById('markdownOutput');
