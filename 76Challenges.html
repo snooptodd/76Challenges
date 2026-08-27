@@ -894,40 +894,40 @@ function buildJson() {
     };
 
     // Atom Shop
-    document.querySelectorAll('#atomicShop li').forEach(li => {
-        const raw = li.textContent.trim();
-        const Match = raw.match(/^(.*)\((\d+⚛️.*|Free!?)\),.*\((\d+-\w+-\d+)\)\s*$/);
-        const Text = Match ? Match[1].trim(): '';
-        const Atoms = Match ? Match[2].trim() : '';
-        const DateLeaves = Match ? Match[3].trim() : '';
-        out['Atom Shop'].entries.push({ Text, Atoms, DateLeaves });
-    });
+    // document.querySelectorAll('#atomicShop li').forEach(li => {
+    //     const raw = li.textContent.trim();
+    //     const Match = raw.match(/^(.*)\((\d+⚛️.*|Free!?)\),.*\((\d+-\w+-\d+)\)\s*$/);
+    //     const Text = Match ? Match[1].trim(): '';
+    //     const Atoms = Match ? Match[2].trim() : '';
+    //     const DateLeaves = Match ? Match[3].trim() : '';
+    //     out['Atom Shop'].entries.push({ Text, Atoms, DateLeaves });
+    // });
 
     // Current Events
-    document.querySelectorAll('#currentEvents li').forEach(li => {
-        const raw = li.textContent.trim();
-        const TextMatch = raw.match(/^(.*),\s*(Ends on|Estimated end date)\s*\(([^)]+)\)\s*$/);
-        const Text = TextMatch ? TextMatch[1].trim() : '';
-        const Estimated = /Estimated/i.test(raw);
-        const dateMatch = raw.match(/\(([^)]+)\)\s*$/);
-        const DateLeaves = dateMatch ? dateMatch[1].trim() : '';
-        out['Current Events'].entries.push({ Text, Estimated, DateLeaves });
-    });
+    // document.querySelectorAll('#currentEvents li').forEach(li => {
+    //     const raw = li.textContent.trim();
+    //     const TextMatch = raw.match(/^(.*),\s*(Ends on|Estimated end date)\s*\(([^)]+)\)\s*$/);
+    //     const Text = TextMatch ? TextMatch[1].trim() : '';
+    //     const Estimated = /Estimated/i.test(raw);
+    //     const dateMatch = raw.match(/\(([^)]+)\)\s*$/);
+    //     const DateLeaves = dateMatch ? dateMatch[1].trim() : '';
+    //     out['Current Events'].entries.push({ Text, Estimated, DateLeaves });
+    // });
 
     // Axolotl
-    const axolotlDiv = document.getElementById('axolotl');
-    if (axolotlDiv) {
-        const p = axolotlDiv.querySelector('p');
-        if (p) {
-            const text = p.innerText.trim();
-            const nameMatch = text.match(/^(.+?)\s+Regions:/);
-            const regionsMatch = text.match(/Regions:\s+(.+?)\s+Changes on:/);
-            const changeMatch = text.match(/Changes on:\s*\(([^)]+)\)/);
-            if (nameMatch) out['Axolotl'].CurrentAxolotl = nameMatch[1].trim();
-            if (regionsMatch) out['Axolotl'].Regions = regionsMatch[1].trim();
-            if (changeMatch) out['Axolotl'].NextChange = changeMatch[1].trim();
-        }
-    }   
+    // const axolotlDiv = document.getElementById('axolotl');
+    // if (axolotlDiv) {
+    //     const p = axolotlDiv.querySelector('p');
+    //     if (p) {
+    //         const text = p.innerText.trim();
+    //         const nameMatch = text.match(/^(.+?)\s+Regions:/);
+    //         const regionsMatch = text.match(/Regions:\s+(.+?)\s+Changes on:/);
+    //         const changeMatch = text.match(/Changes on:\s*\(([^)]+)\)/);
+    //         if (nameMatch) out['Axolotl'].CurrentAxolotl = nameMatch[1].trim();
+    //         if (regionsMatch) out['Axolotl'].Regions = regionsMatch[1].trim();
+    //         if (changeMatch) out['Axolotl'].NextChange = changeMatch[1].trim();
+    //     }
+    // }   
 
     // Special Events - use first h2 in #event as Title if present
     // an event with children will have 
@@ -1041,45 +1041,45 @@ function buildJson() {
 
     // Minerva
     // needs to parse location, next location, leaves on and entries
-    const minerva = document.getElementById('Minerva');
-    if (minerva) {
-        const p = minerva.querySelector('p');
-        if (p) out['Minerva'].Location = p.innerText.replace(/Minerva's Location:\s*/i, '').trim();
-        const secondP = minerva.querySelectorAll('p')[1];
-        if (secondP) {
-            const txt = secondP.innerText.trim();
-            // try to parse 'She will next be at LOCATION on DATE'
-            const m = txt.match(/She will next be at\s+(.+)\s+on\s+(.+)/i);
-            if (m) {
-                out['Minerva'].NextLocation = m[1].trim();
-                out['Minerva'].NextLeavesOn = m[2].trim();
-            } else {
-                out['Minerva'].NextLeavesOn = txt;
-            }
-        }
-        const thirdP = minerva.querySelectorAll('p')[2];
-        if (thirdP) {
-            const txt = thirdP.innerText.trim();
-            // try to parse 'She will leave on DATE'
-            const m = txt.match(/She will leave on\s+(.+)/i);
-            if (m) out['Minerva'].LeavesOn = m[1].trim();
-            else out['Minerva'].LeavesOn = txt;
-        }
-        minerva.querySelectorAll('li').forEach(li => {
-            const t = li.textContent.trim();
-            const m = t.match(/(.+)\((\d+)\s*gold\)/i);
-            if (m) out['Minerva'].entries.push({ Plan: m[1].trim(), Gold: `${m[2]}` });
-            else out['Minerva'].entries.push({ Plan: t, Gold: '' });
-        });
-    }
+    // const minerva = document.getElementById('Minerva');
+    // if (minerva) {
+    //     const p = minerva.querySelector('p');
+    //     if (p) out['Minerva'].Location = p.innerText.replace(/Minerva's Location:\s*/i, '').trim();
+    //     const secondP = minerva.querySelectorAll('p')[1];
+    //     if (secondP) {
+    //         const txt = secondP.innerText.trim();
+    //         // try to parse 'She will next be at LOCATION on DATE'
+    //         const m = txt.match(/She will next be at\s+(.+)\s+on\s+(.+)/i);
+    //         if (m) {
+    //             out['Minerva'].NextLocation = m[1].trim();
+    //             out['Minerva'].NextLeavesOn = m[2].trim();
+    //         } else {
+    //             out['Minerva'].NextLeavesOn = txt;
+    //         }
+    //     }
+    //     const thirdP = minerva.querySelectorAll('p')[2];
+    //     if (thirdP) {
+    //         const txt = thirdP.innerText.trim();
+    //         // try to parse 'She will leave on DATE'
+    //         const m = txt.match(/She will leave on\s+(.+)/i);
+    //         if (m) out['Minerva'].LeavesOn = m[1].trim();
+    //         else out['Minerva'].LeavesOn = txt;
+    //     }
+    //     minerva.querySelectorAll('li').forEach(li => {
+    //         const t = li.textContent.trim();
+    //         const m = t.match(/(.+)\((\d+)\s*gold\)/i);
+    //         if (m) out['Minerva'].entries.push({ Plan: m[1].trim(), Gold: `${m[2]}` });
+    //         else out['Minerva'].entries.push({ Plan: t, Gold: '' });
+    //     });
+    // }
 
     // DailyOp
-    const mut1 = document.querySelector('#dailyOps input[list="EnemyMut1List"]')?.value || '';
-    const mut2 = document.querySelector('#dailyOps input[list="EnemyMut2List"]')?.value || '';
-    const loc = document.querySelector('#dailyOps input[list="LocationList"]')?.value || '';
-    const enemy = document.querySelector('#dailyOps input[list="EnemyFactionList"]')?.value || '';
-    const Mode = mut1 === 'Savage Strike' ? 'Decryption' : 'Uplink';
-    out['DailyOp'] = { Mode, Location: loc, Enemy: enemy, Mutation1: mut1, Mutation2: mut2 };
+    // const mut1 = document.querySelector('#dailyOps input[list="EnemyMut1List"]')?.value || '';
+    // const mut2 = document.querySelector('#dailyOps input[list="EnemyMut2List"]')?.value || '';
+    // const loc = document.querySelector('#dailyOps input[list="LocationList"]')?.value || '';
+    // const enemy = document.querySelector('#dailyOps input[list="EnemyFactionList"]')?.value || '';
+    // const Mode = mut1 === 'Savage Strike' ? 'Decryption' : 'Uplink';
+    // out['DailyOp'] = { Mode, Location: loc, Enemy: enemy, Mutation1: mut1, Mutation2: mut2 };
 
     // dump to textarea
     const textarea = document.getElementById('markdownOutput');
