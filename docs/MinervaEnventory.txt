@@ -138,7 +138,7 @@
 14|Hellstorm Missile Launcher Napalm Payload|200
 14|Hellstorm Missile Launcher Plasma Payload|200
 14|Wendigo Tube|2000
-14|Medical Malpractice|1333
+14|.44 Medical Malpractice|1333
 14|Enclave Medallion|1000
 14|War Glaive|2667
 14|Water Well|750
@@ -154,6 +154,7 @@
 15|Covert Scout Armor Right Leg|1333
 15|Covert Scout Armor Chest Piece|2000
 15|Covert Scout Armor Mask|2667
+15|Nuka-Launcher|1000
 17|Secret Service Left Arm|750
 17|Secret Service Right Arm|750
 17|Secret Service Helmet|1650

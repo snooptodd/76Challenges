@@ -539,7 +539,7 @@ async function minervaStatus() {
 // based on day even/odd select mutation order
 async function dailyOps() {
     const Location = ['Arktos Pharma Biome Lab','Watoga High School','Uncanny Caverns','The Burning Mine', 'The Burrows', 'Vault 94', 'Valley Galleria','Watoga Raider Arena','Vault 96','West Tek Research Center','Charleston Capitol Building','Garrahan Mining Headquarters','Morgantown High School','The Foundry','Aquarium of the Atlantic','Glassed Caverns','Atlantic City Community Center'];
-    const EnemyFaction = ['Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown'];
+    const EnemyFaction = ['Pint-Sized Phantoms','Communists','Blood Eagles','Super Mutants','Robots','Scorched','Mothman Cultists','Mole Miners','Aliens','Fanatics','Overgrown'];
     const EnemyMutations1 = ['Elite Enemies', 'Piercing Gaze'];
     const EnemyMutations2 = ['Reflective Skin', 'Volatile', 'Active Camouflage', 'Resilient' ,'Freezing Touch','Toxic Blood','Group Regeneration','Swift-Footed','Blistering Cold: Freezing Touch and Swift-Footed Mutations','Chilling Mend: Freezing Touch and Group Regeneration Mutations','Clouded Toxins: Active Camouflage and Toxic Blood Mutations','Relentless: Resilient and Group Regeneration Mutations','Stinging Frost: Freezing Touch and Toxic Blood Mutations','Swift Stalker: Active Camouflage and Swift-Footed Mutations','Unstable: Volatile and Swift-Footed Mutations','Vaporous: Volatile and Active Camouflage Mutations','Danger Cloud'];
     function getDaysSinceEpoch() { return Math.floor(Date.now() / 1000 / (24 * 60 * 60)); }
@@ -870,7 +870,6 @@ async function event(ev) {
 // json template
 // {
 // "Atom Shop":{"entries":[{"Text":"","Atoms":"","DateLeaves":""}]},
-// "Current Events":{"entries":[{"Text":"","Estimated":false,"DateLeaves":""}]},
 // "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
 // "Special Events":{"Title":"","entries":[{"Text":"","Count":"","Reward":"","Subentries":[{"text":"","Count":"","Reward":""}]}]},
 // "Daily Challenges":{"entries":[{"Flair":"","Text":"","Count":"","Reward":""}]},
@@ -882,52 +881,40 @@ async function event(ev) {
 
 function buildJson() {
     const out = {
-        "Atom Shop": { entries: [] },
-        "Current Events": { entries: [] },
-        "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
+        // "Atom Shop": { entries: [] },
+        // "Axolotl": { CurrentAxolotl: '', Regions: '', NextChange: '' },
         "Special Events": { Title: '', entries: [] },
         "Daily Challenges": { entries: [] },
         "Weekly Challenges": { entries: [] },
         "Monthly Challenges": { entries: [] },
-        "Minerva": { Location: '', LeavesOn: '', NextLocation: '', NextLeavesOn: '', entries: [] },
-        "DailyOp": { Mode: '', Location: '', Enemy: '', Mutation1: '', Mutation2: '' }
+        // "Minerva": { Location: '', LeavesOn: '', NextLocation: '', NextLeavesOn: '', entries: [] },
+        // "DailyOp": { Mode: '', Location: '', Enemy: '', Mutation1: '', Mutation2: '' }
     };
 
     // Atom Shop
-    document.querySelectorAll('#atomicShop li').forEach(li => {
-        const raw = li.textContent.trim();
-        const Match = raw.match(/^(.*)\((\d+⚛️.*|Free!?)\),.*\((\d+-\w+-\d+)\)\s*$/);
-        const Text = Match ? Match[1].trim(): '';
-        const Atoms = Match ? Match[2].trim() : '';
-        const DateLeaves = Match ? Match[3].trim() : '';
-        out['Atom Shop'].entries.push({ Text, Atoms, DateLeaves });
-    });
-
-    // Current Events
-    document.querySelectorAll('#currentEvents li').forEach(li => {
-        const raw = li.textContent.trim();
-        const TextMatch = raw.match(/^(.*),\s*(Ends on|Estimated end date)\s*\(([^)]+)\)\s*$/);
-        const Text = TextMatch ? TextMatch[1].trim() : '';
-        const Estimated = /Estimated/i.test(raw);
-        const dateMatch = raw.match(/\(([^)]+)\)\s*$/);
-        const DateLeaves = dateMatch ? dateMatch[1].trim() : '';
-        out['Current Events'].entries.push({ Text, Estimated, DateLeaves });
-    });
+    // document.querySelectorAll('#atomicShop li').forEach(li => {
+    //     const raw = li.textContent.trim();
+    //     const Match = raw.match(/^(.*)\((\d+⚛️.*|Free!?)\),.*\((\d+-\w+-\d+)\)\s*$/);
+    //     const Text = Match ? Match[1].trim(): '';
+    //     const Atoms = Match ? Match[2].trim() : '';
+    //     const DateLeaves = Match ? Match[3].trim() : '';
+    //     out['Atom Shop'].entries.push({ Text, Atoms, DateLeaves });
+    // });
 
     // Axolotl
-    const axolotlDiv = document.getElementById('axolotl');
-    if (axolotlDiv) {
-        const p = axolotlDiv.querySelector('p');
-        if (p) {
-            const text = p.innerText.trim();
-            const nameMatch = text.match(/^(.+?)\s+Regions:/);
-            const regionsMatch = text.match(/Regions:\s+(.+?)\s+Changes on:/);
-            const changeMatch = text.match(/Changes on:\s*\(([^)]+)\)/);
-            if (nameMatch) out['Axolotl'].CurrentAxolotl = nameMatch[1].trim();
-            if (regionsMatch) out['Axolotl'].Regions = regionsMatch[1].trim();
-            if (changeMatch) out['Axolotl'].NextChange = changeMatch[1].trim();
-        }
-    }   
+    // const axolotlDiv = document.getElementById('axolotl');
+    // if (axolotlDiv) {
+    //     const p = axolotlDiv.querySelector('p');
+    //     if (p) {
+    //         const text = p.innerText.trim();
+    //         const nameMatch = text.match(/^(.+?)\s+Regions:/);
+    //         const regionsMatch = text.match(/Regions:\s+(.+?)\s+Changes on:/);
+    //         const changeMatch = text.match(/Changes on:\s*\(([^)]+)\)/);
+    //         if (nameMatch) out['Axolotl'].CurrentAxolotl = nameMatch[1].trim();
+    //         if (regionsMatch) out['Axolotl'].Regions = regionsMatch[1].trim();
+    //         if (changeMatch) out['Axolotl'].NextChange = changeMatch[1].trim();
+    //     }
+    // }   
 
     // Special Events - use first h2 in #event as Title if present
     // an event with children will have 
@@ -948,7 +935,9 @@ function buildJson() {
             if (topLevelLis.length) {
                 topLevelLis.forEach(li => {
                     // get the text of the li excluding any nested UL text
-                    let text = count = reward = '';
+                    let text = '';
+                    let count = '';
+                    let reward = '';
                     li.childNodes.forEach(node => {
                         if (node.nodeType === Node.ELEMENT_NODE && (node.tagName.toLowerCase() === 'ul' || node.tagName.toLowerCase() === 'ol')) {
                             return; // skip nested lists
@@ -963,7 +952,9 @@ function buildJson() {
 
                     // collect direct nested list items (one level deep)
                     const nested = Array.from(li.querySelectorAll(':scope > ul > li')).map(n => {
-                        let nText = nCount = nReward = '';
+                        let nText = '';
+                        let nCount = '';
+                        let nReward = '';
                         n.childNodes.forEach(nNode => {
                             if (nNode.nodeType === Node.ELEMENT_NODE && (nNode.tagName.toLowerCase() === 'ul' || nNode.tagName.toLowerCase() === 'ol')) {
                                 return; // skip deeper nested lists
@@ -1014,19 +1005,20 @@ function buildJson() {
             // format Challenge|count|Type|Flair|Reward|FormID
             const Match = raw.split('|');
             const FoFirst = checkbox.checked ? '1ˢᵗ' : '';
-            const Text = Match ? Match[0].trim() : '';
-            const Count = Match ? Match[1].trim() : '';
-            const Flair2 = Match ? Match[3].trim() : '';
-            const Reward= Match ? Match[4].trim() : '';
-            const FormID = Match ? Match[5].trim() : '';
+            const Text = (Match[0] || '').trim();
+            const Count = (Match[1] || '').trim();
+            const Flair2 = (Match[3] || '').trim();
+            const Reward = (Match[4] || '').trim();
+            const FormID = (Match[5] || '').trim();
             // for now cat FoFirst and flair2 together
             const Flair = FoFirst && Flair2 ? `${FoFirst} ${Flair2}` : (FoFirst || Flair2);
             // doube reward if double score event is active and is daily challenges
             if (targetKey === 'Daily Challenges') {
-                const currentEvents = out['Current Events'].entries;
-                const doubleActive = currentEvents.some(ev => /Double S/i.test(ev.Text));
-                if (doubleActive && Reward) {
-                    const doubled = parseInt(Reward, 10) * 2;
+                const doubleActive = Array.from(document.querySelectorAll('#currentEvents li'))
+                    .some(li => /double score/i.test(li.textContent));
+                const numericReward = Number.parseInt(Reward, 10);
+                if (doubleActive && Number.isFinite(numericReward)) {
+                    const doubled = numericReward * 2;
                     out['Daily Challenges'].entries.push({ Flair, Text, Count, Reward: `${doubled}`, FormID });
                     continue;
                 }
@@ -1041,45 +1033,45 @@ function buildJson() {
 
     // Minerva
     // needs to parse location, next location, leaves on and entries
-    const minerva = document.getElementById('Minerva');
-    if (minerva) {
-        const p = minerva.querySelector('p');
-        if (p) out['Minerva'].Location = p.innerText.replace(/Minerva's Location:\s*/i, '').trim();
-        const secondP = minerva.querySelectorAll('p')[1];
-        if (secondP) {
-            const txt = secondP.innerText.trim();
-            // try to parse 'She will next be at LOCATION on DATE'
-            const m = txt.match(/She will next be at\s+(.+)\s+on\s+(.+)/i);
-            if (m) {
-                out['Minerva'].NextLocation = m[1].trim();
-                out['Minerva'].NextLeavesOn = m[2].trim();
-            } else {
-                out['Minerva'].NextLeavesOn = txt;
-            }
-        }
-        const thirdP = minerva.querySelectorAll('p')[2];
-        if (thirdP) {
-            const txt = thirdP.innerText.trim();
-            // try to parse 'She will leave on DATE'
-            const m = txt.match(/She will leave on\s+(.+)/i);
-            if (m) out['Minerva'].LeavesOn = m[1].trim();
-            else out['Minerva'].LeavesOn = txt;
-        }
-        minerva.querySelectorAll('li').forEach(li => {
-            const t = li.textContent.trim();
-            const m = t.match(/(.+)\((\d+)\s*gold\)/i);
-            if (m) out['Minerva'].entries.push({ Plan: m[1].trim(), Gold: `${m[2]}` });
-            else out['Minerva'].entries.push({ Plan: t, Gold: '' });
-        });
-    }
+    // const minerva = document.getElementById('Minerva');
+    // if (minerva) {
+    //     const p = minerva.querySelector('p');
+    //     if (p) out['Minerva'].Location = p.innerText.replace(/Minerva's Location:\s*/i, '').trim();
+    //     const secondP = minerva.querySelectorAll('p')[1];
+    //     if (secondP) {
+    //         const txt = secondP.innerText.trim();
+    //         // try to parse 'She will next be at LOCATION on DATE'
+    //         const m = txt.match(/She will next be at\s+(.+)\s+on\s+(.+)/i);
+    //         if (m) {
+    //             out['Minerva'].NextLocation = m[1].trim();
+    //             out['Minerva'].NextLeavesOn = m[2].trim();
+    //         } else {
+    //             out['Minerva'].NextLeavesOn = txt;
+    //         }
+    //     }
+    //     const thirdP = minerva.querySelectorAll('p')[2];
+    //     if (thirdP) {
+    //         const txt = thirdP.innerText.trim();
+    //         // try to parse 'She will leave on DATE'
+    //         const m = txt.match(/She will leave on\s+(.+)/i);
+    //         if (m) out['Minerva'].LeavesOn = m[1].trim();
+    //         else out['Minerva'].LeavesOn = txt;
+    //     }
+    //     minerva.querySelectorAll('li').forEach(li => {
+    //         const t = li.textContent.trim();
+    //         const m = t.match(/(.+)\((\d+)\s*gold\)/i);
+    //         if (m) out['Minerva'].entries.push({ Plan: m[1].trim(), Gold: `${m[2]}` });
+    //         else out['Minerva'].entries.push({ Plan: t, Gold: '' });
+    //     });
+    // }
 
     // DailyOp
-    const mut1 = document.querySelector('#dailyOps input[list="EnemyMut1List"]')?.value || '';
-    const mut2 = document.querySelector('#dailyOps input[list="EnemyMut2List"]')?.value || '';
-    const loc = document.querySelector('#dailyOps input[list="LocationList"]')?.value || '';
-    const enemy = document.querySelector('#dailyOps input[list="EnemyFactionList"]')?.value || '';
-    const Mode = mut1 === 'Savage Strike' ? 'Decryption' : 'Uplink';
-    out['DailyOp'] = { Mode, Location: loc, Enemy: enemy, Mutation1: mut1, Mutation2: mut2 };
+    // const mut1 = document.querySelector('#dailyOps input[list="EnemyMut1List"]')?.value || '';
+    // const mut2 = document.querySelector('#dailyOps input[list="EnemyMut2List"]')?.value || '';
+    // const loc = document.querySelector('#dailyOps input[list="LocationList"]')?.value || '';
+    // const enemy = document.querySelector('#dailyOps input[list="EnemyFactionList"]')?.value || '';
+    // const Mode = mut1 === 'Savage Strike' ? 'Decryption' : 'Uplink';
+    // out['DailyOp'] = { Mode, Location: loc, Enemy: enemy, Mutation1: mut1, Mutation2: mut2 };
 
     // dump to textarea
     const textarea = document.getElementById('markdownOutput');
@@ -1090,9 +1082,6 @@ const buildJsonBtn = document.getElementById('buildjson');
 if (buildJsonBtn) buildJsonBtn.addEventListener('click', buildJson);
 
 function buildMarkdown() {
-}
-
-document.getElementById('exportBtn').addEventListener('click', () => {
     // generate markdown output of the current dashboard state
     // div headings become bold section titles 
     // list items become markdown list items
@@ -1169,6 +1158,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
         let categoryHasSelection = false;
         let categoryMarkdown = `\r\n**${category} Challenges**\r\n`;
         const container = document.getElementById(`${category}Container`);
+        if (!container) return;
         const inputs = container.querySelectorAll('input.checkbox, input.textbox');
         for (let i = 0; i < inputs.length; i += 2) {
             const checkbox = inputs[i];
@@ -1249,7 +1239,9 @@ document.getElementById('exportBtn').addEventListener('click', () => {
     // const blob = new Blob([markdown], { type: 'text/plain' });
     // const url = URL.createObjectURL(blob);
     // const a = document.createElement('a'); a.href = url; a.download = 'dashboard_export.md'; a.click(); URL.revokeObjectURL(url);
-});
+}
+
+document.getElementById('exportBtn').addEventListener('click', buildMarkdown);
 
 document.getElementById('copyBtn').addEventListener('click', () => {
     const textarea = document.getElementById('markdownOutput');
